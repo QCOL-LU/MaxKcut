@@ -6,3 +6,5 @@ The max k-cut problem is easy to be explained, but hard to be solved: How to col
 
 ![Figure 1](input_graph.png?raw=true "Input graph")
 ![Figure 2](solution_max_3-cut.png?raw=true "An optimal solution for the max 3-cut problem")
+
+We study four classical mixed integer linear optimization models of the max k-cut problem and provide theoretical and computational comparisons between them. As the classical models cannot be fed to quantum machines directly, we propose two quadratic unconstrained binary optimization (QUBO) models with tight penalty coefficients. 
