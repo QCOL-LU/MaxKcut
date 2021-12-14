@@ -1,2 +1,3 @@
 # The max k-cut problem on classical and quantum solvers
-Implementation of different classical formulations and quantum algorithms for the max k-cut problem with a preprocessing framework 
+
+Python code for the [paper] (https://engineering.lehigh.edu/sites/engineering.lehigh.edu/files/_DEPARTMENTS/ise/pdf/tech-papers/21/21T_007.pdf)
