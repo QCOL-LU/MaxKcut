@@ -14,7 +14,7 @@ We study four classical mixed integer linear optimization models of the max k-cu
 
 1- Download the ```MaxKcut```
 
-2- Use the following comands to install the max_k_cut package.
+2- Use the following comands to install the max_k_cut package
 
 ```
 pip3 install MaxKcut
@@ -27,15 +27,15 @@ pip3 install qiskit numpy scipy matplotlib networkx
 
 ## Run
 
-1- Import ```max_k_cut``` to your code.
+1- Import ```max_k_cut``` to the code
 
-2- Generate the networkx graph of the problem
+2- Generate a networkx graph for the problem
 
-3- Generate a problem object by ```problem = Instance(graph, name_specifier=name)```
+3- Generate an instance object by ```my_instance = Instance(graph, name_specifier=name)```
 
 4- Set the parameters of the algorithms as follows
 
-```problem.Params.Num_Partitions = num_partitions```
+```my_instance.Params.Num_Partitions = num_partitions```
 
-5- Run the following code ```problem.solve()```.
+5- Run the following code ```my_instance.solve()```
 
