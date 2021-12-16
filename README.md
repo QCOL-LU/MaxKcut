@@ -10,7 +10,7 @@ The max k-cut problem is easy to be explained, but hard to be solved: How to col
 We study four classical mixed integer linear optimization models of the max k-cut problem and provide theoretical and computational comparisons between them. As the classical models cannot be fed to quantum machines directly, we propose two quadratic unconstrained binary optimization (QUBO) models with tight penalty coefficients. 
 
 
-## Run
+## Install
 
 1- Download the ```MaxKcut```
 
@@ -24,3 +24,7 @@ pip3 install qiskit numpy scipy matplotlib networkx
 3- Follow the instruction provided [here](https://support.gurobi.com/hc/en-us/articles/360044290292-How-do-I-install-Gurobi-for-Python-) to install Gurobi solver.
 
 4- Follow the instruction provided [here](https://docs.mosek.com/latest/install/installation.html) to install Mosek solver.
+
+## Run
+
+1- 
