@@ -12,7 +12,7 @@ We study four classical mixed integer linear optimization models of the max k-cu
 
 ## Run
 
-1- First, download the ```MaxKcut```
+1- Download the ```MaxKcut```
 
 2- Use the following comands to install the max_k_cut package.
 
