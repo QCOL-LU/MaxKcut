@@ -33,9 +33,9 @@ pip3 install qiskit numpy scipy matplotlib networkx
 
 3- Generate an instance object by ```my_instance = Instance(graph, name_specifier=name)```
 
-4- Set the parameters of the algorithms as follows
+4- Set the parameters of the algorithms as follows (all the paramteres are avilable in ```main\ParametersDefault.py``)
 
 ```my_instance.Params.Num_Partitions = num_partitions```
 
-5- Run the following code ```my_instance.solve()```
+5- Execute ```my_instance.solve()```
 
