@@ -27,4 +27,15 @@ pip3 install qiskit numpy scipy matplotlib networkx
 
 ## Run
 
-1- 
+1- Import ```max_k_cut``` to your code.
+
+2- Generate the networkx graph of the problem
+
+3- Generate a problem object by ```problem = Instance(graph, name_specifier=name)```
+
+4- Set the parameters of the algorithms as follows
+
+```problem.Params.Num_Partitions = num_partitions```
+
+5- Run the following code ```problem.solve()```.
+
