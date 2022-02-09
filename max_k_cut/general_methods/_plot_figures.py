@@ -13,9 +13,10 @@ import matplotlib.pyplot as plt
 #================================================================================================
 # Plot the graph of objective value vs probability
 #================================================================================================
-def plot_qaoa_solutions_dist(self, num_bins=20):
-	
-	(lb_bin, ub_bin)	= (min(self.best_histogram.keys()), max(self.best_histogram.keys()))
+def plot_qaoa_solutions_dist(self, feasible_sol=False, num_bins=20):
+	histogram 			= self.best_histogram if feasible_sol==False else self.feasible_best_histogram
+
+	(lb_bin, ub_bin)	= (min(histogram.keys()), max(histogram.keys()))
 
 	range_bin 			= (ub_bin - lb_bin)
 	width_bin			= range_bin * (num_bins + 1) / num_bins**2
@@ -26,7 +27,7 @@ def plot_qaoa_solutions_dist(self, num_bins=20):
 
 	dict_bin			= {}
 
-	for (key, value) in self.best_histogram.items():
+	for (key, value) in histogram.items():
 		for (lb, ub) in bounds_bins:
 			if lb <= key and key < ub and value > 0:
 				mid_bin				= np.round((lb + ub)/2, precision_bin) 
@@ -48,8 +49,11 @@ def plot_qaoa_solutions_dist(self, num_bins=20):
 	
 
 	plt.ylabel('Probability (%)')
-	plt.xlabel('Objective value with EV = ' + str(self.qaoa_best_avg_obj_value))
-	plt.savefig(self.figure_path + "/" + self.name + "_" + self.directory+ "_" +self.Params.Method +'_obj_prob.png', dpi=300)
+	temp 				= self.qaoa_best_avg_obj_value if feasible_sol==False else self.qaoa_feasible_best_avg_obj_value 
+	plt.xlabel('Objective value with EV = ' + str(temp))
+
+	temp 				= '_obj_prob.png' if feasible_sol==False else '_obj_feasible_prob.png'
+	plt.savefig(self.figure_path + "/" + self.name + "_" + self.directory+ "_" +self.Params.Method + temp, dpi=300)
 	plt.clf()
 
 	filename 			= self.figure_path + "/" + self.name + "_"  + self.directory+ "_" +self.Params.Method +'_circuit'

@@ -1,0 +1,61 @@
+
+Gurobi 9.1.1 (linux64) logging started Mon Oct 25 03:39:48 2021
+
+Changed value of parameter LogFile to results/max3cut_numv70/max3cut_numv70_seed1_RP-MILO_log.txt
+   Prev:   Default: 
+Changed value of parameter LazyConstraints to 1
+   Prev: 0  Min: 0  Max: 1  Default: 0
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 3497518 rows, 11506 columns and 19123989 nonzeros
+Model fingerprint: 0x30a551c0
+Variable types: 0 continuous, 11506 integer (11506 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Found heuristic solution: objective 875.0000000
+Presolve removed 2554517 rows and 0 columns (presolve time = 12s) ...
+Presolve removed 2554517 rows and 0 columns (presolve time = 15s) ...
+Presolve removed 2554517 rows and 0 columns (presolve time = 20s) ...
+Presolve removed 2554517 rows and 0 columns (presolve time = 25s) ...
+Presolve removed 2554517 rows and 0 columns (presolve time = 30s) ...
+Presolve removed 2554517 rows and 0 columns (presolve time = 36s) ...
+Presolve removed 2554517 rows and 0 columns (presolve time = 42s) ...
+Presolve removed 2554517 rows and 0 columns
+Presolve time: 43.00s
+Presolved: 943001 rows, 11506 columns, 5204253 nonzeros
+Extracted 791750 lazy constraints
+Variable types: 0 continuous, 11506 integer (11506 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing first log only...
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.9280000e+03   0.000000e+00   0.000000e+00     48s
+Concurrent spin time: 0.11s
+
+Solved with dual simplex
+
+Root relaxation: objective 1.928000e+03, 0 iterations, 0.56 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0          -    0       875.00000 1928.00000   120%     - 3600s
+
+Cutting planes:
+  Lazy constraints: 791750
+
+Explored 0 nodes (72061 simplex iterations) in 3600.18 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 2: 875 -0 
+
+Time limit reached
+Best objective 8.750000000000e+02, best bound 1.928000000000e+03, gap 120.3429%

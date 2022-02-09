@@ -1,0 +1,48 @@
+
+Gurobi 9.1.1 (linux64) logging started Thu Oct 21 15:52:20 2021
+
+Changed value of parameter LogFile to results/max3cut_numv50/max3cut_numv50_band50_3_RP-MILO_log.txt
+   Prev:   Default: 
+Changed value of parameter LazyConstraints to 1
+   Prev: 0  Min: 0  Max: 1  Default: 0
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 1656 rows, 190 columns and 5980 nonzeros
+Model fingerprint: 0x6c947a5c
+Variable types: 0 continuous, 190 integer (190 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+00]
+Found heuristic solution: objective -0.0000000
+Found heuristic solution: objective 12.0000000
+Presolve removed 631 rows and 0 columns
+Presolve time: 0.00s
+Presolved: 1025 rows, 190 columns, 3630 nonzeros
+Crushed 46 out of 46 user cuts to presolved model
+Variable types: 0 continuous, 190 integer (190 binary)
+
+Root relaxation: objective 5.152872e+01, 247 iterations, 0.01 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   51.52872    0  136   12.00000   51.52872   329%     -    0s
+H    0     0                      40.0000000   51.52872  28.8%     -    0s
+     0     0   49.51725    0  136   40.00000   49.51725  23.8%     -    0s
+H    0     0                      49.0000000   49.51725  1.06%     -    0s
+
+Cutting planes:
+  Gomory: 1
+  MIR: 4
+  Zero half: 19
+  RLT: 11
+
+Explored 1 nodes (419 simplex iterations) in 0.05 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 4: 49 40 12 -0 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 4.900000000000e+01, best bound 4.900000000000e+01, gap 0.0000%

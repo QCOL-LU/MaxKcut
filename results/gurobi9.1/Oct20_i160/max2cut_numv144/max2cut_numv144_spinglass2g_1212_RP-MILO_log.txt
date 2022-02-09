@@ -1,0 +1,45 @@
+
+Gurobi 9.1.1 (linux64) logging started Fri Oct 15 23:31:44 2021
+
+Changed value of parameter LogFile to results/max2cut_numv144/max2cut_numv144_spinglass2g_1212_RP-MILO_log.txt
+   Prev:   Default: 
+Changed value of parameter LazyConstraints to 1
+   Prev: 0  Min: 0  Max: 1  Default: 0
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 57235 rows, 2802 columns and 171171 nonzeros
+Model fingerprint: 0x1321e8ba
+Variable types: 0 continuous, 2802 integer (2802 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [9e+02, 3e+05]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 32707 rows and 0 columns
+Presolve time: 0.19s
+Presolved: 24528 rows, 2802 columns, 73584 nonzeros
+Crushed 0 out of 267 user cuts to presolved model
+Variable types: 0 continuous, 2802 integer (2802 binary)
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+    7454    9.8017842e+06   1.919054e+04   0.000000e+00      5s
+   16044    9.4843607e+06   1.045581e+05   0.000000e+00     10s
+   21113    9.4142810e+06   0.000000e+00   0.000000e+00     13s
+
+Root relaxation: objective 9.414281e+06, 21113 iterations, 12.37 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    9414281.0000 9414281.00  0.00%     -   12s
+
+Explored 0 nodes (21113 simplex iterations) in 12.60 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 2: 9.41428e+06 -0 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 9.414281000000e+06, best bound 9.414281000000e+06, gap 0.0000%

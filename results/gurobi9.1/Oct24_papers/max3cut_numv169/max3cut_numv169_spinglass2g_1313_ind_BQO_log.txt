@@ -1,0 +1,77 @@
+
+Gurobi 9.1.1 (linux64) logging started Thu Oct 21 05:31:05 2021
+
+Changed value of parameter LogFile to results/max3cut_numv169/max3cut_numv169_spinglass2g_1313_ind_BQO_log.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 169 rows, 507 columns and 507 nonzeros
+Model fingerprint: 0xe14e1152
+Model has 1014 quadratic objective terms
+Variable types: 0 continuous, 507 integer (507 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [0e+00, 0e+00]
+  QObjective range [8e+02, 6e+05]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 1 rows and 3 columns
+Presolve time: 0.00s
+Presolved: 1170 rows, 1506 columns, 3510 nonzeros
+Variable types: 0 continuous, 1506 integer (1506 binary)
+
+Root relaxation: objective -1.460675e+07, 680 iterations, 0.01 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 1.4607e+07    0  318   -0.00000 1.4607e+07      -     -    0s
+H    0     0                    7545846.0000 1.4607e+07  93.6%     -    0s
+H    0     0                    1.206614e+07 1.4607e+07  21.1%     -    0s
+H    0     0                    1.255964e+07 1.4607e+07  16.3%     -    0s
+     0     0 1.4539e+07    0  335 1.2560e+07 1.4539e+07  15.8%     -    0s
+H    0     0                    1.258296e+07 1.4539e+07  15.5%     -    0s
+H    0     0                    1.289199e+07 1.4502e+07  12.5%     -    0s
+     0     0 1.4267e+07    0  447 1.2892e+07 1.4267e+07  10.7%     -    0s
+     0     0 1.4261e+07    0  421 1.2892e+07 1.4261e+07  10.6%     -    0s
+     0     0 1.4098e+07    0  368 1.2892e+07 1.4098e+07  9.36%     -    0s
+     0     0 1.4098e+07    0  366 1.2892e+07 1.4098e+07  9.36%     -    0s
+     0     0 1.4028e+07    0  364 1.2892e+07 1.4028e+07  8.81%     -    0s
+     0     0 1.4017e+07    0  367 1.2892e+07 1.4017e+07  8.72%     -    0s
+H    0     0                    1.306590e+07 1.4017e+07  7.28%     -    0s
+H    0     0                    1.306637e+07 1.4017e+07  7.27%     -    0s
+     0     0 1.3954e+07    0  380 1.3066e+07 1.3954e+07  6.79%     -    0s
+     0     0 1.3954e+07    0  380 1.3066e+07 1.3954e+07  6.79%     -    0s
+H    0     0                    1.312940e+07 1.3954e+07  6.28%     -    0s
+     0     2 1.3939e+07    0  358 1.3129e+07 1.3939e+07  6.16%     -    0s
+H   83    96                    1.314232e+07 1.3863e+07  5.48%  73.3    0s
+H  262   264                    1.329463e+07 1.3863e+07  4.27%  59.9    0s
+H  263   264                    1.334081e+07 1.3863e+07  3.91%  59.7    0s
+H  265   264                    1.334476e+07 1.3863e+07  3.88%  59.3    0s
+H  267   264                    1.337958e+07 1.3863e+07  3.61%  60.6    0s
+H  344   370                    1.339057e+07 1.3863e+07  3.53%  56.2    0s
+*  798   833              72    1.341201e+07 1.3863e+07  3.36%  39.2    0s
+* 1129   952              43    1.344582e+07 1.3863e+07  3.10%  33.8    0s
+H 1679  1223                    1.345381e+07 1.3812e+07  2.66%  36.6    1s
+H 1701  1175                    1.346204e+07 1.3583e+07  0.90%  36.2    1s
+H 1712  1123                    1.350543e+07 1.3573e+07  0.50%  35.9    2s
+H 1715  1068                    1.352143e+07 1.3571e+07  0.36%  35.9    2s
+H 1715  1014                    1.352514e+07 1.3571e+07  0.34%  35.9    2s
+H 1779   978                    1.352896e+07 1.3563e+07  0.25%  41.3    2s
+
+Cutting planes:
+  Gomory: 27
+  Flow cover: 18
+  Inf proof: 4
+  Zero half: 125
+  RLT: 23
+  BQP: 1
+
+Explored 1824 nodes (77835 simplex iterations) in 2.89 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 10: 1.3529e+07 1.35251e+07 1.35214e+07 ... 1.33796e+07
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 1.352895500000e+07, best bound 1.352895500000e+07, gap 0.0000%

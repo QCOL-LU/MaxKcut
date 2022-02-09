@@ -1,0 +1,51 @@
+
+Gurobi 9.1.1 (linux64) logging started Sun Oct 17 22:44:59 2021
+
+Changed value of parameter LogFile to results/max3cut_numv160/max3cut_numv160_i160-034_BQO_log.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 103 rows, 309 columns and 309 nonzeros
+Model fingerprint: 0x9b9941a9
+Model has 969 quadratic objective terms
+Variable types: 0 continuous, 309 integer (309 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [5e+01, 5e+01]
+  QObjective range [1e+02, 4e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective 0.0000000
+Presolve removed 1 rows and 3 columns
+Presolve time: 0.00s
+Presolved: 744 rows, 948 columns, 2232 nonzeros
+Variable types: 0 continuous, 948 integer (948 binary)
+
+Root relaxation: objective -2.413600e+04, 271 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 24136.0000    0  112    0.00000 24136.0000      -     -    0s
+H    0     0                    23744.000000 24136.0000  1.65%     -    0s
+H    0     0                    23847.000000 24136.0000  1.21%     -    0s
+H    0     0                    23852.000000 24136.0000  1.19%     -    0s
+H    0     0                    23941.000000 24136.0000  0.81%     -    0s
+     0     0 24136.0000    0  125 23941.0000 24136.0000  0.81%     -    0s
+H    0     0                    24043.000000 24136.0000  0.39%     -    0s
+H    0     0                    24136.000000 24136.0000  0.00%     -    0s
+     0     0 24136.0000    0  154 24136.0000 24136.0000  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 2
+  MIR: 2
+  Zero half: 2
+  RLT: 9
+
+Explored 1 nodes (760 simplex iterations) in 0.06 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 7: 24136 24043 23941 ... 7.27596e-12
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 2.413600000000e+04, best bound 2.413600000000e+04, gap 0.0000%

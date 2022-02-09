@@ -1,0 +1,76 @@
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           7
+Number of edges:              15
+Number of partitions:         2
+
+Density (%):                  71
+Name of instance:             seed1_band_pen_shot_naive
+Is planar:                    True
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+Penalty Multiplier:           2.0
+Gates Error Probability:      0.0
+Naive Penalty Coef:           True
+QAOA Optimize:                False
+QAOA Num Shots:               100000
+QAOA Scipy Optimizer:         brute
+QAOA Angles:                  [0.26, 0.38]
+==================================================
+
+
+==================================================
+Summary of results QAOA
+--------------------------------------------------
+Avg of QAOA obj (BQO obj):    2.81
+Avg of QAOA obj (penalty):    -2.41
+Avg of constraint violation:  0.58
+
+Feasible percentage (%):      56.58
+Avg of pure feasible obj:     2.50
+
+Avg of QAOA obj:              0.40
+STD of QAOA obj:              0.11
+
+Avg of QAOA obj (feasible):   2.90
+STD of QAOA obj (feasible):   0.07
+
+Gamma angles:                 0.26
+Beta angles:                  0.38
+
+Best QAOA obj:                10.00
+Modified best QAOA obj:       10.00
+Best QAOA obj (feasible):     10.00
+
+QAOA total time:              1.71s
+QAOA circuit depth:           14
+==================================================
+
+==================================================
+Summary of results of 0-S7
+--------------------------------------------------
+Number of vertices:           7
+Number of edges:              15
+
+Vertex num in largest comp:   7
+Edge num in largest comp:     15
+
+Pre-processing running time:  0.00
+Total solver time:            1.71
+Running time:                 4.28
+
+Upper bound:                  10.00
+Objective value:              10.00
+
+Partition 0:                  1, 4, 5, 6          
+Partition 1:                  2, 3, 7             
+==================================================

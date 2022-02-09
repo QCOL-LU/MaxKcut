@@ -1,0 +1,40 @@
+
+Gurobi 9.1.1 (linux64) logging started Tue Oct 19 11:54:15 2021
+
+Changed value of parameter LogFile to results/max3cut_numv160/max3cut_numv160_i160-032_peel_decompose_weighted_BQO_log.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 109 rows, 327 columns and 327 nonzeros
+Model fingerprint: 0xd5650d25
+Model has 1026 quadratic objective terms
+Variable types: 0 continuous, 327 integer (327 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [5e+01, 5e+01]
+  QObjective range [1e+02, 6e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 1 rows and 3 columns
+Presolve time: 0.00s
+Presolved: 780 rows, 996 columns, 2340 nonzeros
+Found heuristic solution: objective -0.0000000
+Variable types: 0 continuous, 996 integer (996 binary)
+Found heuristic solution: objective 5204.0000000
+
+Root relaxation: objective -2.505100e+04, 313 iterations, 0.01 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+H    0     0                    25051.000000 35891.3870  43.3%     -    0s
+     0     0 25051.0000    0  228 25051.0000 25051.0000  0.00%     -    0s
+
+Explored 1 nodes (313 simplex iterations) in 0.02 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 4: 25051 5204 -0 -7.27596e-12 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 2.505100000000e+04, best bound 2.505100000000e+04, gap 0.0000%

@@ -1,0 +1,51 @@
+
+Gurobi 9.1.1 (linux64) logging started Sun Oct 17 21:33:24 2021
+
+Changed value of parameter LogFile to results/max3cut_numv200/max3cut_numv200_random10_200_weighted_con_preprocess_th10_BQO_log.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 200 rows, 600 columns and 600 nonzeros
+Model fingerprint: 0xb47b03e1
+Model has 6570 quadratic objective terms
+Variable types: 0 continuous, 600 integer (600 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+02, 1e+02]
+  QObjective range [2e+00, 2e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 1 rows and 3 columns
+Presolve time: 0.01s
+Presolved: 6109 rows, 6507 columns, 18327 nonzeros
+Variable types: 0 continuous, 6507 integer (6507 binary)
+
+Root relaxation: objective -1.990000e+03, 428 iterations, 0.02 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 1990.00000    0  336   -0.00000 1990.00000      -     -    0s
+H    0     0                    1498.0000000 1990.00000  32.8%     -    0s
+H    0     0                    1641.0000000 1990.00000  21.3%     -    0s
+     0     0 1984.00000    0  546 1641.00000 1984.00000  20.9%     -    2s
+     0     0 1980.50000    0  598 1641.00000 1980.50000  20.7%     -    5s
+     0     0 1980.50000    0  596 1641.00000 1980.50000  20.7%     -    6s
+     0     2 1980.50000    0  589 1641.00000 1980.50000  20.7%     -    6s
+    23    17 infeasible    5      1641.00000 1969.33043  20.0%  2150   10s
+
+Cutting planes:
+  Gomory: 1
+  MIR: 42
+  Zero half: 194
+  RLT: 944
+  BQP: 442
+
+Explored 24 nodes (63217 simplex iterations) in 10.00 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 3: 1641 1498 -0 
+
+Time limit reached
+Best objective 1.641000000000e+03, best bound 1.969000000000e+03, gap 19.9878%

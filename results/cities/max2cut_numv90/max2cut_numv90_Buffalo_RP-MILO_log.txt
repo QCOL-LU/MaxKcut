@@ -1,0 +1,47 @@
+
+Gurobi 9.5.0 (linux64) logging started Thu Nov 25 03:08:55 2021
+
+Set parameter LogFile to value "results/max2cut_numv90/max2cut_numv90_Buffalo_RP-MILO_log.txt"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 1755 rows, 474 columns and 5265 nonzeros
+Model fingerprint: 0x4bd5e082
+Variable types: 0 continuous, 474 integer (474 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [2e+01, 7e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 582 rows and 0 columns
+Presolve time: 0.00s
+Presolved: 1173 rows, 474 columns, 3519 nonzeros
+Variable types: 0 continuous, 474 integer (474 binary)
+Found heuristic solution: objective 5539.0000000
+
+Root relaxation: objective 3.092700e+04, 0 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 28271.0000    0   89 5539.00000 28271.0000   410%     -    0s
+H    0     0                    27671.000000 28271.0000  2.17%     -    0s
+*    0     0               0    28211.000000 28211.0000  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 16
+  Zero half: 1
+  RLT: 3
+  BQP: 3
+  Lazy constraints: 340
+
+Explored 1 nodes (297 simplex iterations) in 0.07 seconds (0.02 work units)
+Thread count was 10 (of 40 available processors)
+
+Solution count 4: 28211 27671 5539 -0 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 2.821100000000e+04, best bound 2.821100000000e+04, gap 0.0000%
+
+User-callback calls 161, time in user-callback 0.04 sec

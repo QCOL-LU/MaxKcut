@@ -1,0 +1,49 @@
+
+Gurobi 9.5.0 (linux64) logging started Thu Nov 25 22:46:25 2021
+
+Set parameter LogFile to value "results/max3cut_numv200/max3cut_numv200_band200_3_RP-MILO_log.txt"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 5880 rows, 790 columns and 17640 nonzeros
+Model fingerprint: 0xf955d20a
+Variable types: 0 continuous, 790 integer (790 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective 101.0000000
+Presolve removed 2340 rows and 0 columns
+Presolve time: 0.01s
+Presolved: 3540 rows, 790 columns, 10620 nonzeros
+Variable types: 0 continuous, 790 integer (790 binary)
+
+Root relaxation: objective 2.191600e+02, 565 iterations, 0.01 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  219.16000    0  475  101.00000  219.16000   117%     -    0s
+     0     0  200.40000    0   26  101.00000  200.40000  98.4%     -    0s
+H    0     0                     191.0000000  200.40000  4.92%     -    0s
+H    0     0                     197.0000000  200.40000  1.73%     -    0s
+     0     0  199.75000    0  171  197.00000  199.75000  1.40%     -    0s
+H    0     0                     199.0000000  199.75000  0.38%     -    0s
+
+Cutting planes:
+  Gomory: 3
+  MIR: 216
+  Zero half: 177
+  RLT: 50
+  Lazy constraints: 383
+
+Explored 1 nodes (1560 simplex iterations) in 0.24 seconds (0.15 work units)
+Thread count was 10 (of 40 available processors)
+
+Solution count 4: 199 197 191 101 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 1.990000000000e+02, best bound 1.990000000000e+02, gap 0.0000%
+
+User-callback calls 223, time in user-callback 0.05 sec

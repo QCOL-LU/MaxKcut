@@ -1,0 +1,75 @@
+
+Gurobi 9.1.1 (linux64) logging started Thu Oct 21 15:24:52 2021
+
+Changed value of parameter LogFile to results/max3cut_numv50/max3cut_numv50_band50_3_P-MILO_log.txt
+   Prev:   Default: 
+Changed value of parameter LazyConstraints to 1
+   Prev: 0  Min: 0  Max: 1  Default: 0
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 58800 rows, 1225 columns and 176400 nonzeros
+Model fingerprint: 0x0238f01b
+Variable types: 0 continuous, 1225 integer (1225 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve time: 0.16s
+Presolved: 58800 rows, 1225 columns, 176400 nonzeros
+Variable types: 0 continuous, 1225 integer (1225 binary)
+
+Root relaxation: objective 5.416016e+01, 379 iterations, 0.10 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   54.16016    0  203   -0.00000   54.16016      -     -    0s
+H    0     0                       8.0000000   54.16016   577%     -    0s
+     0     0   50.50000    0  113    8.00000   50.50000   531%     -    4s
+     0     0   50.00000    0  160    8.00000   50.00000   525%     -   13s
+     0     0   50.00000    0  325    8.00000   50.00000   525%     -   19s
+H    0     0                      33.0000000   50.00000  51.5%     -   19s
+     0     0   50.00000    0  379   33.00000   50.00000  51.5%     -   29s
+H    0     0                      36.0000000   50.00000  38.9%     -   29s
+     0     0   50.00000    0  345   36.00000   50.00000  38.9%     -   33s
+     0     0   50.00000    0  359   36.00000   50.00000  38.9%     -   43s
+     0     0   50.00000    0  394   36.00000   50.00000  38.9%     -   47s
+     0     0   50.00000    0  401   36.00000   50.00000  38.9%     -   60s
+     0     0   50.00000    0  401   36.00000   50.00000  38.9%     -   64s
+     0     0   50.00000    0  401   36.00000   50.00000  38.9%     -   67s
+     0     2   50.00000    0  454   36.00000   50.00000  38.9%     -   89s
+     1     4   50.00000    1  339   36.00000   50.00000  38.9%  2881   96s
+     3     8   50.00000    2  288   36.00000   50.00000  38.9%  3388  113s
+     7    12   50.00000    3  262   36.00000   50.00000  38.9%  5745  419s
+    15    22   50.00000    4   71   36.00000   50.00000  38.9% 29420  544s
+    25    33   49.96453    5 1119   36.00000   50.00000  38.9% 33399  881s
+    35    43   49.94235    5  990   36.00000   50.00000  38.9% 42825 1047s
+    45    53   49.82143    6  272   36.00000   50.00000  38.9% 38849 1204s
+    55    66   49.75000    7  268   36.00000   50.00000  38.9% 35660 1296s
+H   58    66                      42.0000000   50.00000  19.0% 34901 1296s
+    68    81   49.75000    8  251   42.00000   50.00000  19.0% 33122 1444s
+H   83    94                      43.0000000   50.00000  16.3% 29827 1546s
+H   86    94                      44.0000000   50.00000  13.6% 29586 1546s
+    96   106   49.50000   10  100   44.00000   50.00000  13.6% 28521 1624s
+H   97   106                      49.0000000   50.00000  2.04% 28226 1624s
+   109     6   50.00000    6  401   49.00000   50.00000  2.04% 26714 1640s
+   112     8   50.00000    6  226   49.00000   50.00000  2.04% 25998 1645s
+
+Cutting planes:
+  Implied bound: 3
+  Clique: 2
+  Flow cover: 3
+  Zero half: 5
+  RLT: 8
+
+Explored 113 nodes (2969564 simplex iterations) in 1645.86 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 8: 49 44 43 ... -0
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 4.900000000000e+01, best bound 4.900000000000e+01, gap 0.0000%
+
+User-callback calls 670664, time in user-callback 10.31 sec

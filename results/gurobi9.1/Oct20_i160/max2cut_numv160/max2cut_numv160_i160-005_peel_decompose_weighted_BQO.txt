@@ -1,0 +1,69 @@
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           160
+Number of edges:              240
+Number of partitions:         2
+
+Density (%):                  2
+Name of instance:             i160-005_peel_decompose_weighted
+Is planar:                    False
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       BQO
+Fold:                         False
+
+Curvature Type:               convex
+Curvature Method:             bound
+
+Gurobi Time Limit:            5
+==================================================
+
+==================================================
+Summary of results of BQO model of 1-S133
+--------------------------------------------------
+Model status:                 optimal
+Explored B&B nodes:           45
+Gurobi running time:          0.1
+
+Optimality gap (%):           0.00
+Upper bound:                  20589.00
+Objective value:              20589.00
+==================================================
+
+==================================================
+Summary of results of 1-S133
+--------------------------------------------------
+Number of vertices:           133
+Number of edges:              213
+
+Vertex num in largest comp:   133
+Edge num in largest comp:     213
+
+Pre-processing running time:  0.00
+Total solver time:            0.12
+Running time:                 0.12
+
+Upper bound:                  20589.00
+Objective value:              20589.00
+==================================================
+
+==================================================
+Summary of results of 0-P160
+--------------------------------------------------
+Number of vertices:           160
+Number of edges:              240
+
+Vertex num in largest comp:   133
+Edge num in largest comp:     213
+
+Pre-processing running time:  0.00
+Total solver time:            0.12
+Running time:                 1.05
+
+Upper bound:                  23773.00
+Objective value:              23773.00
+==================================================

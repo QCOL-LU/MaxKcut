@@ -1,0 +1,53 @@
+
+Gurobi 9.1.1 (linux64) logging started Sun Oct 17 22:25:47 2021
+
+Changed value of parameter LogFile to results/max3cut_numv160/max3cut_numv160_i160-023_BQO_log.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 160 rows, 480 columns and 480 nonzeros
+Model fingerprint: 0x02bfbaf6
+Model has 38640 quadratic objective terms
+Variable types: 0 continuous, 480 integer (480 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [8e+01, 8e+01]
+  QObjective range [2e+02, 6e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 1 rows and 3 columns
+Presolve time: 0.04s
+Presolved: 159 rows, 477 columns, 477 nonzeros
+Presolved model has 38160 quadratic objective terms
+Found heuristic solution: objective -0.0000000
+Variable types: 0 continuous, 477 integer (477 binary)
+
+Root relaxation: objective 9.607420e+05, 642 iterations, 0.19 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+H    0     0                    925635.00000 1376230.00  48.7%     -    0s
+     0     0 960742.026    0  459 925635.000 960742.026  3.79%     -    0s
+H    0     0                    926474.00000 960742.026  3.70%     -    0s
+H    0     0                    926871.00000 960742.026  3.65%     -    0s
+H    0     0                    927197.00000 960742.026  3.62%     -    0s
+     0     0 960375.329    0  459 927197.000 960375.329  3.58%     -    0s
+H    0     0                    927562.00000 960375.329  3.54%     -    1s
+H    0     0                    927687.00000 960375.329  3.52%     -    1s
+     0     2 960375.329    0  459 927687.000 960375.329  3.52%     -    1s
+H   79    90                    927773.00000 960115.956  3.49%   3.4    2s
+H   81    90                    927874.00000 960115.956  3.47%   3.5    2s
+H  187   204                    927972.00000 960115.956  3.46%   3.0    2s
+H  257   276                    928020.00000 960115.956  3.46%   2.9    2s
+H  271   276                    928181.00000 960115.956  3.44%   2.9    2s
+   301   331 956664.292   29  407 928181.000 960115.956  3.44%   2.9    5s
+
+Explored 330 nodes (1594 simplex iterations) in 5.01 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 10: 928181 928020 927972 ... 926474
+
+Time limit reached
+Best objective 9.281810000000e+05, best bound 9.601159556182e+05, gap 3.4406%

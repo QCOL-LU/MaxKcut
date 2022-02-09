@@ -1,0 +1,49 @@
+
+Gurobi 9.1.1 (linux64) logging started Sun Oct 17 23:31:44 2021
+
+Changed value of parameter LogFile to results/max4cut_numv160/max4cut_numv160_i160-145_BQO_log.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 160 rows, 640 columns and 640 nonzeros
+Model fingerprint: 0x724bfac8
+Model has 10816 quadratic objective terms
+Variable types: 0 continuous, 640 integer (640 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [8e+01, 8e+01]
+  QObjective range [2e+02, 6e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 1 rows and 4 columns
+Presolve time: 0.02s
+Presolved: 10195 rows, 10672 columns, 30744 nonzeros
+Variable types: 0 continuous, 10672 integer (10672 binary)
+
+Root relaxation: objective -2.923320e+05, 330 iterations, 0.02 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 292332.000    0  242   -0.00000 292332.000      -     -    0s
+H    0     0                    235355.00000 292332.000  24.2%     -    0s
+H    0     0                    255737.00000 292332.000  14.3%     -    0s
+H    0     0                    257580.00000 292332.000  13.5%     -    0s
+H    0     0                    258463.00000 292332.000  13.1%     -    0s
+     0     0 292332.000    0  475 258463.000 292332.000  13.1%     -    2s
+     0     0          -    0      258463.000 292233.500  13.1%     -    5s
+
+Cutting planes:
+  MIR: 351
+  Zero half: 450
+  RLT: 509
+  BQP: 336
+
+Explored 1 nodes (6136 simplex iterations) in 5.01 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 5: 258463 257580 255737 ... -0
+
+Time limit reached
+Best objective 2.584630000000e+05, best bound 2.922330000000e+05, gap 13.0657%

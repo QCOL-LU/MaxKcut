@@ -1,0 +1,51 @@
+
+Gurobi 9.1.1 (linux64) logging started Thu Oct 21 05:31:15 2021
+
+Changed value of parameter LogFile to results/max2cut_numv169/max2cut_numv169_spinglass2g_1313_weighted_con_BQO_log.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 169 rows, 338 columns and 338 nonzeros
+Model fingerprint: 0x3ded3f41
+Model has 1014 quadratic objective terms
+Variable types: 0 continuous, 338 integer (338 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [8e+01, 8e+01]
+  QObjective range [2e+00, 2e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 169 rows and 170 columns
+Presolve time: 0.00s
+Presolved: 334 rows, 502 columns, 1002 nonzeros
+Variable types: 0 continuous, 502 integer (502 binary)
+Found heuristic solution: objective 194.0000000
+
+Root relaxation: objective -3.360000e+02, 191 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  336.00000    0  168  194.00000  336.00000  73.2%     -    0s
+H    0     0                     238.0000000  336.00000  41.2%     -    0s
+H    0     0                     270.0000000  336.00000  24.4%     -    0s
+H    0     0                     298.0000000  336.00000  12.8%     -    0s
+H    0     0                     310.0000000  336.00000  8.39%     -    0s
+     0     0  332.00000    0  171  310.00000  332.00000  7.10%     -    0s
+     0     0  328.00000    0  174  310.00000  328.00000  5.81%     -    0s
+     0     0  328.00000    0  174  310.00000  328.00000  5.81%     -    0s
+H    0     0                     312.0000000  328.00000  5.13%     -    0s
+     0     2  328.00000    0  170  312.00000  328.00000  5.13%     -    0s
+
+Cutting planes:
+  Gomory: 2
+  Zero half: 8
+
+Explored 14062 nodes (443643 simplex iterations) in 2.35 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 8: 312 310 298 ... -2.36469e-11
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 3.120000000000e+02, best bound 3.120000000000e+02, gap 0.0000%

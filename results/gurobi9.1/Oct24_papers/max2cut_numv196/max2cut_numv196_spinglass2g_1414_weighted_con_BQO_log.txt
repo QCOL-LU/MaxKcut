@@ -1,0 +1,37 @@
+
+Gurobi 9.1.1 (linux64) logging started Thu Oct 21 10:39:18 2021
+
+Changed value of parameter LogFile to results/max2cut_numv196/max2cut_numv196_spinglass2g_1414_weighted_con_BQO_log.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 196 rows, 392 columns and 392 nonzeros
+Model fingerprint: 0x022e3dde
+Model has 1176 quadratic objective terms
+Variable types: 0 continuous, 392 integer (392 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+02, 1e+02]
+  QObjective range [2e+00, 2e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 196 rows and 197 columns
+Presolve time: 0.00s
+Presolved: 388 rows, 583 columns, 1164 nonzeros
+Variable types: 0 continuous, 583 integer (583 binary)
+
+Root relaxation: objective -3.920000e+02, 208 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0     392.0000000  392.00000  0.00%     -    0s
+
+Explored 1 nodes (208 simplex iterations) in 0.01 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 2: 392 -0 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 3.920000000000e+02, best bound 3.920000000000e+02, gap 0.0000%

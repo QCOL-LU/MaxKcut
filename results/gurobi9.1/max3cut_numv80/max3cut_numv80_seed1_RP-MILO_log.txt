@@ -1,0 +1,71 @@
+
+Gurobi 9.1.1 (linux64) logging started Mon Oct 25 05:12:30 2021
+
+Changed value of parameter LogFile to results/max3cut_numv80/max3cut_numv80_seed1_RP-MILO_log.txt
+   Prev:   Default: 
+Changed value of parameter LazyConstraints to 1
+   Prev: 0  Min: 0  Max: 1  Default: 0
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 6608625 rows, 16841 columns and 36497628 nonzeros
+Model fingerprint: 0xc11ab46b
+Variable types: 0 continuous, 16841 integer (16841 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Found heuristic solution: objective 1281.0000000
+Presolve removed 0 rows and 0 columns (presolve time = 6s) ...
+Presolve removed 5018483 rows and 0 columns (presolve time = 25s) ...
+Presolve removed 5018483 rows and 0 columns (presolve time = 30s) ...
+Presolve removed 5018483 rows and 0 columns (presolve time = 35s) ...
+Presolve removed 5018483 rows and 0 columns (presolve time = 40s) ...
+Presolve removed 5018483 rows and 0 columns (presolve time = 45s) ...
+Presolve removed 5018483 rows and 0 columns (presolve time = 50s) ...
+Presolve removed 5018483 rows and 0 columns (presolve time = 55s) ...
+Presolve removed 5018483 rows and 0 columns (presolve time = 60s) ...
+Presolve removed 5018483 rows and 0 columns (presolve time = 65s) ...
+Presolve removed 5018483 rows and 0 columns (presolve time = 70s) ...
+Presolve removed 5018483 rows and 0 columns (presolve time = 75s) ...
+Presolve removed 5018483 rows and 0 columns (presolve time = 80s) ...
+Presolve removed 5018483 rows and 0 columns (presolve time = 85s) ...
+Presolve removed 5018483 rows and 0 columns (presolve time = 91s) ...
+Presolve removed 5018483 rows and 0 columns (presolve time = 104s) ...
+Presolve removed 5018483 rows and 0 columns (presolve time = 107s) ...
+Presolve removed 5018483 rows and 0 columns
+Presolve time: 107.10s
+Presolved: 1590142 rows, 16841 columns, 8860209 nonzeros
+Extracted 1363261 lazy constraints
+Variable types: 0 continuous, 16841 integer (16841 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing first log only...
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.5070000e+03   0.000000e+00   0.000000e+00    118s
+Concurrent spin time: 0.21s
+
+Solved with dual simplex
+
+Root relaxation: objective 2.507000e+03, 0 iterations, 0.93 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0          -    0      1281.00000 2507.00000  95.7%     - 3600s
+
+Cutting planes:
+  Lazy constraints: 1363261
+
+Explored 0 nodes (47437 simplex iterations) in 3600.41 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 2: 1281 -0 
+
+Time limit reached
+Best objective 1.281000000000e+03, best bound 2.507000000000e+03, gap 95.7065%

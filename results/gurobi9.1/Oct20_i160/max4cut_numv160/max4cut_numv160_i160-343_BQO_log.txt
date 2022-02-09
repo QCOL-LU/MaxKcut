@@ -1,0 +1,49 @@
+
+Gurobi 9.1.1 (linux64) logging started Mon Oct 18 00:59:09 2021
+
+Changed value of parameter LogFile to results/max4cut_numv160/max4cut_numv160_i160-343_BQO_log.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 160 rows, 640 columns and 640 nonzeros
+Model fingerprint: 0x6c84927a
+Model has 10816 quadratic objective terms
+Variable types: 0 continuous, 640 integer (640 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [8e+01, 8e+01]
+  QObjective range [2e+02, 6e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 1 rows and 4 columns
+Presolve time: 0.02s
+Presolved: 10163 rows, 10640 columns, 30648 nonzeros
+Variable types: 0 continuous, 10640 integer (10640 binary)
+
+Root relaxation: objective -3.815490e+05, 330 iterations, 0.02 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 381549.000    0  250   -0.00000 381549.000      -     -    0s
+H    0     0                    308756.00000 381549.000  23.6%     -    0s
+H    0     0                    334124.00000 381549.000  14.2%     -    0s
+H    0     0                    334337.00000 381549.000  14.1%     -    1s
+     0     0 381549.000    0  490 334337.000 381549.000  14.1%     -    2s
+     0     0 381549.000    0  483 334337.000 381549.000  14.1%     -    4s
+
+Cutting planes:
+  Gomory: 6
+  MIR: 245
+  Zero half: 454
+  RLT: 137
+  BQP: 93
+
+Explored 1 nodes (6363 simplex iterations) in 5.03 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 4: 334337 334124 308756 -0 
+
+Time limit reached
+Best objective 3.343370000000e+05, best bound 3.815490000000e+05, gap 14.1211%

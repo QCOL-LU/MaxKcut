@@ -1,0 +1,1372 @@
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           5
+Number of edges:              8
+Number of partitions:         3
+
+Density (%):                  80
+Name of instance:             seed1
+Is planar:                    True
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       CR-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+==================================================
+
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           5
+Number of edges:              8
+Number of partitions:         3
+
+Density (%):                  80
+Name of instance:             seed1
+Is planar:                    True
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       CR-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+==================================================
+
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           5
+Number of edges:              8
+Number of partitions:         3
+
+Density (%):                  80
+Name of instance:             seed1
+Is planar:                    True
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       CR-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+==================================================
+
+
+Gurobi 9.1.1 (linux64) logging started Wed Nov  3 21:06:58 2021
+
+Changed value of parameter LogFile to results/max3cut_numv5/max3cut_numv5_seed1_CR-QUBO.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 0 rows, 10 columns and 0 nonzeros
+Model fingerprint: 0xbf25d7e1
+Model has 37 quadratic objective terms
+Variable types: 0 continuous, 10 integer (10 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [4e+00, 5e+00]
+  QObjective range [2e+00, 1e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective 5.0000000
+Presolve removed 0 rows and 2 columns
+Presolve time: 0.00s
+Presolved: 24 rows, 32 columns, 72 nonzeros
+Variable types: 0 continuous, 32 integer (32 binary)
+
+Root relaxation: objective -1.950000e+01, 5 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   19.50000    0    8    5.00000   19.50000   290%     -    0s
+H    0     0                       8.0000000   19.50000   144%     -    0s
+H    0     0                      13.0000000   19.50000  50.0%     -    0s
+
+Cutting planes:
+  MIR: 7
+  Zero half: 8
+  RLT: 2
+
+Explored 1 nodes (5 simplex iterations) in 0.02 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 3: 13 8 5 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.300000000000e+01, best bound 1.300000000000e+01, gap 0.0000%
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           5
+Number of edges:              8
+Number of partitions:         3
+
+Density (%):                  80
+Name of instance:             seed1
+Is planar:                    True
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       CR-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+==================================================
+
+
+Gurobi 9.1.1 (linux64) logging started Wed Nov  3 21:07:55 2021
+
+Changed value of parameter LogFile to results/max3cut_numv5/max3cut_numv5_seed1_CR-QUBO.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 0 rows, 10 columns and 0 nonzeros
+Model fingerprint: 0xbf25d7e1
+Model has 37 quadratic objective terms
+Variable types: 0 continuous, 10 integer (10 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [4e+00, 5e+00]
+  QObjective range [2e+00, 1e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective 5.0000000
+Presolve removed 0 rows and 2 columns
+Presolve time: 0.00s
+Presolved: 24 rows, 32 columns, 72 nonzeros
+Variable types: 0 continuous, 32 integer (32 binary)
+
+Root relaxation: objective -1.950000e+01, 5 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   19.50000    0    8    5.00000   19.50000   290%     -    0s
+H    0     0                       8.0000000   19.50000   144%     -    0s
+H    0     0                      13.0000000   19.50000  50.0%     -    0s
+
+Cutting planes:
+  MIR: 7
+  Zero half: 8
+  RLT: 2
+
+Explored 1 nodes (5 simplex iterations) in 0.01 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 3: 13 8 5 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.300000000000e+01, best bound 1.300000000000e+01, gap 0.0000%
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           5
+Number of edges:              8
+Number of partitions:         3
+
+Density (%):                  80
+Name of instance:             seed1
+Is planar:                    True
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       CR-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+==================================================
+
+
+Gurobi 9.1.1 (linux64) logging started Wed Nov  3 21:09:12 2021
+
+Changed value of parameter LogFile to results/max3cut_numv5/max3cut_numv5_seed1_CR-QUBO.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 0 rows, 10 columns and 0 nonzeros
+Model fingerprint: 0x52a9ac2e
+Model has 37 quadratic objective terms
+Variable types: 0 continuous, 10 integer (10 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [4e+00, 5e+00]
+  QObjective range [2e+00, 1e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective 5.0000000
+Presolve removed 0 rows and 2 columns
+Presolve time: 0.00s
+Presolved: 24 rows, 32 columns, 72 nonzeros
+Variable types: 0 continuous, 32 integer (32 binary)
+
+Root relaxation: objective -1.950000e+01, 5 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   19.50000    0    8    5.00000   19.50000   290%     -    0s
+H    0     0                       8.0000000   19.50000   144%     -    0s
+H    0     0                      13.0000000   19.50000  50.0%     -    0s
+
+Cutting planes:
+  MIR: 7
+  Zero half: 8
+  RLT: 2
+
+Explored 1 nodes (5 simplex iterations) in 0.01 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 3: 13 8 5 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.300000000000e+01, best bound 1.300000000000e+01, gap 0.0000%
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           5
+Number of edges:              8
+Number of partitions:         3
+
+Density (%):                  80
+Name of instance:             seed1
+Is planar:                    True
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       CR-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+==================================================
+
+
+Gurobi 9.1.1 (linux64) logging started Wed Nov  3 21:09:57 2021
+
+Changed value of parameter LogFile to results/max3cut_numv5/max3cut_numv5_seed1_CR-QUBO.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 0 rows, 10 columns and 0 nonzeros
+Model fingerprint: 0x75b3cc76
+Model has 37 quadratic objective terms
+Variable types: 0 continuous, 10 integer (10 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [4e+00, 5e+00]
+  QObjective range [2e+00, 1e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective 5.0000000
+Presolve removed 0 rows and 2 columns
+Presolve time: 0.00s
+Presolved: 24 rows, 32 columns, 72 nonzeros
+Variable types: 0 continuous, 32 integer (32 binary)
+
+Root relaxation: objective -1.950000e+01, 5 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   19.50000    0    8    5.00000   19.50000   290%     -    0s
+H    0     0                       8.0100000   19.50000   143%     -    0s
+H    0     0                      13.0000000   19.50000  50.0%     -    0s
+
+Cutting planes:
+  MIR: 7
+  Zero half: 8
+  RLT: 2
+
+Explored 1 nodes (5 simplex iterations) in 0.01 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 3: 13 8.01 5 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.300000000000e+01, best bound 1.300000000000e+01, gap 0.0000%
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           5
+Number of edges:              8
+Number of partitions:         3
+
+Density (%):                  80
+Name of instance:             seed1
+Is planar:                    True
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       CR-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+==================================================
+
+
+Gurobi 9.1.1 (linux64) logging started Wed Nov  3 21:10:44 2021
+
+Changed value of parameter LogFile to results/max3cut_numv5/max3cut_numv5_seed1_CR-QUBO.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 0 rows, 10 columns and 0 nonzeros
+Model fingerprint: 0x9b8cce4d
+Model has 33 quadratic objective terms
+Variable types: 0 continuous, 10 integer (10 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [4e+00, 5e+00]
+  QObjective range [2e+00, 1e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective 4.0000000
+Presolve removed 0 rows and 2 columns
+Presolve time: 0.00s
+Presolved: 24 rows, 32 columns, 72 nonzeros
+Variable types: 0 continuous, 32 integer (32 binary)
+
+Root relaxation: objective -1.900000e+01, 5 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   19.00000    0    8    4.00000   19.00000   375%     -    0s
+H    0     0                       7.0100000   19.00000   171%     -    0s
+H    0     0                      12.0000000   19.00000  58.3%     -    0s
+
+Cutting planes:
+  Gomory: 1
+  MIR: 7
+  Zero half: 8
+  RLT: 2
+
+Explored 1 nodes (5 simplex iterations) in 0.01 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 3: 12 7.01 4 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.200000000000e+01, best bound 1.200000000000e+01, gap 0.0000%
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           5
+Number of edges:              8
+Number of partitions:         3
+
+Density (%):                  80
+Name of instance:             seed1
+Is planar:                    True
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       CR-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+==================================================
+
+
+Gurobi 9.1.1 (linux64) logging started Wed Nov  3 21:10:55 2021
+
+Changed value of parameter LogFile to results/max3cut_numv5/max3cut_numv5_seed1_CR-QUBO.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 0 rows, 10 columns and 0 nonzeros
+Model fingerprint: 0x202dd5a3
+Model has 33 quadratic objective terms
+Variable types: 0 continuous, 10 integer (10 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [4e+00, 5e+00]
+  QObjective range [2e+00, 1e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective 4.0000000
+Presolve removed 0 rows and 2 columns
+Presolve time: 0.00s
+Presolved: 24 rows, 32 columns, 72 nonzeros
+Variable types: 0 continuous, 32 integer (32 binary)
+
+Root relaxation: objective -1.900000e+01, 5 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   19.00000    0    8    4.00000   19.00000   375%     -    0s
+H    0     0                       7.0000000   19.00000   171%     -    0s
+H    0     0                      12.0000000   19.00000  58.3%     -    0s
+
+Cutting planes:
+  Gomory: 1
+  MIR: 7
+  Zero half: 8
+  RLT: 2
+
+Explored 1 nodes (5 simplex iterations) in 0.01 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 3: 12 7 4 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.200000000000e+01, best bound 1.200000000000e+01, gap 0.0000%
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           5
+Number of edges:              8
+Number of partitions:         3
+
+Density (%):                  80
+Name of instance:             seed1
+Is planar:                    True
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       CR-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+==================================================
+
+
+Gurobi 9.1.1 (linux64) logging started Wed Nov  3 21:11:17 2021
+
+Changed value of parameter LogFile to results/max3cut_numv5/max3cut_numv5_seed1_CR-QUBO.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 0 rows, 10 columns and 0 nonzeros
+Model fingerprint: 0x2b005423
+Model has 33 quadratic objective terms
+Variable types: 0 continuous, 10 integer (10 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [4e+00, 5e+00]
+  QObjective range [2e+00, 1e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective 4.0000000
+Presolve removed 0 rows and 2 columns
+Presolve time: 0.00s
+Presolved: 24 rows, 32 columns, 72 nonzeros
+Variable types: 0 continuous, 32 integer (32 binary)
+
+Root relaxation: objective -1.900000e+01, 5 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   19.00000    0    8    4.00000   19.00000   375%     -    0s
+H    0     0                       7.0000000   19.00000   171%     -    0s
+H    0     0                      12.0000000   19.00000  58.3%     -    0s
+
+Cutting planes:
+  Gomory: 1
+  MIR: 7
+  Zero half: 8
+  RLT: 2
+
+Explored 1 nodes (5 simplex iterations) in 0.01 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 3: 12 7 4 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.200000000000e+01, best bound 1.200000000000e+01, gap 0.0000%
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           5
+Number of edges:              8
+Number of partitions:         3
+
+Density (%):                  80
+Name of instance:             seed1
+Is planar:                    True
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       CR-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+==================================================
+
+
+Gurobi 9.1.1 (linux64) logging started Wed Nov  3 21:12:25 2021
+
+Changed value of parameter LogFile to results/max3cut_numv5/max3cut_numv5_seed1_CR-QUBO.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 0 rows, 10 columns and 0 nonzeros
+Model fingerprint: 0x4f9c149b
+Model has 29 quadratic objective terms
+Variable types: 0 continuous, 10 integer (10 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [4e+00, 6e+00]
+  QObjective range [4e+00, 1e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective 4.0000000
+Presolve removed 0 rows and 2 columns
+Presolve time: 0.00s
+Presolved: 20 rows, 28 columns, 60 nonzeros
+Variable types: 0 continuous, 28 integer (28 binary)
+
+Root relaxation: objective -1.600000e+01, 5 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   16.00000    0    6    4.00000   16.00000   300%     -    0s
+H    0     0                      12.0000000   16.00000  33.3%     -    0s
+     0     0     cutoff    0        12.00000   12.00000  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 1
+  MIR: 2
+  Zero half: 1
+
+Explored 1 nodes (9 simplex iterations) in 0.01 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 2: 12 4 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.200000000000e+01, best bound 1.200000000000e+01, gap 0.0000%
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           5
+Number of edges:              8
+Number of partitions:         3
+
+Density (%):                  80
+Name of instance:             seed1
+Is planar:                    True
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       CR-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+==================================================
+
+
+Gurobi 9.1.1 (linux64) logging started Wed Nov  3 21:13:07 2021
+
+Changed value of parameter LogFile to results/max3cut_numv5/max3cut_numv5_seed1_CR-QUBO.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 0 rows, 10 columns and 0 nonzeros
+Model fingerprint: 0x98133442
+Model has 29 quadratic objective terms
+Variable types: 0 continuous, 10 integer (10 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [4e+00, 6e+00]
+  QObjective range [4e+00, 1e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective -0.0000000
+Presolve time: 0.00s
+Presolved: 29 rows, 39 columns, 87 nonzeros
+Variable types: 0 continuous, 39 integer (39 binary)
+
+Root relaxation: objective -2.400000e+01, 6 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   24.00000    0   10   -0.00000   24.00000      -     -    0s
+H    0     0                      12.0100000   24.00000   100%     -    0s
+     0     0   12.01000    0   11   12.01000   12.01000  0.00%     -    0s
+
+Cutting planes:
+  MIR: 8
+  Zero half: 6
+  RLT: 1
+
+Explored 1 nodes (24 simplex iterations) in 0.01 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 2: 12.01 -0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.201000000000e+01, best bound 1.201000000000e+01, gap 0.0000%
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           5
+Number of edges:              8
+Number of partitions:         3
+
+Density (%):                  80
+Name of instance:             seed1
+Is planar:                    True
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       CR-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+==================================================
+
+
+Gurobi 9.1.1 (linux64) logging started Wed Nov  3 21:13:34 2021
+
+Changed value of parameter LogFile to results/max3cut_numv5/max3cut_numv5_seed1_CR-QUBO.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 0 rows, 10 columns and 0 nonzeros
+Model fingerprint: 0x82303af6
+Model has 29 quadratic objective terms
+Variable types: 0 continuous, 10 integer (10 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [4e+00, 6e+00]
+  QObjective range [4e+00, 1e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective -0.0000000
+Presolve time: 0.00s
+Presolved: 29 rows, 39 columns, 87 nonzeros
+Variable types: 0 continuous, 39 integer (39 binary)
+
+Root relaxation: objective -2.400000e+01, 5 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   24.00000    0   10   -0.00000   24.00000      -     -    0s
+H    0     0                      12.0000000   24.00000   100%     -    0s
+     0     0   14.00000    0   10   12.00000   14.00000  16.7%     -    0s
+
+Cutting planes:
+  MIR: 7
+  Zero half: 5
+  RLT: 3
+
+Explored 1 nodes (22 simplex iterations) in 0.01 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 2: 12 -0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.200000000000e+01, best bound 1.200000000000e+01, gap 0.0000%
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           5
+Number of edges:              8
+Number of partitions:         3
+
+Density (%):                  80
+Name of instance:             seed1
+Is planar:                    True
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       CR-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+==================================================
+
+
+Gurobi 9.1.1 (linux64) logging started Wed Nov  3 21:13:49 2021
+
+Changed value of parameter LogFile to results/max3cut_numv5/max3cut_numv5_seed1_CR-QUBO.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 0 rows, 10 columns and 0 nonzeros
+Model fingerprint: 0x62c0374f
+Model has 33 quadratic objective terms
+Variable types: 0 continuous, 10 integer (10 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [4e+00, 5e+00]
+  QObjective range [2e+00, 1e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective -0.0000000
+Presolve time: 0.00s
+Presolved: 33 rows, 43 columns, 99 nonzeros
+Variable types: 0 continuous, 43 integer (43 binary)
+
+Root relaxation: objective -2.500000e+01, 6 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   25.00000    0   10   -0.00000   25.00000      -     -    0s
+H    0     0                      12.0000000   25.00000   108%     -    0s
+     0     0   13.00000    0   14   12.00000   13.00000  8.33%     -    0s
+
+Cutting planes:
+  Gomory: 2
+  MIR: 7
+  Zero half: 14
+  RLT: 2
+
+Explored 1 nodes (29 simplex iterations) in 0.01 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 2: 12 -0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.200000000000e+01, best bound 1.200000000000e+01, gap 0.0000%
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           5
+Number of edges:              8
+Number of partitions:         3
+
+Density (%):                  80
+Name of instance:             seed1
+Is planar:                    True
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       CR-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+==================================================
+
+
+Gurobi 9.1.1 (linux64) logging started Wed Nov  3 21:14:20 2021
+
+Changed value of parameter LogFile to results/max3cut_numv5/max3cut_numv5_seed1_CR-QUBO.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 0 rows, 10 columns and 0 nonzeros
+Model fingerprint: 0x3c5250a0
+Model has 33 quadratic objective terms
+Variable types: 0 continuous, 10 integer (10 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [4e+00, 5e+00]
+  QObjective range [2e+00, 1e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective -0.0000000
+Presolve time: 0.00s
+Presolved: 33 rows, 43 columns, 99 nonzeros
+Variable types: 0 continuous, 43 integer (43 binary)
+
+Root relaxation: objective -2.500000e+01, 6 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   25.00000    0   10   -0.00000   25.00000      -     -    0s
+H    0     0                      12.0100000   25.00000   108%     -    0s
+     0     0   12.01000    0   14   12.01000   12.01000  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 1
+  MIR: 6
+  Zero half: 10
+  RLT: 2
+
+Explored 1 nodes (29 simplex iterations) in 0.01 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 2: 12.01 -0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.201000000000e+01, best bound 1.201000000000e+01, gap 0.0000%
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           5
+Number of edges:              8
+Number of partitions:         3
+
+Density (%):                  80
+Name of instance:             seed1
+Is planar:                    True
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       CR-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+==================================================
+
+
+Gurobi 9.1.1 (linux64) logging started Wed Nov  3 23:02:43 2021
+
+Changed value of parameter LogFile to results/max3cut_numv5/max3cut_numv5_seed1_CR-QUBO.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 0 rows, 10 columns and 0 nonzeros
+Model fingerprint: 0x62c0374f
+Model has 33 quadratic objective terms
+Variable types: 0 continuous, 10 integer (10 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [4e+00, 5e+00]
+  QObjective range [2e+00, 1e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective -0.0000000
+Presolve time: 0.00s
+Presolved: 33 rows, 43 columns, 99 nonzeros
+Variable types: 0 continuous, 43 integer (43 binary)
+
+Root relaxation: objective -2.500000e+01, 6 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   25.00000    0   10   -0.00000   25.00000      -     -    0s
+H    0     0                      12.0000000   25.00000   108%     -    0s
+     0     0   13.00000    0   14   12.00000   13.00000  8.33%     -    0s
+
+Cutting planes:
+  Gomory: 2
+  MIR: 7
+  Zero half: 14
+  RLT: 2
+
+Explored 1 nodes (29 simplex iterations) in 0.01 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 2: 12 -0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.200000000000e+01, best bound 1.200000000000e+01, gap 0.0000%
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           5
+Number of edges:              8
+Number of partitions:         3
+
+Density (%):                  80
+Name of instance:             seed1
+Is planar:                    True
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       CR-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+==================================================
+
+
+Gurobi 9.1.1 (linux64) logging started Wed Nov  3 23:05:01 2021
+
+Changed value of parameter LogFile to results/max3cut_numv5/max3cut_numv5_seed1_CR-QUBO.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 0 rows, 10 columns and 0 nonzeros
+Model fingerprint: 0x14c28289
+Model has 33 quadratic objective terms
+Variable types: 0 continuous, 10 integer (10 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [4e+00, 5e+00]
+  QObjective range [2e+00, 1e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective -0.0000000
+Presolve time: 0.00s
+Presolved: 33 rows, 43 columns, 99 nonzeros
+Variable types: 0 continuous, 43 integer (43 binary)
+
+Root relaxation: objective -2.500000e+01, 6 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   25.00000    0   10   -0.00000   25.00000      -     -    0s
+H    0     0                      11.9800000   25.00000   109%     -    0s
+H    0     0                      12.0000000   25.00000   108%     -    0s
+     0     0   14.50000    0   13   12.00000   14.50000  20.8%     -    0s
+
+Cutting planes:
+  Gomory: 3
+  MIR: 6
+  Zero half: 10
+  RLT: 4
+
+Explored 1 nodes (26 simplex iterations) in 0.01 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 3: 12 11.98 -0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.200000000000e+01, best bound 1.200000000000e+01, gap 0.0000%
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           5
+Number of edges:              8
+Number of partitions:         3
+
+Density (%):                  80
+Name of instance:             seed1
+Is planar:                    True
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       CR-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+==================================================
+
+
+Gurobi 9.1.1 (linux64) logging started Wed Nov  3 23:12:05 2021
+
+Changed value of parameter LogFile to results/max3cut_numv5/max3cut_numv5_seed1_CR-QUBO.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 0 rows, 10 columns and 0 nonzeros
+Model fingerprint: 0x633e6d47
+Model has 37 quadratic objective terms
+Variable types: 0 continuous, 10 integer (10 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [4e+00, 6e+00]
+  QObjective range [2e+00, 1e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective -0.0000000
+Presolve time: 0.00s
+Presolved: 37 rows, 47 columns, 111 nonzeros
+Variable types: 0 continuous, 47 integer (47 binary)
+
+Root relaxation: objective -2.900000e+01, 8 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   29.00000    0   10   -0.00000   29.00000      -     -    0s
+H    0     0                      12.0000000   29.00000   142%     -    0s
+H    0     0                      14.0000000   19.00000  35.7%     -    0s
+     0     0   17.00000    0   12   14.00000   17.00000  21.4%     -    0s
+
+Cutting planes:
+  Gomory: 2
+  MIR: 7
+  Zero half: 17
+  RLT: 7
+  BQP: 2
+
+Explored 1 nodes (40 simplex iterations) in 0.01 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 3: 14 12 -0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.400000000000e+01, best bound 1.400000000000e+01, gap 0.0000%
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           5
+Number of edges:              8
+Number of partitions:         3
+
+Density (%):                  80
+Name of instance:             seed1
+Is planar:                    True
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       CR-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+==================================================
+
+
+Gurobi 9.1.1 (linux64) logging started Wed Nov  3 23:12:39 2021
+
+Changed value of parameter LogFile to results/max3cut_numv5/max3cut_numv5_seed1_CR-QUBO.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 0 rows, 10 columns and 0 nonzeros
+Model fingerprint: 0xa60d53c3
+Model has 37 quadratic objective terms
+Variable types: 0 continuous, 10 integer (10 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [4e+00, 6e+00]
+  QObjective range [2e+00, 1e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective -0.0000000
+Presolve time: 0.00s
+Presolved: 37 rows, 47 columns, 111 nonzeros
+Variable types: 0 continuous, 47 integer (47 binary)
+
+Root relaxation: objective -2.900000e+01, 8 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   29.00000    0   10   -0.00000   29.00000      -     -    0s
+H    0     0                      12.0100000   29.00000   141%     -    0s
+H    0     0                      14.0000000   29.00000   107%     -    0s
+     0     0   15.00000    0   12   14.00000   15.00000  7.14%     -    0s
+
+Cutting planes:
+  Gomory: 2
+  MIR: 7
+  Zero half: 17
+  RLT: 7
+  BQP: 2
+
+Explored 1 nodes (40 simplex iterations) in 0.01 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 3: 14 12.01 -0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.400000000000e+01, best bound 1.400000000000e+01, gap 0.0000%
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           5
+Number of edges:              8
+Number of partitions:         3
+
+Density (%):                  80
+Name of instance:             seed1
+Is planar:                    True
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       CR-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+==================================================
+
+
+Gurobi 9.1.1 (linux64) logging started Wed Nov  3 23:13:54 2021
+
+Changed value of parameter LogFile to results/max3cut_numv5/max3cut_numv5_seed1_CR-QUBO.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 0 rows, 10 columns and 0 nonzeros
+Model fingerprint: 0xb6512585
+Model has 37 quadratic objective terms
+Variable types: 0 continuous, 10 integer (10 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [4e+00, 5e+00]
+  QObjective range [2e+00, 1e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective -0.0000000
+Presolve time: 0.00s
+Presolved: 37 rows, 47 columns, 111 nonzeros
+Variable types: 0 continuous, 47 integer (47 binary)
+
+Root relaxation: objective -2.700000e+01, 10 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   27.00000    0   10   -0.00000   27.00000      -     -    0s
+H    0     0                      12.0000000   27.00000   125%     -    0s
+H    0     0                      13.0000000   19.00000  46.2%     -    0s
+     0     0   14.00000    0   12   13.00000   14.00000  7.69%     -    0s
+
+Cutting planes:
+  MIR: 16
+  Zero half: 14
+  RLT: 6
+  BQP: 2
+
+Explored 1 nodes (40 simplex iterations) in 0.01 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 3: 13 12 -0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.300000000000e+01, best bound 1.300000000000e+01, gap 0.0000%
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           5
+Number of edges:              8
+Number of partitions:         3
+
+Density (%):                  80
+Name of instance:             seed1
+Is planar:                    True
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       CR-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+==================================================
+
+
+Gurobi 9.1.1 (linux64) logging started Wed Nov  3 23:14:19 2021
+
+Changed value of parameter LogFile to results/max3cut_numv5/max3cut_numv5_seed1_CR-QUBO.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 0 rows, 10 columns and 0 nonzeros
+Model fingerprint: 0x9c135c59
+Model has 33 quadratic objective terms
+Variable types: 0 continuous, 10 integer (10 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [4e+00, 5e+00]
+  QObjective range [2e+00, 1e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective -0.0000000
+Presolve time: 0.00s
+Presolved: 33 rows, 43 columns, 99 nonzeros
+Variable types: 0 continuous, 43 integer (43 binary)
+
+Root relaxation: objective -2.500000e+01, 9 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   25.00000    0   10   -0.00000   25.00000      -     -    0s
+H    0     0                      12.0000000   25.00000   108%     -    0s
+H    0     0                      12.0100000   25.00000   108%     -    0s
+     0     0   12.01000    0   12   12.01000   12.01000  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 1
+  MIR: 9
+  Zero half: 11
+  RLT: 3
+
+Explored 1 nodes (33 simplex iterations) in 0.01 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 3: 12.01 12 -0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.201000000000e+01, best bound 1.201000000000e+01, gap 0.0000%
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           5
+Number of edges:              8
+Number of partitions:         3
+
+Density (%):                  80
+Name of instance:             seed1
+Is planar:                    True
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       CR-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+==================================================
+
+
+Gurobi 9.1.1 (linux64) logging started Wed Nov  3 23:22:07 2021
+
+Changed value of parameter LogFile to results/max3cut_numv5/max3cut_numv5_seed1_CR-QUBO.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 0 rows, 10 columns and 0 nonzeros
+Model fingerprint: 0xca784ead
+Model has 33 quadratic objective terms
+Variable types: 0 continuous, 10 integer (10 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [2e+00, 2e+00]
+  QObjective range [2e+00, 8e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective -0.0000000
+Presolve time: 0.00s
+Presolved: 33 rows, 43 columns, 99 nonzeros
+Variable types: 0 continuous, 43 integer (43 binary)
+
+Root relaxation: objective -1.300000e+01, 9 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   13.00000    0   10   -0.00000   13.00000      -     -    0s
+H    0     0                       6.0000000   13.00000   117%     -    0s
+H    0     0                       6.0100000   13.00000   116%     -    0s
+     0     0    6.01000    0   11    6.01000    6.01000  0.00%     -    0s
+
+Cutting planes:
+  MIR: 5
+  Zero half: 11
+  RLT: 4
+
+Explored 1 nodes (36 simplex iterations) in 0.01 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 3: 6.01 6 -0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.010000000000e+00, best bound 6.010000000000e+00, gap 0.0000%
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           5
+Number of edges:              8
+Number of partitions:         3
+
+Density (%):                  80
+Name of instance:             seed1
+Is planar:                    True
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       CR-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+==================================================
+
+
+Gurobi 9.1.1 (linux64) logging started Wed Nov  3 23:44:24 2021
+
+Changed value of parameter LogFile to results/max3cut_numv5/max3cut_numv5_seed1_CR-QUBO.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 0 rows, 10 columns and 0 nonzeros
+Model fingerprint: 0x4f853af7
+Model has 33 quadratic objective terms
+Variable types: 0 continuous, 10 integer (10 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [2e+00, 2e+00]
+  QObjective range [2e+00, 8e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective -0.0000000
+Presolve time: 0.00s
+Presolved: 33 rows, 43 columns, 99 nonzeros
+Variable types: 0 continuous, 43 integer (43 binary)
+
+Root relaxation: objective -1.300000e+01, 7 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   13.00000    0   10   -0.00000   13.00000      -     -    0s
+H    0     0                       6.0100000   13.00000   116%     -    0s
+     0     0    6.01000    0   10    6.01000    6.01000  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 1
+  MIR: 5
+  Zero half: 12
+  RLT: 4
+
+Explored 1 nodes (26 simplex iterations) in 0.01 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 2: 6.01 -0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.010000000000e+00, best bound 6.010000000000e+00, gap 0.0000%

@@ -1,0 +1,184 @@
+
+Gurobi 9.1.1 (linux64) logging started Mon Oct 11 22:50:42 2021
+
+Changed value of parameter LogFile to results/max2cut_numv324/max2cut_numv324_Korean_weighted_A-MILO_log.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 2419 rows, 792 columns and 6779 nonzeros
+Model fingerprint: 0xdad7b011
+Variable types: 0 continuous, 792 integer (792 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 9e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 6e+00]
+Found heuristic solution: objective 1747.0000000
+Presolve removed 1171 rows and 266 columns
+Presolve time: 0.01s
+Presolved: 1248 rows, 526 columns, 3744 nonzeros
+Crushed 39 out of 197 user cuts to presolved model
+Found heuristic solution: objective 1889.0000000
+Variable types: 0 continuous, 526 integer (526 binary)
+
+Root relaxation: objective 4.339500e+03, 240 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 4339.50000    0  214 1889.00000 4339.50000   130%     -    0s
+H    0     0                    2783.0000000 4339.50000  55.9%     -    0s
+H    0     0                    2971.0000000 4339.50000  46.1%     -    0s
+H    0     0                    2998.0000000 4339.50000  44.7%     -    0s
+H    0     0                    3007.0000000 4339.50000  44.3%     -    0s
+H    0     0                    3066.0000000 4339.50000  41.5%     -    0s
+H    0     0                    3331.0000000 4311.00000  29.4%     -    0s
+H    0     0                    3335.0000000 4311.00000  29.3%     -    0s
+H    0     0                    3358.0000000 4311.00000  28.4%     -    0s
+H    0     0                    3427.0000000 4311.00000  25.8%     -    0s
+H    0     0                    3435.0000000 4311.00000  25.5%     -    0s
+     0     0 3654.10000    0  278 3435.00000 3654.10000  6.38%     -    0s
+H    0     0                    3509.0000000 3654.10000  4.14%     -    0s
+     0     0 3648.63333    0  272 3509.00000 3648.63333  3.98%     -    0s
+H    0     0                    3522.0000000 3648.63333  3.60%     -    0s
+H    0     0                    3578.0000000 3648.63333  1.97%     -    0s
+     0     0 3597.00000    0  230 3578.00000 3597.00000  0.53%     -    0s
+     0     0 3596.50000    0  220 3578.00000 3596.50000  0.52%     -    0s
+     0     0 3596.50000    0  206 3578.00000 3596.50000  0.52%     -    0s
+H    0     0                    3583.0000000 3596.50000  0.38%     -    0s
+H    0     0                    3585.0000000 3596.50000  0.32%     -    0s
+*    0     0               0    3596.0000000 3596.00000  0.00%     -    0s
+
+Cutting planes:
+  User: 33
+  Gomory: 3
+  MIR: 1
+  Zero half: 4
+  RLT: 6
+
+Explored 1 nodes (1275 simplex iterations) in 0.16 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 10: 3596 3585 3583 ... 3335
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 3.596000000000e+03, best bound 3.596000000000e+03, gap 0.0000%
+
+Gurobi 9.1.1 (linux64) logging started Mon Oct 11 22:50:42 2021
+
+Changed value of parameter LogFile to results/max2cut_numv324/max2cut_numv324_Korean_weighted_A-MILO_log.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 41 rows, 14 columns and 122 nonzeros
+Model fingerprint: 0x1806d803
+Variable types: 0 continuous, 14 integer (14 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [8e+00, 1e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 4e+00]
+Found heuristic solution: objective 26.0000000
+Presolve removed 29 rows and 8 columns
+Presolve time: 0.00s
+Presolved: 12 rows, 6 columns, 36 nonzeros
+Crushed 1 out of 1 user cuts to presolved model
+Variable types: 0 continuous, 6 integer (6 binary)
+
+Root relaxation: objective 4.550000e+01, 1 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   45.50000    0    3   26.00000   45.50000  75.0%     -    0s
+H    0     0                      43.0000000   45.50000  5.81%     -    0s
+     0     0   45.50000    0    3   43.00000   45.50000  5.81%     -    0s
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 2: 43 26 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 4.300000000000e+01, best bound 4.300000000000e+01, gap 0.0000%
+
+Gurobi 9.1.1 (linux64) logging started Mon Oct 11 22:50:42 2021
+
+Changed value of parameter LogFile to results/max2cut_numv324/max2cut_numv324_Korean_weighted_A-MILO_log.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 41 rows, 14 columns and 122 nonzeros
+Model fingerprint: 0x25c76c45
+Variable types: 0 continuous, 14 integer (14 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+01, 3e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 4e+00]
+Found heuristic solution: objective 44.0000000
+Presolve removed 29 rows and 8 columns
+Presolve time: 0.00s
+Presolved: 12 rows, 6 columns, 36 nonzeros
+Crushed 1 out of 1 user cuts to presolved model
+Variable types: 0 continuous, 6 integer (6 binary)
+
+Root relaxation: objective 9.250000e+01, 1 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   92.50000    0    3   44.00000   92.50000   110%     -    0s
+H    0     0                      84.0000000   92.50000  10.1%     -    0s
+
+Cutting planes:
+  Clique: 1
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 2: 84 44 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 8.400000000000e+01, best bound 8.400000000000e+01, gap 0.0000%
+
+Gurobi 9.1.1 (linux64) logging started Mon Oct 11 22:50:42 2021
+
+Changed value of parameter LogFile to results/max2cut_numv324/max2cut_numv324_Korean_weighted_A-MILO_log.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 41 rows, 14 columns and 122 nonzeros
+Model fingerprint: 0x4ed83364
+Variable types: 0 continuous, 14 integer (14 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [5e+00, 1e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 4e+00]
+Found heuristic solution: objective 21.0000000
+Presolve removed 29 rows and 8 columns
+Presolve time: 0.00s
+Presolved: 12 rows, 6 columns, 36 nonzeros
+Crushed 1 out of 1 user cuts to presolved model
+Variable types: 0 continuous, 6 integer (6 binary)
+
+Root relaxation: objective 3.300000e+01, 1 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   33.00000    0    3   21.00000   33.00000  57.1%     -    0s
+H    0     0                      30.0000000   33.00000  10.0%     -    0s
+H    0     0                      31.0000000   33.00000  6.45%     -    0s
+
+Cutting planes:
+  Clique: 1
+
+Explored 1 nodes (1 simplex iterations) in 0.00 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 3: 31 30 21 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 3.100000000000e+01, best bound 3.100000000000e+01, gap 0.0000%

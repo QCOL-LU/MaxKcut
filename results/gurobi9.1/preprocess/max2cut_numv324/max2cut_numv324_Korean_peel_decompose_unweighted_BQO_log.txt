@@ -1,0 +1,186 @@
+
+Gurobi 9.1.1 (linux64) logging started Sat Oct  9 23:42:18 2021
+
+Changed value of parameter LogFile to results/max2cut_numv324/max2cut_numv324_Korean_peel_decompose_unweighted_BQO_log.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 255 rows, 510 columns and 510 nonzeros
+Model fingerprint: 0x0486eff8
+Model has 1230 quadratic objective terms
+Variable types: 0 continuous, 510 integer (510 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e-16, 5e+00]
+  QObjective range [5e-02, 1e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective 0.0000000
+Presolve removed 255 rows and 256 columns
+Presolve time: 0.00s
+Presolved: 359 rows, 613 columns, 1077 nonzeros
+Found heuristic solution: objective 2.0000000
+Variable types: 0 continuous, 613 integer (613 binary)
+Found heuristic solution: objective 243.0000000
+Presolved: 302 rows, 405 columns, 810 nonzeros
+
+
+Root relaxation: objective -3.575000e+02, 166 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  357.50000    0  199  243.00000  357.50000  47.1%     -    0s
+H    0     0                     279.0000000  357.50000  28.1%     -    0s
+H    0     0                     280.0000000  351.50000  25.5%     -    0s
+H    0     0                     296.0000000  351.00000  18.6%     -    0s
+     0     0  303.33333    0  147  296.00000  303.33333  2.48%     -    0s
+H    0     0                     301.0000000  303.33333  0.78%     -    0s
+     0     0  301.00000    0  102  301.00000  301.00000  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 13
+  MIR: 55
+  Zero half: 40
+  RLT: 6
+  BQP: 2
+
+Explored 1 nodes (539 simplex iterations) in 0.26 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 8: 301 296 280 ... 1.7053e-13
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 3.010000000000e+02, best bound 3.010000000000e+02, gap 0.0000%
+
+Gurobi 9.1.1 (linux64) logging started Sat Oct  9 23:42:18 2021
+
+Changed value of parameter LogFile to results/max2cut_numv324/max2cut_numv324_Korean_peel_decompose_unweighted_BQO_log.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 4 rows, 8 columns and 8 nonzeros
+Model fingerprint: 0x12451d8e
+Model has 20 quadratic objective terms
+Variable types: 0 continuous, 8 integer (8 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 3e+00]
+  QObjective range [2e+00, 6e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 4 rows and 5 columns
+Presolve time: 0.00s
+Presolved: 3 rows, 6 columns, 9 nonzeros
+Variable types: 0 continuous, 6 integer (6 binary)
+Found heuristic solution: objective 4.0000000
+Presolve removed 3 rows and 6 columns
+Presolve: All rows and columns removed
+
+Root relaxation: cutoff, 0 iterations, 0.00 seconds
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 1: 4 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 4.000000000000e+00, best bound 4.000000000000e+00, gap 0.0000%
+
+Gurobi 9.1.1 (linux64) logging started Sat Oct  9 23:42:18 2021
+
+Changed value of parameter LogFile to results/max2cut_numv324/max2cut_numv324_Korean_peel_decompose_unweighted_BQO_log.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 3 rows, 6 columns and 6 nonzeros
+Model fingerprint: 0xaca49a07
+Model has 12 quadratic objective terms
+Variable types: 0 continuous, 6 integer (6 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 2e+00]
+  QObjective range [2e+00, 4e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3 rows and 6 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds
+Thread count was 1 (of 40 available processors)
+
+Solution count 1: 2 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 2.000000000000e+00, best bound 2.000000000000e+00, gap 0.0000%
+
+Gurobi 9.1.1 (linux64) logging started Sat Oct  9 23:42:18 2021
+
+Changed value of parameter LogFile to results/max2cut_numv324/max2cut_numv324_Korean_peel_decompose_unweighted_BQO_log.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 4 rows, 8 columns and 8 nonzeros
+Model fingerprint: 0x4891daf7
+Model has 20 quadratic objective terms
+Variable types: 0 continuous, 8 integer (8 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 3e+00]
+  QObjective range [2e+00, 6e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 4 rows and 5 columns
+Presolve time: 0.00s
+Presolved: 3 rows, 6 columns, 9 nonzeros
+Variable types: 0 continuous, 6 integer (6 binary)
+Found heuristic solution: objective 4.0000000
+Presolve removed 1 rows and 4 columns
+Presolved: 2 rows, 2 columns, 4 nonzeros
+
+
+Root relaxation: cutoff, 0 iterations, 0.00 seconds
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 1: 4 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 4.000000000000e+00, best bound 4.000000000000e+00, gap 0.0000%
+
+Gurobi 9.1.1 (linux64) logging started Sat Oct  9 23:42:18 2021
+
+Changed value of parameter LogFile to results/max2cut_numv324/max2cut_numv324_Korean_peel_decompose_unweighted_BQO_log.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 4 rows, 8 columns and 8 nonzeros
+Model fingerprint: 0x3006a096
+Model has 20 quadratic objective terms
+Variable types: 0 continuous, 8 integer (8 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 3e+00]
+  QObjective range [2e+00, 6e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 4 rows and 5 columns
+Presolve time: 0.00s
+Presolved: 3 rows, 6 columns, 9 nonzeros
+Variable types: 0 continuous, 6 integer (6 binary)
+Found heuristic solution: objective 4.0000000
+Presolve removed 1 rows and 4 columns
+Presolved: 2 rows, 2 columns, 4 nonzeros
+
+
+Root relaxation: cutoff, 0 iterations, 0.00 seconds
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 1: 4 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 4.000000000000e+00, best bound 4.000000000000e+00, gap 0.0000%

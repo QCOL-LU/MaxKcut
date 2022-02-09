@@ -1,0 +1,45 @@
+
+Gurobi 9.5.0 (linux64) logging started Sun Jan 16 18:01:10 2022
+
+Set parameter LogFile to value "../results/max4cut_numv8/max4cut_numv8_seed1_rand_p0.8_neg0.0_BQO_log.txt"
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 8 rows, 32 columns and 32 nonzeros
+Model fingerprint: 0x31887986
+Model has 92 quadratic objective terms
+Variable types: 0 continuous, 32 integer (32 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [0e+00, 0e+00]
+  QObjective range [2e+00, 2e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 1 rows and 4 columns
+Presolve time: 0.00s
+Presolved: 75 rows, 96 columns, 232 nonzeros
+Variable types: 0 continuous, 96 integer (96 binary)
+
+Root relaxation: objective -2.300000e+01, 15 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   23.00000    0    8   -0.00000   23.00000      -     -    0s
+H    0     0                      21.0000000   23.00000  9.52%     -    0s
+H    0     0                      22.0000000   23.00000  4.55%     -    0s
+     0     0   23.00000    0   10   22.00000   23.00000  4.55%     -    0s
+     0     0 infeasible    0        22.00000   22.00000  0.00%     -    0s
+     0     0 infeasible    0        22.00000   22.00000  0.00%     -    0s
+
+Cutting planes:
+  Zero half: 1
+  BQP: 2
+
+Explored 1 nodes (59 simplex iterations) in 0.01 seconds (0.00 work units)
+Thread count was 10 (of 40 available processors)
+
+Solution count 3: 22 21 -0 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 2.200000000000e+01, best bound 2.200000000000e+01, gap 0.0000%

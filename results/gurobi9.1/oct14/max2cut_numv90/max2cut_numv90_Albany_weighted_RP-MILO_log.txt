@@ -1,0 +1,39 @@
+
+Gurobi 9.1.1 (linux64) logging started Mon Oct 11 20:48:26 2021
+
+Changed value of parameter LogFile to results/max2cut_numv90/max2cut_numv90_Albany_weighted_RP-MILO_log.txt
+   Prev:   Default: 
+Changed value of parameter LazyConstraints to 1
+   Prev: 0  Min: 0  Max: 1  Default: 0
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 5352 rows, 659 columns and 15808 nonzeros
+Model fingerprint: 0xc062421f
+Variable types: 0 continuous, 659 integer (659 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [3e+00, 2e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Found heuristic solution: objective 3400.0000000
+Presolve removed 2480 rows and 0 columns
+Presolve time: 0.01s
+Presolved: 2872 rows, 659 columns, 8616 nonzeros
+Crushed 8 out of 132 user cuts to presolved model
+Variable types: 0 continuous, 659 integer (659 binary)
+
+Root relaxation: objective 5.197000e+03, 568 iterations, 0.02 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    5197.0000000 5197.00000  0.00%     -    0s
+
+Explored 0 nodes (568 simplex iterations) in 0.04 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 3: 5197 3400 -0 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 5.197000000000e+03, best bound 5.197000000000e+03, gap 0.0000%

@@ -1,0 +1,49 @@
+
+Gurobi 9.1.1 (linux64) logging started Fri Oct 22 01:12:03 2021
+
+Changed value of parameter LogFile to results/max2cut_numv169/max2cut_numv169_spinglass2pm_1313_A-MILO_log.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 2535 rows, 676 columns and 6760 nonzeros
+Model fingerprint: 0x2daa945f
+Variable types: 0 continuous, 676 integer (676 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+00]
+Found heuristic solution: objective -2.0000000
+Presolve removed 1199 rows and 174 columns
+Presolve time: 0.01s
+Presolved: 1336 rows, 502 columns, 4008 nonzeros
+Crushed 0 out of 338 user cuts to presolved model
+Variable types: 0 continuous, 502 integer (502 binary)
+
+Root relaxation: objective 1.670000e+02, 177 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  167.00000    0  168   -2.00000  167.00000  8450%     -    0s
+H    0     0                      48.0000000  167.00000   248%     -    0s
+H    0     0                      84.0000000  167.00000  98.8%     -    0s
+H    0     0                      92.0000000  167.00000  81.5%     -    0s
+H    0     0                      96.0000000  167.00000  74.0%     -    0s
+H    0     0                     112.0000000  160.00000  42.9%     -    0s
+     0     0  115.66667    0  237  112.00000  115.66667  3.27%     -    0s
+H    0     0                     114.0000000  115.66667  1.46%     -    0s
+     0     0     cutoff    0       114.00000  114.00000  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 3
+  MIR: 2
+  Zero half: 19
+
+Explored 1 nodes (973 simplex iterations) in 0.18 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 7: 114 112 96 ... -2
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 1.140000000000e+02, best bound 1.140000000000e+02, gap 0.0000%

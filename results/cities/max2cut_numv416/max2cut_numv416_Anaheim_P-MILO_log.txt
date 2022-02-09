@@ -1,0 +1,76 @@
+
+Gurobi 9.5.0 (linux64) logging started Wed Nov 24 21:14:08 2021
+
+Set parameter LogFile to value "results/max2cut_numv416/max2cut_numv416_Anaheim_P-MILO_log.txt"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 24715248 rows, 67528 columns and 74145744 nonzeros
+Model fingerprint: 0x635139ae
+Variable types: 0 continuous, 67528 integer (67528 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [3e+02, 2e+04]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 0 rows and 0 columns (presolve time = 5s) ...
+Presolve removed 0 rows and 0 columns (presolve time = 11s) ...
+Presolve removed 0 rows and 0 columns (presolve time = 20s) ...
+Presolve removed 0 rows and 0 columns (presolve time = 27s) ...
+Presolve removed 0 rows and 0 columns (presolve time = 30s) ...
+Presolve removed 0 rows and 0 columns (presolve time = 35s) ...
+Presolve removed 0 rows and 0 columns (presolve time = 40s) ...
+Presolve removed 0 rows and 0 columns (presolve time = 45s) ...
+Presolve removed 0 rows and 0 columns (presolve time = 50s) ...
+Presolve removed 0 rows and 0 columns (presolve time = 61s) ...
+Presolve removed 0 rows and 0 columns (presolve time = 65s) ...
+Presolve removed 0 rows and 0 columns (presolve time = 70s) ...
+Presolve removed 0 rows and 0 columns (presolve time = 75s) ...
+Presolve removed 0 rows and 0 columns (presolve time = 80s) ...
+Presolve removed 0 rows and 0 columns (presolve time = 90s) ...
+Presolve removed 0 rows and 0 columns (presolve time = 95s) ...
+Presolve removed 0 rows and 0 columns (presolve time = 106s) ...
+Presolve time: 106.49s
+Presolved: 24715248 rows, 67528 columns, 74145744 nonzeros
+Variable types: 0 continuous, 67528 integer (67528 binary)
+
+Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+
+Barrier performed 0 iterations in 301.28 seconds (196.71 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+Concurrent spin time: 86.29s (can be avoided by choosing Method=3)
+
+Solved with dual simplex
+
+Root relaxation: objective 1.522289e+06, 0 iterations, 159.36 seconds (28.64 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 1521299.00    0  713   -0.00000 1521299.00      -     -  902s
+     0     0 1521299.00    0  713   -0.00000 1521299.00      -     -  937s
+     0     0          -    0        -0.00000 1521299.00      -     - 3600s
+
+Cutting planes:
+  Gomory: 11
+  MIR: 98
+  Zero half: 212
+  RLT: 501
+  BQP: 2877
+  Lazy constraints: 396
+
+Explored 1 nodes (29474 simplex iterations) in 3600.83 seconds (8912.56 work units)
+Thread count was 10 (of 40 available processors)
+
+Solution count 1: -0 
+
+Time limit reached
+Best objective -0.000000000000e+00, best bound 1.521299000000e+06, gap -
+
+User-callback calls 35648, time in user-callback 0.63 sec

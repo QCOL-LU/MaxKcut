@@ -1,0 +1,51 @@
+
+Gurobi 9.5.0 (linux64) logging started Fri Nov 26 08:10:42 2021
+
+Set parameter LogFile to value "results/max4cut_numv144/max4cut_numv144_spinglass2pm_1212_RP-MILO_log.txt"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 47853 rows, 3064 columns and 143559 nonzeros
+Model fingerprint: 0xdedad044
+Variable types: 0 continuous, 3064 integer (3064 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 25128 rows and 0 columns
+Presolve time: 0.15s
+Presolved: 22725 rows, 3064 columns, 68175 nonzeros
+Variable types: 0 continuous, 3064 integer (3064 binary)
+
+Root relaxation: objective 1.200000e+02, 256 iterations, 0.04 seconds (0.03 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  120.00000    0  408   -0.00000  120.00000      -     -    0s
+     0     0  120.00000    0  405   -0.00000  120.00000      -     -    2s
+     0     0  120.00000    0   84   -0.00000  120.00000      -     -    8s
+     0     0  120.00000    0  255   -0.00000  120.00000      -     -   11s
+H    0     0                     119.0000000  120.00000  0.84%     -   11s
+     0     0  120.00000    0   81  119.00000  120.00000  0.84%     -   11s
+*    0     0               0     120.0000000  120.00000  0.00%     -   11s
+
+Cutting planes:
+  Lift-and-project: 1
+  MIR: 48
+  Zero half: 18
+  RLT: 65
+  BQP: 113
+  Lazy constraints: 630
+
+Explored 1 nodes (29470 simplex iterations) in 11.84 seconds (28.34 work units)
+Thread count was 10 (of 40 available processors)
+
+Solution count 3: 120 119 -0 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 1.200000000000e+02, best bound 1.200000000000e+02, gap 0.0000%
+
+User-callback calls 860, time in user-callback 0.13 sec

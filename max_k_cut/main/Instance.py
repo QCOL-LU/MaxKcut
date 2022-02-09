@@ -121,8 +121,8 @@ class Instance(Parameters):
 		self.directory 			= self.name + "_numv" + str(self.num_vertices) 
 		self.name 				= self.directory + "_" + str(self.name_specifier)
 
-		self.figure_path 		= "figures/" + self.directory 
-		self.result_path 		= "results/" + self.directory
+		self.figure_path 		= "../figures/" + self.directory 
+		self.result_path 		= "../results/" + self.directory
 
 		self.filename 			= self.result_path + "/"+ self.name +"_" + self.Params.Method + ".txt"
 
@@ -173,7 +173,7 @@ class Instance(Parameters):
 	from quantum_methods._max_k_cut_qaoa import solve_max_k_cut_qaoa
 	from quantum_methods._max_k_cut_qaoa_circuits import qaoa_expected_value
 
-	from quantum_methods._max_k_cut_qaoa_dependencies import cal_obj_from_sol, convert_string_sol_to_sorted_sol, make_sol_feasible
+	from quantum_methods._max_k_cut_qaoa_dependencies import cal_obj_from_sol, convert_string_sol_to_sorted_sol, make_sol_feasible, cal_avg_best_sol, cal_avg_best_sol_feasible, gate_i_zz, gate_i_z_1, gate_i_z_2
 
 	#------------------------------------------------------------------------------------------------
 	# Plot methods
@@ -206,8 +206,10 @@ class Instance(Parameters):
 		is_peeling_allowed 				= self.Params.Peel and (True if self.parent == None else (not self.parent.applied_operation == "peel")) and (self.num_vertices > 0)
 		is_decompose_allowed  			= self.Params.Decompose and (True if self.parent == None else (not self.parent.applied_operation == "decompose")) and (self.num_vertices > 0)
 		is_folding_allowed  			= self.Params.Fold and (True if self.parent == None else (not self.parent.applied_operation == "fold")) and (self.num_vertices > 0)
-		
+
 		is_graph_simplified 			= False 
+
+		
 
 		
 
@@ -237,8 +239,6 @@ class Instance(Parameters):
 			if is_graph_simplified == True:
 				self.create_tree_node()
 
-
-
 				for (ind, component) in enumerate(self.ordered_components):
 
 					fixed_vertex		= self.fixed_vertices[ind]
@@ -266,6 +266,7 @@ class Instance(Parameters):
 													indentifier=self.num_traversed_graphs + 1)
 				self.create_tree_node()
 				new_instance.solve()
+
 
 
 		#--------------------------------------------------------------------------------------------

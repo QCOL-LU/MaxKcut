@@ -1,0 +1,159 @@
+
+Gurobi 9.1.1 (linux64) logging started Thu Oct 14 21:51:38 2021
+
+Changed value of parameter LogFile to results/max2cut_numv324/max2cut_numv324_Korean_weighted_RP-MILO_log.txt
+   Prev:   Default: 
+Changed value of parameter LazyConstraints to 1
+   Prev: 0  Min: 0  Max: 1  Default: 0
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 4961 rows, 928 columns and 14635 nonzeros
+Model fingerprint: 0x4eba955d
+Variable types: 0 continuous, 928 integer (928 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 9e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 4e+00]
+Found heuristic solution: objective -0.0000000
+Found heuristic solution: objective 2466.0000000
+Presolve removed 1545 rows and 0 columns
+Presolve time: 0.02s
+Presolved: 3416 rows, 928 columns, 10248 nonzeros
+Crushed 40 out of 197 user cuts to presolved model
+Variable types: 0 continuous, 928 integer (928 binary)
+
+Root relaxation: objective 3.598000e+03, 904 iterations, 0.02 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3598.00000    0   30 2466.00000 3598.00000  45.9%     -    0s
+H    0     0                    3595.0000000 3598.00000  0.08%     -    0s
+*    0     0               0    3596.0000000 3596.00000  0.00%     -    0s
+
+Cutting planes:
+  Mod-K: 1
+  RLT: 2
+
+Explored 1 nodes (1008 simplex iterations) in 0.07 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 4: 3596 3595 2466 -0 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 3.596000000000e+03, best bound 3.596000000000e+03, gap 0.0000%
+
+Gurobi 9.1.1 (linux64) logging started Thu Oct 14 21:51:38 2021
+
+Changed value of parameter LogFile to results/max2cut_numv324/max2cut_numv324_Korean_weighted_RP-MILO_log.txt
+   Prev:   Default: 
+Changed value of parameter LazyConstraints to 1
+   Prev: 0  Min: 0  Max: 1  Default: 0
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 17 rows, 6 columns and 54 nonzeros
+Model fingerprint: 0x3258ef82
+Variable types: 0 continuous, 6 integer (6 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [8e+00, 1e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 1 rows and 0 columns
+Presolve time: 0.00s
+Presolved: 16 rows, 6 columns, 48 nonzeros
+Crushed 1 out of 1 user cuts to presolved model
+Variable types: 0 continuous, 6 integer (6 binary)
+
+Root relaxation: objective 4.300000e+01, 4 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0      43.0000000   43.00000  0.00%     -    0s
+
+Explored 0 nodes (4 simplex iterations) in 0.00 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 2: 43 -0 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 4.300000000000e+01, best bound 4.300000000000e+01, gap 0.0000%
+
+Gurobi 9.1.1 (linux64) logging started Thu Oct 14 21:51:38 2021
+
+Changed value of parameter LogFile to results/max2cut_numv324/max2cut_numv324_Korean_weighted_RP-MILO_log.txt
+   Prev:   Default: 
+Changed value of parameter LazyConstraints to 1
+   Prev: 0  Min: 0  Max: 1  Default: 0
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 17 rows, 6 columns and 54 nonzeros
+Model fingerprint: 0x1424e3ad
+Variable types: 0 continuous, 6 integer (6 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+01, 3e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 1 rows and 0 columns
+Presolve time: 0.00s
+Presolved: 16 rows, 6 columns, 48 nonzeros
+Crushed 1 out of 1 user cuts to presolved model
+Variable types: 0 continuous, 6 integer (6 binary)
+
+Root relaxation: objective 8.400000e+01, 4 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0      84.0000000   84.00000  0.00%     -    0s
+
+Explored 0 nodes (4 simplex iterations) in 0.00 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 2: 84 -0 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 8.400000000000e+01, best bound 8.400000000000e+01, gap 0.0000%
+
+Gurobi 9.1.1 (linux64) logging started Thu Oct 14 21:51:38 2021
+
+Changed value of parameter LogFile to results/max2cut_numv324/max2cut_numv324_Korean_weighted_RP-MILO_log.txt
+   Prev:   Default: 
+Changed value of parameter LazyConstraints to 1
+   Prev: 0  Min: 0  Max: 1  Default: 0
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 17 rows, 6 columns and 54 nonzeros
+Model fingerprint: 0xe63770e9
+Variable types: 0 continuous, 6 integer (6 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [5e+00, 1e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 1 rows and 0 columns
+Presolve time: 0.00s
+Presolved: 16 rows, 6 columns, 48 nonzeros
+Crushed 1 out of 1 user cuts to presolved model
+Variable types: 0 continuous, 6 integer (6 binary)
+
+Root relaxation: objective 3.100000e+01, 4 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0      31.0000000   31.00000  0.00%     -    0s
+
+Explored 0 nodes (4 simplex iterations) in 0.00 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 2: 31 -0 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 3.100000000000e+01, best bound 3.100000000000e+01, gap 0.0000%

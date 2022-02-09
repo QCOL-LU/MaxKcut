@@ -1,0 +1,95 @@
+
+Gurobi 9.5.0 (linux64) logging started Fri Nov 26 05:49:35 2021
+
+Set parameter LogFile to value "results/max4cut_numv250/max4cut_numv250_band250_4_P-MILO_log.txt"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 7719000 rows, 31125 columns and 23157000 nonzeros
+Model fingerprint: 0x2e0eec3a
+Variable types: 0 continuous, 31125 integer (31125 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 0 rows and 0 columns (presolve time = 5s) ...
+Presolve removed 0 rows and 0 columns (presolve time = 10s) ...
+Presolve removed 0 rows and 0 columns (presolve time = 15s) ...
+Presolve removed 0 rows and 0 columns (presolve time = 20s) ...
+Presolve removed 0 rows and 0 columns (presolve time = 25s) ...
+Presolve time: 29.50s
+Presolved: 7719000 rows, 31125 columns, 23157000 nonzeros
+Variable types: 0 continuous, 31125 integer (31125 binary)
+
+Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+
+Barrier performed 0 iterations in 204.81 seconds (72.10 work units)
+Optimization exhausted available memory
+
+Concurrent spin time: 98.20s (can be avoided by choosing Method=3)
+
+Solved with dual simplex
+
+Root relaxation: objective 3.382041e+02, 7566 iterations, 165.39 seconds (90.75 work units)
+Total elapsed time = 219.06s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  338.20408    0 1614   -0.00000  338.20408      -     -  233s
+     0     0  338.20408    0 1614   -0.00000  338.20408      -     -  248s
+     0     0  338.20408    0 1614   -0.00000  338.20408      -     -  251s
+H    0     0                      27.0000000  338.20408  1153%     -  257s
+     0     0  311.22256    0 2622   27.00000  311.22256  1053%     - 1011s
+     0     0  311.22256    0 2517   27.00000  311.22256  1053%     - 1028s
+     0     0  311.22141    0 2511   27.00000  311.22141  1053%     - 1038s
+     0     0  305.47789    0 2185   27.00000  305.47789  1031%     - 1759s
+     0     0  305.47789    0 2106   27.00000  305.47789  1031%     - 1771s
+     0     0  304.74178    0 2179   27.00000  304.74178  1029%     - 1811s
+     0     0  304.60421    0 2100   27.00000  304.60421  1028%     - 1831s
+     0     0  304.58848    0 2114   27.00000  304.58848  1028%     - 1849s
+     0     0  304.58836    0 2137   27.00000  304.58836  1028%     - 1862s
+     0     0  299.73883    0 2209   27.00000  299.73883  1010%     - 2402s
+     0     0  299.73883    0 2122   27.00000  299.73883  1010%     - 2416s
+     0     0  299.73883    0 2122   27.00000  299.73883  1010%     - 2422s
+     0     0  299.08045    0 2348   27.00000  299.08045  1008%     - 2539s
+     0     0  299.04428    0 2271   27.00000  299.04428  1008%     - 2560s
+     0     0  299.03454    0 2265   27.00000  299.03454  1008%     - 2575s
+     0     0  299.03357    0 2317   27.00000  299.03357  1008%     - 2589s
+     0     0  296.30747    0 2256   27.00000  296.30747   997%     - 3336s
+     0     0  296.30747    0 2174   27.00000  296.30747   997%     - 3346s
+     0     0  296.30747    0 2174   27.00000  296.30747   997%     - 3358s
+     0     0  296.30747    0 2174   27.00000  296.30747   997%     - 3362s
+     0     0  296.30747    0 2174   27.00000  296.30747   997%     - 3366s
+     0     0  296.30747    0 2174   27.00000  296.30747   997%     - 3371s
+     0     0  296.30747    0 2174   27.00000  296.30747   997%     - 3375s
+     0     0  295.84053    0 2263   27.00000  295.84053   996%     - 3426s
+     0     0  295.78044    0 2184   27.00000  295.78044   995%     - 3455s
+     0     0  295.76261    0 2276   27.00000  295.76261   995%     - 3485s
+     0     0  295.76009    0 2305   27.00000  295.76009   995%     - 3507s
+     0     0          -    0        27.00000  295.76009   995%     - 3600s
+
+Cutting planes:
+  Gomory: 2
+  Lift-and-project: 1
+  MIR: 1781
+  Zero half: 249
+  RLT: 2069
+  BQP: 2334
+  Lazy constraints: 488
+
+Explored 1 nodes (146896 simplex iterations) in 3600.17 seconds (8669.79 work units)
+Thread count was 10 (of 40 available processors)
+
+Solution count 2: 27 -0 
+
+Time limit reached
+Best objective 2.700000000000e+01, best bound 2.950000000000e+02, gap 992.5926%
+
+User-callback calls 107506, time in user-callback 1.27 sec

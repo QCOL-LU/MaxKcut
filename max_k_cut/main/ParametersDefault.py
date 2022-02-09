@@ -36,13 +36,16 @@ class Parameters():
 
 		self.QAOA_Optimize 					= True
 		self.QAOA_Num_Levels 				= 3
-		self.QAOA_Num_Shots 				= 1000
+		self.QAOA_Num_Shots 				= 10000
 		self.QAOA_Scipy_Optimizer			= "COBYLA"
 		self.QAOA_Opt_Print_Time			= 1
 		self.QAOA_Opt_Tol 					= 1e-3
 		self.QAOA_Verbosity 				= 1
 		self.QAOA_Angles					= []
+		self.QAOA_Brute_Num_Samples 		= 50
+		self.QAOA_Gates_Noise 				= 0.0 	# Error probabilities; 0.01 means that the error is 1%
 		self.Penalty_Increase 				= 1
+		self.Naive 							= False
 
 
 		self.Gurobi_TimeLimit 				= 3600

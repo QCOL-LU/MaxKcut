@@ -1,0 +1,75 @@
+
+Gurobi 9.1.1 (linux64) logging started Thu Oct 21 10:39:13 2021
+
+Changed value of parameter LogFile to results/max4cut_numv196/max4cut_numv196_spinglass2g_1414_ind_BQO_log.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 196 rows, 784 columns and 784 nonzeros
+Model fingerprint: 0xefdddc7d
+Model has 1568 quadratic objective terms
+Variable types: 0 continuous, 784 integer (784 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [0e+00, 0e+00]
+  QObjective range [8e+02, 6e+05]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 1 rows and 4 columns
+Presolve time: 0.00s
+Presolved: 1747 rows, 2332 columns, 5436 nonzeros
+Variable types: 0 continuous, 2332 integer (2332 binary)
+
+Root relaxation: objective -1.663734e+07, 1097 iterations, 0.03 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 1.6637e+07    0  338   -0.00000 1.6637e+07      -     -    0s
+H    0     0                    1.033792e+07 1.6637e+07  60.9%     -    0s
+H    0     0                    1.420856e+07 1.6637e+07  17.1%     -    0s
+     0     0 1.6615e+07    0  370 1.4209e+07 1.6615e+07  16.9%     -    0s
+H    0     0                    1.421582e+07 1.6615e+07  16.9%     -    0s
+H    0     0                    1.423693e+07 1.6615e+07  16.7%     -    0s
+H    0     0                    1.431599e+07 1.6615e+07  16.1%     -    0s
+     0     0 1.6403e+07    0  396 1.4316e+07 1.6403e+07  14.6%     -    0s
+H    0     0                    1.433914e+07 1.6403e+07  14.4%     -    0s
+     0     0 1.6403e+07    0  396 1.4339e+07 1.6403e+07  14.4%     -    0s
+     0     0 1.6055e+07    0  433 1.4339e+07 1.6055e+07  12.0%     -    0s
+H    0     0                    1.434996e+07 1.6055e+07  11.9%     -    0s
+     0     0 1.6051e+07    0  424 1.4350e+07 1.6051e+07  11.9%     -    0s
+H    0     0                    1.451349e+07 1.6051e+07  10.6%     -    0s
+H    0     0                    1.488199e+07 1.6051e+07  7.86%     -    0s
+     0     0 1.5744e+07    0  451 1.4882e+07 1.5744e+07  5.79%     -    0s
+H    0     0                    1.508813e+07 1.5744e+07  4.35%     -    0s
+H    0     0                    1.533178e+07 1.5744e+07  2.69%     -    0s
+H    0     0                    1.533443e+07 1.5744e+07  2.67%     -    0s
+     0     0 1.5743e+07    0  482 1.5334e+07 1.5743e+07  2.66%     -    0s
+     0     0 1.5630e+07    0  411 1.5334e+07 1.5630e+07  1.93%     -    0s
+H    0     0                    1.536542e+07 1.5630e+07  1.72%     -    0s
+H    0     0                    1.539022e+07 1.5630e+07  1.56%     -    0s
+     0     0 1.5628e+07    0  481 1.5390e+07 1.5628e+07  1.55%     -    0s
+     0     0 1.5585e+07    0  517 1.5390e+07 1.5585e+07  1.27%     -    0s
+     0     0 1.5585e+07    0  513 1.5390e+07 1.5585e+07  1.27%     -    0s
+H    0     0                    1.539381e+07 1.5585e+07  1.24%     -    0s
+     0     2 1.5563e+07    0  475 1.5394e+07 1.5563e+07  1.10%     -    0s
+*   34    34               5    1.548908e+07 1.5536e+07  0.30%   117    0s
+H   37    38                    1.549200e+07 1.5536e+07  0.28%   107    0s
+H   41    38                    1.549606e+07 1.5536e+07  0.26%   105    0s
+*   44    38               5    1.551158e+07 1.5536e+07  0.16%   108    0s
+*   53    39               7    1.551449e+07 1.5535e+07  0.13%  95.9    0s
+
+Cutting planes:
+  Gomory: 36
+  MIR: 2
+  Inf proof: 1
+  Zero half: 144
+
+Explored 220 nodes (18637 simplex iterations) in 0.90 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 10: 1.55145e+07 1.55116e+07 1.54961e+07 ... 1.53318e+07
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 1.551448900000e+07, best bound 1.551448900000e+07, gap 0.0000%

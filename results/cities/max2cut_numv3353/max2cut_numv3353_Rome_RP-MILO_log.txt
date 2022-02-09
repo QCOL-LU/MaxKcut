@@ -1,0 +1,59 @@
+
+Gurobi 9.5.0 (linux64) logging started Thu Nov 25 15:36:30 2021
+
+Set parameter LogFile to value "results/max2cut_numv3353/max2cut_numv3353_Rome_RP-MILO_log.txt"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 489345 rows, 34105 columns and 1468035 nonzeros
+Model fingerprint: 0x7e67a817
+Variable types: 0 continuous, 34105 integer (34105 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 3e+04]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 238182 rows and 0 columns
+Presolve time: 1.74s
+Presolved: 251163 rows, 34105 columns, 753489 nonzeros
+Variable types: 0 continuous, 34105 integer (34105 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex (primal and dual model)
+Showing first log only...
+
+Root relaxation presolve removed 102 rows and 0 columns
+Root relaxation presolved: 251215 rows, 34105 columns, 753645 nonzeros
+
+Concurrent spin time: 0.13s
+
+Solved with dual simplex (primal model)
+
+Root relaxation: objective 2.263806e+06, 45 iterations, 1.00 seconds (0.35 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 2172737.61    0 6034   -0.00000 2172737.61      -     -  193s
+     0     0 2167810.33    0 7322   -0.00000 2167810.33      -     -  854s
+H    0     0                    1451919.0000 2167810.33  49.3%     -  854s
+     0     0 2167288.59    0 7283 1451919.00 2167288.59  49.3%     - 1413s
+     0     0          -    0      1451919.00 2167288.59  49.3%     - 3600s
+
+Cutting planes:
+  Gomory: 14
+  MIR: 79
+  Zero half: 44
+  RLT: 213
+  BQP: 537
+  Lazy constraints: 12334
+
+Explored 1 nodes (497585 simplex iterations) in 3600.01 seconds (7603.82 work units)
+Thread count was 10 (of 40 available processors)
+
+Solution count 2: 1.45192e+06 -0 
+
+Time limit reached
+Best objective 1.451919000000e+06, best bound 2.167288591631e+06, gap 49.2706%
+
+User-callback calls 3106, time in user-callback 1.61 sec

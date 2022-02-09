@@ -1,0 +1,72 @@
+
+Gurobi 9.5.0 (linux64) logging started Thu Nov 25 13:25:18 2021
+
+Set parameter LogFile to value "results/max2cut_numv317/max2cut_numv317_DCNYBOS_P-MILO_log.txt"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 11943792 rows, 41616 columns and 35831376 nonzeros
+Model fingerprint: 0xd5086fc9
+Variable types: 0 continuous, 41616 integer (41616 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+02, 1e+04]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 0 rows and 0 columns (presolve time = 5s) ...
+Presolve removed 0 rows and 0 columns (presolve time = 12s) ...
+Presolve removed 0 rows and 0 columns (presolve time = 16s) ...
+Presolve removed 0 rows and 0 columns (presolve time = 20s) ...
+Presolve removed 0 rows and 0 columns (presolve time = 25s) ...
+Presolve removed 0 rows and 0 columns (presolve time = 30s) ...
+Presolve removed 0 rows and 0 columns (presolve time = 35s) ...
+Presolve removed 0 rows and 0 columns (presolve time = 42s) ...
+Presolve removed 0 rows and 0 columns (presolve time = 45s) ...
+Presolve time: 49.49s
+Presolved: 11943792 rows, 41616 columns, 35831376 nonzeros
+Variable types: 0 continuous, 41616 integer (41616 binary)
+
+Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+
+Barrier performed 0 iterations in 119.71 seconds (93.13 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+Concurrent spin time: 28.92s (can be avoided by choosing Method=3)
+
+Solved with dual simplex
+
+Root relaxation: objective 1.088389e+06, 0 iterations, 53.74 seconds (12.97 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 1073672.17    0  205   -0.00000 1073672.17      -     -  132s
+     0     0 1073672.17    0  205   -0.00000 1073672.17      -     -  162s
+     0     0 1072337.00    0 1669   -0.00000 1072337.00      -     -  408s
+     0     0 1072337.00    0 1669   -0.00000 1072337.00      -     -  432s
+     0     0 1071898.15    0 2107   -0.00000 1071898.15      -     - 2381s
+     0     0 1071898.15    0 2105   -0.00000 1071898.15      -     - 2402s
+     0     0          -    0        -0.00000 1071898.15      -     - 3600s
+
+Cutting planes:
+  Gomory: 11
+  MIR: 772
+  Zero half: 54
+  RLT: 1202
+  BQP: 10986
+  Lazy constraints: 382
+
+Explored 1 nodes (64278 simplex iterations) in 3600.25 seconds (9223.84 work units)
+Thread count was 10 (of 40 available processors)
+
+Solution count 1: -0 
+
+Time limit reached
+Best objective -0.000000000000e+00, best bound 1.071898150000e+06, gap -
+
+User-callback calls 38478, time in user-callback 0.58 sec

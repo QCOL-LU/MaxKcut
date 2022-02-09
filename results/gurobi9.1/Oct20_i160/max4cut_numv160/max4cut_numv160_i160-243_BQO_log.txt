@@ -1,0 +1,50 @@
+
+Gurobi 9.1.1 (linux64) logging started Mon Oct 18 00:15:00 2021
+
+Changed value of parameter LogFile to results/max4cut_numv160/max4cut_numv160_i160-243_BQO_log.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 160 rows, 640 columns and 640 nonzeros
+Model fingerprint: 0xe312c9bf
+Model has 10816 quadratic objective terms
+Variable types: 0 continuous, 640 integer (640 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [8e+01, 8e+01]
+  QObjective range [2e+02, 6e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 1 rows and 4 columns
+Presolve time: 0.02s
+Presolved: 10203 rows, 10680 columns, 30768 nonzeros
+Variable types: 0 continuous, 10680 integer (10680 binary)
+
+Root relaxation: objective -3.254790e+05, 339 iterations, 0.02 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 325479.000    0  252   -0.00000 325479.000      -     -    0s
+H    0     0                    259818.00000 325479.000  25.3%     -    0s
+H    0     0                    286183.00000 325479.000  13.7%     -    0s
+H    0     0                    288834.00000 325479.000  12.7%     -    0s
+     0     0 325479.000    0  503 288834.000 325479.000  12.7%     -    2s
+     0     0 325385.000    0  491 288834.000 325385.000  12.7%     -    4s
+     0     0          -    0      288834.000 325385.000  12.7%     -    5s
+
+Cutting planes:
+  Gomory: 1
+  MIR: 178
+  Zero half: 275
+  RLT: 697
+  BQP: 499
+
+Explored 1 nodes (5488 simplex iterations) in 5.00 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 4: 288834 286183 259818 -0 
+
+Time limit reached
+Best objective 2.888340000000e+05, best bound 3.253850000000e+05, gap 12.6547%

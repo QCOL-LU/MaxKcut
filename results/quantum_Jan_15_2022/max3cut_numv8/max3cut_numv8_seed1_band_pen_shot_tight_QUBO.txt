@@ -1,0 +1,77 @@
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           8
+Number of edges:              22
+Number of partitions:         3
+
+Density (%):                  79
+Name of instance:             seed1_band_pen_shot_tight
+Is planar:                    False
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+Penalty Multiplier:           1.0
+Gates Error Probability:      0.0
+Naive Penalty Coef:           False
+QAOA Optimize:                False
+QAOA Num Shots:               10000
+QAOA Scipy Optimizer:         brute
+QAOA Angles:                  [0.26, 3.46]
+==================================================
+
+
+==================================================
+Summary of results QAOA
+--------------------------------------------------
+Avg of QAOA obj (BQO obj):    0.43
+Avg of QAOA obj (penalty):    -5.09
+Avg of constraint violation:  2.67
+
+Feasible percentage (%):      5.34
+Avg of pure feasible obj:     0.95
+
+Avg of QAOA obj:              -4.66
+STD of QAOA obj:              0.42
+
+Avg of QAOA obj (feasible):   2.31
+STD of QAOA obj (feasible):   0.23
+
+Gamma angles:                 0.26
+Beta angles:                  3.46
+
+Best QAOA obj:                8.00
+Modified best QAOA obj:       8.00
+Best QAOA obj (feasible):     8.00
+
+QAOA total time:              4.61s
+QAOA circuit depth:           18
+==================================================
+
+==================================================
+Summary of results of 0-S8
+--------------------------------------------------
+Number of vertices:           8
+Number of edges:              22
+
+Vertex num in largest comp:   8
+Edge num in largest comp:     22
+
+Pre-processing running time:  0.00
+Total solver time:            4.61
+Running time:                 11.26
+
+Upper bound:                  12.00
+Objective value:              8.00
+
+Partition 0:                  1, 4, 5, 6, 8       
+Partition 1:                  3                   
+Partition 2:                  2, 7                
+==================================================

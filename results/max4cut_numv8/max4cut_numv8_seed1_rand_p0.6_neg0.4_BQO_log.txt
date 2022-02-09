@@ -1,0 +1,36 @@
+
+Gurobi 9.5.0 (linux64) logging started Sun Jan 16 18:01:06 2022
+
+Set parameter LogFile to value "../results/max4cut_numv8/max4cut_numv8_seed1_rand_p0.6_neg0.4_BQO_log.txt"
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 8 rows, 32 columns and 32 nonzeros
+Model fingerprint: 0x8163585f
+Model has 72 quadratic objective terms
+Variable types: 0 continuous, 32 integer (32 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [0e+00, 0e+00]
+  QObjective range [2e+00, 2e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 1 rows and 4 columns
+Presolve time: 0.00s
+Presolved: 63 rows, 84 columns, 196 nonzeros
+Variable types: 0 continuous, 84 integer (84 binary)
+
+Root relaxation: objective -1.100000e+01, 23 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0      11.0000000   11.00000  0.00%     -    0s
+
+Explored 1 nodes (23 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 10 (of 40 available processors)
+
+Solution count 2: 11 -0 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 1.100000000000e+01, best bound 1.100000000000e+01, gap 0.0000%

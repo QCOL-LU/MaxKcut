@@ -1,0 +1,48 @@
+
+Gurobi 9.5.0 (linux64) logging started Fri Nov 26 11:12:33 2021
+
+Set parameter LogFile to value "results/max2cut_numv169/max2cut_numv169_spinglass2pm_1313_A-MILO_log.txt"
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 2535 rows, 676 columns and 6760 nonzeros
+Model fingerprint: 0x933988ba
+Variable types: 0 continuous, 676 integer (676 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+00]
+Found heuristic solution: objective -2.0000000
+Presolve removed 1867 rows and 174 columns
+Presolve time: 0.01s
+Presolved: 668 rows, 502 columns, 2004 nonzeros
+Crushed 0 out of 338 user cuts to presolved model
+Variable types: 0 continuous, 502 integer (502 binary)
+Found heuristic solution: objective 34.0000000
+
+Root relaxation: objective 1.670000e+02, 181 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  167.00000    0  168   34.00000  167.00000   391%     -    0s
+H    0     0                      50.0000000  167.00000   234%     -    0s
+H    0     0                      68.0000000  167.00000   146%     -    0s
+H    0     0                      86.0000000  167.00000  94.2%     -    0s
+H    0     0                      92.0000000  167.00000  81.5%     -    0s
+     0     0  117.00000    0  218   92.00000  117.00000  27.2%     -    0s
+H    0     0                     100.0000000  117.00000  17.0%     -    0s
+     0     0  115.00000    0  189  100.00000  115.00000  15.0%     -    0s
+H    0     0                     114.0000000  115.00000  0.88%     -    0s
+     0     0  115.00000    0  188  114.00000  115.00000  0.88%     -    0s
+
+Cutting planes:
+  Zero half: 12
+
+Explored 1 nodes (1216 simplex iterations) in 0.12 seconds (0.05 work units)
+Thread count was 10 (of 40 available processors)
+
+Solution count 8: 114 100 92 ... -2
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 1.140000000000e+02, best bound 1.140000000000e+02, gap 0.0000%

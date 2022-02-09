@@ -63,13 +63,15 @@ def solve_max_k_cut_qaoa(self):
 			locally_optimal_angles 	= optimizer_results.x
 
 		elif self.Params.QAOA_Scipy_Optimizer == "brute":
-			bounds 					= [(0, 2 * np.pi) for _ in range(2 * self.Params.QAOA_Num_Levels)]
+			bounds 					= [(0,  np.pi) for _ in range(2 * self.Params.QAOA_Num_Levels)]
 			# bounds					= [(.5, .9), (.6, 1), (1.8, 2.2), (4.8, 5.2)]
-			Ns						= 50
+			Ns						= self.Params.QAOA_Brute_Num_Samples
 
 			# optimizer_results 		= brute(func=self.qaoa_expected_value, 
 			# 								ranges=bounds,
 			# 								Ns=10)
+
+			iter_finish				= 100
 
 			if self.Params.QAOA_Num_Levels == 1:
 				gammas, betas		= np.meshgrid(np.linspace(bounds[0][0]/np.pi, bounds[0][1]/np.pi, Ns), np.linspace(bounds[self.Params.QAOA_Num_Levels ][0]/np.pi, bounds[self.Params.QAOA_Num_Levels ][1]/np.pi, Ns))
@@ -77,13 +79,26 @@ def solve_max_k_cut_qaoa(self):
 				objectives 			= np.zeros((Ns, Ns))
 
 
+			itr 					= 0
+			total_itr 				= 0
 			for g_ind, gamma1 in enumerate(np.linspace(*bounds[0], Ns) ):
 				for b_ind, beta1 in enumerate(np.linspace(*bounds[self.Params.QAOA_Num_Levels ], Ns)):
 
 					if self.Params.QAOA_Num_Levels == 1:
+						old_best_exp_obj			= self.qaoa_best_avg_obj_value
+
 						arg 						= (gamma1, beta1)
 						obj 						= - self.qaoa_expected_value(arg)
+						total_itr 					+= 1
 						objectives[g_ind][b_ind]	= obj
+
+						if self.qaoa_best_avg_obj_value != old_best_exp_obj:
+							itr 					= 0
+						else:
+							itr 					+= 1
+
+					if itr > iter_finish: break
+
 
 					if self.Params.QAOA_Num_Levels >= 2:
 						for gamma2 in np.linspace(*bounds[1], Ns):
@@ -101,8 +116,9 @@ def solve_max_k_cut_qaoa(self):
 											arg 	= (gamma1, gamma2, gamma3, beta1, beta2, beta3)
 											obj 	= - self.qaoa_expected_value(arg)
 
-
-
+					
+				if itr > iter_finish: break
+				
 
 			self.plot_qaoa_level_one(gammas, betas, objectives)
 			locally_optimal_angles 		= self.best_angles
@@ -115,32 +131,39 @@ def solve_max_k_cut_qaoa(self):
 												tol=self.Params.QAOA_Opt_Tol)
 		
 			locally_optimal_angles 	= optimizer_results.x
-		# print(locally_optimal_angles, self.qaoa_best_avg_obj_value)
+
 		with open(self.filename, 'a') as file:
 			if self.Params.QAOA_Scipy_Optimizer != "brute":
 				self.my_print(file, "\n" + optimizer_results.message + " It stopped after "+ str(self.qaoa_iter) + " iterations.\n")
-			# else:
+			else:
+				self.my_print(file, "The brute search stopped after "+ str(total_itr) + " iterations.")
 	else: 
 		self.qaoa_expected_value(self.Params.QAOA_Angles)
 		
 
 	#--------------------------------------------------------------------------------------------
 	# Improve the resulting binary solution of QAOA and make it feasible in case of infeasibility
-	#--------------------------------------------------------------------------------------------	
-	self.qaoa_best_solution 	= self.make_sol_feasible(self.qaoa_best_solution)
-		
+	#--------------------------------------------------------------------------------------------
+	self.cal_avg_best_sol_feasible()
+	
+
 	#--------------------------------------------------------------------------------------------
 	# Print the summary of results of QAOA 
 	#--------------------------------------------------------------------------------------------
 	if self.Params.QAOA_Verbosity > 0:
 
-		self.plot_qaoa_solutions_dist(num_bins=20)
+		self.plot_qaoa_solutions_dist(feasible_sol=False, num_bins=20)
+		self.plot_qaoa_solutions_dist(feasible_sol=True, num_bins=10)
+
 		self.print_qaoa_results_summary()
 
 	#--------------------------------------------------------------------------------------------
 	# Update the selected partitions for each of vertices in the original graph
 	#--------------------------------------------------------------------------------------------
+
+	best_solution  		= deepcopy(self.qaoa_feasible_best_solution) if self.qaoa_feasible_best_obj_value > self.qaoa_best_obj_value else deepcopy(self.qaoa_best_solution)
+	
 	for vertex in self.vertices:
 		for partition in self.partitions:
-			if self.qaoa_best_solution[vertex][partition] == 1:
+			if best_solution[vertex][partition] == 1:
 				self.graph.nodes[vertex]["partition"] 	= partition 

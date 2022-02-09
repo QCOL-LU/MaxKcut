@@ -1,0 +1,54 @@
+
+Gurobi 9.1.1 (linux64) logging started Mon Oct 25 04:54:49 2021
+
+Changed value of parameter LogFile to results/max3cut_numv60/max3cut_numv60_seed1_RP-MILO_log.txt
+   Prev:   Default: 
+Changed value of parameter LazyConstraints to 1
+   Prev: 0  Min: 0  Max: 1  Default: 0
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 1953530 rows, 8401 columns and 10537842 nonzeros
+Model fingerprint: 0xac8f8831
+Variable types: 0 continuous, 8401 integer (8401 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Found heuristic solution: objective 590.0000000
+Presolve removed 1443139 rows and 0 columns (presolve time = 5s) ...
+Presolve removed 1443139 rows and 0 columns (presolve time = 10s) ...
+Presolve removed 1443139 rows and 0 columns (presolve time = 16s) ...
+Presolve removed 1443139 rows and 0 columns
+Presolve time: 16.95s
+Presolved: 510391 rows, 8401 columns, 2780385 nonzeros
+Extracted 416404 lazy constraints
+Variable types: 0 continuous, 8401 integer (8401 binary)
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.4010000e+03   0.000000e+00   0.000000e+00     19s
+
+Root relaxation: objective 1.401000e+03, 0 iterations, 0.12 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 1167.50000    0 1700  590.00000 1167.50000  97.9%     - 1216s
+H    0     0                     913.0000000 1167.50000  27.9%     - 1220s
+     0     0 1167.50000    0 1700  913.00000 1167.50000  27.9%     - 1236s
+     0     2 1167.50000    0 1700  913.00000 1167.50000  27.9%     - 1448s
+     1     3 1166.66667    1 1694  913.00000 1167.49966  27.9%  1591 3600s
+
+Cutting planes:
+  Lazy constraints: 416404
+
+Explored 2 nodes (55465 simplex iterations) in 3600.11 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 3: 913 590 -0 
+
+Time limit reached
+Best objective 9.130000000000e+02, best bound 1.167000000000e+03, gap 27.8204%

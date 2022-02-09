@@ -1,0 +1,50 @@
+
+Gurobi 9.1.1 (linux64) logging started Tue Oct 19 12:18:23 2021
+
+Changed value of parameter LogFile to results/max4cut_numv160/max4cut_numv160_i160-345_peel_decompose_weighted_BQO_log.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 160 rows, 640 columns and 640 nonzeros
+Model fingerprint: 0x8cfcc2ac
+Model has 10816 quadratic objective terms
+Variable types: 0 continuous, 640 integer (640 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [8e+01, 8e+01]
+  QObjective range [2e+02, 6e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 1 rows and 4 columns
+Presolve time: 0.02s
+Presolved: 10163 rows, 10640 columns, 30648 nonzeros
+Variable types: 0 continuous, 10640 integer (10640 binary)
+
+Root relaxation: objective -3.860740e+05, 339 iterations, 0.02 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 386074.000    0  246   -0.00000 386074.000      -     -    0s
+H    0     0                    304921.00000 386074.000  26.6%     -    0s
+H    0     0                    341130.00000 386074.000  13.2%     -    0s
+H    0     0                    341974.00000 386074.000  12.9%     -    0s
+     0     0 386074.000    0  448 341974.000 386074.000  12.9%     -    2s
+     0     0 386074.000    0  401 341974.000 386074.000  12.9%     -    3s
+     0     0          -    0      341974.000 386074.000  12.9%     -    5s
+
+Cutting planes:
+  Gomory: 1
+  MIR: 9
+  Zero half: 501
+  RLT: 684
+  BQP: 407
+
+Explored 1 nodes (6805 simplex iterations) in 5.00 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 4: 341974 341130 304921 -0 
+
+Time limit reached
+Best objective 3.419740000000e+05, best bound 3.860740000000e+05, gap 12.8957%

@@ -13,6 +13,19 @@ import numpy as np
 def fold(self):
 
 	self.preprocessing_start_time				= time()
+
+	#--------------------------------------------------------------------------------------------
+	# Find vertex pairs with distance less and equal than 2
+	#--------------------------------------------------------------------------------------------
+	vertex_pair_ditance 	= {(vertex1, vertex2):3 for (vertex1, vertex2) in itertools.combinations(self.vertices, 2)} 
+	
+	for vertex1 in self.vertices:
+
+		ditance 			= nx.single_source_dijkstra_path_length(self.graph, vertex1, cutoff=2, weight=1)
+		for (vertex2, value) in ditance.items():
+			vertex_pair_ditance[(vertex1, vertex2)] 	= value
+			vertex_pair_ditance[(vertex2, vertex1)] 	= value
+
 	#--------------------------------------------------------------------------------------------
 	# Initialize the variables (graph.nodes[v1][folded-in] = v2  =>  v1 is removed and v2 is updated) folded-in = parent
 	#--------------------------------------------------------------------------------------------
@@ -21,18 +34,21 @@ def fold(self):
 
 	nx.set_node_attributes(self.graph, -1, "folded-in")
 
+
 	for (vertex1, vertex2) in itertools.combinations(self.vertices, 2):
 
-		if (not folded_graph.has_node(vertex1)) or (not folded_graph.has_node(vertex2)):
+		if vertex_pair_ditance[(vertex1, vertex2)] > 2: 
 			continue
+
+
+		if (not folded_graph.has_node(vertex1)) or (not folded_graph.has_node(vertex2)): continue
+
 
 		neighbors_of_vertex1 		= set(folded_graph.neighbors(vertex1) )
 		neighbors_of_vertex2 		= set(folded_graph.neighbors(vertex2) )
 
 		common_neighbors 			= list( neighbors_of_vertex1.intersection(neighbors_of_vertex2) )
 		
-		if not common_neighbors: continue
-
 
 		# min_common_weights 			= {neighbor: min(folded_graph.edges[vertex1, neighbor]["weight"], folded_graph.edges[vertex2, neighbor]["weight"]) for neighbor in common_neighbors}
 		
@@ -57,13 +73,14 @@ def fold(self):
 		neg_weight_of_edge 			= ( (2 if self.num_partitions == 2 else 1.5) * (min(folded_graph.edges[vertex1, vertex2]["weight"], 0) ) ) if folded_graph.has_edge(vertex1, vertex2) else 0
 		can_be_folded 				= (total_common_pos_weights - total_common_neg_weights - neg_weight_of_edge >= 0.5 * max_pos_diff_neg_weights)
 		
+		can_be_folded_twin 			= (total_common_pos_weights - total_common_neg_weights - neg_weight_of_edge >= max_pos_diff_neg_weights)
+
 
 		#----------------------------------------------------------------------------------------
 		# Check the sufficient condition
 		#----------------------------------------------------------------------------------------
-		if can_be_folded == True:
-
-
+		if can_be_folded == True and can_be_folded_twin == False:
+	
 			with Env(empty=True) as env:
 				env.setParam('LogToConsole', 0)
 				# sys.stdout.write(2*"\033[F\033[K")
@@ -94,7 +111,7 @@ def fold(self):
 					
 					can_be_folded 				= (total_common_pos_weights - total_common_neg_weights - neg_weight_of_edge >= max_pos_diff_neg_weights - alpha_star)
 	
-
+	
 		#-----------------------------------------------------------------------------------------
 		# Fold vertices (graph.nodes[v1][folded-in] = v2  =>  v1 is removed and v2 is updated)
 		#-----------------------------------------------------------------------------------------
@@ -136,7 +153,6 @@ def fold(self):
 	self.preprocessing_end_time				= time()
 	self.preprocessing_total_time 			= self.preprocessing_end_time  - self.preprocessing_start_time
 
-	
 
 	return (is_folded, folded_graph)
 

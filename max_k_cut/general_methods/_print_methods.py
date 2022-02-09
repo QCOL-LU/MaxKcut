@@ -45,93 +45,81 @@ def print_paramters(self):
 		self.my_print(file, 50*"-")
 
 		self.my_print(file, "{:30}{}".format("Method:", self.Params.Method) )
-		flag 				= False
 
 		if (default_paramters.Peel != self.Params.Peel):
 			self.my_print(file, "{:30}{:}".format("Peel:", self.Params.Peel) )
-			flag 			= True
 
 		if (default_paramters.Decompose != self.Params.Decompose):
 			self.my_print(file, "{:30}{:}".format("Decompose:", self.Params.Decompose) )
-			flag 			= True
 
 		if (default_paramters.Fold != self.Params.Fold):
-			self.my_print(file, "{:30}{:}".format("Fold:", self.Params.Fold) )
-			flag 			= True
-			
+			self.my_print(file, "{:30}{:}".format("Fold:", self.Params.Fold) )			
 
 		if (default_paramters.Relaxed != self.Params.Relaxed):
 			self.my_print(file, "{:30}{:}".format("Relaxed:", self.Params.Relaxed) )
-			flag 			= True
 
 		
 
 		if self.Params.Method == "BQO":
-			if flag == True: self.my_print(file)
-			flag 				= False
 
 			if (default_paramters.Rounding_Heuristic != self.Params.Rounding_Heuristic):
 				self.my_print(file, "{:30}{:}".format("Rounding Heuristic:", self.Params.Rounding_Heuristic) )
-				flag 			= True
 
 			if (default_paramters.Curvature_Type != self.Params.Curvature_Type):
 				self.my_print(file, "{:30}{:}".format("Curvature Type:", self.Params.Curvature_Type) )
-				flag 			= True
 
 			if (default_paramters.Curvature_Method != self.Params.Curvature_Method):
 				self.my_print(file, "{:30}{:}".format("Curvature Method:", self.Params.Curvature_Method) )
-				flag 			= True
 
 			if (default_paramters.Symmetry_Breaking != self.Params.Symmetry_Breaking):
 				self.my_print(file, "{:30}{:}".format("Symmetry Breaking:", self.Params.Symmetry_Breaking) )
-				flag 			= True
 
 
 		if self.Params.Method == "A-MILO":
-			if flag == True: self.my_print(file)
-			flag 				= False
+
 			if (default_paramters.Clique_Constraints != self.Params.Clique_Constraints):
 				self.my_print(file, "{:30}{:}".format("Clique Constraints:", self.Params.Clique_Constraints) )
-				flag 			= True
 
 			if (default_paramters.Wheel_Constraints != self.Params.Wheel_Constraints):
 				self.my_print(file, "{:30}{:}".format("Wheel Constraints:", self.Params.Wheel_Constraints) )
-				flag 			= True
 
 			if (default_paramters.Bicycle_Wheel_Constraints != self.Params.Bicycle_Wheel_Constraints):
 				self.my_print(file, "{:30}{:}".format("Bicycle Wheel Constraints:", self.Params.Bicycle_Wheel_Constraints) )
-				flag 			= True
+
 
 		elif self.Params.Method in ["QUBO", "R-QUBO", "PUBO"]:
-			if flag == True: self.my_print(file)
-			flag 				= False
+			self.my_print(file)
+
+			self.my_print(file, "{:30}{:}".format("Naive Penalty Coef:", self.Params.Naive) )
+			self.my_print(file, "{:30}{:}".format("Penalty Multiplier:", self.Params.Penalty_Increase) )
+			
+
+			self.my_print(file)
+			self.my_print(file, "{:30}{:}".format("Gates Error Probability:", self.Params.QAOA_Gates_Noise) )
+			self.my_print(file, "{:30}{:}".format("QAOA Num Levels:", self.Params.QAOA_Num_Levels) )
+
 
 			if (default_paramters.QAOA_Optimize != self.Params.QAOA_Optimize):
 				self.my_print(file, "{:30}{:}".format("QAOA Optimize:", self.Params.QAOA_Optimize) )
-				flag 			= True
 
-			if (default_paramters.QAOA_Num_Levels != self.Params.QAOA_Num_Levels):
-				self.my_print(file, "{:30}{:}".format("QAOA Num Levels:", self.Params.QAOA_Num_Levels) )
-				flag 			= True
+			# if (default_paramters.QAOA_Num_Levels != self.Params.QAOA_Num_Levels):
+				
 
 			if (default_paramters.QAOA_Num_Shots != self.Params.QAOA_Num_Shots):
 				self.my_print(file, "{:30}{:}".format("QAOA Num Shots:", self.Params.QAOA_Num_Shots) )
-				flag 			= True
 
 			if (default_paramters.QAOA_Scipy_Optimizer != self.Params.QAOA_Scipy_Optimizer):
 				self.my_print(file, "{:30}{:}".format("QAOA Scipy Optimizer:", self.Params.QAOA_Scipy_Optimizer) )
-				flag 			= True
 
 			if (default_paramters.QAOA_Opt_Tol != self.Params.QAOA_Opt_Tol):
 				self.my_print(file, "{:30}{:}".format("QAOA Optimizer Tol:", self.Params.QAOA_Opt_Tol) )
-				flag 			= True
 
 			if (default_paramters.QAOA_Angles != self.Params.QAOA_Angles):
 				self.my_print(file, "{:30}{:}".format("QAOA Angles:", self.Params.QAOA_Angles) )
-				flag 			= True
+
+			
 
 		if self.Params.Method not in ["QUBO", "R-QUBO", "PUBO"]:
-			if flag == True: self.my_print(file)
 
 			if (default_paramters.Gurobi_TimeLimit != self.Params.Gurobi_TimeLimit):
 				self.my_print(file, "{:30}{:.0f}".format("Gurobi Time Limit:", self.Params.Gurobi_TimeLimit) )
@@ -218,7 +206,8 @@ def print_results_summary(self):
 #================================================================================================
 def print_qaoa_results_summary(self):
 	if self.Params.Verbosity > 0 or self.parent == None:
-		modified_qaoa_best_sol_obj_value 		= self.cal_obj_from_sol(self.qaoa_best_solution)
+		modified_qaoa_best_sol							= self.make_sol_feasible(self.qaoa_best_solution)
+		modified_qaoa_best_sol_obj_value, penalty, const_viol 		= self.cal_obj_from_sol(modified_qaoa_best_sol)
 			
 		with open(self.filename, 'a') as file:
 			self.my_print(file)
@@ -226,11 +215,23 @@ def print_qaoa_results_summary(self):
 			self.my_print(file, "Summary of results QAOA")
 			self.my_print(file, 50*"-")
 
-			self.my_print(file, "{:<30}{:.2f}".format("Average of QAOA obj:", self.qaoa_best_avg_obj_value))
+			self.my_print(file, "{:<30}{:.2f}".format("Avg of QAOA obj (BQO obj):", self.qaoa_best_avg_total_penalty + self.qaoa_best_avg_obj_value))
+			self.my_print(file, "{:<30}{:.2f}".format("Avg of QAOA obj (penalty):", - self.qaoa_best_avg_total_penalty))
+			self.my_print(file, "{:<30}{:.2f}".format("Avg of constraint violation:", self.qaoa_best_avg_constraint_violation))
+			self.my_print(file)
+ 
+			self.my_print(file, "{:<30}{:.2f}".format("Feasible percentage (%):", self.qaoa_best_pure_feasible_percentage))
+			if self.qaoa_best_avg_pure_feasible_obj_value == "NA":
+				self.my_print(file, "{:<30}{:}".format("Avg of pure feasible obj:", self.qaoa_best_avg_pure_feasible_obj_value))
+
+			else:
+				self.my_print(file, "{:<30}{:.2f}".format("Avg of pure feasible obj:", self.qaoa_best_avg_pure_feasible_obj_value))
+			self.my_print(file)
+			self.my_print(file, "{:<30}{:.2f}".format("Avg of QAOA obj:", self.qaoa_best_avg_obj_value))
 			self.my_print(file, "{:<30}{:.2f}".format("STD of QAOA obj:", self.qaoa_std_obj_value))
 
-
-			self.my_print(file, "{:<30}{:.2f}".format("Average of QAOA obj (feasible):", self.qaoa_feasible_best_avg_obj_value))
+			self.my_print(file)
+			self.my_print(file, "{:<30}{:.2f}".format("Avg of QAOA obj (feasible):", self.qaoa_feasible_best_avg_obj_value))
 			self.my_print(file, "{:<30}{:.2f}".format("STD of QAOA obj (feasible):", self.qaoa_feasible_std_obj_value))
 
 			if self.Params.Verbosity == 2:
@@ -238,10 +239,7 @@ def print_qaoa_results_summary(self):
 				self.my_print(file, "{:<30}{:}".format("Gamma angles:", ', '.join(('%.2f'% f) for f in self.best_angles[:self.Params.QAOA_Num_Levels]) ) )
 				self.my_print(file, "{:<30}{:}".format("Beta angles:", ', '.join(('%.2f'% f) for f in self.best_angles[self.Params.QAOA_Num_Levels:]) ) )
 				
-				self.my_print(file, "{:<30}{:}".format("Gamma angles (feasible):", ', '.join(('%.2f'% f) for f in self.feasible_best_angles[:self.Params.QAOA_Num_Levels]) ) )
-				self.my_print(file, "{:<30}{:}".format("Beta angles (feasible):", ', '.join(('%.2f'% f) for f in self.feasible_best_angles[self.Params.QAOA_Num_Levels:]) ) )
-
-
+				
 			self.my_print(file)
 			self.my_print(file, "{:<30}{:.2f}".format("Best QAOA obj:", self.qaoa_best_obj_value))
 			self.my_print(file, "{:<30}{:.2f}".format("Modified best QAOA obj:", modified_qaoa_best_sol_obj_value))

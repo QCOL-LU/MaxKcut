@@ -1,0 +1,48 @@
+
+Gurobi 9.1.1 (linux64) logging started Sun Oct 17 23:29:24 2021
+
+Changed value of parameter LogFile to results/max3cut_numv160/max3cut_numv160_i160-132_BQO_log.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 95 rows, 285 columns and 285 nonzeros
+Model fingerprint: 0xba07d54f
+Model has 909 quadratic objective terms
+Variable types: 0 continuous, 285 integer (285 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [5e+01, 5e+01]
+  QObjective range [1e+02, 6e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 1 rows and 3 columns
+Presolve time: 0.00s
+Presolved: 694 rows, 882 columns, 2082 nonzeros
+Variable types: 0 continuous, 882 integer (882 binary)
+Found heuristic solution: objective 5231.0000000
+
+Root relaxation: objective -2.407800e+04, 244 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 24078.0000    0  149 5231.00000 24078.0000   360%     -    0s
+H    0     0                    23970.000000 24078.0000  0.45%     -    0s
+H    0     0                    24078.000000 24078.0000  0.00%     -    0s
+     0     0 24078.0000    0  142 24078.0000 24078.0000  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 1
+  Clique: 2
+  MIR: 1
+  Zero half: 12
+  RLT: 3
+
+Explored 1 nodes (584 simplex iterations) in 0.05 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 4: 24078 23970 5231 -1.09139e-11 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 2.407800000000e+04, best bound 2.407800000000e+04, gap 0.0000%

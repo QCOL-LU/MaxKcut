@@ -1,0 +1,72 @@
+
+Gurobi 9.5.0 (linux64) logging started Fri Nov 26 03:40:33 2021
+
+Set parameter LogFile to value "results/max4cut_numv225/max4cut_numv225_spinglass2g_1515_P-MILO_log.txt"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 5619600 rows, 25200 columns and 16858800 nonzeros
+Model fingerprint: 0xea56116e
+Variable types: 0 continuous, 25200 integer (25200 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [4e+02, 3e+05]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 0 rows and 0 columns (presolve time = 5s) ...
+Presolve removed 0 rows and 0 columns (presolve time = 10s) ...
+Presolve removed 0 rows and 0 columns (presolve time = 15s) ...
+Presolve removed 0 rows and 0 columns (presolve time = 21s) ...
+Presolve time: 21.40s
+Presolved: 5619600 rows, 25200 columns, 16858800 nonzeros
+Variable types: 0 continuous, 25200 integer (25200 binary)
+
+Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+
+Barrier performed 0 iterations in 111.31 seconds (48.30 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+Concurrent spin time: 67.24s (can be avoided by choosing Method=3)
+
+Solved with dual simplex
+
+Root relaxation: objective 1.746484e+07, 1697 iterations, 82.70 seconds (11.14 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 1.7465e+07    0  823   -0.00000 1.7465e+07      -     -  131s
+     0     0 1.7465e+07    0  823   -0.00000 1.7465e+07      -     -  142s
+     0     0 1.7465e+07    0  284   -0.00000 1.7465e+07      -     -  271s
+     0     0 1.7465e+07    0   29   -0.00000 1.7465e+07      -     -  333s
+     0     0 1.7465e+07    0   29   -0.00000 1.7465e+07      -     -  348s
+     0     0 1.7465e+07    0  685   -0.00000 1.7465e+07      -     -  644s
+     0     0 1.7465e+07    0  685   -0.00000 1.7465e+07      -     -  669s
+     0     0 1.7465e+07    0  276   -0.00000 1.7465e+07      -     - 1938s
+     0     0 1.7465e+07    0  276   -0.00000 1.7465e+07      -     - 1944s
+     0     0 1.7465e+07    0  276   -0.00000 1.7465e+07      -     - 1948s
+     0     0 1.7465e+07    0  276   -0.00000 1.7465e+07      -     - 1955s
+H    0     0                    678328.00000 1.7465e+07  2475%     - 1958s
+     0     0          -    0      678328.000 1.7465e+07  2475%     - 3600s
+
+Cutting planes:
+  MIR: 270
+  Zero half: 578
+  RLT: 297
+  BQP: 1737
+  Lazy constraints: 154
+
+Explored 1 nodes (66953 simplex iterations) in 3600.11 seconds (10542.92 work units)
+Thread count was 10 (of 40 available processors)
+
+Solution count 2: 678328 -0 
+
+Time limit reached
+Best objective 6.783280000000e+05, best bound 1.746483500000e+07, gap 2474.6888%
+
+User-callback calls 26497, time in user-callback 0.58 sec

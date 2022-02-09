@@ -1,0 +1,72 @@
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           19
+Number of edges:              51
+Number of partitions:         2
+
+Density (%):                  30
+Name of instance:             seed1_band_bqo
+Is planar:                    True
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       BQO
+Peel:                         False
+Decompose:                    False
+
+==================================================
+
+==================================================
+Summary of results of BQO model of 1-S15
+--------------------------------------------------
+Model status:                 optimal
+Explored B&B nodes:           1
+Gurobi running time:          0.0
+
+Optimality gap (%):           0.00
+Upper bound:                  17.00
+Objective value:              17.00
+==================================================
+
+==================================================
+Summary of results of 1-S15
+--------------------------------------------------
+Number of vertices:           15
+Number of edges:              35
+
+Vertex num in largest comp:   15
+Edge num in largest comp:     35
+
+Pre-processing running time:  0.00
+Total solver time:            0.02
+Running time:                 0.02
+
+Upper bound:                  17.00
+Objective value:              17.00
+
+Partition 0:                  1, 5, 6, 14, 15, 17, 19
+Partition 1:                  3, 7, 9, 10, 11, 12, 13, 18
+==================================================
+
+==================================================
+Summary of results of 0-F19
+--------------------------------------------------
+Number of vertices:           19
+Number of edges:              51
+
+Vertex num in largest comp:   15
+Edge num in largest comp:     35
+
+Pre-processing running time:  0.09
+Total solver time:            0.02
+Running time:                 0.70
+
+Upper bound:                  17.00
+Objective value:              17.00
+
+Partition 0:                  1, 4, 5, 6, 14, 15, 17, 19
+Partition 1:                  2, 3, 7, 8, 9, 10, 11, 12, 13, 16, 18
+==================================================

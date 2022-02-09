@@ -1,0 +1,47 @@
+
+Gurobi 9.5.0 (linux64) logging started Fri Nov 26 14:22:43 2021
+
+Set parameter LogFile to value "results/max3cut_numv196/max3cut_numv196_spinglass2pm_1414_weighted_con_BQO_log.txt"
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 196 rows, 588 columns and 588 nonzeros
+Model fingerprint: 0x8a64b51b
+Model has 1764 quadratic objective terms
+Variable types: 0 continuous, 588 integer (588 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+02, 1e+02]
+  QObjective range [2e+00, 2e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 1 rows and 3 columns
+Presolve time: 0.00s
+Presolved: 1359 rows, 1749 columns, 4077 nonzeros
+Variable types: 0 continuous, 1749 integer (1749 binary)
+
+Root relaxation: objective -3.920000e+02, 511 iterations, 0.01 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  392.00000    0   31   -0.00000  392.00000      -     -    0s
+H    0     0                     389.0000000  392.00000  0.77%     -    0s
+H    0     0                     390.0000000  392.00000  0.51%     -    0s
+     0     0  392.00000    0  116  390.00000  392.00000  0.51%     -    0s
+     0     0  392.00000    0   36  390.00000  392.00000  0.51%     -    0s
+H    0     0                     392.0000000  392.00000  0.00%     -    0s
+     0     0  392.00000    0   36  392.00000  392.00000  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 2
+  MIR: 5
+  Zero half: 11
+
+Explored 1 nodes (1294 simplex iterations) in 0.10 seconds (0.04 work units)
+Thread count was 10 (of 40 available processors)
+
+Solution count 4: 392 390 389 -0 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 3.920000000000e+02, best bound 3.920000000000e+02, gap 0.0000%

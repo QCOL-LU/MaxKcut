@@ -1,0 +1,46 @@
+
+Gurobi 9.5.0 (linux64) logging started Fri Nov 26 01:19:08 2021
+
+Set parameter LogFile to value "results/max3cut_numv225/max3cut_numv225_spinglass2g_1515_weighted_con_BQO_log.txt"
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 225 rows, 675 columns and 675 nonzeros
+Model fingerprint: 0x1fce64fb
+Model has 2025 quadratic objective terms
+Variable types: 0 continuous, 675 integer (675 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+02, 1e+02]
+  QObjective range [2e+00, 2e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective 0.0000000
+Presolve removed 1 rows and 3 columns
+Presolve time: 0.00s
+Presolved: 1562 rows, 2010 columns, 4686 nonzeros
+Variable types: 0 continuous, 2010 integer (2010 binary)
+
+Root relaxation: objective -4.500000e+02, 594 iterations, 0.01 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  450.00000    0   34    0.00000  450.00000      -     -    0s
+H    0     0                     447.0000000  450.00000  0.67%     -    0s
+H    0     0                     448.0000000  450.00000  0.45%     -    0s
+     0     0  450.00000    0   67  448.00000  450.00000  0.45%     -    0s
+H    0     0                     450.0000000  450.00000  0.00%     -    0s
+     0     0  450.00000    0   39  450.00000  450.00000  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 4
+  MIR: 3
+  Zero half: 20
+
+Explored 1 nodes (1313 simplex iterations) in 0.17 seconds (0.04 work units)
+Thread count was 10 (of 40 available processors)
+
+Solution count 4: 450 448 447 6.36646e-11 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 4.500000000000e+02, best bound 4.500000000000e+02, gap 0.0000%

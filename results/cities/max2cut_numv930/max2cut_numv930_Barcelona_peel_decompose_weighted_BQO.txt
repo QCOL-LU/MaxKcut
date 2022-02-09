@@ -1,0 +1,70 @@
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           930
+Number of edges:              1798
+Number of partitions:         2
+
+Density (%):                  0
+Name of instance:             Barcelona_peel_decompose_weighted
+Is planar:                    False
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       BQO
+Fold:                         False
+
+Curvature Type:               convex
+Curvature Method:             bound
+
+Gurobi Time Limit:            5
+Gurobi Presolve:              2
+==================================================
+
+==================================================
+Summary of results of BQO model of 1-S906
+--------------------------------------------------
+Model status:                 time limit
+Explored B&B nodes:           7693
+Gurobi running time:          5.1
+
+Optimality gap (%):           0.61
+Upper bound:                  104197.00
+Objective value:              103566.00
+==================================================
+
+==================================================
+Summary of results of 1-S906
+--------------------------------------------------
+Number of vertices:           906
+Number of edges:              1774
+
+Vertex num in largest comp:   906
+Edge num in largest comp:     1774
+
+Pre-processing running time:  0.01
+Total solver time:            5.14
+Running time:                 5.16
+
+Upper bound:                  104197.00
+Objective value:              103566.00
+==================================================
+
+==================================================
+Summary of results of 0-P930
+--------------------------------------------------
+Number of vertices:           930
+Number of edges:              1798
+
+Vertex num in largest comp:   906
+Edge num in largest comp:     1774
+
+Pre-processing running time:  0.03
+Total solver time:            5.14
+Running time:                 7.66
+
+Upper bound:                  106045.00
+Objective value:              105414.00
+==================================================

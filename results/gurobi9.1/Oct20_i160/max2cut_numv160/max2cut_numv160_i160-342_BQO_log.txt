@@ -1,0 +1,50 @@
+
+Gurobi 9.1.1 (linux64) logging started Mon Oct 18 00:58:29 2021
+
+Changed value of parameter LogFile to results/max2cut_numv160/max2cut_numv160_i160-342_BQO_log.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 160 rows, 320 columns and 320 nonzeros
+Model fingerprint: 0xbec2da9d
+Model has 5408 quadratic objective terms
+Variable types: 0 continuous, 320 integer (320 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [8e+01, 8e+01]
+  QObjective range [2e+02, 6e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 160 rows and 161 columns
+Presolve time: 0.01s
+Presolved: 2510 rows, 2669 columns, 7530 nonzeros
+Variable types: 0 continuous, 2669 integer (2669 binary)
+
+Root relaxation: objective -3.743050e+05, 162 iterations, 0.01 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 374305.000    0  159   -0.00000 374305.000      -     -    0s
+H    0     0                    188582.00000 374305.000  98.5%     -    0s
+H    0     0                    211956.00000 374305.000  76.6%     -    0s
+H    0     0                    212033.00000 374305.000  76.5%     -    0s
+     0     0 313269.750    0  702 212033.000 313269.750  47.7%     -    0s
+     0     0 295237.250    0  832 212033.000 295237.250  39.2%     -    1s
+     0     0 292921.000    0  830 212033.000 292921.000  38.1%     -    1s
+     0     0          -    0      212033.000 292112.000  37.8%     -    5s
+
+Cutting planes:
+  MIR: 569
+  Zero half: 463
+  RLT: 1091
+  BQP: 225
+
+Explored 1 nodes (11543 simplex iterations) in 5.01 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 4: 212033 211956 188582 -0 
+
+Time limit reached
+Best objective 2.120330000000e+05, best bound 2.921120000000e+05, gap 37.7672%

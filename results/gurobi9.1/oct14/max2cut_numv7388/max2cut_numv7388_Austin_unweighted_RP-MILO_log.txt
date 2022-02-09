@@ -1,0 +1,188 @@
+
+Gurobi 9.1.1 (linux64) logging started Mon Oct 11 23:22:25 2021
+
+Changed value of parameter LogFile to results/max2cut_numv7388/max2cut_numv7388_Austin_unweighted_RP-MILO_log.txt
+   Prev:   Default: 
+Changed value of parameter LazyConstraints to 1
+   Prev: 0  Min: 0  Max: 1  Default: 0
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 2374793 rows, 95030 columns and 7106667 nonzeros
+Model fingerprint: 0xc05ebdf7
+Variable types: 0 continuous, 95030 integer (95030 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 7e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Found heuristic solution: objective 6326.0000000
+Presolve removed 1176529 rows and 0 columns (presolve time = 5s) ...
+Presolve removed 1176529 rows and 0 columns (presolve time = 10s) ...
+Presolve removed 1176529 rows and 0 columns
+Presolve time: 10.17s
+Presolved: 1198264 rows, 95030 columns, 3594792 nonzeros
+Crushed 149 out of 9005 user cuts to presolved model
+Variable types: 0 continuous, 95030 integer (95030 binary)
+
+Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Elapsed ordering time = 5s
+Elapsed ordering time = 11s
+Ordering time: 102.29s
+Elapsed ordering time = 103s
+Elapsed ordering time = 105s
+Elapsed ordering time = 115s
+Elapsed ordering time = 115s
+Elapsed ordering time = 122s
+Elapsed ordering time = 129s
+Elapsed ordering time = 130s
+Elapsed ordering time = 136s
+Elapsed ordering time = 141s
+Elapsed ordering time = 145s
+Elapsed ordering time = 150s
+Elapsed ordering time = 155s
+Elapsed ordering time = 160s
+Elapsed ordering time = 177s
+Elapsed ordering time = 185s
+Elapsed ordering time = 185s
+Elapsed ordering time = 192s
+Elapsed ordering time = 199s
+Elapsed ordering time = 200s
+Elapsed ordering time = 205s
+Elapsed ordering time = 210s
+Elapsed ordering time = 215s
+Elapsed ordering time = 220s
+Elapsed ordering time = 242s
+Elapsed ordering time = 249s
+Elapsed ordering time = 250s
+Elapsed ordering time = 257s
+Elapsed ordering time = 264s
+Elapsed ordering time = 265s
+Elapsed ordering time = 270s
+Elapsed ordering time = 275s
+Elapsed ordering time = 280s
+Elapsed ordering time = 285s
+Elapsed ordering time = 290s
+Elapsed ordering time = 303s
+Elapsed ordering time = 306s
+Elapsed ordering time = 311s
+Elapsed ordering time = 320s
+Elapsed ordering time = 320s
+Elapsed ordering time = 326s
+Elapsed ordering time = 330s
+Elapsed ordering time = 335s
+Elapsed ordering time = 340s
+Elapsed ordering time = 345s
+Elapsed ordering time = 367s
+Elapsed ordering time = 375s
+Elapsed ordering time = 383s
+Elapsed ordering time = 385s
+Elapsed ordering time = 390s
+Elapsed ordering time = 396s
+Elapsed ordering time = 400s
+Elapsed ordering time = 406s
+Elapsed ordering time = 410s
+Elapsed ordering time = 415s
+Ordering time: 425.00s
+
+Barrier statistics:
+ Dense cols : 7815
+ AA' NZ     : 1.377e+08
+ Factor NZ  : 6.611e+09 (roughly 50.0 GBytes of memory)
+ Factor Ops : 1.752e+14 (roughly 1200 seconds per iteration)
+ Threads    : 8
+
+Barrier performed 0 iterations in 498.03 seconds
+Error termination
+
+
+
+Root relaxation: unknown termination status, 0 iterations, 3587.54 seconds
+
+Explored 0 nodes (0 simplex iterations) in 3600.11 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 2: 6326 -0 
+
+Time limit reached
+Best objective 6.326000000000e+03, best bound 9.894000000000e+03, gap 56.4021%
+
+Gurobi 9.1.1 (linux64) logging started Tue Oct 12 00:22:30 2021
+
+Changed value of parameter LogFile to results/max2cut_numv7388/max2cut_numv7388_Austin_unweighted_RP-MILO_log.txt
+   Prev:   Default: 
+Changed value of parameter LazyConstraints to 1
+   Prev: 0  Min: 0  Max: 1  Default: 0
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 5 rows, 3 columns and 15 nonzeros
+Model fingerprint: 0x918cb755
+Variable types: 0 continuous, 3 integer (3 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 3e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 1 rows and 0 columns
+Presolve time: 0.00s
+Presolved: 4 rows, 3 columns, 12 nonzeros
+Crushed 1 out of 1 user cuts to presolved model
+Variable types: 0 continuous, 3 integer (3 binary)
+
+Root relaxation: objective 4.000000e+00, 1 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0       4.0000000    4.00000  0.00%     -    0s
+
+Explored 0 nodes (1 simplex iterations) in 0.00 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 2: 4 -0 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 4.000000000000e+00, best bound 4.000000000000e+00, gap 0.0000%
+
+Gurobi 9.1.1 (linux64) logging started Tue Oct 12 00:22:30 2021
+
+Changed value of parameter LogFile to results/max2cut_numv7388/max2cut_numv7388_Austin_unweighted_RP-MILO_log.txt
+   Prev:   Default: 
+Changed value of parameter LazyConstraints to 1
+   Prev: 0  Min: 0  Max: 1  Default: 0
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 5 rows, 3 columns and 15 nonzeros
+Model fingerprint: 0x090fb3da
+Variable types: 0 continuous, 3 integer (3 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 3e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 1 rows and 0 columns
+Presolve time: 0.00s
+Presolved: 4 rows, 3 columns, 12 nonzeros
+Crushed 1 out of 1 user cuts to presolved model
+Variable types: 0 continuous, 3 integer (3 binary)
+
+Root relaxation: objective 4.000000e+00, 1 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0       4.0000000    4.00000  0.00%     -    0s
+
+Explored 0 nodes (1 simplex iterations) in 0.00 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 2: 4 -0 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 4.000000000000e+00, best bound 4.000000000000e+00, gap 0.0000%

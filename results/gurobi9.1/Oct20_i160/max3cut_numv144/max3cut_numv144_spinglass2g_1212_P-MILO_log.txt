@@ -1,0 +1,42 @@
+
+Gurobi 9.1.1 (linux64) logging started Fri Oct 15 23:35:26 2021
+
+Changed value of parameter LogFile to results/max3cut_numv144/max3cut_numv144_spinglass2g_1212_P-MILO_log.txt
+   Prev:   Default: 
+Changed value of parameter LazyConstraints to 1
+   Prev: 0  Min: 0  Max: 1  Default: 0
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 1098435 rows, 8515 columns and 3295305 nonzeros
+Model fingerprint: 0x3434b450
+Variable types: 0 continuous, 8515 integer (8515 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [9e+02, 3e+05]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve time: 4.02s
+Presolved: 1098435 rows, 8515 columns, 3295305 nonzeros
+Variable types: 0 continuous, 8515 integer (8515 binary)
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.1676244e+07   2.180000e+02   0.000000e+00      7s
+     698    1.0513448e+07   0.000000e+00   0.000000e+00      7s
+
+Root relaxation: objective 1.051345e+07, 698 iterations, 2.08 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 1.0513e+07    0  398   -0.00000 1.0513e+07      -     -    9s
+     0     0 1.0513e+07    0  398   -0.00000 1.0513e+07      -     -   11s
+     0     0 1.0513e+07    0  310   -0.00000 1.0513e+07      -     -   22s
+     0     0 1.0513e+07    0   39   -0.00000 1.0513e+07      -     -   38s
+     0     0 1.0513e+07    0   39   -0.00000 1.0513e+07      -     -   41s
+     0     0 1.0513e+07    0 1053   -0.00000 1.0513e+07      -     -   92s
+     0     0 1.0513e+07    0  192   -0.00000 1.0513e+07      -     -  495s
+     0     0 1.0513e+07    0  192   -0.00000 1.0513e+07      -     -  500s
+H    0     0                    1080831.0000 1.0513e+07   873%     -  500s

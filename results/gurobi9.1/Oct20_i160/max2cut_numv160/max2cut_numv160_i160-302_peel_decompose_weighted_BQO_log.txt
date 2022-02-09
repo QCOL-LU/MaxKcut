@@ -1,0 +1,92 @@
+
+Gurobi 9.1.1 (linux64) logging started Tue Oct 19 12:11:17 2021
+
+Changed value of parameter LogFile to results/max2cut_numv160/max2cut_numv160_i160-302_peel_decompose_weighted_BQO_log.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 125 rows, 250 columns and 250 nonzeros
+Model fingerprint: 0x2ec24c5a
+Model has 658 quadratic objective terms
+Variable types: 0 continuous, 250 integer (250 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [6e+01, 6e+01]
+  QObjective range [1e+02, 6e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective 0.0000000
+Presolve removed 125 rows and 128 columns
+Presolve time: 0.00s
+Presolved: 194 rows, 316 columns, 582 nonzeros
+Found heuristic solution: objective 1283.0000000
+Variable types: 0 continuous, 316 integer (316 binary)
+Found heuristic solution: objective 17769.000000
+
+Root relaxation: objective -2.935100e+04, 80 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 29351.0000    0  116 17769.0000 29351.0000  65.2%     -    0s
+H    0     0                    24574.000000 29351.0000  19.4%     -    0s
+H    0     0                    24777.000000 29351.0000  18.5%     -    0s
+H    0     0                    25182.000000 29351.0000  16.6%     -    0s
+H    0     0                    25464.000000 28118.0000  10.4%     -    0s
+H    0     0                    25616.000000 28118.0000  9.77%     -    0s
+     0     0 28088.0000    0  123 25616.0000 28088.0000  9.65%     -    0s
+H    0     0                    25619.000000 28088.0000  9.64%     -    0s
+H    0     0                    26398.000000 27605.5000  4.57%     -    0s
+     0     0 27481.0000    0  126 26398.0000 27481.0000  4.10%     -    0s
+     0     0 27481.0000    0  126 26398.0000 27481.0000  4.10%     -    0s
+     0     2 27481.0000    0  126 26398.0000 27481.0000  4.10%     -    0s
+*  108   100              10    26686.000000 27478.0000  2.97%  22.7    0s
+*  126   110              10    27077.000000 27478.0000  1.48%  20.3    0s
+
+Cutting planes:
+  Gomory: 2
+  Zero half: 33
+
+Explored 265 nodes (4290 simplex iterations) in 0.10 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 10: 27077 26686 26398 ... 17769
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 2.707700000000e+04, best bound 2.707700000000e+04, gap 0.0000%
+
+Gurobi 9.1.1 (linux64) logging started Tue Oct 19 12:11:18 2021
+
+Changed value of parameter LogFile to results/max2cut_numv160/max2cut_numv160_i160-302_peel_decompose_weighted_BQO_log.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 3 rows, 6 columns and 6 nonzeros
+Model fingerprint: 0x7b2774af
+Model has 12 quadratic objective terms
+Variable types: 0 continuous, 6 integer (6 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [2e+00, 2e+00]
+  QObjective range [3e+00, 4e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 3 rows and 5 columns
+Presolve time: 0.00s
+Presolved: 0 rows, 1 columns, 0 nonzeros
+Variable types: 0 continuous, 1 integer (1 binary)
+
+Root relaxation: objective 3.920000e+02, 0 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0     392.0000000  392.00000  0.00%     -    0s
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 1: 392 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 3.920000000000e+02, best bound 3.920000000000e+02, gap 0.0000%

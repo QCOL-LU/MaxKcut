@@ -1,0 +1,76 @@
+
+Gurobi 9.5.0 (linux64) logging started Thu Nov 25 22:39:43 2021
+
+Set parameter LogFile to value "results/max3cut_numv200/max3cut_numv200_band200_3_weighted_con_BQO_log.txt"
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 200 rows, 600 columns and 600 nonzeros
+Model fingerprint: 0xd5481ea9
+Model has 2970 quadratic objective terms
+Variable types: 0 continuous, 600 integer (600 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+02, 1e+02]
+  QObjective range [2e+00, 2e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 1 rows and 3 columns
+Presolve time: 0.00s
+Presolved: 2557 rows, 2955 columns, 7671 nonzeros
+Variable types: 0 continuous, 2955 integer (2955 binary)
+
+Root relaxation: objective -7.900000e+02, 423 iterations, 0.01 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  790.00000    0  376   -0.00000  790.00000      -     -    0s
+H    0     0                     618.0000000  790.00000  27.8%     -    0s
+H    0     0                     647.0000000  790.00000  22.1%     -    0s
+H    0     0                     648.0000000  790.00000  21.9%     -    0s
+     0     0  777.83333    0  520  648.00000  777.83333  20.0%     -    0s
+     0     0  777.33333    0  478  648.00000  777.33333  20.0%     -    0s
+     0     0  777.24359    0  514  648.00000  777.24359  19.9%     -    0s
+     0     0  726.86061    0  765  648.00000  726.86061  12.2%     -    0s
+H    0     0                     650.0000000  726.86061  11.8%     -    1s
+     0     0  722.79691    0  788  650.00000  722.79691  11.2%     -    1s
+H    0     0                     651.0000000  722.79691  11.0%     -    1s
+     0     0  721.53334    0  832  651.00000  721.53334  10.8%     -    1s
+H    0     0                     652.0000000  721.53334  10.7%     -    2s
+H    0     0                     653.0000000  721.53334  10.5%     -    2s
+     0     0  704.79327    0  959  653.00000  704.79327  7.93%     -    2s
+     0     0  704.79327    0  953  653.00000  704.79327  7.93%     -    2s
+     0     2  704.67867    0  937  653.00000  704.67867  7.91%     -    2s
+H   35    46                     663.0000000  698.50229  5.35%  1546    5s
+H   43    46                     666.0000000  698.50229  4.88%  1388    5s
+H  120   128                     670.0000000  698.50229  4.25%   825    7s
+H  172   178                     671.0000000  698.50229  4.10%   719    8s
+H  222   231                     677.0000000  698.50229  3.18%   625    8s
+   256   268  690.87092   19 1053  677.00000  698.50229  3.18%   585   10s
+H  259   268                     680.0000000  698.50229  2.72%   581   10s
+H  262   268                     683.0000000  698.50229  2.27%   580   10s
+H  426   404                     684.0000000  698.50229  2.12%   451   11s
+H  645   600                     685.0000000  698.50229  1.97%   400   14s
+   689   624  696.54144    5 1093  685.00000  697.87882  1.88%   395   15s
+H  882   633                     688.0000000  697.87882  1.44%   369   18s
+  1026   698     cutoff   28       688.00000  697.87882  1.44%   358   20s
+  1475   965  693.71128   11 1076  688.00000  697.55587  1.39%   343   25s
+  1693  1059  693.39479   12  912  688.00000  697.55587  1.39%   338   30s
+H 1708  1015                     691.0000000  691.29263  0.04%   335   35s
+
+Cutting planes:
+  Gomory: 2
+  MIR: 62
+  Flow cover: 68
+  Zero half: 59
+  RLT: 145
+  BQP: 1264
+
+Explored 1708 nodes (609567 simplex iterations) in 35.03 seconds (51.58 work units)
+Thread count was 10 (of 40 available processors)
+
+Solution count 10: 691 688 685 ... 666
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 6.910000000000e+02, best bound 6.910000000000e+02, gap 0.0000%

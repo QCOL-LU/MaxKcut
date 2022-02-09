@@ -1,0 +1,49 @@
+
+Gurobi 9.5.0 (linux64) logging started Fri Nov 26 02:41:00 2021
+
+Set parameter LogFile to value "results/max3cut_numv250/max3cut_numv250_band250_3_RP-MILO_log.txt"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 7380 rows, 990 columns and 22140 nonzeros
+Model fingerprint: 0xc0d2fc26
+Variable types: 0 continuous, 990 integer (990 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective 126.0000000
+Presolve removed 2940 rows and 0 columns
+Presolve time: 0.02s
+Presolved: 4440 rows, 990 columns, 13320 nonzeros
+Variable types: 0 continuous, 990 integer (990 binary)
+
+Root relaxation: objective 2.741600e+02, 713 iterations, 0.01 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  274.16000    0  602  126.00000  274.16000   118%     -    0s
+     0     0  250.00000    0  328  126.00000  250.00000  98.4%     -    0s
+H    0     0                     240.0000000  250.00000  4.17%     -    0s
+H    0     0                     249.0000000  250.00000  0.40%     -    0s
+     0     0  250.00000    0    8  249.00000  250.00000  0.40%     -    0s
+     0     0     cutoff    0       249.00000  249.00000  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 2
+  MIR: 274
+  Zero half: 236
+  RLT: 73
+  Lazy constraints: 482
+
+Explored 1 nodes (2401 simplex iterations) in 0.29 seconds (0.19 work units)
+Thread count was 10 (of 40 available processors)
+
+Solution count 3: 249 240 126 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 2.490000000000e+02, best bound 2.490000000000e+02, gap 0.0000%
+
+User-callback calls 214, time in user-callback 0.04 sec

@@ -1,0 +1,72 @@
+
+Gurobi 9.5.0 (linux64) logging started Fri Nov 26 20:07:00 2021
+
+Set parameter LogFile to value "results/max3cut_numv225/max3cut_numv225_spinglass2pm_1515_RP-MILO_log.txt"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 138198 rows, 6662 columns and 414594 nonzeros
+Model fingerprint: 0x72d53db7
+Variable types: 0 continuous, 6662 integer (6662 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 75987 rows and 0 columns
+Presolve time: 0.38s
+Presolved: 62211 rows, 6662 columns, 186633 nonzeros
+Variable types: 0 continuous, 6662 integer (6662 binary)
+
+Root relaxation: objective 1.800000e+02, 450 iterations, 0.14 seconds (0.10 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  179.71084    0 1088   -0.00000  179.71084      -     -    5s
+     0     0  179.58333    0 1159   -0.00000  179.58333      -     -   21s
+H    0     0                      45.0000000  179.58333   299%     -   21s
+     0     0  179.50064    0 1279   45.00000  179.50064   299%     -   33s
+     0     0  179.48697    0 1399   45.00000  179.48697   299%     -   48s
+     0     0  179.47440    0 1391   45.00000  179.47440   299%     -   57s
+     0     0  179.43490    0 1372   45.00000  179.43490   299%     -   74s
+H    0     0                      49.0000000  179.43490   266%     -   74s
+     0     0  179.42894    0 1309   49.00000  179.42894   266%     -   84s
+     0     0  179.42728    0 1398   49.00000  179.42728   266%     -  105s
+     0     0  179.42480    0 1378   49.00000  179.42480   266%     -  115s
+     0     0  179.42415    0 1391   49.00000  179.42415   266%     -  126s
+H    0     0                      57.0000000  179.42415   215%     -  126s
+     0     0  179.42415    0 1369   57.00000  179.42415   215%     -  129s
+     0     0  179.42415    0 1363   57.00000  179.42415   215%     -  136s
+     0     0  179.42415    0 1384   57.00000  179.42415   215%     -  144s
+     0     0  179.42415    0 1410   57.00000  179.42415   215%     -  159s
+     0     0  179.42415    0 1401   57.00000  179.42415   215%     -  165s
+     0     0  179.42415    0 1407   57.00000  179.42415   215%     -  178s
+     0     0  179.42415    0 1406   57.00000  179.42415   215%     -  182s
+H    0     0                     176.0000000  179.42415  1.95%     -  184s
+     0     2  179.42415    0 1406  176.00000  179.42415  1.95%     -  209s
+     1     4  179.42116    1 1404  176.00000  179.42350  1.95% 13678  224s
+     3     8  179.39790    2 1507  176.00000  179.42116  1.94% 13462  248s
+     7    16  179.37702    3 1462  176.00000  179.39729  1.93% 14995  286s
+    15    26  179.37661    4 1437  176.00000  179.37702  1.92% 16395  335s
+H   16    26                     178.0000000  179.37702  0.77% 15370  335s
+H   21    26                     179.0000000  179.37702  0.21% 16766  335s
+
+Cutting planes:
+  Gomory: 7
+  MIR: 445
+  Zero half: 29
+  RLT: 1292
+  BQP: 1927
+  Lazy constraints: 900
+
+Explored 25 nodes (593147 simplex iterations) in 335.94 seconds (1314.26 work units)
+Thread count was 10 (of 40 available processors)
+
+Solution count 7: 179 178 176 ... -0
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 1.790000000000e+02, best bound 1.790000000000e+02, gap 0.0000%
+
+User-callback calls 57403, time in user-callback 1.12 sec

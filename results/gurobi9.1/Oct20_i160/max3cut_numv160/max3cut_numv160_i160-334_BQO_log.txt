@@ -1,0 +1,51 @@
+
+Gurobi 9.1.1 (linux64) logging started Mon Oct 18 00:57:51 2021
+
+Changed value of parameter LogFile to results/max3cut_numv160/max3cut_numv160_i160-334_BQO_log.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 106 rows, 318 columns and 318 nonzeros
+Model fingerprint: 0xe60725fe
+Model has 1002 quadratic objective terms
+Variable types: 0 continuous, 318 integer (318 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [5e+01, 5e+01]
+  QObjective range [1e+02, 6e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 1 rows and 3 columns
+Presolve time: 0.00s
+Presolved: 771 rows, 981 columns, 2313 nonzeros
+Variable types: 0 continuous, 981 integer (981 binary)
+
+Root relaxation: objective -3.545500e+04, 274 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 35455.0000    0   56   -0.00000 35455.0000      -     -    0s
+H    0     0                    33966.000000 35455.0000  4.38%     -    0s
+H    0     0                    35056.000000 35455.0000  1.14%     -    0s
+H    0     0                    35062.000000 35455.0000  1.12%     -    0s
+H    0     0                    35169.000000 35455.0000  0.81%     -    0s
+     0     0 35455.0000    0  135 35169.0000 35455.0000  0.81%     -    0s
+H    0     0                    35274.000000 35455.0000  0.51%     -    0s
+H    0     0                    35364.000000 35455.0000  0.26%     -    0s
+     0     0 35455.0000    0   68 35364.0000 35455.0000  0.26%     -    0s
+H    0     0                    35455.000000 35455.0000  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 1
+  Zero half: 5
+  RLT: 1
+
+Explored 1 nodes (1076 simplex iterations) in 0.08 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 8: 35455 35364 35274 ... -0
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 3.545500000000e+04, best bound 3.545500000000e+04, gap 0.0000%

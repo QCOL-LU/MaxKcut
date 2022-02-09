@@ -1,0 +1,53 @@
+
+Gurobi 9.1.1 (linux64) logging started Mon Oct 18 00:13:55 2021
+
+Changed value of parameter LogFile to results/max2cut_numv160/max2cut_numv160_i160-241_BQO_log.txt
+   Prev:   Default: 
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 160 rows, 320 columns and 320 nonzeros
+Model fingerprint: 0x6b273b74
+Model has 5408 quadratic objective terms
+Variable types: 0 continuous, 320 integer (320 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [8e+01, 8e+01]
+  QObjective range [2e+02, 6e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 160 rows and 161 columns
+Presolve time: 0.01s
+Presolved: 2513 rows, 2672 columns, 7539 nonzeros
+Variable types: 0 continuous, 2672 integer (2672 binary)
+
+Root relaxation: objective -3.237105e+05, 164 iterations, 0.01 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 323710.500    0  159   -0.00000 323710.500      -     -    0s
+H    0     0                    162401.00000 323710.500  99.3%     -    0s
+H    0     0                    181471.00000 323710.500  78.4%     -    0s
+H    0     0                    182683.00000 323710.500  77.2%     -    0s
+H    0     0                    186668.00000 323710.500  73.4%     -    0s
+H    0     0                    187659.00000 323710.500  72.5%     -    0s
+     0     0 265671.000    0  706 187659.000 265671.000  41.6%     -    0s
+     0     0 251857.000    0  816 187659.000 251857.000  34.2%     -    1s
+H    0     0                    190314.00000 251857.000  32.3%     -    1s
+     0     0 250597.625    0  944 190314.000 250597.625  31.7%     -    1s
+     0     0          -    0      190314.000 250597.625  31.7%     -    5s
+
+Cutting planes:
+  MIR: 523
+  Zero half: 537
+  RLT: 1077
+  BQP: 245
+
+Explored 1 nodes (12678 simplex iterations) in 5.01 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 7: 190314 187659 186668 ... -0
+
+Time limit reached
+Best objective 1.903140000000e+05, best bound 2.505970000000e+05, gap 31.6755%

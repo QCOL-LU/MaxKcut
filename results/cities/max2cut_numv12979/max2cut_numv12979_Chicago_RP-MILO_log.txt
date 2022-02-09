@@ -1,0 +1,62 @@
+
+Gurobi 9.5.0 (linux64) logging started Thu Nov 25 11:30:48 2021
+
+Set parameter LogFile to value "results/max2cut_numv12979/max2cut_numv12979_Chicago_RP-MILO_log.txt"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 10431072 rows, 310764 columns and 31293216 nonzeros
+Model fingerprint: 0x0b12ce79
+Variable types: 0 continuous, 310764 integer (310764 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [2e+00, 1e+03]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 0 rows and 0 columns (presolve time = 5s) ...
+Presolve removed 5199897 rows and 0 columns (presolve time = 10s) ...
+Presolve removed 5199897 rows and 0 columns (presolve time = 15s) ...
+Presolve removed 5199897 rows and 0 columns (presolve time = 20s) ...
+Presolve removed 5199897 rows and 0 columns (presolve time = 25s) ...
+Presolve removed 5199897 rows and 0 columns (presolve time = 31s) ...
+Presolve removed 5199897 rows and 0 columns (presolve time = 36s) ...
+Presolve removed 5199897 rows and 0 columns (presolve time = 40s) ...
+Presolve removed 5199897 rows and 0 columns (presolve time = 47s) ...
+Presolve removed 5199897 rows and 0 columns
+Presolve time: 47.14s
+Presolved: 5231175 rows, 310764 columns, 15693525 nonzeros
+Variable types: 0 continuous, 310764 integer (310764 binary)
+
+Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+
+Barrier performed 0 iterations in 84.66 seconds (72.12 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+Concurrent spin time: 1.44s
+
+Solved with dual simplex
+
+Root relaxation: objective 1.263116e+06, 86 iterations, 20.53 seconds (8.11 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0          -    0        -0.00000 1263116.00      -     - 3600s
+
+Cutting planes:
+  Lazy constraints: 61349
+
+Explored 1 nodes (169077 simplex iterations) in 3600.27 seconds (6494.18 work units)
+Thread count was 10 (of 40 available processors)
+
+Solution count 1: -0 
+
+Time limit reached
+Best objective -0.000000000000e+00, best bound 1.263116000000e+06, gap -
+
+User-callback calls 8251, time in user-callback 7.58 sec

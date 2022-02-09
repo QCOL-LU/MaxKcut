@@ -1,0 +1,471 @@
+
+Gurobi 9.1.1 (linux64) logging started Tue Oct 12 08:02:02 2021
+
+Changed value of parameter LogFile to results/max2cut_numv12979/max2cut_numv12979_Chicago_weighted_RP-MILO_log.txt
+   Prev:   Default: 
+Changed value of parameter LazyConstraints to 1
+   Prev: 0  Min: 0  Max: 1  Default: 0
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 13925075 rows, 310764 columns and 41742919 nonzeros
+Model fingerprint: 0x5ffae95d
+Variable types: 0 continuous, 310764 integer (310764 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [2e+00, 1e+03]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Found heuristic solution: objective 796951.00000
+Presolve removed 16979 rows and 0 columns (presolve time = 5s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 21s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 25s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 30s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 35s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 45s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 60s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 63s) ...
+Presolve removed 6950175 rows and 0 columns
+Presolve time: 63.18s
+Presolved: 6974900 rows, 310764 columns, 20924700 nonzeros
+Crushed 826 out of 16979 user cuts to presolved model
+Variable types: 0 continuous, 310764 integer (310764 binary)
+
+Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+
+Barrier performed 0 iterations in 165.02 seconds
+Error termination
+
+
+
+Root relaxation: unknown termination status, 0 iterations, 3521.71 seconds
+
+Explored 0 nodes (0 simplex iterations) in 3600.84 seconds
+Thread count was 10 (of 40 available processors)
+
+Solution count 2: 796951 -0 
+
+Time limit reached
+Best objective 7.969510000000e+05, best bound 1.263380000000e+06, gap 58.5267%
+
+Gurobi 9.1.1 (linux64) logging started Tue Oct 12 09:23:59 2021
+
+Changed value of parameter LogFile to results/max2cut_numv12979/max2cut_numv12979_Chicago_weighted_RP-MILO_log.txt
+   Prev:   Default: 
+Changed value of parameter LazyConstraints to 1
+   Prev: 0  Min: 0  Max: 1  Default: 0
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 13925075 rows, 310764 columns and 41742919 nonzeros
+Model fingerprint: 0x5ffae95d
+Variable types: 0 continuous, 310764 integer (310764 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [2e+00, 1e+03]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Found heuristic solution: objective 796951.00000
+Presolve removed 16979 rows and 0 columns (presolve time = 6s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 24s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 26s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 30s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 35s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 40s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 52s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 73s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 77s) ...
+Presolve removed 6950175 rows and 0 columns
+Presolve time: 77.27s
+Presolved: 6974900 rows, 310764 columns, 20924700 nonzeros
+Crushed 826 out of 16979 user cuts to presolved model
+Variable types: 0 continuous, 310764 integer (310764 binary)
+
+Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Elapsed ordering time = 21s
+Elapsed ordering time = 25s
+Elapsed ordering time = 30s
+Elapsed ordering time = 35s
+Elapsed ordering time = 40s
+Elapsed ordering time = 45s
+Elapsed ordering time = 50s
+Elapsed ordering time = 55s
+Elapsed ordering time = 60s
+Elapsed ordering time = 65s
+Elapsed ordering time = 70s
+Elapsed ordering time = 75s
+Elapsed ordering time = 85s
+Elapsed ordering time = 85s
+Elapsed ordering time = 90s
+Elapsed ordering time = 95s
+Elapsed ordering time = 100s
+Elapsed ordering time = 105s
+Elapsed ordering time = 110s
+
+Gurobi 9.1.1 (linux64) logging started Tue Oct 12 16:07:01 2021
+
+Changed value of parameter LogFile to results/max2cut_numv12979/max2cut_numv12979_Chicago_weighted_RP-MILO_log.txt
+   Prev:   Default: 
+Changed value of parameter LazyConstraints to 1
+   Prev: 0  Min: 0  Max: 1  Default: 0
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 13925075 rows, 310764 columns and 41742919 nonzeros
+Model fingerprint: 0x5ffae95d
+Variable types: 0 continuous, 310764 integer (310764 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [2e+00, 1e+03]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Found heuristic solution: objective 796951.00000
+Presolve removed 16979 rows and 0 columns (presolve time = 5s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 21s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 25s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 30s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 35s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 46s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 61s) ...
+Presolve removed 6950175 rows and 0 columns
+Presolve time: 64.06s
+Presolved: 6974900 rows, 310764 columns, 20924700 nonzeros
+Crushed 826 out of 16979 user cuts to presolved model
+Variable types: 0 continuous, 310764 integer (310764 binary)
+
+Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Elapsed ordering time = 20s
+Elapsed ordering time = 25s
+Elapsed ordering time = 30s
+Elapsed ordering time = 35s
+Elapsed ordering time = 40s
+Elapsed ordering time = 45s
+Elapsed ordering time = 50s
+Elapsed ordering time = 55s
+Elapsed ordering time = 60s
+Elapsed ordering time = 65s
+Elapsed ordering time = 70s
+Elapsed ordering time = 77s
+Elapsed ordering time = 80s
+Elapsed ordering time = 85s
+Elapsed ordering time = 90s
+Elapsed ordering time = 95s
+Elapsed ordering time = 100s
+Elapsed ordering time = 105s
+Elapsed ordering time = 110s
+
+Gurobi 9.1.1 (linux64) logging started Tue Oct 12 21:03:12 2021
+
+Changed value of parameter LogFile to results/max2cut_numv12979/max2cut_numv12979_Chicago_weighted_RP-MILO_log.txt
+   Prev:   Default: 
+Changed value of parameter LazyConstraints to 1
+   Prev: 0  Min: 0  Max: 1  Default: 0
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 13925075 rows, 310764 columns and 41742919 nonzeros
+Model fingerprint: 0x5ffae95d
+Variable types: 0 continuous, 310764 integer (310764 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [2e+00, 1e+03]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Found heuristic solution: objective 796951.00000
+Presolve removed 16979 rows and 0 columns (presolve time = 6s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 25s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 25s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 30s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 35s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 40s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 45s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 56s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 73s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 78s) ...
+Presolve removed 6950175 rows and 0 columns
+Presolve time: 77.60s
+Presolved: 6974900 rows, 310764 columns, 20924700 nonzeros
+Crushed 826 out of 16979 user cuts to presolved model
+Variable types: 0 continuous, 310764 integer (310764 binary)
+
+Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Elapsed ordering time = 19s
+Elapsed ordering time = 20s
+Elapsed ordering time = 25s
+Elapsed ordering time = 30s
+Elapsed ordering time = 35s
+Elapsed ordering time = 40s
+Elapsed ordering time = 45s
+Elapsed ordering time = 50s
+Elapsed ordering time = 55s
+Elapsed ordering time = 60s
+Elapsed ordering time = 65s
+Elapsed ordering time = 70s
+Elapsed ordering time = 75s
+Elapsed ordering time = 85s
+Elapsed ordering time = 90s
+Elapsed ordering time = 95s
+Elapsed ordering time = 100s
+Elapsed ordering time = 105s
+Elapsed ordering time = 110s
+
+Gurobi 9.1.1 (linux64) logging started Wed Oct 13 06:21:14 2021
+
+Changed value of parameter LogFile to results/max2cut_numv12979/max2cut_numv12979_Chicago_weighted_RP-MILO_log.txt
+   Prev:   Default: 
+Changed value of parameter LazyConstraints to 1
+   Prev: 0  Min: 0  Max: 1  Default: 0
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 13925075 rows, 310764 columns and 41742919 nonzeros
+Model fingerprint: 0x5ffae95d
+Variable types: 0 continuous, 310764 integer (310764 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [2e+00, 1e+03]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Found heuristic solution: objective 796951.00000
+Presolve removed 16979 rows and 0 columns (presolve time = 5s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 21s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 25s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 30s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 35s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 45s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 60s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 63s) ...
+Presolve removed 6950175 rows and 0 columns
+Presolve time: 63.33s
+Presolved: 6974900 rows, 310764 columns, 20924700 nonzeros
+Crushed 826 out of 16979 user cuts to presolved model
+Variable types: 0 continuous, 310764 integer (310764 binary)
+
+Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Elapsed ordering time = 19s
+Elapsed ordering time = 20s
+Elapsed ordering time = 25s
+Elapsed ordering time = 30s
+Elapsed ordering time = 35s
+Elapsed ordering time = 40s
+Elapsed ordering time = 45s
+Elapsed ordering time = 50s
+Elapsed ordering time = 55s
+Elapsed ordering time = 60s
+Elapsed ordering time = 65s
+Elapsed ordering time = 70s
+Elapsed ordering time = 75s
+Elapsed ordering time = 80s
+Elapsed ordering time = 85s
+Elapsed ordering time = 90s
+Elapsed ordering time = 95s
+Elapsed ordering time = 100s
+Elapsed ordering time = 105s
+Elapsed ordering time = 110s
+Elapsed ordering time = 115s
+Elapsed ordering time = 120s
+Elapsed ordering time = 125s
+
+Gurobi 9.1.1 (linux64) logging started Wed Oct 13 07:53:42 2021
+
+Changed value of parameter LogFile to results/max2cut_numv12979/max2cut_numv12979_Chicago_weighted_RP-MILO_log.txt
+   Prev:   Default: 
+Changed value of parameter LazyConstraints to 1
+   Prev: 0  Min: 0  Max: 1  Default: 0
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 13925075 rows, 310764 columns and 41742919 nonzeros
+Model fingerprint: 0x5ffae95d
+Variable types: 0 continuous, 310764 integer (310764 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [2e+00, 1e+03]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Found heuristic solution: objective 796951.00000
+Presolve removed 16979 rows and 0 columns (presolve time = 5s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 21s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 25s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 30s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 35s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 45s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 60s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 64s) ...
+Presolve removed 6950175 rows and 0 columns
+Presolve time: 63.56s
+Presolved: 6974900 rows, 310764 columns, 20924700 nonzeros
+Crushed 826 out of 16979 user cuts to presolved model
+Variable types: 0 continuous, 310764 integer (310764 binary)
+
+Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Elapsed ordering time = 19s
+Elapsed ordering time = 20s
+Elapsed ordering time = 25s
+Elapsed ordering time = 30s
+Elapsed ordering time = 35s
+Elapsed ordering time = 40s
+Elapsed ordering time = 45s
+Elapsed ordering time = 50s
+Elapsed ordering time = 55s
+Elapsed ordering time = 60s
+Elapsed ordering time = 65s
+Elapsed ordering time = 74s
+Elapsed ordering time = 75s
+Elapsed ordering time = 80s
+Elapsed ordering time = 85s
+Elapsed ordering time = 90s
+Elapsed ordering time = 95s
+Elapsed ordering time = 100s
+Elapsed ordering time = 105s
+Elapsed ordering time = 110s
+Elapsed ordering time = 115s
+Elapsed ordering time = 120s
+Elapsed ordering time = 126s
+Elapsed ordering time = 130s
+
+Gurobi 9.1.1 (linux64) logging started Wed Oct 13 18:01:57 2021
+
+Changed value of parameter LogFile to results/max2cut_numv12979/max2cut_numv12979_Chicago_weighted_RP-MILO_log.txt
+   Prev:   Default: 
+Changed value of parameter LazyConstraints to 1
+   Prev: 0  Min: 0  Max: 1  Default: 0
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 13925075 rows, 310764 columns and 41742919 nonzeros
+Model fingerprint: 0x5ffae95d
+Variable types: 0 continuous, 310764 integer (310764 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [2e+00, 1e+03]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Found heuristic solution: objective 796951.00000
+Presolve removed 16979 rows and 0 columns (presolve time = 5s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 22s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 25s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 30s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 35s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 40s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 48s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 64s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 68s) ...
+Presolve removed 6950175 rows and 0 columns
+Presolve time: 67.56s
+Presolved: 6974900 rows, 310764 columns, 20924700 nonzeros
+Crushed 826 out of 16979 user cuts to presolved model
+Variable types: 0 continuous, 310764 integer (310764 binary)
+
+Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Elapsed ordering time = 25s
+Elapsed ordering time = 25s
+Elapsed ordering time = 30s
+Elapsed ordering time = 35s
+Elapsed ordering time = 40s
+Elapsed ordering time = 45s
+Elapsed ordering time = 50s
+Elapsed ordering time = 55s
+Elapsed ordering time = 60s
+Elapsed ordering time = 65s
+Elapsed ordering time = 70s
+Elapsed ordering time = 75s
+Elapsed ordering time = 80s
+Elapsed ordering time = 85s
+Elapsed ordering time = 90s
+Elapsed ordering time = 95s
+Elapsed ordering time = 100s
+Elapsed ordering time = 105s
+Elapsed ordering time = 114s
+Elapsed ordering time = 115s
+Elapsed ordering time = 120s
+
+Gurobi 9.1.1 (linux64) logging started Thu Oct 14 15:26:08 2021
+
+Changed value of parameter LogFile to results/max2cut_numv12979/max2cut_numv12979_Chicago_weighted_RP-MILO_log.txt
+   Prev:   Default: 
+Changed value of parameter LazyConstraints to 1
+   Prev: 0  Min: 0  Max: 1  Default: 0
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 13925075 rows, 310764 columns and 41742919 nonzeros
+Model fingerprint: 0x5ffae95d
+Variable types: 0 continuous, 310764 integer (310764 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [2e+00, 1e+03]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Found heuristic solution: objective 796951.00000
+Presolve removed 16979 rows and 0 columns (presolve time = 6s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 23s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 25s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 30s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 35s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 40s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 48s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 64s) ...
+Presolve removed 6950175 rows and 0 columns (presolve time = 68s) ...
+Presolve removed 6950175 rows and 0 columns
+Presolve time: 68.14s
+Presolved: 6974900 rows, 310764 columns, 20924700 nonzeros
+Crushed 826 out of 16979 user cuts to presolved model
+Variable types: 0 continuous, 310764 integer (310764 binary)
+
+Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Elapsed ordering time = 17s
+Elapsed ordering time = 20s
+Elapsed ordering time = 25s
+Elapsed ordering time = 30s
+Elapsed ordering time = 35s
+Elapsed ordering time = 40s
+Elapsed ordering time = 45s
+Elapsed ordering time = 50s
+Elapsed ordering time = 55s
+Elapsed ordering time = 60s
+Elapsed ordering time = 65s
+Elapsed ordering time = 71s
+Elapsed ordering time = 75s
+Elapsed ordering time = 80s
+Elapsed ordering time = 85s
+Elapsed ordering time = 90s
+Elapsed ordering time = 95s
+Elapsed ordering time = 100s
+Elapsed ordering time = 105s
+Elapsed ordering time = 110s
+Elapsed ordering time = 115s
+Elapsed ordering time = 120s
+Elapsed ordering time = 125s

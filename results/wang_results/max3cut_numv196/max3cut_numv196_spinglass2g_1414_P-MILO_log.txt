@@ -1,0 +1,66 @@
+
+Gurobi 9.5.0 (linux64) logging started Thu Nov 25 23:17:40 2021
+
+Set parameter LogFile to value "results/max3cut_numv196/max3cut_numv196_spinglass2g_1414_P-MILO_log.txt"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 3707340 rows, 19110 columns and 11122020 nonzeros
+Model fingerprint: 0xac64e59c
+Variable types: 0 continuous, 19110 integer (19110 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [4e+02, 3e+05]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 0 rows and 0 columns (presolve time = 5s) ...
+Presolve removed 0 rows and 0 columns (presolve time = 10s) ...
+Presolve time: 13.83s
+Presolved: 3707340 rows, 19110 columns, 11122020 nonzeros
+Variable types: 0 continuous, 19110 integer (19110 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing first log only...
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0126225e+07   0.000000e+00   6.511115e+06     26s
+Concurrent spin time: 0.45s
+
+Solved with dual simplex
+
+Root relaxation: objective 1.551449e+07, 883 iterations, 8.99 seconds (4.73 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 1.5514e+07    0  906   -0.00000 1.5514e+07      -     -   34s
+     0     0 1.5514e+07    0  906   -0.00000 1.5514e+07      -     -   42s
+     0     0 1.5514e+07    0  889   -0.00000 1.5514e+07      -     -   83s
+     0     0 1.5514e+07    0  889   -0.00000 1.5514e+07      -     -   90s
+     0     0 1.5514e+07    0 1111   -0.00000 1.5514e+07      -     -  270s
+     0     0 1.5514e+07    0 1111   -0.00000 1.5514e+07      -     -  276s
+H    0     0                    214110.00000 1.5514e+07  7146%     -  280s
+     0     0 1.5514e+07    0 1726 214110.000 1.5514e+07  7146%     - 1061s
+     0     0          -    0      214110.000 1.5514e+07  7146%     - 3600s
+
+Cutting planes:
+  Gomory: 2
+  MIR: 188
+  Zero half: 8793
+  RLT: 1930
+  BQP: 14730
+  Lazy constraints: 100
+
+Explored 1 nodes (79701 simplex iterations) in 3600.58 seconds (11504.74 work units)
+Thread count was 10 (of 40 available processors)
+
+Solution count 2: 214110 -0 
+
+Time limit reached
+Best objective 2.141100000000e+05, best bound 1.551448900000e+07, gap 7146.0366%
+
+User-callback calls 18727, time in user-callback 0.29 sec
