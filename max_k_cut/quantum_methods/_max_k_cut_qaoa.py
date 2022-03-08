@@ -63,9 +63,10 @@ def solve_max_k_cut_qaoa(self):
 			locally_optimal_angles 	= optimizer_results.x
 
 		elif self.Params.QAOA_Scipy_Optimizer == "brute":
-			bounds 					= [(0,  np.pi) for _ in range(2 * self.Params.QAOA_Num_Levels)]
-			# bounds					= [(.5, .9), (.6, 1), (1.8, 2.2), (4.8, 5.2)]
+			bounds 					= [(0,  2*np.pi) for _ in range(2 * self.Params.QAOA_Num_Levels)]
 			Ns						= self.Params.QAOA_Brute_Num_Samples
+
+	
 
 			# optimizer_results 		= brute(func=self.qaoa_expected_value, 
 			# 								ranges=bounds,
@@ -97,7 +98,7 @@ def solve_max_k_cut_qaoa(self):
 						else:
 							itr 					+= 1
 
-					if itr > iter_finish: break
+					# if itr > iter_finish: break
 
 
 					if self.Params.QAOA_Num_Levels >= 2:
@@ -117,7 +118,7 @@ def solve_max_k_cut_qaoa(self):
 											obj 	= - self.qaoa_expected_value(arg)
 
 					
-				if itr > iter_finish: break
+				# if itr > iter_finish: break
 				
 
 			self.plot_qaoa_level_one(gammas, betas, objectives)

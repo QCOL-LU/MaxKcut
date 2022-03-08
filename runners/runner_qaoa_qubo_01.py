@@ -13,7 +13,7 @@ num_partitions 	= int(sys.argv[3])
 penalty_increase= float(sys.argv[4])
 noise 			= float(sys.argv[5])
 
-name 			= "seed" + str(seed) + "_band_pen_shot_" + ("naive" if penalty_increase > 1 else "tight")
+name 			= "seed" + str(seed) + "_band_test_" + ("naive" if penalty_increase > 1 else "tight")
 graph 			= nx.Graph( )
 
 # graph 			= nx.erdos_renyi_graph(num_vertices, .8, seed=seed, directed=False)
@@ -36,7 +36,7 @@ problem.Params.Peel 					= False
 problem.Params.Fold 					= False
 problem.Params.Decompose 				= False
 
-problem.Params.Method 					= "QUBO" #R-QUBO BQO
+problem.Params.Method 					= "R-QUBO" #R-QUBO BQO
 problem.Params.Naive 					= (True if penalty_increase > 1 else False)
 
 # problem.Params.Curvature_Type 			= "convex" 			#"concave"
@@ -44,15 +44,15 @@ problem.Params.Naive 					= (True if penalty_increase > 1 else False)
 
 problem.Params.Gurobi_TimeLimit			= 3600
 # problem.Params.Gurobi_LogToConsole 		= 1
-problem.Params.QAOA_Optimize 			= False
+# problem.Params.QAOA_Optimize 			= False
 
 problem.Params.QAOA_Scipy_Optimizer 	= "brute" #Nelder-Mead brute
-problem.Params.Penalty_Increase 		= penalty_increase
+# problem.Params.Penalty_Increase 		= penalty_increase
 
-problem.Params.QAOA_Angles				= [0.26, 0.38] #[0.26, 0.38]
-# problem.Params.QAOA_Num_Levels			= 1
+# problem.Params.QAOA_Angles				= [0.26, 0.38] #[0.26, 0.38]
+problem.Params.QAOA_Num_Levels			= 1
 problem.Params.QAOA_Num_Shots			= 10000
-# problem.Params.QAOA_Brute_Num_Samples 	= 10
-problem.Params.QAOA_Gates_Noise			= noise
+problem.Params.QAOA_Brute_Num_Samples 	= 50
+# problem.Params.QAOA_Gates_Noise			= noise
 
 problem.solve()

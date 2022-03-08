@@ -182,7 +182,9 @@ def qaoa_expected_value(self, angles):
 	error_u1 			= depolarizing_error(self.Params.QAOA_Gates_Noise, 1)
 	noise_model.add_all_qubit_quantum_error(error_u1, ['u1', 'rx', 'unitary'])
 
-	backend 			= Aer.get_backend("qasm_simulator") #qasm_simulator
+	backend 			= Aer.get_backend("qasm_simulator", fusion_max_qubit=3, precision="single") #qasm_simulator
+	# backend 			= Aer.get_backend("qasm_simulator") #qasm_simulator
+
 	shots				= self.Params.QAOA_Num_Shots
 
 	

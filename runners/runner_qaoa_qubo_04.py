@@ -58,7 +58,7 @@ problem.Params.QAOA_Scipy_Optimizer 	= "brute" #Nelder-Mead brute
 # problem.Params.QAOA_Angles				= [0.26, 0.38] #[0.26, 0.38]
 problem.Params.QAOA_Num_Levels			= 1
 problem.Params.QAOA_Num_Shots			= 10000
-problem.Params.QAOA_Brute_Num_Samples 	= 25
+problem.Params.QAOA_Brute_Num_Samples 	= 50
 problem.Params.QAOA_Gates_Noise			= noise
 
 problem.solve()

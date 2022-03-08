@@ -7,6 +7,7 @@ from max_k_cut import *
 from networkx import nx
 import sys
 import numpy as np
+import random
 
 seed 			= int(sys.argv[1])
 num_vertices 	= int(sys.argv[2])
@@ -14,12 +15,26 @@ num_partitions 	= int(sys.argv[3])
 penalty_increase= float(sys.argv[4])
 noise 			= float(sys.argv[5])
 
-name 			= "seed" + str(seed) + "_band_pen_shot_" + ("naive" if penalty_increase > 1 else "tight")
+name 			= "seed" + str(seed) + "_band_pen_shot_test_" + ("naive" if penalty_increase > 1 else "tight")
 graph 			= nx.Graph()
+graph_density 	= 0.8
+
+is_connected 		= False
+while (not is_connected):
+	
+	random.seed(seed) 
+	graph 			= nx.erdos_renyi_graph(num_vertices, graph_density, seed=seed, directed=False)
+	seed 			= seed + 1 
+	is_connected 	= nx.is_connected(graph)
+
+neg_edge_percentage = 0.8
+weighted_graph	= nx.Graph()
+edges 			= [(edge[0], edge[1], 1 if random.random() > neg_edge_percentage else -1) for edge in graph.edges()] 
 
 
-np.random.seed(seed) 
-edges = [(i, j, 2*np.random.randint(0, 2) - 1) for i in np.arange(1, num_vertices, 1) for j in np.arange(i + 1, min(i+num_partitions+1, num_vertices) + 1, 1)]
+
+# np.random.seed(seed) 
+# edges = [(i, j, 2*np.random.randint(0, 2) - 1) for i in np.arange(1, num_vertices, 1) for j in np.arange(i + 1, min(i+num_partitions+1, num_vertices) + 1, 1)]
 
 graph.add_weighted_edges_from(edges)
 
@@ -42,14 +57,14 @@ problem.Params.Naive 					= (True if penalty_increase > 1 else False)
 
 problem.Params.Gurobi_TimeLimit			= 3600
 # problem.Params.Gurobi_LogToConsole 		= 1
-problem.Params.QAOA_Optimize 			= False
+# problem.Params.QAOA_Optimize 			= False
 
 problem.Params.QAOA_Scipy_Optimizer 	= "brute" #Nelder-Mead brute
 problem.Params.Penalty_Increase 		= penalty_increase
 
-problem.Params.QAOA_Angles				= [6.15, 2.69]
+# problem.Params.QAOA_Angles				= [6.15, 2.69]
 problem.Params.QAOA_Num_Levels			= 1
-problem.Params.QAOA_Num_Shots			= 1000
+problem.Params.QAOA_Num_Shots			= 10000
 problem.Params.QAOA_Gates_Noise			= noise
 
 

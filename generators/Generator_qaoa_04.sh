@@ -2,7 +2,7 @@
 
 PWD=`pwd`
 RUNNERS=(../runners/runner_qaoa_qubo_04) #Change this 
-NUM_PARTITIONS=(3 4)
+NUM_PARTITIONS=(4)
 PENALTY_MULTIPLIER=(1.0 2.0)
 NUM_VERTICES=(8)
 GRAPH_DENSITY=(0.8) #0.2 0.4 0.6
