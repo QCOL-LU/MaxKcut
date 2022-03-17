@@ -12,20 +12,19 @@ We study four classical mixed integer linear optimization models of the max k-cu
 
 ## Install
 
-1- Download the ```MaxKcut```
-
-2- Use the following comands to install the max_k_cut package
+1- Use the following comands to install the max_k_cut package
 
 ```
+git clone https://github.com/QCOL-LU/MaxKcut.git
 python3.9 -m venv env
 source env/bin/activate
 pip3.9 install -e MaxKcut/max_k_cut
 pip3 install qiskit numpy scipy matplotlib networkx
 ```
 
-3- Follow the instruction provided [here](https://support.gurobi.com/hc/en-us/articles/360044290292-How-do-I-install-Gurobi-for-Python-) to install Gurobi solver.
+2- Follow the instruction provided [here](https://support.gurobi.com/hc/en-us/articles/360044290292-How-do-I-install-Gurobi-for-Python-) to install Gurobi solver.
 
-4- Follow the instruction provided [here](https://docs.mosek.com/latest/install/installation.html) to install Mosek solver.
+3- Follow the instruction provided [here](https://docs.mosek.com/latest/install/installation.html) to install Mosek solver.
 
 ## Run
 
