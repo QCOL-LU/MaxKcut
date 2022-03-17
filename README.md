@@ -17,7 +17,9 @@ We study four classical mixed integer linear optimization models of the max k-cu
 2- Use the following comands to install the max_k_cut package
 
 ```
-pip3 install MaxKcut
+python3.9 -m venv env
+source env/bin/activate
+pip3.9 install -e MaxKcut/max_k_cut
 pip3 install qiskit numpy scipy matplotlib networkx
 ```
 
