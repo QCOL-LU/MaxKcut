@@ -1,0 +1,73 @@
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           128
+Number of edges:              3216
+Number of partitions:         4
+
+Density (%):                  40
+Name of instance:             miles1000_concave
+
+Is planar:                    False
+Is Chordal:                   False
+
+Triangles Density (%):        13
+Min_Maximal_Matching (%):     98
+Global Efficiency:            0.65
+
+Core Number:                  42
+Largest Component Size:       128
+
+Cut Vertices Number:          0
+Largest BiComponent Size:     128
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       BQO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+Relaxed:                      True
+Rounding Heuristic:           False
+Curvature Type:               concave
+Curvature Method:             mosek
+Symmetry Breaking:            False
+Gurobi Time Limit:            3600
+Gurobi MIPGap:                0
+Gurobi Threads:               10
+Gurobi Heuristics:            0
+Gurobi Presolve:              -1
+Gurobi Symmetry:              -1
+Gurobi Cuts:                  -1
+==================================================
+
+==================================================
+Summary of results of BQO model of 0-S128
+--------------------------------------------------
+Model status:                 optimal
+Explored B&B nodes:           0
+Gurobi running time:          94.9
+
+Optimality gap (%):           0.00
+Upper bound:                  3186.10
+Objective value:              3186.10
+==================================================
+
+==================================================
+Summary of results of 0-S128
+--------------------------------------------------
+Number of vertices:           128
+Number of edges:              3216
+
+Vertex num in largest comp:   128
+Edge num in largest comp:     3216
+
+Pre-processing running time:  0.00
+Total solver time:            94.89
+Running time:                 98.03
+
+Upper bound:                  3186.10
+Objective value:              50.00
+==================================================

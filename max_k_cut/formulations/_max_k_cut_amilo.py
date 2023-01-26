@@ -118,7 +118,8 @@ def solve_max_k_cut_amilo(self):
 			
 			model.Params.Threads			= self.Params.Gurobi_Threads
 			model.Params.timeLimit 			= self.Params.Gurobi_TimeLimit
-			model.Params.MIPGap 			= self.Params.Gurobi_MIPGap
+			
+			model.Params.MIPGap 			= self.Params.Gurobi_MIPGap 
 
 			model.Params.LogFile 			= self.filename[:-4] + "_log.txt"
 
@@ -134,7 +135,7 @@ def solve_max_k_cut_amilo(self):
 			self.gurobi_obj_value			= model.objVal
 			self.gurobi_BB_nodes 			= model.getAttr(GRB.Attr.NodeCount) 		# Spatial BB nodes
 			self.gurobi_ObjBound			= model.ObjBound
-			self.gurobi_MIPGap				= model.MIPGap
+			self.gurobi_MIPGap				= model.MIPGap if self.Params.Relaxed == False else 0.0
 
 
 			if model.status == GRB.Status.OPTIMAL:

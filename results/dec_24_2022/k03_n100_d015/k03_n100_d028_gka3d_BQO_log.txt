@@ -1,0 +1,48 @@
+
+Gurobi 10.0.0 (linux64) logging started Mon Dec 19 10:45:47 2022
+
+Set parameter LogFile to value "../results/k03_n100_d015/k03_n100_d028_gka3d_BQO_log.txt"
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 100 rows, 300 columns and 300 nonzeros
+Model fingerprint: 0xa9e2b11c
+Model has 4275 quadratic objective terms
+Variable types: 0 continuous, 300 integer (300 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [0e+00, 0e+00]
+  QObjective range [2e+00, 1e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 1 rows and 3 columns
+Presolve time: 0.15s
+Presolved: 4281 rows, 4479 columns, 12843 nonzeros
+Variable types: 0 continuous, 4479 integer (4479 binary)
+
+Root relaxation: objective 1.860450e+04, 1108 iterations, 0.11 seconds (0.10 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 18604.5000    0  198   -0.00000 18604.5000      -     -    0s
+H    0     0                    2984.0000000 18604.5000   523%     -    0s
+H    0     0                    7095.0000000 18604.5000   162%     -    0s
+     0     0          -    0      7095.00000 18218.6667   157%     -    1s
+
+Cutting planes:
+  Gomory: 1
+  Zero half: 50
+  RLT: 798
+  BQP: 366
+
+Explored 1 nodes (2307 simplex iterations) in 1.00 seconds (0.79 work units)
+Thread count was 10 (of 40 available processors)
+
+Solution count 3: 7095 2984 -0 
+
+Time limit reached
+Best objective 7.095000000000e+03, best bound 1.821800000000e+04, gap 156.7724%

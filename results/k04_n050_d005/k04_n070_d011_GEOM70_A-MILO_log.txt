@@ -1,0 +1,37 @@
+
+Gurobi 10.0.0 (linux64) logging started Thu Nov 24 11:19:04 2022
+
+Set parameter LogFile to value "../results/k04_n050_d005/k04_n070_d011_GEOM70_A-MILO_log.txt"
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 3274 rows, 547 columns and 9892 nonzeros
+Model fingerprint: 0x9287e551
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 9e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+00]
+Presolve removed 37 rows and 8 columns
+Presolve time: 0.01s
+Presolved: 3237 rows, 539 columns, 9768 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.9000000e+01   1.403000e+03   0.000000e+00      0s
+     263    1.4220000e+03   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+     138 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 0.0000000e+00      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     404    1.4220000e+03   0.000000e+00   0.000000e+00      0s
+
+Solved in 404 iterations and 0.02 seconds (0.02 work units)
+Optimal objective  1.422000000e+03

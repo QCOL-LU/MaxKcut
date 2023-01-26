@@ -1,0 +1,61 @@
+
+Gurobi 10.0.0 (linux64) logging started Wed Nov 16 04:44:48 2022
+
+Set parameter LogFile to value "../results/k03_n250_d005/k03_n250_d003_band250_4_A-MILO_log.txt"
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 11365 rows, 1985 columns and 34095 nonzeros
+Model fingerprint: 0xd8cf537e
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+00]
+Presolve removed 36 rows and 8 columns
+Presolve time: 0.03s
+Presolved: 1974 rows, 13310 columns, 36010 nonzeros
+
+Concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Ordering time: 0.00s
+
+Barrier statistics:
+ Free vars  : 246
+ AA' NZ     : 1.181e+04
+ Factor NZ  : 3.838e+04 (roughly 6 MB of memory)
+ Factor Ops : 7.595e+05 (less than 1 second per iteration)
+ Threads    : 1
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   6.13797010e+03  1.07236260e+00  1.42e+00 1.65e+00  1.15e+00     0s
+   1   2.60165874e+03  1.80674451e+02  0.00e+00 3.65e-06  1.61e-01     0s
+   2   7.42893778e+02  4.44281520e+02  0.00e+00 3.87e-07  1.99e-02     0s
+   3   6.34890980e+02  5.94985925e+02  0.00e+00 1.34e-07  2.65e-03     0s
+   4   6.21843192e+02  6.13075787e+02  0.00e+00 2.80e-08  5.83e-04     0s
+   5   6.19905404e+02  6.17752372e+02  0.00e+00 4.24e-09  1.43e-04     0s
+   6   6.19007461e+02  6.18995114e+02  0.00e+00 2.73e-09  8.21e-07     0s
+   7   6.19000007e+02  6.18999995e+02  0.00e+00 1.23e-10  8.21e-10     0s
+   8   6.19000000e+02  6.19000000e+02  1.09e-14 2.38e-14  8.68e-16     0s
+
+Barrier solved model in 8 iterations and 0.11 seconds (0.07 work units)
+Optimal objective 6.19000000e+02
+
+Crossover log...
+
+      30 DPushes remaining with DInf 0.0000000e+00                 0s
+       0 DPushes remaining with DInf 0.0000000e+00                 0s
+
+    4665 PPushes remaining with PInf 0.0000000e+00                 0s
+
+Solved with primal simplex
+Extra simplex iterations after uncrush: 2
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+    3242    6.1900000e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 3242 iterations and 0.16 seconds (0.09 work units)
+Optimal objective  6.190000000e+02

@@ -1,0 +1,68 @@
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           120
+Number of edges:              1491
+Number of partitions:         3
+
+Density (%):                  21
+Name of instance:             GEOM120b_naive
+
+Is planar:                    False
+Is Chordal:                   False
+
+Triangles Density (%):        2
+Min_Maximal_Matching (%):     98
+Global Efficiency:            0.52
+
+Core Number:                  17
+Largest Component Size:       120
+
+Cut Vertices Number:          0
+Largest BiComponent Size:     120
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       CR-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+Naive Penalty Coef:           True
+Adjusted Penalty Coef:        False
+Penalty Multiplier:           1
+
+Gates Error Probability:      0.0
+QAOA Num Levels:              3
+==================================================
+
+==================================================
+Summary of results of CR-QUBO model of 0-S120
+--------------------------------------------------
+Model status:                 time limit
+Explored B&B nodes:           3924834
+Gurobi running time:          3607.5
+
+Optimality gap (%):           85.17
+Upper bound:                  10851.00
+Objective value:              5860.00
+==================================================
+
+==================================================
+Summary of results of 0-S120
+--------------------------------------------------
+Number of vertices:           120
+Number of edges:              1491
+
+Vertex num in largest comp:   120
+Edge num in largest comp:     1491
+
+Pre-processing running time:  0.00
+Total solver time:            3607.53
+Running time:                 3609.39
+
+Upper bound:                  10851.00
+Objective value:              5860.00
+==================================================

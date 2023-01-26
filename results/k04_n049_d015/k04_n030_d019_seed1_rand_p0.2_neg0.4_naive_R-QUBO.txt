@@ -1,0 +1,102 @@
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           30
+Number of edges:              86
+Number of partitions:         4
+
+Density (%):                  20
+Name of instance:             seed1_rand_p0.2_neg0.4_naive
+
+Is planar:                    False
+Is Chordal:                   False
+
+Triangles Density (%):        0
+Min_Maximal_Matching (%):     80
+Global Efficiency:            0.55
+
+Core Number:                  5
+Largest Component Size:       30
+
+Cut Vertices Number:          1
+Largest BiComponent Size:     29
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       R-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+Quantum Computer:             ibm_washington
+Naive Penalty Coef:           True
+Adjusted Penalty Coef:        False
+Penalty Multiplier:           1
+
+QAOA Num Levels:              1
+QAOA Num Shots:               10000
+Gates Error Probability:      0.0
+
+QAOA Optimize:                True
+QAOA Scipy Optimizer:         COBYLA
+QAOA Optimizer Tol:           0.001
+QAOA Angles:                  [0.2, 0.3]
+==================================================
+
+   iter        avg-obj        best avg-obj       best-obj         tight-obj        rqubo-obj           std           skewness      time          gamma            beta      
+*     0     -3.23841e+02     -3.23841e+02     -4.60000e+01     -7.68134e+01     -7.68134e+01      1.31332e+01     -1.74906e+01  20687s           0.30             0.20      
+      1     -3.59889e+02     -3.23841e+02     -4.60000e+01     -8.68356e+01     -8.68356e+01      1.39533e+01     -1.71647e+01  20804s           0.30             1.20      
+*     2     -2.77977e+02     -2.77977e+02     -2.80000e+01     -6.43538e+01     -6.43538e+01      1.20153e+01     -1.70422e+01  20921s           1.30             0.20      
+      3     -3.21172e+02     -2.77977e+02     -2.80000e+01     -7.64316e+01     -7.64316e+01      1.31219e+01     -1.72512e+01  21039s           2.09            -0.42      
+      4     -3.13191e+02     -2.77977e+02     -2.80000e+01     -7.30678e+01     -7.30678e+01      1.30247e+01     -1.66354e+01  21155s           1.47             0.67      
+      5     -3.12866e+02     -2.77977e+02     -2.80000e+01     -7.37680e+01     -7.37680e+01      1.29578e+01     -1.74005e+01  21273s           1.41            -0.02      
+      6     -3.13016e+02     -2.77977e+02     -2.80000e+01     -7.41886e+01     -7.41886e+01      1.27291e+01     -1.71590e+01  21391s           1.05             0.22      
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           30
+Number of edges:              86
+Number of partitions:         4
+
+Density (%):                  20
+Name of instance:             seed1_rand_p0.2_neg0.4_naive
+
+Is planar:                    False
+Is Chordal:                   False
+
+Triangles Density (%):        0
+Min_Maximal_Matching (%):     80
+Global Efficiency:            0.55
+
+Core Number:                  5
+Largest Component Size:       30
+
+Cut Vertices Number:          1
+Largest BiComponent Size:     29
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       R-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+Quantum Computer:             ibm_sherbrooke
+Naive Penalty Coef:           True
+Adjusted Penalty Coef:        False
+Penalty Multiplier:           1
+
+QAOA Num Levels:              1
+QAOA Num Shots:               10000
+Gates Error Probability:      0.0
+
+QAOA Optimize:                True
+QAOA Scipy Optimizer:         COBYLA
+QAOA Optimizer Tol:           0.001
+QAOA Angles:                  [0.2, 0.3]
+==================================================
+

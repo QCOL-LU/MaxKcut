@@ -1,0 +1,73 @@
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           200
+Number of edges:              790
+Number of partitions:         3
+
+Density (%):                  4
+Name of instance:             band200_3_concave
+
+Is planar:                    False
+Is Chordal:                   True
+
+Triangles Density (%):        0
+Min_Maximal_Matching (%):     100
+Global Efficiency:            0.14
+
+Core Number:                  5
+Largest Component Size:       200
+
+Cut Vertices Number:          0
+Largest BiComponent Size:     200
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       BQO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+Relaxed:                      True
+Rounding Heuristic:           False
+Curvature Type:               concave
+Curvature Method:             mosek
+Symmetry Breaking:            False
+Gurobi Time Limit:            3600
+Gurobi MIPGap:                0
+Gurobi Threads:               10
+Gurobi Heuristics:            0
+Gurobi Presolve:              -1
+Gurobi Symmetry:              -1
+Gurobi Cuts:                  -1
+==================================================
+
+==================================================
+Summary of results of BQO model of 0-S200
+--------------------------------------------------
+Model status:                 optimal
+Explored B&B nodes:           0
+Gurobi running time:          884.0
+
+Optimality gap (%):           0.00
+Upper bound:                  484.22
+Objective value:              484.22
+==================================================
+
+==================================================
+Summary of results of 0-S200
+--------------------------------------------------
+Number of vertices:           200
+Number of edges:              790
+
+Vertex num in largest comp:   200
+Edge num in largest comp:     790
+
+Pre-processing running time:  0.00
+Total solver time:            884.03
+Running time:                 886.75
+
+Upper bound:                  484.22
+Objective value:              4.00
+==================================================

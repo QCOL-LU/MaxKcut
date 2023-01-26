@@ -1,0 +1,54 @@
+
+Gurobi 10.0.0 (linux64) logging started Mon Dec 19 22:23:58 2022
+
+Set parameter LogFile to value "../results/k03_n250_d005/k03_n250_d003_band250_4_BQO_log.txt"
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 250 rows, 750 columns and 750 nonzeros
+Model fingerprint: 0xb8e82ea0
+Model has 3705 quadratic objective terms
+Variable types: 0 continuous, 750 integer (750 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [0e+00, 0e+00]
+  QObjective range [2e+00, 2e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 1 rows and 3 columns
+Presolve time: 0.02s
+Presolved: 3939 rows, 4437 columns, 11817 nonzeros
+Variable types: 0 continuous, 4437 integer (4437 binary)
+
+Root relaxation: objective 6.190000e+02, 1271 iterations, 0.04 seconds (0.03 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  619.00000    0  498   -0.00000  619.00000      -     -    0s
+H    0     0                     166.0000000  619.00000   273%     -    0s
+H    0     0                     242.0000000  619.00000   156%     -    0s
+H    0     0                     246.0000000  619.00000   152%     -    0s
+H    0     0                     259.0000000  613.50000   137%     -    0s
+     0     0  513.39167    0 1192  259.00000  513.39167  98.2%     -    0s
+     0     0  509.12500    0 1197  259.00000  509.12500  96.6%     -    0s
+     0     0  509.00000    0 1199  259.00000  509.00000  96.5%     -    0s
+     0     0  380.56746    0 1682  259.00000  380.56746  46.9%     -    0s
+     0     0          -    0       259.00000  380.56746  46.9%     -    1s
+
+Cutting planes:
+  Gomory: 13
+  Zero half: 397
+  RLT: 1047
+  BQP: 279
+
+Explored 1 nodes (14033 simplex iterations) in 1.00 seconds (0.58 work units)
+Thread count was 10 (of 40 available processors)
+
+Solution count 5: 259 246 242 ... -0
+
+Time limit reached
+Best objective 2.590000000000e+02, best bound 3.800000000000e+02, gap 46.7181%

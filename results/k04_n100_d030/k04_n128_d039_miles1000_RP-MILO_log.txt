@@ -1,0 +1,1396 @@
+
+Gurobi 10.0.0 (linux64) logging started Sun Nov 20 13:58:09 2022
+
+Set parameter LogFile to value "../results/k04_n100_d030/k04_n128_d039_miles1000_RP-MILO_log.txt"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1480161 rows, 3956 columns and 4440483 nonzeros
+Model fingerprint: 0xceb18095
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve time: 1.96s
+Presolved: 219804 rows, 3956 columns, 659412 nonzeros
+
+Concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Presolve time: 2.17s
+
+Solved with primal simplex
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.2160000e+03   0.000000e+00   0.000000e+00      3s
+
+Solved in 0 iterations and 2.82 seconds (1.42 work units)
+Optimal objective  3.216000000e+03
+Set parameter TimeLimit to value 3.5593545353412628e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1484247 rows, 3956 columns and 4481343 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.2160000e+03   4.086000e+03   0.000000e+00      1s
+     207    3.2050500e+03   0.000000e+00   0.000000e+00      2s
+
+Solved in 207 iterations and 1.58 seconds (0.83 work units)
+Optimal objective  3.205050000e+03
+Set parameter TimeLimit to value 3.5574468977451324e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1486634 rows, 3956 columns and 4505213 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.2050500e+03   2.275600e+03   0.000000e+00      1s
+     309    3.1981500e+03   0.000000e+00   0.000000e+00      2s
+
+Solved in 309 iterations and 1.96 seconds (1.28 work units)
+Optimal objective  3.198150000e+03
+Set parameter TimeLimit to value 3.5549810290336609e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1489528 rows, 3956 columns and 4534153 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1981500e+03   2.777300e+03   0.000000e+00      1s
+    1109    3.1917683e+03   0.000000e+00   0.000000e+00      3s
+
+Solved in 1109 iterations and 2.95 seconds (4.35 work units)
+Optimal objective  3.191768333e+03
+Set parameter TimeLimit to value 3.5512330629825592e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1491612 rows, 3956 columns and 4554993 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1917683e+03   2.084000e+03   0.000000e+00      1s
+       4    3.1907683e+03   0.000000e+00   0.000000e+00      1s
+
+Solved in 4 iterations and 0.93 seconds (0.61 work units)
+Optimal objective  3.190768333e+03
+Set parameter TimeLimit to value 3.5495121550559998e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1493696 rows, 3956 columns and 4575833 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1907683e+03   2.084000e+03   0.000000e+00      1s
+      10    3.1897683e+03   0.000000e+00   0.000000e+00      1s
+
+Solved in 10 iterations and 1.42 seconds (0.96 work units)
+Optimal objective  3.189768333e+03
+Set parameter TimeLimit to value 3.5472768840789795e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1495780 rows, 3956 columns and 4596673 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1897683e+03   2.084000e+03   0.000000e+00      1s
+      11    3.1887683e+03   0.000000e+00   0.000000e+00      2s
+
+Solved in 11 iterations and 1.50 seconds (0.99 work units)
+Optimal objective  3.188768333e+03
+Set parameter TimeLimit to value 3544.96604013443
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1497864 rows, 3956 columns and 4617513 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1887683e+03   2.084000e+03   0.000000e+00      1s
+       9    3.1877683e+03   0.000000e+00   0.000000e+00      1s
+
+Solved in 9 iterations and 1.25 seconds (0.68 work units)
+Optimal objective  3.187768333e+03
+Set parameter TimeLimit to value 3542.73668050766
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1499948 rows, 3956 columns and 4638353 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1877683e+03   2.084000e+03   0.000000e+00      1s
+      14    3.1867683e+03   0.000000e+00   0.000000e+00      1s
+
+Solved in 14 iterations and 1.09 seconds (0.70 work units)
+Optimal objective  3.186768333e+03
+Set parameter TimeLimit to value 3.5407071907520294e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1502032 rows, 3956 columns and 4659193 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1867683e+03   2.084000e+03   0.000000e+00      1s
+      13    3.1857683e+03   0.000000e+00   0.000000e+00      1s
+
+Solved in 13 iterations and 1.31 seconds (0.71 work units)
+Optimal objective  3.185768333e+03
+Set parameter TimeLimit to value 3.5383295760154724e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1504116 rows, 3956 columns and 4680033 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1857683e+03   2.084000e+03   0.000000e+00      1s
+      14    3.1847683e+03   0.000000e+00   0.000000e+00      1s
+
+Solved in 14 iterations and 1.38 seconds (0.73 work units)
+Optimal objective  3.184768333e+03
+Set parameter TimeLimit to value 3.5359146978855133e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1506200 rows, 3956 columns and 4700873 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1847683e+03   2.084000e+03   0.000000e+00      1s
+      12    3.1837683e+03   0.000000e+00   0.000000e+00      1s
+
+Solved in 12 iterations and 1.46 seconds (0.73 work units)
+Optimal objective  3.183768333e+03
+Set parameter TimeLimit to value 3.5334969966411591e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1508284 rows, 3956 columns and 4721713 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1837683e+03   2.084000e+03   0.000000e+00      1s
+       8    3.1827683e+03   0.000000e+00   0.000000e+00      1s
+
+Solved in 8 iterations and 1.10 seconds (0.72 work units)
+Optimal objective  3.182768333e+03
+Set parameter TimeLimit to value 3.5314654970169067e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1510368 rows, 3956 columns and 4742553 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1827683e+03   2.084000e+03   0.000000e+00      1s
+       9    3.1817683e+03   0.000000e+00   0.000000e+00      1s
+
+Solved in 9 iterations and 1.08 seconds (0.73 work units)
+Optimal objective  3.181768333e+03
+Set parameter TimeLimit to value 3.5294700877666473e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1512452 rows, 3956 columns and 4763393 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1817683e+03   2.084000e+03   0.000000e+00      1s
+       9    3.1807683e+03   0.000000e+00   0.000000e+00      1s
+
+Solved in 9 iterations and 1.15 seconds (0.74 work units)
+Optimal objective  3.180768333e+03
+Set parameter TimeLimit to value 3.5273752455711365e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1514536 rows, 3956 columns and 4784233 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1807683e+03   2.084000e+03   0.000000e+00      1s
+      12    3.1797683e+03   0.000000e+00   0.000000e+00      1s
+
+Solved in 12 iterations and 1.19 seconds (0.78 work units)
+Optimal objective  3.179768333e+03
+Set parameter TimeLimit to value 3.5252157399654388e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1516620 rows, 3956 columns and 4805073 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1797683e+03   2.084000e+03   0.000000e+00      1s
+      14    3.1787683e+03   0.000000e+00   0.000000e+00      1s
+
+Solved in 14 iterations and 1.28 seconds (0.78 work units)
+Optimal objective  3.178768333e+03
+Set parameter TimeLimit to value 3.5229902005195618e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1518704 rows, 3956 columns and 4825913 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1787683e+03   2.084000e+03   0.000000e+00      1s
+      11    3.1777683e+03   0.000000e+00   0.000000e+00      1s
+
+Solved in 11 iterations and 1.15 seconds (0.78 work units)
+Optimal objective  3.177768333e+03
+Set parameter TimeLimit to value 3.5209046876430511e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1520788 rows, 3956 columns and 4846753 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1777683e+03   2.084000e+03   0.000000e+00      1s
+      12    3.1767683e+03   0.000000e+00   0.000000e+00      1s
+
+Solved in 12 iterations and 1.15 seconds (0.80 work units)
+Optimal objective  3.176768333e+03
+Set parameter TimeLimit to value 3518.91357088089
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1522872 rows, 3956 columns and 4867593 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1767683e+03   2.084000e+03   0.000000e+00      1s
+      10    3.1757683e+03   0.000000e+00   0.000000e+00      1s
+
+Solved in 10 iterations and 1.03 seconds (0.80 work units)
+Optimal objective  3.175768333e+03
+Set parameter TimeLimit to value 3.5170960037708282e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1524956 rows, 3956 columns and 4888433 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1757683e+03   2.084000e+03   0.000000e+00      1s
+      12    3.1747683e+03   0.000000e+00   0.000000e+00      1s
+
+Solved in 12 iterations and 1.21 seconds (0.81 work units)
+Optimal objective  3.174768333e+03
+Set parameter TimeLimit to value 3.5149657804965973e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1527040 rows, 3956 columns and 4909273 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1747683e+03   2.084000e+03   0.000000e+00      1s
+      12    3.1737683e+03   0.000000e+00   0.000000e+00      1s
+
+Solved in 12 iterations and 1.25 seconds (0.81 work units)
+Optimal objective  3.173768333e+03
+Set parameter TimeLimit to value 3.5127634589672089e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1529124 rows, 3956 columns and 4930113 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1737683e+03   2.084000e+03   0.000000e+00      1s
+      16    3.1727683e+03   0.000000e+00   0.000000e+00      2s
+
+Solved in 16 iterations and 1.54 seconds (0.91 work units)
+Optimal objective  3.172768333e+03
+Set parameter TimeLimit to value 3.5101236922740936e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1531208 rows, 3956 columns and 4950953 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1727683e+03   2.084000e+03   0.000000e+00      1s
+      11    3.1717683e+03   0.000000e+00   0.000000e+00      1s
+
+Solved in 11 iterations and 1.42 seconds (0.86 work units)
+Optimal objective  3.171768333e+03
+Set parameter TimeLimit to value 3.5077693655490875e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1533292 rows, 3956 columns and 4971793 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1717683e+03   2.084000e+03   0.000000e+00      1s
+      37    3.1697683e+03   0.000000e+00   0.000000e+00      2s
+
+Solved in 37 iterations and 2.22 seconds (1.57 work units)
+Optimal objective  3.169768333e+03
+Set parameter TimeLimit to value 3.5043686532974243e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1535376 rows, 3956 columns and 4992633 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1697683e+03   2.084000e+03   0.000000e+00      1s
+     150    3.1657683e+03   0.000000e+00   0.000000e+00      3s
+
+Solved in 150 iterations and 3.12 seconds (3.26 work units)
+Optimal objective  3.165768333e+03
+Set parameter TimeLimit to value 3.5001864283084869e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1537460 rows, 3956 columns and 5013473 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1657683e+03   2.084000e+03   0.000000e+00      1s
+     228    3.1627683e+03   0.000000e+00   0.000000e+00      5s
+
+Solved in 228 iterations and 4.96 seconds (6.31 work units)
+Optimal objective  3.162768333e+03
+Set parameter TimeLimit to value 3.4941036446094513e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1539544 rows, 3956 columns and 5034313 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1627683e+03   2.084000e+03   0.000000e+00      1s
+     340    3.1591718e+03   8.701004e+03   0.000000e+00      7s
+     679    3.1590183e+03   0.000000e+00   0.000000e+00     11s
+
+Solved in 679 iterations and 11.56 seconds (21.85 work units)
+Optimal objective  3.159018333e+03
+Set parameter TimeLimit to value 3.4814392580986023e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1541628 rows, 3956 columns and 5055153 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1590183e+03   2.084000e+03   0.000000e+00      1s
+     280    3.1565729e+03   3.637720e+06   0.000000e+00      7s
+     660    3.1559641e+03   4.371072e+05   0.000000e+00     11s
+    1030    3.1557707e+03   1.144036e+04   0.000000e+00     16s
+    1041    3.1557683e+03   0.000000e+00   0.000000e+00     17s
+
+Solved in 1041 iterations and 17.45 seconds (38.65 work units)
+Optimal objective  3.155768333e+03
+Set parameter TimeLimit to value 3.4628965806961060e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1543712 rows, 3956 columns and 5075993 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1557683e+03   2.084000e+03   0.000000e+00      1s
+     270    3.1536037e+03   1.210597e+06   0.000000e+00      7s
+     630    3.1528540e+03   4.206440e+04   0.000000e+00     12s
+     990    3.1521204e+03   4.361671e+05   0.000000e+00     18s
+    1160    3.1519738e+03   3.999054e+05   0.000000e+00     21s
+    1510    3.1518457e+03   1.179353e+06   0.000000e+00     26s
+    1845    3.1517683e+03   0.000000e+00   0.000000e+00     32s
+
+Solved in 1845 iterations and 32.43 seconds (75.66 work units)
+Optimal objective  3.151768333e+03
+Set parameter TimeLimit to value 3.4295674693584442e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1545796 rows, 3956 columns and 5096833 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1517683e+03   2.084000e+03   0.000000e+00      1s
+     140    3.1507812e+03   9.590469e+04   0.000000e+00      5s
+     440    3.1498672e+03   4.322347e+04   0.000000e+00     12s
+     770    3.1494909e+03   1.813463e+04   0.000000e+00     17s
+     940    3.1493911e+03   4.027302e+04   0.000000e+00     20s
+    1280    3.1490825e+03   1.423780e+04   0.000000e+00     26s
+    1650    3.1488641e+03   1.146979e+04   0.000000e+00     31s
+    2010    3.1487782e+03   3.422887e+03   0.000000e+00     38s
+    2190    3.1487620e+03   4.503051e+02   0.000000e+00     40s
+    2540    3.1487339e+03   1.274006e+05   0.000000e+00     46s
+    2890    3.1487119e+03   1.939795e+03   0.000000e+00     52s
+    3230    3.1486973e+03   5.216201e+03   0.000000e+00     57s
+    3410    3.1486911e+03   7.449355e+02   0.000000e+00     60s
+    3770    3.1486718e+03   2.553693e+03   0.000000e+00     67s
+    4130    3.1486497e+03   8.550666e+02   0.000000e+00     72s
+    4310    3.1486418e+03   6.151797e+02   0.000000e+00     75s
+    4700    3.1486250e+03   3.326560e+05   0.000000e+00     81s
+Warning: Markowitz tolerance tightened to 0.03125
+    5080    3.1486089e+03   4.477190e+03   0.000000e+00     88s
+    5290    3.1486010e+03   1.137468e+02   0.000000e+00     91s
+    5660    3.1485902e+03   2.585035e+02   0.000000e+00     98s
+    5850    3.1485858e+03   3.263109e+03   0.000000e+00    101s
+    6260    3.1485789e+03   2.212084e+03   0.000000e+00    108s
+    6450    3.1485766e+03   2.513057e+02   0.000000e+00    110s
+    6850    3.1485723e+03   5.433559e+02   0.000000e+00    117s
+    7030    3.1485702e+03   1.941110e+02   0.000000e+00    120s
+    7410    3.1485681e+03   8.129967e+01   0.000000e+00    128s
+    7610    3.1485675e+03   1.219779e+01   0.000000e+00    132s
+    7810    3.1485668e+03   2.992243e+02   0.000000e+00    136s
+    8100    3.1485661e+03   0.000000e+00   0.000000e+00    142s
+
+Solved in 8100 iterations and 142.48 seconds (371.99 work units)
+Optimal objective  3.148566086e+03
+Set parameter TimeLimit to value 3.2862146697044373e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1547880 rows, 3956 columns and 5117673 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1485661e+03   2.063337e+03   0.000000e+00      1s
+     300    3.1469389e+03   1.878313e+07   0.000000e+00      9s
+     490    3.1465472e+03   8.426810e+05   0.000000e+00     13s
+     680    3.1461793e+03   5.465208e+05   0.000000e+00     18s
+     870    3.1459056e+03   4.462854e+04   0.000000e+00     23s
+    1070    3.1457106e+03   3.242184e+04   0.000000e+00     27s
+    1260    3.1455096e+03   6.190986e+05   0.000000e+00     31s
+    1460    3.1453789e+03   7.470773e+04   0.000000e+00     35s
+    1890    3.1451336e+03   4.001933e+04   0.000000e+00     43s
+    2100    3.1450333e+03   1.921313e+04   0.000000e+00     47s
+    2320    3.1449577e+03   1.386030e+06   0.000000e+00     50s
+    2740    3.1447884e+03   8.021686e+03   0.000000e+00     58s
+    2950    3.1447647e+03   1.247864e+03   0.000000e+00     62s
+    3160    3.1447514e+03   2.313375e+03   0.000000e+00     67s
+    3380    3.1447406e+03   6.668504e+03   0.000000e+00     71s
+    3620    3.1447282e+03   8.032099e+02   0.000000e+00     75s
+    4070    3.1447068e+03   4.290144e+03   0.000000e+00     83s
+    4310    3.1446985e+03   2.446712e+03   0.000000e+00     87s
+    4570    3.1446933e+03   1.268275e+03   0.000000e+00     92s
+    4800    3.1446882e+03   3.145377e+02   0.000000e+00     96s
+    5020    3.1446816e+03   1.164200e+03   0.000000e+00    100s
+    5260    3.1446772e+03   6.888834e+03   0.000000e+00    105s
+    5490    3.1446730e+03   1.550562e+03   0.000000e+00    111s
+    5960    3.1446647e+03   1.329424e+03   0.000000e+00    119s
+    6200    3.1446620e+03   1.903911e+03   0.000000e+00    123s
+    6440    3.1446600e+03   1.939866e+04   0.000000e+00    127s
+    6650    3.1446576e+03   4.569340e+02   0.000000e+00    131s
+    6900    3.1446557e+03   8.766408e+02   0.000000e+00    136s
+    7120    3.1446539e+03   3.964882e+02   0.000000e+00    140s
+    7360    3.1446527e+03   2.456866e+04   0.000000e+00    145s
+    7840    3.1446502e+03   1.400481e+02   0.000000e+00    152s
+    8090    3.1446488e+03   4.119310e+02   0.000000e+00    156s
+    8570    3.1446466e+03   1.128614e+03   0.000000e+00    164s
+    8790    3.1446458e+03   1.266096e+02   0.000000e+00    167s
+    9010    3.1446451e+03   9.245333e+02   0.000000e+00    171s
+    9240    3.1446445e+03   6.830286e+01   0.000000e+00    175s
+    9750    3.1446428e+03   2.171971e+02   0.000000e+00    184s
+   10000    3.1446421e+03   8.256151e+01   0.000000e+00    189s
+   10250    3.1446417e+03   2.682191e+02   0.000000e+00    194s
+   10480    3.1446413e+03   9.756069e+02   0.000000e+00    199s
+   10740    3.1446409e+03   2.919289e+02   0.000000e+00    204s
+   10980    3.1446405e+03   1.713767e+02   0.000000e+00    208s
+   11240    3.1446400e+03   2.055297e+01   0.000000e+00    213s
+   11500    3.1446397e+03   2.072356e+01   0.000000e+00    218s
+   11780    3.1446393e+03   2.523625e+02   0.000000e+00    223s
+   12030    3.1446391e+03   4.633715e+02   0.000000e+00    228s
+   12270    3.1446389e+03   1.331733e+01   0.000000e+00    232s
+   12550    3.1446387e+03   4.773985e+00   0.000000e+00    237s
+   12800    3.1446385e+03   2.942693e+01   0.000000e+00    241s
+   13030    3.1446383e+03   1.025774e+01   0.000000e+00    245s
+   13280    3.1446382e+03   2.196706e+02   0.000000e+00    250s
+   13760    3.1446380e+03   2.319309e+01   0.000000e+00    258s
+   14030    3.1446380e+03   5.419379e+00   0.000000e+00    262s
+   14270    3.1446379e+03   1.992422e+01   0.000000e+00    266s
+   14740    3.1446379e+03   1.734063e-01   0.000000e+00    274s
+   14980    3.1446379e+03   5.026698e-01   0.000000e+00    279s
+   15149    3.1446379e+03   0.000000e+00   0.000000e+00    282s
+
+Solved in 15149 iterations and 282.62 seconds (822.58 work units)
+Optimal objective  3.144637896e+03
+Set parameter TimeLimit to value 3.0024691100120544e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1549964 rows, 3956 columns and 5138513 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1446379e+03   2.046213e+03   0.000000e+00      1s
+     180    3.1441054e+03   2.599230e+07   0.000000e+00      7s
+     350    3.1436812e+03   2.446966e+05   0.000000e+00     12s
+     540    3.1431936e+03   1.333754e+06   0.000000e+00     19s
+     720    3.1425437e+03   1.627249e+06   0.000000e+00     25s
+     900    3.1420027e+03   1.526367e+06   0.000000e+00     32s
+    1100    3.1415967e+03   2.359612e+06   0.000000e+00     39s
+    1320    3.1412281e+03   1.764314e+06   0.000000e+00     47s
+    1540    3.1409577e+03   1.305853e+06   0.000000e+00     55s
+    1750    3.1408632e+03   1.280282e+04   0.000000e+00     63s
+    1960    3.1408167e+03   8.146083e+03   0.000000e+00     72s
+    2190    3.1407754e+03   1.625412e+04   0.000000e+00     80s
+    2420    3.1407450e+03   6.224647e+03   0.000000e+00     88s
+    2620    3.1407232e+03   1.228975e+03   0.000000e+00     95s
+    2830    3.1407020e+03   6.043357e+03   0.000000e+00    102s
+    3040    3.1406878e+03   2.141773e+03   0.000000e+00    109s
+    3220    3.1406780e+03   1.162166e+04   0.000000e+00    115s
+    3420    3.1406692e+03   2.522492e+03   0.000000e+00    123s
+    3630    3.1406600e+03   1.058490e+03   0.000000e+00    129s
+    3830    3.1406546e+03   2.223827e+03   0.000000e+00    134s
+    4030    3.1406514e+03   4.237174e+03   0.000000e+00    140s
+    4210    3.1406487e+03   3.791890e+02   0.000000e+00    145s
+    4400    3.1406459e+03   4.789721e+03   0.000000e+00    151s
+    4570    3.1406440e+03   1.318744e+02   0.000000e+00    156s
+    4890    3.1406432e+03   1.569155e+01   0.000000e+00    161s
+    5390    3.1406428e+03   4.114176e+01   0.000000e+00    169s
+    5670    3.1406427e+03   2.404510e+00   0.000000e+00    173s
+    5930    3.1406427e+03   2.378961e+02   0.000000e+00    177s
+    6190    3.1406426e+03   1.546267e+00   0.000000e+00    181s
+    6720    3.1406426e+03   6.658589e+02   0.000000e+00    188s
+    6940    3.1406426e+03   8.716909e-01   0.000000e+00    192s
+    7170    3.1406426e+03   2.652671e-01   0.000000e+00    195s
+    7650    3.1406425e+03   9.737093e-01   0.000000e+00    203s
+    7880    3.1406425e+03   3.684214e-01   0.000000e+00    206s
+    8150    3.1406425e+03   1.980382e-01   0.000000e+00    210s
+    8161    3.1406425e+03   0.000000e+00   0.000000e+00    211s
+
+Solved in 8161 iterations and 211.33 seconds (527.56 work units)
+Optimal objective  3.140642502e+03
+Set parameter TimeLimit to value 2.7901220610141754e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1552048 rows, 3956 columns and 5159353 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1406425e+03   1.991955e+03   0.000000e+00      1s
+     180    3.1400886e+03   5.618109e+06   0.000000e+00      6s
+     370    3.1394683e+03   1.815360e+06   0.000000e+00     12s
+     580    3.1387744e+03   3.885702e+05   0.000000e+00     19s
+     810    3.1382689e+03   4.667573e+05   0.000000e+00     27s
+    1040    3.1380279e+03   1.339493e+05   0.000000e+00     36s
+    1280    3.1379032e+03   8.939544e+04   0.000000e+00     44s
+    1510    3.1378223e+03   2.404740e+04   0.000000e+00     52s
+    1750    3.1377630e+03   6.369002e+05   0.000000e+00     60s
+    1953    3.1377332e+03   0.000000e+00   0.000000e+00     65s
+
+Solved in 1953 iterations and 66.14 seconds (136.18 work units)
+Optimal objective  3.137733177e+03
+Set parameter TimeLimit to value 2.7190290889739990e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1554132 rows, 3956 columns and 5180193 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1377332e+03   2.008016e+03   0.000000e+00      1s
+     240    3.1367491e+03   1.055046e+04   0.000000e+00      7s
+     258    3.1367488e+03   0.000000e+00   0.000000e+00      9s
+
+Solved in 258 iterations and 8.94 seconds (20.50 work units)
+Optimal objective  3.136748802e+03
+Set parameter TimeLimit to value 2.7038554031848907e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1556216 rows, 3956 columns and 5201033 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1367488e+03   1.986207e+03   0.000000e+00      1s
+     290    3.1351658e+03   7.699858e+06   0.000000e+00     11s
+     516    3.1349314e+03   0.000000e+00   0.000000e+00     18s
+
+Solved in 516 iterations and 19.07 seconds (35.37 work units)
+Optimal objective  3.134931377e+03
+Set parameter TimeLimit to value 2.6726971683502197e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1558309 rows, 3956 columns and 5221963 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1349314e+03   2.077569e+03   0.000000e+00      1s
+     430    3.1310189e+03   5.819383e+06   0.000000e+00      9s
+     850    3.1300517e+03   2.654309e+03   0.000000e+00     16s
+    1225    3.1300281e+03   0.000000e+00   0.000000e+00     20s
+
+Solved in 1225 iterations and 19.50 seconds (37.86 work units)
+Optimal objective  3.130028140e+03
+Set parameter TimeLimit to value 2.6404871857166290e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1560394 rows, 3956 columns and 5242813 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1300281e+03   2.065660e+03   0.000000e+00      1s
+     220    3.1270548e+03   1.664637e+07   0.000000e+00      9s
+     440    3.1260771e+03   9.763410e+05   0.000000e+00     17s
+Warning: Markowitz tolerance tightened to 0.03125
+     730    3.1257669e+03   1.470093e+06   0.000000e+00     24s
+    1020    3.1257487e+03   7.299685e+02   0.000000e+00     30s
+    1136    3.1257455e+03   0.000000e+00   0.000000e+00     34s
+
+Solved in 1136 iterations and 34.40 seconds (73.28 work units)
+Optimal objective  3.125745531e+03
+Set parameter TimeLimit to value 2.5939125158786774e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1562478 rows, 3956 columns and 5263653 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1257455e+03   2.049370e+03   0.000000e+00      1s
+     220    3.1230887e+03   1.658299e+07   0.000000e+00     10s
+     410    3.1226086e+03   1.138971e+07   0.000000e+00     17s
+     680    3.1223737e+03   8.139455e+04   0.000000e+00     24s
+     960    3.1221073e+03   2.540218e+04   0.000000e+00     32s
+    1240    3.1219962e+03   1.464048e+05   0.000000e+00     39s
+    1510    3.1218923e+03   3.497726e+04   0.000000e+00     46s
+    1820    3.1217856e+03   6.921031e+04   0.000000e+00     52s
+    2100    3.1217587e+03   1.560843e+06   0.000000e+00     58s
+    2400    3.1217336e+03   4.190648e+03   0.000000e+00     66s
+    2690    3.1217109e+03   2.827365e+03   0.000000e+00     73s
+    2980    3.1216912e+03   1.392929e+03   0.000000e+00     80s
+    3240    3.1216867e+03   1.547672e+04   0.000000e+00     85s
+    3530    3.1216776e+03   1.286219e+05   0.000000e+00     92s
+    3840    3.1216698e+03   4.690332e+02   0.000000e+00     98s
+    3990    3.1216652e+03   0.000000e+00   0.000000e+00    100s
+
+Solved in 3990 iterations and 101.00 seconds (243.97 work units)
+Optimal objective  3.121665171e+03
+Set parameter TimeLimit to value 2.4819641435146332e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1564562 rows, 3956 columns and 5284493 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1216652e+03   2.038821e+03   0.000000e+00      1s
+     210    3.1206864e+03   1.286728e+07   0.000000e+00     10s
+     410    3.1197845e+03   2.411959e+07   0.000000e+00     19s
+     680    3.1195048e+03   5.928974e+05   0.000000e+00     26s
+     950    3.1193309e+03   1.014812e+06   0.000000e+00     33s
+    1220    3.1192131e+03   1.784604e+05   0.000000e+00     40s
+    1480    3.1191170e+03   3.934536e+04   0.000000e+00     47s
+    1740    3.1190182e+03   8.743581e+04   0.000000e+00     53s
+    2040    3.1189391e+03   1.305866e+04   0.000000e+00     60s
+    2350    3.1188716e+03   4.698266e+04   0.000000e+00     67s
+    2640    3.1188242e+03   1.134093e+04   0.000000e+00     74s
+    2950    3.1187685e+03   1.030309e+04   0.000000e+00     82s
+    3270    3.1187218e+03   5.982818e+04   0.000000e+00     89s
+Warning: Markowitz tolerance tightened to 0.03125
+    3600    3.1186948e+03   4.503363e+06   0.000000e+00     96s
+    3920    3.1186307e+03   3.326823e+05   0.000000e+00    105s
+    4230    3.1185933e+03   1.527054e+04   0.000000e+00    112s
+    4540    3.1185673e+03   2.057715e+04   0.000000e+00    120s
+    4910    3.1185441e+03   5.987612e+03   0.000000e+00    128s
+    5270    3.1185284e+03   1.061056e+03   0.000000e+00    135s
+    5590    3.1185198e+03   1.602482e+04   0.000000e+00    142s
+    5890    3.1185128e+03   1.992495e+04   0.000000e+00    147s
+    5963    3.1185118e+03   0.000000e+00   0.000000e+00    150s
+
+Solved in 5963 iterations and 149.52 seconds (370.37 work units)
+Optimal objective  3.118511787e+03
+Set parameter TimeLimit to value 2.3221326956748962e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1566646 rows, 3956 columns and 5305333 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1185118e+03   2.034486e+03   0.000000e+00      2s
+     210    3.1171233e+03   2.936684e+06   0.000000e+00     11s
+     410    3.1163509e+03   1.411744e+07   0.000000e+00     21s
+     610    3.1162760e+03   6.534400e+05   0.000000e+00     29s
+     810    3.1161637e+03   3.632464e+06   0.000000e+00     37s
+    1030    3.1160103e+03   1.562965e+05   0.000000e+00     44s
+    1300    3.1158975e+03   1.549021e+05   0.000000e+00     51s
+    1600    3.1158207e+03   1.234563e+04   0.000000e+00     58s
+    1900    3.1157284e+03   3.176208e+05   0.000000e+00     66s
+    2180    3.1156828e+03   1.190276e+05   0.000000e+00     74s
+    2460    3.1156351e+03   6.830440e+03   0.000000e+00     81s
+    2720    3.1155907e+03   3.953868e+03   0.000000e+00     87s
+    2990    3.1155683e+03   1.319799e+05   0.000000e+00     93s
+    3280    3.1155334e+03   2.461704e+04   0.000000e+00     98s
+    3570    3.1155004e+03   1.147057e+05   0.000000e+00    104s
+    3870    3.1154863e+03   1.531649e+05   0.000000e+00    111s
+    4200    3.1154744e+03   3.883808e+03   0.000000e+00    118s
+    4500    3.1154588e+03   1.854180e+03   0.000000e+00    125s
+Warning: Markowitz tolerance tightened to 0.03125
+    4790    3.1154510e+03   8.680965e+02   0.000000e+00    131s
+    5050    3.1154447e+03   4.662449e+04   0.000000e+00    137s
+    5300    3.1154381e+03   1.299753e+03   0.000000e+00    143s
+    5580    3.1154323e+03   5.709469e+03   0.000000e+00    150s
+    5820    3.1154275e+03   7.911727e+03   0.000000e+00    155s
+    6050    3.1154223e+03   2.707876e+02   0.000000e+00    161s
+    6320    3.1154170e+03   1.091037e+03   0.000000e+00    168s
+    6560    3.1154131e+03   2.882962e+02   0.000000e+00    174s
+    6800    3.1154071e+03   1.371162e+03   0.000000e+00    180s
+    7040    3.1154011e+03   5.370016e+03   0.000000e+00    185s
+    7280    3.1153970e+03   1.103403e+03   0.000000e+00    190s
+    7770    3.1153928e+03   3.477692e+02   0.000000e+00    200s
+    8040    3.1153903e+03   4.344755e+00   0.000000e+00    206s
+    8300    3.1153897e+03   2.231658e+01   0.000000e+00    212s
+    8580    3.1153896e+03   2.552831e+01   0.000000e+00    217s
+    8802    3.1153895e+03   0.000000e+00   0.000000e+00    221s
+
+Solved in 8802 iterations and 221.55 seconds (575.56 work units)
+Optimal objective  3.115389541e+03
+Set parameter TimeLimit to value 2090.61074924469
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1570094 rows, 3956 columns and 5339813 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1153895e+03   3.299360e+03   0.000000e+00      1s
+     160    3.1146048e+03   2.397281e+07   0.000000e+00      8s
+     340    3.1141152e+03   7.098641e+06   0.000000e+00     15s
+Warning: Markowitz tolerance tightened to 0.125
+     520    3.1133315e+03   5.922526e+07   0.000000e+00     22s
+     700    3.1128905e+03   1.098346e+07   0.000000e+00     29s
+     880    3.1123393e+03   1.483751e+06   0.000000e+00     36s
+    1150    3.1120114e+03   1.313916e+06   0.000000e+00     42s
+    1430    3.1118134e+03   5.605521e+05   0.000000e+00     49s
+    1730    3.1116830e+03   5.503651e+06   0.000000e+00     56s
+    2050    3.1115283e+03   3.165984e+05   0.000000e+00     63s
+    2390    3.1113412e+03   4.186902e+05   0.000000e+00     71s
+    2680    3.1111327e+03   2.853638e+07   0.000000e+00     78s
+    3000    3.1110499e+03   2.090537e+04   0.000000e+00     85s
+    3320    3.1109686e+03   1.267752e+05   0.000000e+00     91s
+    3610    3.1109101e+03   8.198701e+03   0.000000e+00     96s
+    3910    3.1108487e+03   7.102221e+05   0.000000e+00    103s
+    4200    3.1108100e+03   9.843113e+04   0.000000e+00    109s
+    4490    3.1107749e+03   1.598639e+04   0.000000e+00    114s
+    4740    3.1107470e+03   5.467507e+04   0.000000e+00    120s
+    5000    3.1107115e+03   3.604591e+05   0.000000e+00    126s
+    5280    3.1106697e+03   2.411386e+04   0.000000e+00    132s
+    5550    3.1106448e+03   2.777099e+03   0.000000e+00    137s
+    5850    3.1106222e+03   4.304938e+04   0.000000e+00    144s
+    6110    3.1106045e+03   6.537797e+03   0.000000e+00    149s
+    6420    3.1105920e+03   2.015312e+04   0.000000e+00    154s
+    6650    3.1105775e+03   2.771887e+03   0.000000e+00    159s
+    6940    3.1105517e+03   3.436260e+03   0.000000e+00    164s
+    7210    3.1105233e+03   6.815982e+03   0.000000e+00    170s
+    7450    3.1105046e+03   1.445288e+03   0.000000e+00    175s
+    7700    3.1104951e+03   1.293188e+04   0.000000e+00    180s
+    7950    3.1104868e+03   1.282573e+03   0.000000e+00    185s
+    8190    3.1104778e+03   9.342567e+02   0.000000e+00    190s
+    8460    3.1104737e+03   1.197977e+04   0.000000e+00    195s
+    8730    3.1104691e+03   1.428707e+03   0.000000e+00    201s
+    9020    3.1104618e+03   2.239350e+04   0.000000e+00    206s
+    9260    3.1104581e+03   9.013034e+04   0.000000e+00    211s
+    9510    3.1104544e+03   2.430587e+04   0.000000e+00    216s
+    9770    3.1104514e+03   6.324046e+03   0.000000e+00    221s
+   10030    3.1104483e+03   4.472479e+04   0.000000e+00    226s
+   10290    3.1104468e+03   8.623933e+03   0.000000e+00    231s
+   10600    3.1104452e+03   7.551400e+01   0.000000e+00    237s
+   10643    3.1104451e+03   0.000000e+00   0.000000e+00    239s
+
+Solved in 10643 iterations and 239.17 seconds (748.12 work units)
+Optimal objective  3.110445095e+03
+Set parameter TimeLimit to value 1.8407462675571442e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1572178 rows, 3956 columns and 5360653 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1104451e+03   1.991641e+03   0.000000e+00      1s
+     200    3.1094975e+03   2.213166e+06   0.000000e+00      8s
+     400    3.1094525e+03   2.253472e+05   0.000000e+00     14s
+     630    3.1094459e+03   1.225373e+04   0.000000e+00     19s
+     792    3.1094451e+03   0.000000e+00   0.000000e+00     22s
+
+Solved in 792 iterations and 22.55 seconds (64.48 work units)
+Optimal objective  3.109445095e+03
+Set parameter TimeLimit to value 1.8080487856864929e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1574262 rows, 3956 columns and 5381493 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1094451e+03   1.971910e+03   0.000000e+00      1s
+     180    3.1078847e+03   1.580297e+07   0.000000e+00      8s
+     360    3.1074094e+03   7.791921e+06   0.000000e+00     15s
+     570    3.1072046e+03   7.195291e+05   0.000000e+00     21s
+     800    3.1068196e+03   3.117214e+05   0.000000e+00     27s
+    1030    3.1065667e+03   1.114965e+05   0.000000e+00     34s
+    1300    3.1062939e+03   4.420057e+05   0.000000e+00     40s
+    1530    3.1060489e+03   1.152100e+05   0.000000e+00     47s
+    1800    3.1058746e+03   3.352764e+05   0.000000e+00     53s
+    2040    3.1057727e+03   3.685207e+05   0.000000e+00     59s
+    2290    3.1056853e+03   5.837508e+04   0.000000e+00     65s
+    2600    3.1055658e+03   9.499692e+04   0.000000e+00     72s
+    2860    3.1054933e+03   7.870009e+04   0.000000e+00     79s
+    3170    3.1054034e+03   5.109439e+05   0.000000e+00     86s
+    3410    3.1053446e+03   6.884659e+04   0.000000e+00     91s
+    3660    3.1052322e+03   2.107768e+04   0.000000e+00     98s
+    3950    3.1050908e+03   6.756882e+04   0.000000e+00    105s
+    4240    3.1049667e+03   8.967994e+04   0.000000e+00    113s
+Warning: Markowitz tolerance tightened to 0.03125
+    4550    3.1048419e+03   2.458974e+06   0.000000e+00    121s
+    4810    3.1047483e+03   4.547120e+04   0.000000e+00    127s
+    5060    3.1046845e+03   1.841618e+05   0.000000e+00    133s
+    5390    3.1045923e+03   5.888547e+04   0.000000e+00    141s
+    5640    3.1045462e+03   3.718665e+05   0.000000e+00    147s
+    5930    3.1044860e+03   1.083299e+05   0.000000e+00    154s
+    6270    3.1044292e+03   7.154801e+04   0.000000e+00    163s
+    6570    3.1043742e+03   5.748958e+06   0.000000e+00    170s
+    6890    3.1043352e+03   7.730427e+03   0.000000e+00    177s
+    7200    3.1042977e+03   1.979402e+05   0.000000e+00    184s
+    7440    3.1042699e+03   8.643563e+03   0.000000e+00    189s
+    7700    3.1042406e+03   4.160170e+05   0.000000e+00    194s
+    7970    3.1042193e+03   5.354041e+03   0.000000e+00    199s
+    8280    3.1041966e+03   2.453494e+03   0.000000e+00    204s
+    8520    3.1041753e+03   1.650428e+04   0.000000e+00    209s
+    8770    3.1041613e+03   1.111329e+03   0.000000e+00    213s
+    9000    3.1041503e+03   1.583702e+05   0.000000e+00    218s
+    9230    3.1041337e+03   3.340088e+03   0.000000e+00    223s
+    9470    3.1041268e+03   2.569030e+04   0.000000e+00    229s
+    9700    3.1041168e+03   6.833063e+05   0.000000e+00    234s
+    9920    3.1041067e+03   1.913234e+04   0.000000e+00    239s
+   10170    3.1040954e+03   2.460403e+04   0.000000e+00    245s
+   10420    3.1040835e+03   3.953282e+04   0.000000e+00    250s
+   10660    3.1040743e+03   1.463950e+03   0.000000e+00    256s
+   10900    3.1040674e+03   2.064982e+03   0.000000e+00    261s
+   11130    3.1040611e+03   4.356706e+02   0.000000e+00    267s
+   11370    3.1040547e+03   4.986153e+02   0.000000e+00    271s
+   11620    3.1040493e+03   1.677134e+03   0.000000e+00    277s
+   11880    3.1040457e+03   1.005235e+03   0.000000e+00    282s
+   12110    3.1040432e+03   3.472798e+02   0.000000e+00    287s
+   12380    3.1040405e+03   1.360551e+03   0.000000e+00    292s
+   12600    3.1040370e+03   1.149940e+03   0.000000e+00    297s
+   12830    3.1040352e+03   1.119029e+03   0.000000e+00    302s
+   13060    3.1040323e+03   1.311923e+03   0.000000e+00    307s
+   13300    3.1040304e+03   2.349707e+02   0.000000e+00    311s
+   13510    3.1040286e+03   1.249159e+04   0.000000e+00    315s
+   13760    3.1040265e+03   1.041680e+03   0.000000e+00    321s
+   13980    3.1040247e+03   6.456187e+02   0.000000e+00    326s
+   14210    3.1040236e+03   1.340199e+04   0.000000e+00    331s
+   14450    3.1040224e+03   9.794119e+01   0.000000e+00    336s
+   14670    3.1040215e+03   1.072863e+02   0.000000e+00    341s
+   14890    3.1040192e+03   1.978444e+02   0.000000e+00    346s
+   15150    3.1040180e+03   1.664676e+02   0.000000e+00    350s
+   15640    3.1040165e+03   1.550922e+03   0.000000e+00    359s
+   15860    3.1040151e+03   2.578923e+03   0.000000e+00    364s
+   16090    3.1040139e+03   9.677368e+01   0.000000e+00    368s
+   16320    3.1040135e+03   1.218700e+02   0.000000e+00    373s
+   16510    3.1040127e+03   4.795673e+02   0.000000e+00    377s
+   16730    3.1040118e+03   1.822103e+04   0.000000e+00    382s
+   16950    3.1040108e+03   1.739541e+03   0.000000e+00    386s
+   17190    3.1040097e+03   1.349061e+02   0.000000e+00    391s
+   17430    3.1040092e+03   4.870767e+03   0.000000e+00    396s
+   17640    3.1040088e+03   3.178127e+02   0.000000e+00    401s
+   18070    3.1040078e+03   4.900742e+01   0.000000e+00    409s
+   18320    3.1040070e+03   4.346706e+03   0.000000e+00    414s
+   18590    3.1040063e+03   2.660092e+02   0.000000e+00    419s
+   18840    3.1040056e+03   9.325724e+02   0.000000e+00    424s
+   19090    3.1040051e+03   1.068770e+02   0.000000e+00    428s
+   19320    3.1040043e+03   2.252837e+02   0.000000e+00    433s
+   19560    3.1040039e+03   1.731689e+02   0.000000e+00    437s
+   19820    3.1040036e+03   6.513471e+04   0.000000e+00    442s
+   20040    3.1040034e+03   4.380085e+01   0.000000e+00    447s
+   20081    3.1040034e+03   0.000000e+00   0.000000e+00    449s
+
+Solved in 20081 iterations and 449.47 seconds (1531.96 work units)
+Optimal objective  3.104003429e+03
+Set parameter TimeLimit to value 1.3471860048770905e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1576346 rows, 3956 columns and 5402333 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.1040034e+03   1.948017e+03   0.000000e+00      1s
+     190    3.1036854e+03   8.407683e+07   0.000000e+00      7s
+     360    3.1030860e+03   4.496133e+07   0.000000e+00     13s
+     550    3.1027646e+03   2.092731e+07   0.000000e+00     19s
+     760    3.1024653e+03   9.434490e+05   0.000000e+00     25s
+     960    3.1023463e+03   4.267931e+05   0.000000e+00     31s
+    1170    3.1021056e+03   9.754248e+06   0.000000e+00     37s
+    1390    3.1018056e+03   9.630421e+05   0.000000e+00     44s
+Warning: Markowitz tolerance tightened to 0.03125
+    1650    3.1015476e+03   1.315692e+07   0.000000e+00     51s
+    1950    3.1012539e+03   3.178795e+06   0.000000e+00     59s
+    2250    3.1008891e+03   2.735235e+06   0.000000e+00     68s
+    2550    3.1005607e+03   1.579061e+06   0.000000e+00     78s
+    2820    3.1003447e+03   6.205771e+05   0.000000e+00     85s
+    3140    3.1000874e+03   6.812851e+05   0.000000e+00     93s
+    3470    3.0998971e+03   3.468526e+07   0.000000e+00    103s
+    3900    3.0996837e+03   1.467461e+07   0.000000e+00    112s
+    4260    3.0995566e+03   1.585330e+07   0.000000e+00    121s
+    4600    3.0994658e+03   5.423961e+05   0.000000e+00    130s
+    4950    3.0993263e+03   2.160551e+05   0.000000e+00    139s
+    5310    3.0992022e+03   2.629124e+05   0.000000e+00    147s
+    5600    3.0991229e+03   2.496106e+05   0.000000e+00    153s
+    5980    3.0989906e+03   5.122396e+05   0.000000e+00    161s
+    6330    3.0988810e+03   3.090139e+06   0.000000e+00    170s
+    6650    3.0988224e+03   2.883883e+06   0.000000e+00    177s
+    6930    3.0987293e+03   4.081041e+06   0.000000e+00    184s
+    7250    3.0986028e+03   4.710620e+06   0.000000e+00    192s
+    7520    3.0985241e+03   1.298733e+05   0.000000e+00    199s
+    7780    3.0984657e+03   1.126851e+05   0.000000e+00    206s
+    8050    3.0984274e+03   1.186405e+07   0.000000e+00    213s
+    8290    3.0983852e+03   9.632262e+05   0.000000e+00    219s
+    8550    3.0983615e+03   1.702141e+05   0.000000e+00    226s
+    8800    3.0983297e+03   1.776193e+05   0.000000e+00    232s
+    9050    3.0982975e+03   1.902048e+06   0.000000e+00    238s
+    9290    3.0982624e+03   5.371407e+05   0.000000e+00    244s
+    9520    3.0982297e+03   1.206654e+05   0.000000e+00    250s
+    9760    3.0982069e+03   7.851115e+05   0.000000e+00    256s
+   10020    3.0981694e+03   1.068184e+07   0.000000e+00    263s
+   10280    3.0981353e+03   6.673666e+05   0.000000e+00    268s
+   10560    3.0981084e+03   1.995152e+05   0.000000e+00    275s
+   10900    3.0980598e+03   1.418727e+06   0.000000e+00    284s
+   11200    3.0980199e+03   1.020765e+05   0.000000e+00    291s
+   11460    3.0979734e+03   2.510843e+05   0.000000e+00    299s
+   11720    3.0979384e+03   4.684031e+05   0.000000e+00    306s
+   11960    3.0979075e+03   4.912987e+06   0.000000e+00    312s
+   12230    3.0978620e+03   2.309612e+05   0.000000e+00    319s
+   12470    3.0978240e+03   2.938273e+04   0.000000e+00    325s
+   12710    3.0978007e+03   5.732163e+04   0.000000e+00    332s
+   12980    3.0977820e+03   5.560622e+04   0.000000e+00    338s
+   13230    3.0977508e+03   6.228072e+04   0.000000e+00    345s
+   13470    3.0977263e+03   1.032728e+06   0.000000e+00    352s
+   13720    3.0976957e+03   1.190875e+05   0.000000e+00    358s
+   13990    3.0976461e+03   4.296927e+05   0.000000e+00    364s
+   14250    3.0976234e+03   5.222343e+05   0.000000e+00    371s
+   14470    3.0976036e+03   1.357742e+05   0.000000e+00    377s
+   14690    3.0975842e+03   2.757528e+05   0.000000e+00    382s
+   14910    3.0975663e+03   8.535917e+03   0.000000e+00    388s
+   15140    3.0975488e+03   3.342531e+05   0.000000e+00    394s
+   15410    3.0975329e+03   2.487619e+04   0.000000e+00    401s
+   15670    3.0975116e+03   5.274094e+04   0.000000e+00    406s
+   15900    3.0974992e+03   4.081559e+05   0.000000e+00    412s
+   16140    3.0974863e+03   2.600404e+04   0.000000e+00    418s
+   16370    3.0974781e+03   9.970284e+03   0.000000e+00    423s
+   16600    3.0974644e+03   6.605360e+03   0.000000e+00    429s
+   16880    3.0974557e+03   2.240521e+04   0.000000e+00    435s
+   17130    3.0974492e+03   3.495934e+04   0.000000e+00    441s
+   17370    3.0974435e+03   8.594939e+04   0.000000e+00    447s
+   17590    3.0974346e+03   3.105996e+04   0.000000e+00    452s
+   17870    3.0974263e+03   5.631193e+03   0.000000e+00    458s
+   18120    3.0974190e+03   5.177110e+04   0.000000e+00    464s
+   18410    3.0974115e+03   4.939856e+03   0.000000e+00    471s
+   18660    3.0974047e+03   1.318380e+03   0.000000e+00    477s
+   18900    3.0974004e+03   9.205696e+02   0.000000e+00    482s
+   19130    3.0973973e+03   3.357068e+03   0.000000e+00    487s
+   19350    3.0973941e+03   3.473984e+05   0.000000e+00    493s
+   19570    3.0973919e+03   7.974913e+05   0.000000e+00    499s
+   19790    3.0973878e+03   2.558172e+03   0.000000e+00    503s
+   19990    3.0973843e+03   1.794850e+05   0.000000e+00    508s
+   20200    3.0973804e+03   3.936831e+03   0.000000e+00    512s
+   20420    3.0973772e+03   1.038583e+03   0.000000e+00    516s
+   20620    3.0973748e+03   9.123569e+04   0.000000e+00    520s
+   21030    3.0973698e+03   5.682697e+02   0.000000e+00    529s
+   21250    3.0973676e+03   4.580427e+02   0.000000e+00    533s
+   21450    3.0973652e+03   3.172182e+03   0.000000e+00    539s
+   21670    3.0973630e+03   5.693380e+02   0.000000e+00    545s
+   21880    3.0973606e+03   5.976954e+03   0.000000e+00    550s
+   22120    3.0973591e+03   9.131780e+02   0.000000e+00    554s
+   22330    3.0973569e+03   2.744960e+03   0.000000e+00    559s
+   22560    3.0973553e+03   2.988059e+03   0.000000e+00    564s
+   22760    3.0973528e+03   8.422371e+02   0.000000e+00    569s
+   22960    3.0973513e+03   4.792880e+03   0.000000e+00    573s
+   23160    3.0973501e+03   4.953446e+03   0.000000e+00    577s
+   23350    3.0973477e+03   2.692743e+03   0.000000e+00    582s
+   23570    3.0973459e+03   3.139001e+04   0.000000e+00    587s
+   23760    3.0973444e+03   6.779383e+02   0.000000e+00    592s
+   23990    3.0973431e+03   2.607707e+02   0.000000e+00    596s
+   24230    3.0973421e+03   1.077300e+03   0.000000e+00    601s
+   24450    3.0973409e+03   1.421448e+02   0.000000e+00    605s
+   24680    3.0973397e+03   5.354544e+03   0.000000e+00    610s
+   24930    3.0973391e+03   1.207777e+02   0.000000e+00    615s
+   25160    3.0973388e+03   9.403515e+01   0.000000e+00    620s
+   25630    3.0973382e+03   1.027115e+02   0.000000e+00    629s
+   25810    3.0973379e+03   1.915771e+02   0.000000e+00    633s
+   26030    3.0973376e+03   5.309341e+01   0.000000e+00    638s
+   26240    3.0973373e+03   6.737733e+01   0.000000e+00    643s
+   26460    3.0973371e+03   6.340132e+01   0.000000e+00    647s
+   26680    3.0973369e+03   2.758722e+02   0.000000e+00    652s
+   26900    3.0973368e+03   4.832560e+02   0.000000e+00    657s
+   27100    3.0973367e+03   1.024351e+02   0.000000e+00    661s
+   27300    3.0973365e+03   7.404401e+03   0.000000e+00    666s
+   27500    3.0973363e+03   6.596446e+01   0.000000e+00    670s
+   27940    3.0973361e+03   3.905458e+01   0.000000e+00    679s
+   28160    3.0973360e+03   9.333485e+02   0.000000e+00    684s
+   28380    3.0973359e+03   6.901019e+02   0.000000e+00    689s
+   28580    3.0973358e+03   8.961520e+01   0.000000e+00    693s
+   28780    3.0973356e+03   8.917430e+01   0.000000e+00    698s
+   29000    3.0973354e+03   2.066685e+02   0.000000e+00    702s
+   29190    3.0973353e+03   2.976976e+01   0.000000e+00    707s
+   29400    3.0973351e+03   3.854902e+01   0.000000e+00    711s
+   29600    3.0973350e+03   3.274845e+01   0.000000e+00    716s
+   30000    3.0973347e+03   3.405409e+02   0.000000e+00    724s
+   30200    3.0973346e+03   8.279610e+02   0.000000e+00    729s
+   30380    3.0973345e+03   2.414697e+01   0.000000e+00    733s
+   30590    3.0973344e+03   1.540149e+02   0.000000e+00    738s
+   30810    3.0973343e+03   3.005215e+03   0.000000e+00    742s
+   31020    3.0973342e+03   8.227144e+01   0.000000e+00    746s
+   31220    3.0973342e+03   5.146712e+02   0.000000e+00    751s
+   31410    3.0973341e+03   5.939721e+01   0.000000e+00    756s
+   31630    3.0973340e+03   7.871963e+01   0.000000e+00    760s
+   32060    3.0973339e+03   5.299918e+01   0.000000e+00    769s
+   32290    3.0973339e+03   5.780525e+01   0.000000e+00    774s
+   32500    3.0973338e+03   4.451964e+01   0.000000e+00    779s
+   32710    3.0973338e+03   8.899714e+00   0.000000e+00    783s
+   32930    3.0973338e+03   7.741508e+01   0.000000e+00    788s
+   33110    3.0973337e+03   7.069371e+01   0.000000e+00    792s
+   33320    3.0973337e+03   3.181609e+01   0.000000e+00    797s
+   33530    3.0973336e+03   3.334246e+01   0.000000e+00    801s
+   33780    3.0973336e+03   1.473294e+00   0.000000e+00    807s
+   34010    3.0973336e+03   4.033562e+00   0.000000e+00    812s
+   34220    3.0973336e+03   1.689100e+01   0.000000e+00    817s
+   34440    3.0973336e+03   1.149814e+01   0.000000e+00    822s
+   34640    3.0973336e+03   6.452168e+00   0.000000e+00    827s
+   34840    3.0973336e+03   2.864762e+01   0.000000e+00    831s
+   35040    3.0973336e+03   1.068442e+00   0.000000e+00    836s
+   35440    3.0973336e+03   1.636150e+00   0.000000e+00    844s
+   35568    3.0973336e+03   0.000000e+00   0.000000e+00    847s
+   35597    3.0973338e+03   0.000000e+00   0.000000e+00    850s
+
+Solved in 35597 iterations and 849.64 seconds (2957.25 work units)
+Optimal objective  3.097333800e+03
+Set parameter TimeLimit to value 4.8385121607780457e+02
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 1579365 rows, 3956 columns and 5432523 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    3.0973338e+03   2.731436e+03   0.000000e+00      1s
+     170    3.0969387e+03   2.017419e+07   0.000000e+00      7s
+     320    3.0964013e+03   1.360298e+08   0.000000e+00     14s
+     530    3.0961984e+03   1.263032e+06   0.000000e+00     19s
+     770    3.0960962e+03   7.937111e+05   0.000000e+00     24s
+     970    3.0959685e+03   4.483731e+05   0.000000e+00     29s
+    1230    3.0958617e+03   6.840097e+05   0.000000e+00     34s
+    1500    3.0957433e+03   6.141946e+06   0.000000e+00     39s
+    1800    3.0956659e+03   3.420497e+05   0.000000e+00     45s
+    2050    3.0955993e+03   2.877416e+05   0.000000e+00     51s
+    2320    3.0954315e+03   1.714321e+06   0.000000e+00     58s
+    2620    3.0952223e+03   3.042080e+05   0.000000e+00     66s
+    2850    3.0950354e+03   3.880365e+05   0.000000e+00     72s
+Warning: Markowitz tolerance tightened to 0.03125
+    3120    3.0948878e+03   1.284714e+05   0.000000e+00     79s
+    3420    3.0947732e+03   1.019243e+07   0.000000e+00     87s
+    3700    3.0946669e+03   1.119251e+05   0.000000e+00     93s
+    3970    3.0945740e+03   5.155312e+06   0.000000e+00    100s
+    4270    3.0944556e+03   3.576419e+05   0.000000e+00    108s
+    4520    3.0943439e+03   1.781741e+06   0.000000e+00    115s
+    4790    3.0942481e+03   1.604799e+05   0.000000e+00    122s
+    5180    3.0941468e+03   1.718890e+06   0.000000e+00    131s
+    5540    3.0940662e+03   3.324136e+05   0.000000e+00    139s
+    5860    3.0939678e+03   4.526208e+04   0.000000e+00    147s
+    6180    3.0938853e+03   8.414294e+04   0.000000e+00    155s
+    6500    3.0938051e+03   7.401285e+05   0.000000e+00    162s
+    6820    3.0937305e+03   2.419011e+05   0.000000e+00    170s
+    7140    3.0936649e+03   2.209541e+06   0.000000e+00    177s
+    7370    3.0936277e+03   1.442137e+04   0.000000e+00    183s
+    7630    3.0935867e+03   1.978980e+04   0.000000e+00    190s
+    8000    3.0935524e+03   8.519327e+05   0.000000e+00    196s
+    8240    3.0935065e+03   2.790152e+05   0.000000e+00    203s
+    8510    3.0934354e+03   2.757958e+04   0.000000e+00    210s
+    8780    3.0933778e+03   7.179490e+06   0.000000e+00    216s
+    9050    3.0933491e+03   4.089441e+05   0.000000e+00    222s
+    9280    3.0933266e+03   1.070641e+05   0.000000e+00    229s
+    9540    3.0932930e+03   7.877159e+05   0.000000e+00    235s
+    9760    3.0932575e+03   1.871783e+04   0.000000e+00    241s
+   10010    3.0932351e+03   1.392192e+07   0.000000e+00    247s
+   10230    3.0932101e+03   1.566470e+04   0.000000e+00    253s
+   10470    3.0931783e+03   2.268761e+05   0.000000e+00    259s
+   10740    3.0931494e+03   1.096657e+06   0.000000e+00    265s
+   10990    3.0931249e+03   6.800662e+06   0.000000e+00    272s
+   11240    3.0931049e+03   1.751205e+06   0.000000e+00    278s
+   11470    3.0930770e+03   2.518518e+04   0.000000e+00    284s
+   11700    3.0930366e+03   1.205682e+05   0.000000e+00    290s
+   11920    3.0929927e+03   7.971354e+04   0.000000e+00    296s
+   12170    3.0929587e+03   1.059646e+04   0.000000e+00    302s
+   12410    3.0929293e+03   3.036368e+05   0.000000e+00    308s
+   12700    3.0928910e+03   1.187770e+04   0.000000e+00    315s
+   13040    3.0928575e+03   3.489697e+05   0.000000e+00    322s
+   13330    3.0928297e+03   4.727972e+04   0.000000e+00    328s
+   13600    3.0928057e+03   2.721004e+04   0.000000e+00    335s
+   13860    3.0927796e+03   1.847186e+03   0.000000e+00    342s
+   14140    3.0927596e+03   1.718372e+04   0.000000e+00    349s
+   14420    3.0927340e+03   2.962001e+06   0.000000e+00    356s
+   14670    3.0927152e+03   7.452107e+05   0.000000e+00    362s
+   14930    3.0926883e+03   2.080327e+05   0.000000e+00    369s
+   15180    3.0926680e+03   1.079388e+04   0.000000e+00    375s
+   15430    3.0926499e+03   5.218106e+03   0.000000e+00    382s
+   15700    3.0926261e+03   7.075117e+03   0.000000e+00    388s
+   15960    3.0926097e+03   4.901396e+04   0.000000e+00    395s
+   16210    3.0925941e+03   4.300701e+05   0.000000e+00    401s
+   16460    3.0925793e+03   2.523614e+04   0.000000e+00    406s
+   16720    3.0925655e+03   1.223532e+04   0.000000e+00    412s
+   16990    3.0925495e+03   5.293237e+04   0.000000e+00    418s
+   17230    3.0925344e+03   3.906472e+03   0.000000e+00    425s
+   17510    3.0925225e+03   1.789821e+03   0.000000e+00    431s
+   17780    3.0925095e+03   2.514738e+03   0.000000e+00    438s
+   18030    3.0925016e+03   1.052482e+04   0.000000e+00    443s
+   18260    3.0924923e+03   1.310753e+06   0.000000e+00    448s
+   18500    3.0924836e+03   1.803835e+05   0.000000e+00    453s
+   18740    3.0924721e+03   8.434846e+04   0.000000e+00    458s
+   19000    3.0924603e+03   2.279332e+06   0.000000e+00    463s
+   19240    3.0924519e+03   6.794932e+04   0.000000e+00    469s
+   19510    3.0924432e+03   1.542253e+03   0.000000e+00    476s
+   19750    3.0924366e+03   1.226435e+03   0.000000e+00    482s
+
+Stopped in 19848 iterations and 483.86 seconds (1651.30 work units)
+Time limit reached

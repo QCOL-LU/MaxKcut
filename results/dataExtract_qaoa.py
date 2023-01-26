@@ -8,7 +8,7 @@ files 				= []
 wrong_words 		= ["log", ".py"]
 
 for folder in sorted(os.listdir(os.getcwd())):
-	if not os.path.isdir(folder) or "max" not in folder: continue
+	if not os.path.isdir(folder) or "k" not in folder: continue
 	folder_paths 	= os.path.join(os.getcwd(), folder)	
 
 

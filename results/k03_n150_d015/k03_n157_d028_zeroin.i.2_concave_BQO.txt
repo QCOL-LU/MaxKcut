@@ -1,0 +1,73 @@
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           157
+Number of edges:              3541
+Number of partitions:         3
+
+Density (%):                  29
+Name of instance:             zeroin.i.2_concave
+
+Is planar:                    False
+Is Chordal:                   False
+
+Triangles Density (%):        5
+Min_Maximal_Matching (%):     67
+Global Efficiency:            0.64
+
+Core Number:                  30
+Largest Component Size:       157
+
+Cut Vertices Number:          0
+Largest BiComponent Size:     157
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       BQO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+Relaxed:                      True
+Rounding Heuristic:           False
+Curvature Type:               concave
+Curvature Method:             mosek
+Symmetry Breaking:            False
+Gurobi Time Limit:            3600
+Gurobi MIPGap:                0
+Gurobi Threads:               10
+Gurobi Heuristics:            0
+Gurobi Presolve:              -1
+Gurobi Symmetry:              -1
+Gurobi Cuts:                  -1
+==================================================
+
+==================================================
+Summary of results of BQO model of 0-S157
+--------------------------------------------------
+Model status:                 optimal
+Explored B&B nodes:           0
+Gurobi running time:          278.6
+
+Optimality gap (%):           0.00
+Upper bound:                  5169.99
+Objective value:              5169.99
+==================================================
+
+==================================================
+Summary of results of 0-S157
+--------------------------------------------------
+Number of vertices:           157
+Number of edges:              3541
+
+Vertex num in largest comp:   157
+Edge num in largest comp:     3541
+
+Pre-processing running time:  0.00
+Total solver time:            278.60
+Running time:                 281.28
+
+Upper bound:                  5169.99
+Objective value:              140.00
+==================================================

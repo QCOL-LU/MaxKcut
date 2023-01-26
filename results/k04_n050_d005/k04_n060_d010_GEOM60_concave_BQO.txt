@@ -1,0 +1,73 @@
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           60
+Number of edges:              185
+Number of partitions:         4
+
+Density (%):                  10
+Name of instance:             GEOM60_concave
+
+Is planar:                    False
+Is Chordal:                   False
+
+Triangles Density (%):        0
+Min_Maximal_Matching (%):     93
+Global Efficiency:            0.34
+
+Core Number:                  6
+Largest Component Size:       60
+
+Cut Vertices Number:          1
+Largest BiComponent Size:     59
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       BQO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+Relaxed:                      True
+Rounding Heuristic:           False
+Curvature Type:               concave
+Curvature Method:             mosek
+Symmetry Breaking:            False
+Gurobi Time Limit:            3600
+Gurobi MIPGap:                0
+Gurobi Threads:               10
+Gurobi Heuristics:            0
+Gurobi Presolve:              -1
+Gurobi Symmetry:              -1
+Gurobi Cuts:                  -1
+==================================================
+
+==================================================
+Summary of results of BQO model of 0-S60
+--------------------------------------------------
+Model status:                 optimal
+Explored B&B nodes:           0
+Gurobi running time:          3.2
+
+Optimality gap (%):           0.00
+Upper bound:                  1258.78
+Objective value:              1258.78
+==================================================
+
+==================================================
+Summary of results of 0-S60
+--------------------------------------------------
+Number of vertices:           60
+Number of edges:              185
+
+Vertex num in largest comp:   60
+Edge num in largest comp:     185
+
+Pre-processing running time:  0.00
+Total solver time:            3.23
+Running time:                 5.16
+
+Upper bound:                  1258.78
+Objective value:              17.00
+==================================================

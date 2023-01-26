@@ -1,0 +1,73 @@
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           202
+Number of edges:              1227
+Number of partitions:         4
+
+Density (%):                  6
+Name of instance:             1-Insertions_5_concave
+
+Is planar:                    False
+Is Chordal:                   False
+
+Triangles Density (%):        0
+Min_Maximal_Matching (%):     84
+Global Efficiency:            0.43
+
+Core Number:                  9
+Largest Component Size:       202
+
+Cut Vertices Number:          0
+Largest BiComponent Size:     202
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       BQO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+Relaxed:                      True
+Rounding Heuristic:           False
+Curvature Type:               concave
+Curvature Method:             mosek
+Symmetry Breaking:            False
+Gurobi Time Limit:            3600
+Gurobi MIPGap:                0
+Gurobi Threads:               10
+Gurobi Heuristics:            0
+Gurobi Presolve:              -1
+Gurobi Symmetry:              -1
+Gurobi Cuts:                  -1
+==================================================
+
+==================================================
+Summary of results of BQO model of 0-S202
+--------------------------------------------------
+Model status:                 optimal
+Explored B&B nodes:           0
+Gurobi running time:          853.9
+
+Optimality gap (%):           0.00
+Upper bound:                  2404.15
+Objective value:              2404.15
+==================================================
+
+==================================================
+Summary of results of 0-S202
+--------------------------------------------------
+Number of vertices:           202
+Number of edges:              1227
+
+Vertex num in largest comp:   202
+Edge num in largest comp:     1227
+
+Pre-processing running time:  0.00
+Total solver time:            853.86
+Running time:                 856.57
+
+Upper bound:                  2404.15
+Objective value:              16.00
+==================================================

@@ -1,0 +1,73 @@
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           120
+Number of edges:              638
+Number of partitions:         4
+
+Density (%):                  9
+Name of instance:             games120_concave
+
+Is planar:                    False
+Is Chordal:                   False
+
+Triangles Density (%):        0
+Min_Maximal_Matching (%):     95
+Global Efficiency:            0.42
+
+Core Number:                  9
+Largest Component Size:       120
+
+Cut Vertices Number:          0
+Largest BiComponent Size:     120
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       BQO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+Relaxed:                      True
+Rounding Heuristic:           False
+Curvature Type:               concave
+Curvature Method:             mosek
+Symmetry Breaking:            False
+Gurobi Time Limit:            3600
+Gurobi MIPGap:                0
+Gurobi Threads:               10
+Gurobi Heuristics:            0
+Gurobi Presolve:              -1
+Gurobi Symmetry:              -1
+Gurobi Cuts:                  -1
+==================================================
+
+==================================================
+Summary of results of BQO model of 0-S120
+--------------------------------------------------
+Model status:                 optimal
+Explored B&B nodes:           0
+Gurobi running time:          75.7
+
+Optimality gap (%):           0.00
+Upper bound:                  836.24
+Objective value:              836.24
+==================================================
+
+==================================================
+Summary of results of 0-S120
+--------------------------------------------------
+Number of vertices:           120
+Number of edges:              638
+
+Vertex num in largest comp:   120
+Edge num in largest comp:     638
+
+Pre-processing running time:  0.00
+Total solver time:            75.74
+Running time:                 78.41
+
+Upper bound:                  836.24
+Objective value:              11.00
+==================================================

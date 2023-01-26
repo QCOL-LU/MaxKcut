@@ -1,0 +1,68 @@
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           125
+Number of edges:              6961
+Number of partitions:         4
+
+Density (%):                  90
+Name of instance:             DSJC125.9_tight
+
+Is planar:                    False
+Is Chordal:                   False
+
+Triangles Density (%):        72
+Min_Maximal_Matching (%):     99
+Global Efficiency:            0.95
+
+Core Number:                  104
+Largest Component Size:       125
+
+Cut Vertices Number:          0
+Largest BiComponent Size:     125
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       C-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+Naive Penalty Coef:           False
+Adjusted Penalty Coef:        False
+Penalty Multiplier:           1
+
+Gates Error Probability:      0.0
+QAOA Num Levels:              3
+==================================================
+
+==================================================
+Summary of results of C-QUBO model of 0-N125
+--------------------------------------------------
+Model status:                 time limit
+Explored B&B nodes:           1562224
+Gurobi running time:          3602.7
+
+Optimality gap (%):           10.31
+Upper bound:                  6030.40
+Objective value:              5467.00
+==================================================
+
+==================================================
+Summary of results of 0-N125
+--------------------------------------------------
+Number of vertices:           125
+Number of edges:              6961
+
+Vertex num in largest comp:   125
+Edge num in largest comp:     6961
+
+Pre-processing running time:  0.00
+Total solver time:            3602.73
+Running time:                 3606.20
+
+Upper bound:                  6030.40
+Objective value:              5467.00
+==================================================

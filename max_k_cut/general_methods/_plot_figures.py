@@ -147,14 +147,29 @@ def plot_graph_solution(self):
 def plot_decomposition_tree(self):
 
 	default_axes 	= plt.axes(frameon=True)
+
+	fontsize 		= 5
+	width 			= 0.6
+	linewidth 		= 0.6
+	node_size 		= 50
+
+	name_mapping 	= {old_name: old_name for old_name in self.decomposition_tree.nodes}
+
+	if self.decomposition_tree.number_of_nodes() > 15:
+		fontsize 		= 1
+		width 			= .1 	
+		linewidth 		= 0.1
+		node_size 		= 20	
+
 	position 		= nx.nx_pydot.pydot_layout(self.decomposition_tree, prog="dot")
 	pos				= {key:(value[0], value[1]) for (key, value) in position.items()}
 
-	options 		= {"font_size": 5,
+	options 		= {"font_size": fontsize,
 						"node_color": "white",
 						"edgecolors": "black",
-						"linewidths": .6,
-						"width": .6,
+						"linewidths": linewidth,
+						"width": width,
+						"node_size": node_size
 						}
 
 
@@ -175,7 +190,7 @@ def plot_decomposition_tree(self):
 	plt.xlim(xmin - xincrease, cut*xmax)
 	plt.ylim(ymin - yincrease, cut*ymax)
 
-	plt.savefig(figure_name,  dpi=300)
+	plt.savefig(figure_name,  dpi=1000)
 	plt.clf()
 
 
@@ -188,7 +203,7 @@ def plot_qaoa_level_one(self, gammas, betas, objectives):
 	objectives_min, objectives_max 	= -np.abs(objectives).max(), np.abs(objectives).max()
 
 	fig, ax 						= plt.subplots()
-
+	
 	colormesh						= ax.pcolormesh(betas, gammas, objectives, cmap='RdBu', vmin=objectives_min, vmax=objectives_max, shading='auto')
 	ax.set_title('QAOA$_1$-' + self.Params.Method)
 
@@ -202,6 +217,8 @@ def plot_qaoa_level_one(self, gammas, betas, objectives):
 	plt.xlabel(r'$\beta/\pi$')
 
 
+
+
 	plt.savefig(figure_name,  dpi=300)
 
 	plt.clf()
@@ -209,14 +226,16 @@ def plot_qaoa_level_one(self, gammas, betas, objectives):
 	ax_3d.plot_surface(betas, gammas, objectives, rstride=1, cstride=1,
 	                cmap='RdBu', edgecolor='none')
 	ax_3d.set_title('QAOA$_1$-' + self.Params.Method)
+	ax_3d.set_box_aspect((2,4,3))
 
 	figure_name 	= self.figure_path + "/"+ self.name +"_" + self.Params.Method + "_qaoa_level_one_3d.png"
 
 	plt.grid(False)
 
-	# ax_3d.set_xticks([])
-	# ax_3d.set_yticks([])
+	ax_3d.set_xticks([i *0.5 for i in range(3)])
+	ax_3d.set_yticks([i *0.5 for i in range(5)])
 	# ax_3d.set_zticks([])
+	# ax_3d.set_aspect('equal')
 
 
 	ax_3d.xaxis.pane.fill = False
@@ -233,7 +252,8 @@ def plot_qaoa_level_one(self, gammas, betas, objectives):
 	
 	ax_3d.zaxis.set_rotate_label(False) 
 	if self.Params.Method == "R-QUBO":
-		ax_3d.set_zlabel(r'$\bar{q}$', fontsize=10, rotation = 0)
+		# ax_3d.set_zlabel(r'$\bar{q}$', fontsize=10, rotation = 0)
+		ax_3d.set_zlabel(r'$\quad\qquad\ F_1 (\vec{\beta}, \vec{\gamma})$', fontsize=10, rotation = 0)
 	elif self.Params.Method == "QUBO":
 		ax_3d.set_zlabel(r'$q$', fontsize=10, rotation = 0)
 	plt.savefig(figure_name,  dpi=300)

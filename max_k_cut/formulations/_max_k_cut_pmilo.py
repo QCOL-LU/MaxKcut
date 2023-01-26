@@ -49,14 +49,12 @@ def solve_max_k_cut_pmilo(self):
 				model.addConstr(z[(vertex_set[0], vertex_set[2])] + z[(vertex_set[1], vertex_set[2])] <= 1 + z[(vertex_set[0], vertex_set[1])])
 
 
-			# if self.Params.Clique_Constraints == True:
-			# 	for clique in nx.find_cliques(self.graph):
-			# 		clique_list 			= sorted(list(clique))
-			# 		clique_size 			= len(clique_list)
-			# 		(quotient, reminder)	= divmod(clique_size, self.num_partitions)
+			if self.Params.Relaxed == True:
+				for clique in itertools.combinations(self.vertices, self.num_partitions + 1):
+					clique_list 			= sorted(list(clique))
 
-			# 		clique_constraint 		= model.addConstr(quicksum(z[edge] for edge in itertools.combinations(clique_list, 2) ) >=  ((quotient*(quotient - 1)*(self.num_partitions - reminder) + quotient*(quotient + 1)*reminder) )/2 )
-			# 		clique_constraint.Lazy 	= -1
+					model.addConstr(quicksum(z[edge] for edge in itertools.combinations(clique_list, 2) ) >=  1 )
+					# clique_constraint.Lazy 	= -1
 
 			#-----------------------------------------------------------------------------------
 			# Callback function to obtain root node relaxation
@@ -115,14 +113,17 @@ def solve_max_k_cut_pmilo(self):
 			#-----------------------------------------------------------------------------------
 			# Solve the model and extract the obtained solution
 			#-----------------------------------------------------------------------------------
-			model.optimize(add_lazy_constraint)
+			if self.Params.Relaxed == True:
+				model.optimize()
+			else:
+				model.optimize(add_lazy_constraint)
 
 			self.gurobi_obj_value			= model.objVal
 			self.gurobi_BB_nodes 			= model.getAttr(GRB.Attr.NodeCount) 		# Spatial BB nodes
 			self.gurobi_ObjBound			= model.ObjBound
-			self.gurobi_MIPGap				= model.MIPGap
+			self.gurobi_MIPGap				= model.MIPGap if self.Params.Relaxed == False else 0.0
 			
-			all_variables 					= model.getVars()
+			all_variables 					= model.getVars() 
 
 			if model.status == GRB.Status.OPTIMAL:
 				self.gurobi_model_status 	= "optimal"

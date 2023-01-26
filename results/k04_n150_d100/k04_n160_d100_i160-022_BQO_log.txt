@@ -1,0 +1,87 @@
+
+Gurobi 10.0.0 (linux64) logging started Wed Nov 16 04:37:34 2022
+
+Set parameter LogFile to value "../results/k04_n150_d100/k04_n160_d100_i160-022_BQO_log.txt"
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 160 rows, 640 columns and 640 nonzeros
+Model fingerprint: 0x5ac966c9
+Model has 50880 quadratic objective terms
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [0e+00, 0e+00]
+  QObjective range [2e+02, 6e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 1 rows and 4 columns
+
+Continuous model is non-convex -- solving as a MIP
+
+Presolve removed 1 rows and 4 columns
+Presolve time: 0.09s
+Presolved: 100648 rows, 50881 columns, 251857 nonzeros
+Presolved model has 50244 bilinear constraint(s)
+Variable types: 50881 continuous, 0 integer (0 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex (primal and dual model)
+Showing first log only...
+
+Root relaxation presolved: 50403 rows, 50880 columns, 151368 nonzeros
+
+
+Use crossover to convert LP symmetric solution to basic solution...
+Concurrent spin time: 0.21s
+
+Solved with primal simplex (primal model)
+
+Root relaxation: objective 1.377369e+06, 321 iterations, 1.02 seconds (0.21 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 1377369.00    0 25122          - 1377369.00      -     -    1s
+H    0     0                    704909.00000 1377369.00  95.4%     -    1s
+H    0     0                    1044541.0572 1377369.00  31.9%     -    6s
+     0     0 1374535.50    0 37019 1044541.06 1374535.50  31.6%     -   16s
+     0     0 1374535.50    0 36552 1044541.06 1374535.50  31.6%     -   25s
+     0     0 1367538.28    0 27291 1044541.06 1367538.28  30.9%     -   48s
+     0     0 1366849.74    0 34589 1044541.06 1366849.74  30.9%     -   61s
+     0     0 1359765.64    0 33942 1044541.06 1359765.64  30.2%     -  111s
+     0     0 1359187.42    0 34472 1044541.06 1359187.42  30.1%     -  144s
+     0     0 1354536.02    0 32692 1044541.06 1354536.02  29.7%     -  216s
+     0     0 1353688.20    0 37441 1044541.06 1353688.20  29.6%     -  265s
+     0     0 1349580.51    0 33442 1044541.06 1349580.51  29.2%     -  356s
+     0     0 1348348.67    0 37706 1044541.06 1348348.67  29.1%     -  422s
+     0     0 1345244.27    0 34511 1044541.06 1345244.27  28.8%     -  507s
+     0     0 1344017.18    0 39019 1044541.06 1344017.18  28.7%     -  603s
+     0     0 1340553.52    0 36023 1044541.06 1340553.52  28.3%     -  743s
+     0     0 1339286.09    0 40915 1044541.06 1339286.09  28.2%     -  837s
+     0     0 1336470.05    0 37371 1044541.06 1336470.05  27.9%     -  981s
+     0     0 1335199.57    0 41320 1044541.06 1335199.57  27.8%     - 1099s
+     0     0 1332282.80    0 39978 1044541.06 1332282.80  27.5%     - 1286s
+     0     0 1330974.61    0 41626 1044541.06 1330974.61  27.4%     - 1457s
+     0     0 1328226.25    0 40736 1044541.06 1328226.25  27.2%     - 1678s
+     0     0 1326759.99    0 42429 1044541.06 1326759.99  27.0%     - 1968s
+     0     0 1324149.22    0 40394 1044541.06 1324149.22  26.8%     - 2212s
+     0     0 1322614.04    0 42943 1044541.06 1322614.04  26.6%     - 2414s
+     0     0 1320104.85    0 42135 1044541.06 1320104.85  26.4%     - 2661s
+     0     0 1318913.93    0 42912 1044541.06 1318913.93  26.3%     - 2828s
+     0     0 1316795.08    0 42138 1044541.06 1316795.08  26.1%     - 3060s
+     0     0 1315596.92    0 42620 1044541.06 1315596.92  25.9%     - 3236s
+     0     0          -    0      1044541.06 1315596.92  25.9%     - 3600s
+
+Cutting planes:
+  RLT: 1755
+  BQP: 2727
+  PSD: 1
+
+Explored 1 nodes (437747 simplex iterations) in 3600.01 seconds (3458.48 work units)
+Thread count was 10 (of 40 available processors)
+
+Solution count 2: 1.04454e+06 704909 
+
+Time limit reached
+Best objective 1.044541057160e+06, best bound 1.315596915238e+06, gap 25.9498%

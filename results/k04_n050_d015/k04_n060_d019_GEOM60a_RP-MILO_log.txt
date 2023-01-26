@@ -1,0 +1,49 @@
+
+Gurobi 10.0.0 (linux64) logging started Fri Nov 25 02:02:11 2022
+
+Set parameter LogFile to value "../results/k04_n050_d015/k04_n060_d019_GEOM60a_RP-MILO_log.txt"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 15066 rows, 503 columns and 45198 nonzeros
+Model fingerprint: 0x486374ad
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 9e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve time: 0.02s
+Presolved: 6321 rows, 503 columns, 18963 nonzeros
+
+Concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Presolve time: 0.02s
+
+Solved with primal simplex
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.8520000e+03   0.000000e+00   0.000000e+00      0s
+
+Solved in 0 iterations and 0.03 seconds (0.01 work units)
+Optimal objective  1.852000000e+03
+Set parameter TimeLimit to value 3.5984506957530975e+03
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 31995 rows, 503 columns and 214488 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 9e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.8520000e+03   1.692900e+04   0.000000e+00      0s
+    5767    1.6762344e+03   0.000000e+00   0.000000e+00      5s
+
+Solved in 5767 iterations and 4.57 seconds (14.00 work units)
+Optimal objective  1.676234429e+03

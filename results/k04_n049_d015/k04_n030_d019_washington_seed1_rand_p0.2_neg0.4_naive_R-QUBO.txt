@@ -1,0 +1,55 @@
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           30
+Number of edges:              86
+Number of partitions:         4
+
+Density (%):                  20
+Name of instance:             washington_seed1_rand_p0.2_neg0.4_naive
+
+Is planar:                    False
+Is Chordal:                   False
+
+Triangles Density (%):        0
+Min_Maximal_Matching (%):     80
+Global Efficiency:            0.55
+
+Core Number:                  5
+Largest Component Size:       30
+
+Cut Vertices Number:          1
+Largest BiComponent Size:     29
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       R-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+Quantum Computer:             ibm_washington
+Naive Penalty Coef:           True
+Adjusted Penalty Coef:        False
+Penalty Multiplier:           1
+
+QAOA Num Levels:              1
+QAOA Num Shots:               10000
+Gates Error Probability:      0.0
+
+QAOA Optimize:                True
+QAOA Scipy Optimizer:         COBYLA
+QAOA Optimizer Tol:           0.001
+QAOA Angles:                  [0.2, 0.3]
+==================================================
+
+   iter        avg-obj        best avg-obj       best-obj         tight-obj        rqubo-obj           std           skewness      time          gamma            beta      
+*     0     -3.16271e+02     -3.16271e+02     -6.10000e+01     -7.48084e+01     -7.48084e+01      1.30041e+01     -1.68224e+01  37813s           0.30             0.20      
+      1     -3.30639e+02     -3.16271e+02     -6.10000e+01     -7.73194e+01     -7.73194e+01      1.30891e+01     -1.70147e+01  37936s           0.30             1.20      
+*     2     -3.13623e+02     -3.13623e+02     -6.10000e+01     -7.34878e+01     -7.34878e+01      1.28947e+01     -1.73936e+01  38056s           1.30             0.20      
+      3     -3.56549e+02     -3.13623e+02     -3.30000e+01     -8.58934e+01     -8.58934e+01      1.41574e+01     -1.72595e+01  38180s           1.48            -0.78      
+      4     -3.23683e+02     -3.13623e+02     -3.30000e+01     -7.42490e+01     -7.42490e+01      1.30473e+01     -1.69874e+01  38303s           1.33             0.70      
+      5     -3.31917e+02     -3.13623e+02     -3.30000e+01     -7.83024e+01     -7.83024e+01      1.34095e+01     -1.73288e+01  38427s           1.33            -0.05      
+*     6     -3.09725e+02     -3.09725e+02     -3.30000e+01     -7.18516e+01     -7.18516e+01      1.28713e+01     -1.73180e+01  38614s           1.42             0.22      

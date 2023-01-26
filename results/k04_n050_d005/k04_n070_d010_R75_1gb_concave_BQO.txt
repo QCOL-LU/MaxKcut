@@ -1,0 +1,73 @@
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           70
+Number of edges:              251
+Number of partitions:         4
+
+Density (%):                  10
+Name of instance:             R75_1gb_concave
+
+Is planar:                    False
+Is Chordal:                   False
+
+Triangles Density (%):        0
+Min_Maximal_Matching (%):     91
+Global Efficiency:            0.48
+
+Core Number:                  6
+Largest Component Size:       70
+
+Cut Vertices Number:          0
+Largest BiComponent Size:     70
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       BQO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+Relaxed:                      True
+Rounding Heuristic:           False
+Curvature Type:               concave
+Curvature Method:             mosek
+Symmetry Breaking:            False
+Gurobi Time Limit:            3600
+Gurobi MIPGap:                0
+Gurobi Threads:               10
+Gurobi Heuristics:            0
+Gurobi Presolve:              -1
+Gurobi Symmetry:              -1
+Gurobi Cuts:                  -1
+==================================================
+
+==================================================
+Summary of results of BQO model of 0-S70
+--------------------------------------------------
+Model status:                 optimal
+Explored B&B nodes:           0
+Gurobi running time:          5.7
+
+Optimality gap (%):           0.00
+Upper bound:                  412.04
+Objective value:              412.04
+==================================================
+
+==================================================
+Summary of results of 0-S70
+--------------------------------------------------
+Number of vertices:           70
+Number of edges:              251
+
+Vertex num in largest comp:   70
+Edge num in largest comp:     251
+
+Pre-processing running time:  0.00
+Total solver time:            5.65
+Running time:                 7.69
+
+Upper bound:                  412.04
+Objective value:              6.00
+==================================================

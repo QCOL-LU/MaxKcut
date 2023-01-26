@@ -1,3 +1,7 @@
+import sys
+# insert at 1, 0 is the script path (or '' in REPL)
+sys.path.insert(1, '..')
+
 from max_k_cut import *
 from networkx import *
 import sys
@@ -5,14 +9,17 @@ import os
 from read_wang_hijazi_instances import * 
 
 
-path 			= os.getcwd()+ "/"+sys.argv[1] #instances_conncut_random
-name_extension 	= sys.argv[2]
+# path 			= os.getcwd()+ "/"+sys.argv[1] #instances_conncut_random
+# name_extension 	= sys.argv[2]
+
+path 			= "/home/ramin/MaxKcut/instances/wang_hijazi_instances/band/" + "band250_4.txt"
+name_extension 	= ".txt"
 
 final_path 		= path 
 
 name 			= name_extension[:-4] 
 
-num_partitions 	= int(name.split("_")[-1]) if "band" in name else int(sys.argv[3])
+num_partitions 	= int(name.split("_")[-1]) if "band" in name else 3 #int(sys.argv[3])
 
 # num_partitions 	= int(sys.argv[3])
 
@@ -50,7 +57,7 @@ problem.Params.Relaxed 					= False
 # problem.Params.Gurobi_Cuts 				= 3
 # problem.Params.Gurobi_Presolve 			= 2
 problem.Params.Gurobi_TimeLimit			= 3600
-
+problem.Params.Gurobi_LogToConsole 		= 1
 
 
 problem.solve()

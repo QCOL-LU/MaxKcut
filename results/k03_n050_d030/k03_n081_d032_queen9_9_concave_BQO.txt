@@ -1,0 +1,73 @@
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           81
+Number of edges:              1056
+Number of partitions:         3
+
+Density (%):                  33
+Name of instance:             queen9_9_concave
+
+Is planar:                    False
+Is Chordal:                   False
+
+Triangles Density (%):        4
+Min_Maximal_Matching (%):     98
+Global Efficiency:            0.66
+
+Core Number:                  25
+Largest Component Size:       81
+
+Cut Vertices Number:          0
+Largest BiComponent Size:     81
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       BQO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+Relaxed:                      True
+Rounding Heuristic:           False
+Curvature Type:               concave
+Curvature Method:             mosek
+Symmetry Breaking:            False
+Gurobi Time Limit:            3600
+Gurobi MIPGap:                0
+Gurobi Threads:               10
+Gurobi Heuristics:            0
+Gurobi Presolve:              -1
+Gurobi Symmetry:              -1
+Gurobi Cuts:                  -1
+==================================================
+
+==================================================
+Summary of results of BQO model of 0-S81
+--------------------------------------------------
+Model status:                 optimal
+Explored B&B nodes:           0
+Gurobi running time:          8.7
+
+Optimality gap (%):           0.00
+Upper bound:                  915.34
+Objective value:              915.34
+==================================================
+
+==================================================
+Summary of results of 0-S81
+--------------------------------------------------
+Number of vertices:           81
+Number of edges:              1056
+
+Vertex num in largest comp:   81
+Edge num in largest comp:     1056
+
+Pre-processing running time:  0.00
+Total solver time:            8.67
+Running time:                 10.96
+
+Upper bound:                  915.34
+Objective value:              24.00
+==================================================

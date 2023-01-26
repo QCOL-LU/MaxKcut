@@ -1,0 +1,73 @@
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           50
+Number of edges:              238
+Number of partitions:         4
+
+Density (%):                  19
+Name of instance:             GEOM50a_concave
+
+Is planar:                    False
+Is Chordal:                   False
+
+Triangles Density (%):        2
+Min_Maximal_Matching (%):     92
+Global Efficiency:            0.46
+
+Core Number:                  9
+Largest Component Size:       50
+
+Cut Vertices Number:          0
+Largest BiComponent Size:     50
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       BQO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+Relaxed:                      True
+Rounding Heuristic:           False
+Curvature Type:               concave
+Curvature Method:             mosek
+Symmetry Breaking:            False
+Gurobi Time Limit:            3600
+Gurobi MIPGap:                0
+Gurobi Threads:               10
+Gurobi Heuristics:            0
+Gurobi Presolve:              -1
+Gurobi Symmetry:              -1
+Gurobi Cuts:                  -1
+==================================================
+
+==================================================
+Summary of results of BQO model of 0-S50
+--------------------------------------------------
+Model status:                 optimal
+Explored B&B nodes:           0
+Gurobi running time:          2.2
+
+Optimality gap (%):           0.00
+Upper bound:                  1456.36
+Objective value:              1456.36
+==================================================
+
+==================================================
+Summary of results of 0-S50
+--------------------------------------------------
+Number of vertices:           50
+Number of edges:              238
+
+Vertex num in largest comp:   50
+Edge num in largest comp:     238
+
+Pre-processing running time:  0.00
+Total solver time:            2.20
+Running time:                 4.22
+
+Upper bound:                  1456.36
+Objective value:              75.00
+==================================================

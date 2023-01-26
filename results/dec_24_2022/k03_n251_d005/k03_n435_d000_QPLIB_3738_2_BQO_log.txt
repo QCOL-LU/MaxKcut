@@ -1,0 +1,59 @@
+
+Gurobi 10.0.0 (linux64) logging started Mon Dec 19 10:52:04 2022
+
+Set parameter LogFile to value "../results/k03_n251_d005/k03_n435_d000_QPLIB_3738_2_BQO_log.txt"
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 396 rows, 1188 columns and 1188 nonzeros
+Model fingerprint: 0xfbc79bdc
+Model has 2352 quadratic objective terms
+Variable types: 0 continuous, 1188 integer (1188 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [0e+00, 0e+00]
+  QObjective range [2e+00, 2e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 1 rows and 3 columns
+Presolve time: 0.08s
+Presolved: 2735 rows, 3525 columns, 8205 nonzeros
+Variable types: 0 continuous, 3525 integer (3525 binary)
+
+Root relaxation: objective 5.030000e+02, 1328 iterations, 0.04 seconds (0.02 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  503.00000    0  642   -0.00000  503.00000      -     -    0s
+H    0     0                     351.0000000  503.00000  43.3%     -    0s
+H    0     0                     422.0000000  503.00000  19.2%     -    0s
+H    0     0                     424.0000000  503.00000  18.6%     -    0s
+H    0     0                     427.0000000  503.00000  17.8%     -    0s
+     0     0  502.75000    0  787  427.00000  502.75000  17.7%     -    0s
+H    0     0                     438.0000000  502.75000  14.8%     -    0s
+H    0     0                     443.0000000  502.75000  13.5%     -    0s
+     0     0  502.75000    0  791  443.00000  502.75000  13.5%     -    0s
+     0     0  498.87500    0 1053  443.00000  498.87500  12.6%     -    0s
+H    0     0                     444.0000000  498.87500  12.4%     -    0s
+     0     0  495.00000    0  874  444.00000  495.00000  11.5%     -    0s
+H    0     0                     447.0000000  495.00000  10.7%     -    0s
+     0     0  495.00000    0  830  447.00000  495.00000  10.7%     -    0s
+     0     0  494.00000    0  998  447.00000  494.00000  10.5%     -    0s
+     0     0  493.50000    0 1090  447.00000  493.50000  10.4%     -    1s
+
+Cutting planes:
+  Gomory: 13
+  MIR: 5
+  Zero half: 120
+
+Explored 1 nodes (6684 simplex iterations) in 1.00 seconds (0.56 work units)
+Thread count was 10 (of 40 available processors)
+
+Solution count 9: 447 444 443 ... -0
+
+Time limit reached
+Best objective 4.470000000000e+02, best bound 4.930000000000e+02, gap 10.2908%

@@ -1,0 +1,68 @@
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           128
+Number of edges:              5198
+Number of partitions:         4
+
+Density (%):                  64
+Name of instance:             miles1500_tight
+
+Is planar:                    False
+Is Chordal:                   False
+
+Triangles Density (%):        38
+Min_Maximal_Matching (%):     98
+Global Efficiency:            0.81
+
+Core Number:                  73
+Largest Component Size:       128
+
+Cut Vertices Number:          0
+Largest BiComponent Size:     128
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       CR-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+Naive Penalty Coef:           False
+Adjusted Penalty Coef:        False
+Penalty Multiplier:           1
+
+Gates Error Probability:      0.0
+QAOA Num Levels:              3
+==================================================
+
+==================================================
+Summary of results of CR-QUBO model of 0-N128
+--------------------------------------------------
+Model status:                 time limit
+Explored B&B nodes:           2166494
+Gurobi running time:          3603.4
+
+Optimality gap (%):           39.40
+Upper bound:                  5835.10
+Objective value:              4186.00
+==================================================
+
+==================================================
+Summary of results of 0-N128
+--------------------------------------------------
+Number of vertices:           128
+Number of edges:              5198
+
+Vertex num in largest comp:   128
+Edge num in largest comp:     5198
+
+Pre-processing running time:  0.00
+Total solver time:            3603.41
+Running time:                 3605.41
+
+Upper bound:                  5835.10
+Objective value:              4186.00
+==================================================

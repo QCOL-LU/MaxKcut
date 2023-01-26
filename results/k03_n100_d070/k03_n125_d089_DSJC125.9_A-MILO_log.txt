@@ -1,0 +1,63 @@
+
+Gurobi 10.0.0 (linux64) logging started Sat Nov 19 23:46:43 2022
+
+Set parameter LogFile to value "../results/k03_n100_d070/k03_n125_d089_DSJC125.9_A-MILO_log.txt"
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 62774 rows, 7336 columns and 188322 nonzeros
+Model fingerprint: 0x0b73157d
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+00]
+Presolve removed 806 rows and 118 columns
+Presolve time: 0.22s
+Presolved: 7218 rows, 69416 columns, 193352 nonzeros
+
+Concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Ordering time: 0.02s
+
+Barrier statistics:
+ Free vars  : 124
+ AA' NZ     : 6.199e+04
+ Factor NZ  : 1.173e+05 (roughly 30 MB of memory)
+ Factor Ops : 1.756e+07 (less than 1 second per iteration)
+ Threads    : 8
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   2.74421349e+04  1.15000000e+02  1.21e+00 1.00e+00  6.51e-01     0s
+   1   1.08065036e+04  5.21206106e+03  0.00e+00 3.36e-05  7.31e-02     0s
+   2   7.67090573e+03  6.92241194e+03  0.00e+00 6.67e-07  9.78e-03     0s
+   3   6.96826880e+03  6.92836521e+03  0.00e+00 2.17e-08  5.22e-04     0s
+   4   6.96255522e+03  6.96079774e+03  0.00e+00 9.70e-14  2.30e-05     0s
+   5   6.96100038e+03  6.96099992e+03  0.00e+00 1.96e-10  5.99e-09     0s
+   6   6.96100000e+03  6.96100000e+03  3.16e-15 2.04e-11  6.00e-15     0s
+
+Barrier solved model in 6 iterations and 0.49 seconds (0.38 work units)
+Optimal objective 6.96100000e+03
+
+Crossover log...
+
+      40 DPushes remaining with DInf 0.0000000e+00                 1s
+       0 DPushes remaining with DInf 0.0000000e+00                 1s
+
+   11643 PPushes remaining with PInf 0.0000000e+00                 1s
+       0 PPushes remaining with PInf 0.0000000e+00                 1s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 0.0000000e+00      1s
+
+
+Solved with barrier
+Extra simplex iterations after uncrush: 2
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   11688    6.9610000e+03   0.000000e+00   0.000000e+00      1s
+
+Solved in 11688 iterations and 0.64 seconds (0.46 work units)
+Optimal objective  6.961000000e+03

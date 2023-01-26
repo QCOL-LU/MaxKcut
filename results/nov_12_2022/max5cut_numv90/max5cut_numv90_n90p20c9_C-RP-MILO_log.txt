@@ -1,0 +1,81 @@
+
+Gurobi 9.5.0 (linux64) logging started Mon May 23 19:51:53 2022
+
+Set parameter LogFile to value "../results/max5cut_numv90/max5cut_numv90_n90p20c9_C-RP-MILO_log.txt"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 618173 rows, 15695 columns and 1857442 nonzeros
+Model fingerprint: 0xa76855a5
+Variable types: 0 continuous, 15695 integer (15695 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 8e+01]
+Presolve removed 482238 rows and 0 columns
+Presolve time: 2.30s
+Presolved: 135935 rows, 15695 columns, 410728 nonzeros
+Variable types: 0 continuous, 15695 integer (15695 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex (primal and dual model)
+Showing first log only...
+
+Root relaxation presolved: 135935 rows, 15695 columns, 410728 nonzeros
+
+Concurrent spin time: 0.08s
+
+Solved with dual simplex (primal model)
+
+Root relaxation: objective 7.140000e+02, 1720 iterations, 0.96 seconds (0.53 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  714.00000    0  322          -  714.00000      -     -    5s
+     0     0  714.00000    0  377          -  714.00000      -     -    7s
+     0     0  714.00000    0  318          -  714.00000      -     -    9s
+     0     0  714.00000    0  317          -  714.00000      -     -   10s
+     0     0  714.00000    0  212          -  714.00000      -     -   12s
+     0     0  714.00000    0  210          -  714.00000      -     -   13s
+     0     0  714.00000    0  128          -  714.00000      -     -   14s
+     0     0  714.00000    0  116          -  714.00000      -     -   15s
+     0     0  714.00000    0  126          -  714.00000      -     -   16s
+     0     0  714.00000    0  151          -  714.00000      -     -   17s
+     0     0  714.00000    0  121          -  714.00000      -     -   19s
+     0     0  714.00000    0  121          -  714.00000      -     -   22s
+     0     0  714.00000    0  614          -  714.00000      -     -   26s
+     0     0  714.00000    0  746          -  714.00000      -     -   36s
+     0     0  714.00000    0  745          -  714.00000      -     -   41s
+     0     2  714.00000    0  745          -  714.00000      -     -   59s
+     1     4  714.00000    1  686          -  714.00000      -  7538   60s
+    25    36  714.00000    5  558          -  714.00000      -  1173   74s
+    35    46  714.00000    5  443          -  714.00000      -  1117   75s
+   226   428  714.00000   29  369          -  714.00000      -   327   84s
+   427   720  714.00000   45  381          -  714.00000      -   355   94s
+   719  1254  714.00000   69  375          -  714.00000      -   410  116s
+H  781  1254                     374.0000000  714.00000  90.9%   399  116s
+H  792  1254                     472.0000000  714.00000  51.3%   411  116s
+H  815  1254                     503.0000000  714.00000  41.9%   412  116s
+H  893  1254                     505.0000000  714.00000  41.4%   408  116s
+H 1121  1254                     543.0000000  714.00000  31.5%   396  117s
+  1253  1543  714.00000  120  445  543.00000  714.00000  31.5%   400  134s
+  1542  1681  714.00000  128  463  543.00000  714.00000  31.5%   375  195s
+  1680  1862  714.00000  129  474  543.00000  714.00000  31.5%   364  202s
+
+Cutting planes:
+  MIR: 193
+  Zero half: 47
+  RLT: 86
+  BQP: 251
+  Lazy constraints: 1395
+
+Explored 1861 nodes (724474 simplex iterations) in 202.04 seconds (485.59 work units)
+Thread count was 10 (of 40 available processors)
+
+Solution count 5: 543 505 503 ... 374
+
+Solve interrupted
+Best objective 5.430000000000e+02, best bound 7.140000000000e+02, gap 31.4917%
+
+User-callback calls 36138, time in user-callback 0.69 sec

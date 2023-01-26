@@ -1,0 +1,68 @@
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           160
+Number of edges:              12720
+Number of partitions:         3
+
+Density (%):                  100
+Name of instance:             i160-021_naive
+
+Is planar:                    False
+Is Chordal:                   True
+
+Triangles Density (%):        100
+Min_Maximal_Matching (%):     100
+Global Efficiency:            1.00
+
+Core Number:                  160
+Largest Component Size:       160
+
+Cut Vertices Number:          0
+Largest BiComponent Size:     160
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       C-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+Naive Penalty Coef:           True
+Adjusted Penalty Coef:        False
+Penalty Multiplier:           1
+
+Gates Error Probability:      0.0
+QAOA Num Levels:              3
+==================================================
+
+==================================================
+Summary of results of C-QUBO model of 0-S160
+--------------------------------------------------
+Model status:                 time limit
+Explored B&B nodes:           2790499
+Gurobi running time:          3605.0
+
+Optimality gap (%):           57.42
+Upper bound:                  1462201.52
+Objective value:              928847.00
+==================================================
+
+==================================================
+Summary of results of 0-S160
+--------------------------------------------------
+Number of vertices:           160
+Number of edges:              12720
+
+Vertex num in largest comp:   160
+Edge num in largest comp:     12720
+
+Pre-processing running time:  0.00
+Total solver time:            3605.02
+Running time:                 3609.01
+
+Upper bound:                  1462201.52
+Objective value:              928847.00
+==================================================

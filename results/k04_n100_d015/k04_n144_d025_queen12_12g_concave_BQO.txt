@@ -1,0 +1,73 @@
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           144
+Number of edges:              2596
+Number of partitions:         4
+
+Density (%):                  25
+Name of instance:             queen12_12g_concave
+
+Is planar:                    False
+Is Chordal:                   False
+
+Triangles Density (%):        2
+Min_Maximal_Matching (%):     100
+Global Efficiency:            0.63
+
+Core Number:                  34
+Largest Component Size:       144
+
+Cut Vertices Number:          0
+Largest BiComponent Size:     144
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       BQO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+Relaxed:                      True
+Rounding Heuristic:           False
+Curvature Type:               concave
+Curvature Method:             mosek
+Symmetry Breaking:            False
+Gurobi Time Limit:            3600
+Gurobi MIPGap:                0
+Gurobi Threads:               10
+Gurobi Heuristics:            0
+Gurobi Presolve:              -1
+Gurobi Symmetry:              -1
+Gurobi Cuts:                  -1
+==================================================
+
+==================================================
+Summary of results of BQO model of 0-S144
+--------------------------------------------------
+Model status:                 optimal
+Explored B&B nodes:           0
+Gurobi running time:          165.8
+
+Optimality gap (%):           0.00
+Upper bound:                  2374.28
+Objective value:              2374.28
+==================================================
+
+==================================================
+Summary of results of 0-S144
+--------------------------------------------------
+Number of vertices:           144
+Number of edges:              2596
+
+Vertex num in largest comp:   144
+Edge num in largest comp:     2596
+
+Pre-processing running time:  0.00
+Total solver time:            165.77
+Running time:                 168.09
+
+Upper bound:                  2374.28
+Objective value:              33.00
+==================================================

@@ -8,7 +8,7 @@ files 				= []
 wrong_words 		= ["log", ".py"]
 
 for folder in sorted(os.listdir(os.getcwd())):
-	if not os.path.isdir(folder) or "max" not in folder: continue
+	if not os.path.isdir(folder) or "k" not in folder: continue
 	folder_paths 	= os.path.join(os.getcwd(), folder)	
 
 
@@ -27,8 +27,7 @@ for folder in sorted(os.listdir(os.getcwd())):
 			files.append(os.path.join(folder_paths, filename) )
 
 
-headers12	= ["File name", "Name of instance", "Density (%)","Is planar", "Number of vertices", "Number of edges", "Number of partitions", "Method","Peel", "Decompose", "Fold", "Curvature Type", "Curvature Method", "Clique Constraints",  "Num of bi-comp", "Vertex num in largest comp", "Edge num in largest comp",  "Pre-processing running time", "Total solver time", "Running time", "Upper bound" ,"Objective value"]
-
+headers12	= ["File name", "Name of instance", "Cut Vertices Number", "Largest BiComponent Size", "Core Number", "Largest Component Size", "Triangles Density (%)", "Min_Maximal_Matching (%)", "Global Efficiency", "Density (%)", "Is planar", "Is Chordal", "Number of vertices", "Number of edges", "Number of partitions", "Relaxed" ,"Method","Peel", "Decompose", "Fold", "Curvature Type",   "Num of bi-comp", "Vertex num in largest comp", "Edge num in largest comp",  "Pre-processing running time", "Total solver time", "Running time", "Upper bound" ,"Objective value"]
 
 
 string_title 		= deepcopy(headers12) + ["Method","Peel", "Decompose", "Fold", "Curvature Type", "Curvature Method", "Clique Constraints", "Model status"]
@@ -48,7 +47,7 @@ for (row, filename) in enumerate(files):
 		df.iloc[row , df.columns.get_loc("File name")] 	= file_name
 		
 		lines 				= f.read().splitlines()
-		lines.reverse()
+		# lines.reverse()
 		
 		for header in headers12:
 			for line in lines:

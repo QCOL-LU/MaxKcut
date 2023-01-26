@@ -11,12 +11,14 @@ def solve_max_k_cut_rqubo(self):
 
 	self.gurobi_start_time 			= time.time()
 
-	penalty_coef	= {vertex: (self.graph.nodes[vertex]["pos-weight"] - self.graph.nodes[vertex]["neg-weight"]) for vertex in self.vertices}
+	penalty_coef	= {vertex: (self.graph.nodes[vertex]["pos-weight"] - self.graph.nodes[vertex]["neg-weight"]) * 1.01 for vertex in self.vertices}
+		
+
+	if self.Params.Naive == True:
+		penalty_coef	= {vertex: self.num_partitions * (self.graph.nodes[vertex]["pos-weight"] -  self.graph.nodes[vertex]["neg-weight"]) for vertex in self.vertices}
+
+
 	
-	# penalty_coef[1] = 1
-	penalty_coef[3] -= 1e-2
-	# penalty_coef[5] += 1e-2
-	print(penalty_coef)
 
 
 	#--------------------------------------------------------------------------------------------
@@ -34,8 +36,6 @@ def solve_max_k_cut_rqubo(self):
 			#-----------------------------------------------------------------------------------
 			x 		= model.addVars(self.vertices, self.partitions[:-1], vtype=GRB.BINARY, name="x")
 
-			# self.fixed_vertex = 3
-			# self.graph.nodes[self.fixed_vertex]["partition"] = 0
 
 
 			#-----------------------------------------------------------------------------------
@@ -77,7 +77,7 @@ def solve_max_k_cut_rqubo(self):
 			model.Params.timeLimit 			= self.Params.Gurobi_TimeLimit
 
 			# model.Params.LogToConsole 		= 0
-			model.Params.LogFile 			= self.filename
+			model.Params.LogFile 			= self.filename[:-4] + "_log.txt"
 			# model.Params.OutputFlag 		= 0
 			
 			model 							= model if self.Params.Relaxed == False else model.relax()
@@ -114,9 +114,8 @@ def solve_max_k_cut_rqubo(self):
 			# Obtain a binary solution
 			#-----------------------------------------------------------------------------------
 			solution						= {vertex: [model.getVarByName("x["+str(vertex)+","+str(partition)+"]").x for partition in self.partitions[:-1]] for vertex in self.vertices}
-			solution						= {vertex: solution[vertex] + [1 - sum(solution[vertex])] for vertex in self.vertices}
-			print(solution)
-			print(hkj)
+			solution						= {vertex: solution[vertex] + [max(1 - sum(solution[vertex]), 0)] for vertex in self.vertices}
+			
 			
 			vertices_more_than_one_assignment			= [vertex for vertex in self.vertices if sum(solution[vertex]) > 1]
 			
@@ -124,14 +123,16 @@ def solve_max_k_cut_rqubo(self):
 			while vertices_more_than_one_assignment:
 				vertex 	 								= vertices_more_than_one_assignment[0]
 				similar_inf_vertices					= [neighbor for neighbor in vertices_more_than_one_assignment[1:] if str(solution[vertex]) == str(solution[neighbor]) ]
-				inf_edges 								= [edge for edge in self.edges if self.graph.edges[edge]["weight"] < 0 and len(set(edge).intersection(set(similar_inf_vertices))) > 1 ]
-				inf_partitions 							= [partition for partition in self.partitions if solution[vertex][partition] == 1]
-				weight_partition 						= {partition: sum(self.graph.edges[edge[0], edge[1]]["weight"] * solution[edge[0]][partition] * solution[edge[1]][partition] for edge in inf_edges) for partition in self.partitions}
+				inf_edges 								= [edge for edge in self.edges if len(set(edge).intersection(set(similar_inf_vertices))) > 1 ]
+				inf_partitions 							= [partition for partition in self.partitions[:-1] if solution[vertex][partition] == 1]
+				weight_partition 						= {partition: sum(self.graph.edges[edge[0], edge[1]]["weight"] * solution[edge[0]][partition] * solution[edge[1]][partition] for edge in inf_edges) for partition in self.partitions[:-1]}
 
 				selected_partition 						= min(weight_partition, key=weight_partition.get)
-				solution[vertex] 						= [1 if partition == selected_partition else 0 for partition in self.partitions]
+
+				for vertex in similar_inf_vertices:
+					solution[vertex] 					= [1 if partition == selected_partition else 0 for partition in self.partitions]
+
 				vertices_more_than_one_assignment 		= list(set(vertices_more_than_one_assignment) - set(similar_inf_vertices))
-				print(vertex, "o")
 
 	for vertex in self.vertices:
 		for partition in self.partitions:

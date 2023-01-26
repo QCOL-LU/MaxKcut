@@ -1,0 +1,53 @@
+
+Gurobi 10.0.0 (linux64) logging started Tue Dec 13 18:57:59 2022
+
+Set parameter LogFile to value "../results/k02_n100_d070/k02_n100_d099_pm1d_100.0_BQO_log.txt"
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 100 rows, 200 columns and 200 nonzeros
+Model fingerprint: 0x9c726bdb
+Model has 9802 quadratic objective terms
+Variable types: 0 continuous, 200 integer (200 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [0e+00, 0e+00]
+  QObjective range [2e+00, 2e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 100 rows and 101 columns
+Presolve time: 0.04s
+Presolved: 0 rows, 99 columns, 0 nonzeros
+Presolved model has 4902 quadratic objective terms
+Variable types: 0 continuous, 99 integer (99 binary)
+Found heuristic solution: objective 326.0000000
+
+Root relaxation: objective 4.474357e+02, 145 iterations, 0.00 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  447.43567    0   96  326.00000  447.43567  37.3%     -    0s
+     0     0  447.43567    0   96  326.00000  447.43567  37.3%     -    0s
+H    0     0                     340.0000000  447.43567  31.6%     -    0s
+     0     2  447.43567    0   96  340.00000  447.43567  31.6%     -    0s
+
+Cutting planes:
+  Gomory: 56
+  Implied bound: 28
+  MIR: 75
+  Flow cover: 119
+  Zero half: 7
+  RLT: 39
+  Relax-and-lift: 62
+
+Explored 8898 nodes (164916 simplex iterations) in 3.00 seconds (3.41 work units)
+Thread count was 10 (of 40 available processors)
+
+Solution count 3: 340 326 -0 
+
+Time limit reached
+Best objective 3.400000000000e+02, best bound 4.330000000000e+02, gap 27.3529%

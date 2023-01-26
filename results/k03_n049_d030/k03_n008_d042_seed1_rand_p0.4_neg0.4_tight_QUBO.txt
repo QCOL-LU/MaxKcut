@@ -1,0 +1,124 @@
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           8
+Number of edges:              12
+Number of partitions:         3
+
+Density (%):                  43
+Name of instance:             seed1_rand_p0.4_neg0.4_tight
+
+Is planar:                    True
+Is Chordal:                   False
+
+Triangles Density (%):        5
+Min_Maximal_Matching (%):     100
+Global Efficiency:            0.70
+
+Core Number:                  3
+Largest Component Size:       8
+
+Cut Vertices Number:          0
+Largest BiComponent Size:     8
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+Quantum Computer:             ibmq_montreal
+Naive Penalty Coef:           False
+Adjusted Penalty Coef:        False
+Penalty Multiplier:           1
+
+QAOA Num Levels:              1
+QAOA Num Shots:               10000
+Gates Error Probability:      0.0
+
+QAOA Optimize:                True
+QAOA Scipy Optimizer:         COBYLA
+QAOA Optimizer Tol:           0.001
+QAOA Angles:                  [0.39, 0.39]
+==================================================
+
+   iter        avg-obj        best avg-obj       best-obj            std           skewness      time          gamma            beta      
+*     0     -3.94526e+00     -3.94526e+00      5.32667e+00      4.23544e-01     -1.43707e+01  23382s           0.39             0.39      
+*     1     -3.89497e+00     -3.89497e+00      5.32667e+00      4.32630e-01     -1.62871e+01  23420s           0.39             1.39      
+      2     -4.28603e+00     -3.89497e+00      5.32667e+00      4.50095e-01     -1.54838e+01  23453s           1.39             1.39      
+      3     -4.84534e+00     -3.89497e+00      5.32667e+00      4.58082e-01     -1.46120e+01  23525s          -0.60             1.52      
+      4     -4.31716e+00     -3.89497e+00      5.32667e+00      4.44882e-01     -1.57996e+01  23563s          -0.11             1.45      
+*     5     -3.83356e+00     -3.83356e+00      5.32667e+00      4.26369e-01     -1.69402e+01  23604s           0.64             1.40      
+      6     -4.19170e+00     -3.83356e+00      6.00000e+00      4.48740e-01     -1.64084e+01  23635s           0.88             1.46      
+*     7     -3.75304e+00     -3.75304e+00      6.00000e+00      4.09956e-01     -1.59505e+01  23714s           0.63             1.53      
+      8     -4.68816e+00     -3.75304e+00      6.00000e+00      4.49681e-01     -1.44161e+01  23766s           0.71             1.77      
+      9     -4.03607e+00     -3.75304e+00      6.00000e+00      4.25455e-01     -1.46934e+01  23880s           0.51             1.53      
+*    10     -3.57959e+00     -3.57959e+00      6.00000e+00      4.08209e-01     -1.61035e+01  23954s           0.69             1.55      
+     11     -3.66835e+00     -3.57959e+00      6.00000e+00      4.11966e-01     -1.62391e+01  24023s           0.75             1.57      
+     12     -3.83801e+00     -3.57959e+00      6.00000e+00      4.13187e-01     -1.52449e+01  24090s           0.68             1.58      
+*    13     -3.22680e+00     -3.22680e+00      6.00000e+00      3.96452e-01     -1.62567e+01  24164s           0.70             1.49      
+     14     -3.92304e+00     -3.22680e+00      6.00000e+00      4.28230e-01     -1.52084e+01  24214s           0.70             1.43      
+     15     -4.02676e+00     -3.22680e+00      6.00000e+00      4.33830e-01     -1.62125e+01  24246s           0.70             1.46      
+     16     -4.40074e+00     -3.22680e+00      6.00000e+00      4.46233e-01     -1.59751e+01  24303s           0.68             1.49      
+     17     -4.16060e+00     -3.22680e+00      6.00000e+00      4.39218e-01     -1.62092e+01  24337s           0.73             1.50      
+     18     -3.66173e+00     -3.22680e+00      6.00000e+00      4.13375e-01     -1.56011e+01  24372s           0.69             1.50      
+     19     -3.69260e+00     -3.22680e+00      6.00000e+00      4.09544e-01     -1.45283e+01  24410s           0.70             1.48      
+     20     -3.65947e+00     -3.22680e+00      6.00000e+00      4.15228e-01     -1.58236e+01  24445s           0.70             1.49      
+     21     -3.66877e+00     -3.22680e+00      6.00000e+00      4.16281e-01     -1.50467e+01  24480s           0.70             1.49      
+     22     -4.10486e+00     -3.22680e+00      6.00000e+00      4.35231e-01     -1.56300e+01  24510s           0.70             1.49      
+     23     -4.16200e+00     -3.22680e+00      6.00000e+00      4.46462e-01     -1.52394e+01  24541s           0.70             1.49      
+     24     -3.67008e+00     -3.22680e+00      6.00000e+00      4.12676e-01     -1.58630e+01  24578s           0.70             1.49      
+
+Optimization terminated successfully. It stopped after 25 iterations.
+
+
+==================================================
+Summary of results QAOA
+--------------------------------------------------
+Avg of QAOA obj (BQO obj):    1.66
+Avg of QAOA obj (penalty):    -4.89
+Avg of constraint violation:  3.86
+
+Feasible percentage (%):      0.14
+Avg of pure feasible obj:     3.00
+
+Avg of QAOA obj:              -3.23
+STD of QAOA obj:              0.41
+
+Avg of QAOA obj (feasible):   0.00
+STD of QAOA obj (feasible):   0.00
+
+Gamma angles:                 0.70
+Beta angles:                  1.49
+
+Best QAOA obj:                6.00
+Modified best QAOA obj:       6.00
+Best QAOA obj (feasible):     6.00
+
+QAOA total time:              24578.48s
+QAOA circuit depth:           14
+==================================================
+
+==================================================
+Summary of results of 0-S8
+--------------------------------------------------
+Number of vertices:           8
+Number of edges:              12
+
+Vertex num in largest comp:   8
+Edge num in largest comp:     12
+
+Pre-processing running time:  0.00
+Total solver time:            24578.48
+Running time:                 24585.05
+
+Upper bound:                  8.00
+Objective value:              6.00
+
+Partition 0:                  0, 1, 4, 6          
+Partition 1:                  2, 5                
+Partition 2:                  3, 7                
+==================================================

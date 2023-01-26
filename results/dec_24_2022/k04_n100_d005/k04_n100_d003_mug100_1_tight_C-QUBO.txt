@@ -1,0 +1,68 @@
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           100
+Number of edges:              166
+Number of partitions:         4
+
+Density (%):                  3
+Name of instance:             mug100_1_tight
+
+Is planar:                    True
+Is Chordal:                   False
+
+Triangles Density (%):        0
+Min_Maximal_Matching (%):     92
+Global Efficiency:            0.21
+
+Core Number:                  4
+Largest Component Size:       100
+
+Cut Vertices Number:          0
+Largest BiComponent Size:     100
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       C-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+Naive Penalty Coef:           False
+Adjusted Penalty Coef:        False
+Penalty Multiplier:           1
+
+Gates Error Probability:      0.0
+QAOA Num Levels:              3
+==================================================
+
+==================================================
+Summary of results of C-QUBO model of 0-N100
+--------------------------------------------------
+Model status:                 optimal
+Explored B&B nodes:           1
+Gurobi running time:          0.1
+
+Optimality gap (%):           0.00
+Upper bound:                  166.00
+Objective value:              166.00
+==================================================
+
+==================================================
+Summary of results of 0-N100
+--------------------------------------------------
+Number of vertices:           100
+Number of edges:              166
+
+Vertex num in largest comp:   100
+Edge num in largest comp:     166
+
+Pre-processing running time:  0.00
+Total solver time:            0.11
+Running time:                 1.11
+
+Upper bound:                  166.00
+Objective value:              166.00
+==================================================

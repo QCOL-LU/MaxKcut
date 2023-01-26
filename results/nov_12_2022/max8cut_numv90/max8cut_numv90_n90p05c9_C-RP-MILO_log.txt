@@ -1,0 +1,54 @@
+
+Gurobi 9.5.0 (linux64) logging started Mon May 23 20:39:09 2022
+
+Set parameter LogFile to value "../results/max8cut_numv90/max8cut_numv90_n90p05c9_C-RP-MILO_log.txt"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 27065 rows, 2148 columns and 81718 nonzeros
+Model fingerprint: 0x93a68c2d
+Variable types: 0 continuous, 2148 integer (2148 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 8e+01]
+Presolve removed 18133 rows and 0 columns
+Presolve time: 0.06s
+Presolved: 8932 rows, 2148 columns, 27327 nonzeros
+Variable types: 0 continuous, 2148 integer (2148 binary)
+
+Root relaxation: objective 1.170000e+02, 625 iterations, 0.02 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  117.00000    0  133          -  117.00000      -     -    0s
+     0     0  117.00000    0   99          -  117.00000      -     -    0s
+     0     0  117.00000    0    4          -  117.00000      -     -    0s
+     0     0  117.00000    0   37          -  117.00000      -     -    0s
+     0     0  117.00000    0   35          -  117.00000      -     -    0s
+     0     0  117.00000    0   34          -  117.00000      -     -    0s
+     0     2  117.00000    0    8          -  117.00000      -     -    0s
+  2898  2555  117.00000   87  203          -  117.00000      -  33.6    5s
+  2991  2619  117.00000   17  154          -  117.00000      -  37.5   10s
+  5521  4317  114.00000   79  102          -  117.00000      -  39.8   15s
+  8307  5458  117.00000  107    -          -  117.00000      -  41.1   20s
+
+Cutting planes:
+  MIR: 2
+  Flow cover: 8
+  Zero half: 4
+  RLT: 15
+  BQP: 12
+  Lazy constraints: 2942
+
+Explored 10357 nodes (422793 simplex iterations) in 23.08 seconds (24.80 work units)
+Thread count was 10 (of 40 available processors)
+
+Solution count 0
+
+Solve interrupted
+Best objective -, best bound 1.170000000000e+02, gap -
+
+User-callback calls 23673, time in user-callback 1.94 sec

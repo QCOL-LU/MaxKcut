@@ -1,0 +1,63 @@
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           60
+Number of edges:              885
+Number of partitions:         3
+
+Density (%):                  50
+Name of instance:             g05_60.1
+
+Is planar:                    False
+Is Chordal:                   False
+
+Triangles Density (%):        12
+Min_Maximal_Matching (%):     100
+Global Efficiency:            0.75
+
+Core Number:                  25
+Largest Component Size:       60
+
+Cut Vertices Number:          0
+Largest BiComponent Size:     60
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       BQO
+Gurobi Time Limit:            1
+==================================================
+
+==================================================
+Summary of results of BQO model of 0-S60
+--------------------------------------------------
+Model status:                 time limit
+Explored B&B nodes:           1
+Gurobi running time:          1.1
+
+Optimality gap (%):           26.27
+Upper bound:                  870.00
+Objective value:              689.00
+==================================================
+
+==================================================
+Summary of results of 0-S60
+--------------------------------------------------
+Number of vertices:           60
+Number of edges:              885
+
+Vertex num in largest comp:   60
+Edge num in largest comp:     885
+
+Pre-processing running time:  4.88
+Total solver time:            1.10
+Running time:                 8.00
+
+Upper bound:                  870.00
+Objective value:              689.00
+
+Partition 0:                  1, 4, 13, 14, 18, 21, 24, 29, 36, 37, 38, 40, 43, 47, 52, 53, 57, 59, 60
+Partition 1:                  3, 5, 7, 8, 10, 11, 15, 16, 20, 26, 28, 33, 41, 42, 46, 49, 50, 51, 54, 56
+Partition 2:                  2, 6, 9, 12, 17, 19, 22, 23, 25, 27, 30, 31, 32, 34, 35, 39, 44, 45, 48, 55, 58
+==================================================

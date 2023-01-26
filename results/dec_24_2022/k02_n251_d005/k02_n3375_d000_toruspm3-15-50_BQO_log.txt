@@ -1,0 +1,52 @@
+
+Gurobi 10.0.0 (linux64) logging started Tue Dec 13 15:04:44 2022
+
+Set parameter LogFile to value "../results/k02_n251_d005/k02_n3375_d000_toruspm3-15-50_BQO_log.txt"
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 3375 rows, 6750 columns and 6750 nonzeros
+Model fingerprint: 0xe417f1ec
+Model has 20250 quadratic objective terms
+Variable types: 0 continuous, 6750 integer (6750 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [0e+00, 0e+00]
+  QObjective range [2e+00, 2e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 3375 rows and 3376 columns
+Presolve time: 0.22s
+Presolved: 10119 rows, 13493 columns, 30357 nonzeros
+Variable types: 0 continuous, 13493 integer (13493 binary)
+
+Root relaxation: objective 5.060000e+03, 5447 iterations, 0.06 seconds (0.03 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 5060.00000    0 3374   -0.00000 5060.00000      -     -    0s
+H    0     0                    1922.0000000 5060.00000   163%     -    0s
+H    0     0                    1982.0000000 5060.00000   155%     -    0s
+H    0     0                    2054.0000000 5060.00000   146%     -    1s
+H    0     0                    2116.0000000 5048.00000   139%     -    1s
+     0     0 4903.91667    0 3545 2116.00000 4903.91667   132%     -    1s
+     0     0 4903.41667    0 3547 2116.00000 4903.41667   132%     -    1s
+H    0     0                    2252.0000000 4903.41667   118%     -    3s
+     0     0 4575.89167    0 3950 2252.00000 4575.89167   103%     -    3s
+
+Cutting planes:
+  Gomory: 106
+  MIR: 1
+  Zero half: 996
+
+Explored 1 nodes (21020 simplex iterations) in 3.03 seconds (1.34 work units)
+Thread count was 10 (of 40 available processors)
+
+Solution count 6: 2252 2116 2054 ... -0
+
+Time limit reached
+Best objective 2.252000000000e+03, best bound 4.574000000000e+03, gap 103.1083%

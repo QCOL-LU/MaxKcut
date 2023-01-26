@@ -1,4 +1,5 @@
 import networkx as nx 
+import numpy as np
 
 import time
 import os
@@ -35,7 +36,20 @@ def print_paramters(self):
 		self.my_print(file)
 		self.my_print(file, "{:<30}{:.0f}".format('Density (%):', self.density) )
 		self.my_print(file, "{:<30}{:}".format('Name of instance:', self.name_specifier) )
-		self.my_print(file, "{:<30}{:}".format('Is planar:', nx.check_planarity(self.graph)[0]) )
+		self.my_print(file)
+		self.my_print(file, "{:<30}{:}".format('Is planar:', self.is_planar) )
+		self.my_print(file, "{:<30}{:}".format('Is Chordal:', self.is_chordal ) )
+		self.my_print(file)
+		self.my_print(file, "{:<30}{:.0f}".format('Triangles Density (%):', self.triangles_density) )
+		self.my_print(file, "{:<30}{:.0f}".format('Min_Maximal_Matching (%):', self.min_maximal_matching) )
+		self.my_print(file, "{:<30}{:.2f}".format('Global Efficiency:', self.global_efficiency) )
+		self.my_print(file)
+		self.my_print(file, "{:<30}{:.0f}".format('Core Number:', self.core_number) )
+		self.my_print(file, "{:<30}{:.0f}".format('Largest Component Size:', self.largest_component) )
+		self.my_print(file)
+		self.my_print(file, "{:<30}{:.0f}".format('Cut Vertices Number:', self.num_cut_vertices) )
+		self.my_print(file, "{:<30}{:.0f}".format('Largest BiComponent Size:', self.largest_biconnected_component) )
+		
 		
 		self.my_print(file, 50*"=")
 		self.my_print(file)
@@ -46,14 +60,11 @@ def print_paramters(self):
 
 		self.my_print(file, "{:30}{}".format("Method:", self.Params.Method) )
 
-		if (default_paramters.Peel != self.Params.Peel):
-			self.my_print(file, "{:30}{:}".format("Peel:", self.Params.Peel) )
+		self.my_print(file, "{:30}{:}".format("Peel:", self.Params.Peel) )
 
-		if (default_paramters.Decompose != self.Params.Decompose):
-			self.my_print(file, "{:30}{:}".format("Decompose:", self.Params.Decompose) )
+		self.my_print(file, "{:30}{:}".format("Decompose:", self.Params.Decompose) )
 
-		if (default_paramters.Fold != self.Params.Fold):
-			self.my_print(file, "{:30}{:}".format("Fold:", self.Params.Fold) )			
+		self.my_print(file, "{:30}{:}".format("Fold:", self.Params.Fold) )			
 
 		if (default_paramters.Relaxed != self.Params.Relaxed):
 			self.my_print(file, "{:30}{:}".format("Relaxed:", self.Params.Relaxed) )
@@ -62,85 +73,68 @@ def print_paramters(self):
 
 		if self.Params.Method == "BQO":
 
-			if (default_paramters.Rounding_Heuristic != self.Params.Rounding_Heuristic):
-				self.my_print(file, "{:30}{:}".format("Rounding Heuristic:", self.Params.Rounding_Heuristic) )
+			self.my_print(file, "{:30}{:}".format("Rounding Heuristic:", self.Params.Rounding_Heuristic) )
 
-			if (default_paramters.Curvature_Type != self.Params.Curvature_Type):
-				self.my_print(file, "{:30}{:}".format("Curvature Type:", self.Params.Curvature_Type) )
+			self.my_print(file, "{:30}{:}".format("Curvature Type:", self.Params.Curvature_Type) )
 
-			if (default_paramters.Curvature_Method != self.Params.Curvature_Method):
-				self.my_print(file, "{:30}{:}".format("Curvature Method:", self.Params.Curvature_Method) )
+			self.my_print(file, "{:30}{:}".format("Curvature Method:", self.Params.Curvature_Method) )
 
-			if (default_paramters.Symmetry_Breaking != self.Params.Symmetry_Breaking):
-				self.my_print(file, "{:30}{:}".format("Symmetry Breaking:", self.Params.Symmetry_Breaking) )
+			self.my_print(file, "{:30}{:}".format("Symmetry Breaking:", self.Params.Symmetry_Breaking) )
 
 
 		if self.Params.Method == "A-MILO":
 
-			if (default_paramters.Clique_Constraints != self.Params.Clique_Constraints):
-				self.my_print(file, "{:30}{:}".format("Clique Constraints:", self.Params.Clique_Constraints) )
+			self.my_print(file, "{:30}{:}".format("Clique Constraints:", self.Params.Clique_Constraints) )
 
-			if (default_paramters.Wheel_Constraints != self.Params.Wheel_Constraints):
-				self.my_print(file, "{:30}{:}".format("Wheel Constraints:", self.Params.Wheel_Constraints) )
+			self.my_print(file, "{:30}{:}".format("Wheel Constraints:", self.Params.Wheel_Constraints) )
 
-			if (default_paramters.Bicycle_Wheel_Constraints != self.Params.Bicycle_Wheel_Constraints):
-				self.my_print(file, "{:30}{:}".format("Bicycle Wheel Constraints:", self.Params.Bicycle_Wheel_Constraints) )
+			self.my_print(file, "{:30}{:}".format("Bicycle Wheel Constraints:", self.Params.Bicycle_Wheel_Constraints) )
 
 
-		elif self.Params.Method in ["QUBO", "R-QUBO", "PUBO"]:
+		elif self.Params.Method in ["QUBO", "R-QUBO", "PUBO", "C-QUBO", "CR-QUBO"]:
 			self.my_print(file)
 
+			self.my_print(file, "{:30}{:}".format("Quantum Computer:", self.Params.QC_Name) )
+
 			self.my_print(file, "{:30}{:}".format("Naive Penalty Coef:", self.Params.Naive) )
+			self.my_print(file, "{:30}{:}".format("Adjusted Penalty Coef:", self.Params.Adjusted_Penalty) )
 			self.my_print(file, "{:30}{:}".format("Penalty Multiplier:", self.Params.Penalty_Increase) )
 			
 
 			self.my_print(file)
-			self.my_print(file, "{:30}{:}".format("Gates Error Probability:", self.Params.QAOA_Gates_Noise) )
+			
 			self.my_print(file, "{:30}{:}".format("QAOA Num Levels:", self.Params.QAOA_Num_Levels) )
+			self.my_print(file, "{:30}{:}".format("QAOA Num Shots:", self.Params.QAOA_Num_Shots) )
+			self.my_print(file, "{:30}{:}".format("Gates Error Probability:", self.Params.QAOA_Gates_Noise) )
 
-
-			if (default_paramters.QAOA_Optimize != self.Params.QAOA_Optimize):
-				self.my_print(file, "{:30}{:}".format("QAOA Optimize:", self.Params.QAOA_Optimize) )
-
-			# if (default_paramters.QAOA_Num_Levels != self.Params.QAOA_Num_Levels):
 				
+			
+			self.my_print(file)
+			self.my_print(file, "{:30}{:}".format("QAOA Optimize:", self.Params.QAOA_Optimize) )
 
-			if (default_paramters.QAOA_Num_Shots != self.Params.QAOA_Num_Shots):
-				self.my_print(file, "{:30}{:}".format("QAOA Num Shots:", self.Params.QAOA_Num_Shots) )
+			self.my_print(file, "{:30}{:}".format("QAOA Scipy Optimizer:", self.Params.QAOA_Scipy_Optimizer) )
 
-			if (default_paramters.QAOA_Scipy_Optimizer != self.Params.QAOA_Scipy_Optimizer):
-				self.my_print(file, "{:30}{:}".format("QAOA Scipy Optimizer:", self.Params.QAOA_Scipy_Optimizer) )
+			self.my_print(file, "{:30}{:}".format("QAOA Optimizer Tol:", self.Params.QAOA_Opt_Tol) )
 
-			if (default_paramters.QAOA_Opt_Tol != self.Params.QAOA_Opt_Tol):
-				self.my_print(file, "{:30}{:}".format("QAOA Optimizer Tol:", self.Params.QAOA_Opt_Tol) )
-
-			if (default_paramters.QAOA_Angles != self.Params.QAOA_Angles):
-				self.my_print(file, "{:30}{:}".format("QAOA Angles:", self.Params.QAOA_Angles) )
+			self.my_print(file, "{:30}{:}".format("QAOA Angles:", self.Params.QAOA_Angles) )
 
 			
 
 		if self.Params.Method not in ["QUBO", "R-QUBO", "PUBO"]:
 
-			if (default_paramters.Gurobi_TimeLimit != self.Params.Gurobi_TimeLimit):
-				self.my_print(file, "{:30}{:.0f}".format("Gurobi Time Limit:", self.Params.Gurobi_TimeLimit) )
+			self.my_print(file, "{:30}{:.0f}".format("Gurobi Time Limit:", self.Params.Gurobi_TimeLimit) )
 
-			if (default_paramters.Gurobi_MIPGap != self.Params.Gurobi_MIPGap):
-				self.my_print(file, "{:30}{:.0f}".format("Gurobi MIPGap:", self.Params.Gurobi_MIPGap) )
+			self.my_print(file, "{:30}{:.0f}".format("Gurobi MIPGap:", self.Params.Gurobi_MIPGap) )
 
-			if (default_paramters.Gurobi_Threads != self.Params.Gurobi_Threads):
-				self.my_print(file, "{:30}{:.0f}".format("Gurobi Threads:", self.Params.Gurobi_Threads) )
+			self.my_print(file, "{:30}{:.0f}".format("Gurobi Threads:", self.Params.Gurobi_Threads) )
 
-			if (default_paramters.Gurobi_Heuristics != self.Params.Gurobi_Heuristics):
-				self.my_print(file, "{:30}{:.0f}".format("Gurobi Heuristics:", self.Params.Gurobi_Heuristics) )
+			self.my_print(file, "{:30}{:.0f}".format("Gurobi Heuristics:", self.Params.Gurobi_Heuristics) )
 
-			if (default_paramters.Gurobi_Presolve != self.Params.Gurobi_Presolve):
-				self.my_print(file, "{:30}{:.0f}".format("Gurobi Presolve:", self.Params.Gurobi_Presolve) )
+			self.my_print(file, "{:30}{:.0f}".format("Gurobi Presolve:", self.Params.Gurobi_Presolve) )
 
-			if (default_paramters.Gurobi_Symmetry != self.Params.Gurobi_Symmetry):
-				self.my_print(file, "{:30}{:.0f}".format("Gurobi Symmetry:", self.Params.Gurobi_Symmetry) )
+			self.my_print(file, "{:30}{:.0f}".format("Gurobi Symmetry:", self.Params.Gurobi_Symmetry) )
 
-			if (default_paramters.Gurobi_Cuts != self.Params.Gurobi_Cuts):
-				self.my_print(file, "{:30}{:.0f}".format("Gurobi Cuts:", self.Params.Gurobi_Cuts) )
+			self.my_print(file, "{:30}{:.0f}".format("Gurobi Cuts:", self.Params.Gurobi_Cuts) )
 
 
 		self.my_print(file, 50*"=")
@@ -164,7 +158,7 @@ def print_results_summary(self):
 			self.my_print(file, "{:<30}{:.0f}".format('Number of vertices:', self.num_vertices) )
 			self.my_print(file, "{:<30}{:.0f}".format('Number of edges:', self.num_edges) )
 			
-			if self.Params.Method == "RP-MILO" and self.applied_operation == "solve":
+			if self.Params.Method in ["RP-MILO", "C-RP-MILO"] and self.applied_operation == "solve":
 				self.my_print(file, "{:<30}{:.0f}".format('Density of ext Chordal (%):', self.density_chordal_graph) )
 
 			if self.applied_operation == "decompose":
@@ -207,7 +201,7 @@ def print_results_summary(self):
 def print_qaoa_results_summary(self):
 	if self.Params.Verbosity > 0 or self.parent == None:
 		modified_qaoa_best_sol							= self.make_sol_feasible(self.qaoa_best_solution)
-		modified_qaoa_best_sol_obj_value, penalty, const_viol 		= self.cal_obj_from_sol(modified_qaoa_best_sol)
+		temp, modified_qaoa_best_sol_obj_value, penalty, const_viol 		= self.cal_obj_from_sol(modified_qaoa_best_sol)
 			
 		with open(self.filename, 'a') as file:
 			self.my_print(file)
@@ -215,7 +209,9 @@ def print_qaoa_results_summary(self):
 			self.my_print(file, "Summary of results QAOA")
 			self.my_print(file, 50*"-")
 
-			self.my_print(file, "{:<30}{:.2f}".format("Avg of QAOA obj (BQO obj):", self.qaoa_best_avg_total_penalty + self.qaoa_best_avg_obj_value))
+			bqo_obj 			= self.qaoa_best_avg_total_penalty + self.qaoa_best_avg_obj_value
+
+			self.my_print(file, "{:<30}{:.2f}".format("Avg of QAOA obj (BQO obj):", bqo_obj))
 			self.my_print(file, "{:<30}{:.2f}".format("Avg of QAOA obj (penalty):", - self.qaoa_best_avg_total_penalty))
 			self.my_print(file, "{:<30}{:.2f}".format("Avg of constraint violation:", self.qaoa_best_avg_constraint_violation))
 			self.my_print(file)
@@ -227,7 +223,14 @@ def print_qaoa_results_summary(self):
 			else:
 				self.my_print(file, "{:<30}{:.2f}".format("Avg of pure feasible obj:", self.qaoa_best_avg_pure_feasible_obj_value))
 			self.my_print(file)
+			self.my_print(file, "{:<30}{:.2f}".format("Avg of tight R-QUBO QAOA obj (penalty):", self.qaoa_best_avg_rqubo_total_penalty))
+			self.my_print(file, "{:<30}{:.2f}".format("Avg of tight R-QUBO QAOA obj:", self.qaoa_best_avg_rqubo_tight_obj_value))
+			self.my_print(file)
+			self.my_print(file, "{:<30}{:.2f}".format("Avg of tight QAOA obj (penalty):",self.qaoa_best_avg_tight_obj_value - bqo_obj))
+			self.my_print(file, "{:<30}{:.2f}".format("Avg of tight QAOA obj:", self.qaoa_best_avg_tight_obj_value))
+			self.my_print(file)
 			self.my_print(file, "{:<30}{:.2f}".format("Avg of QAOA obj:", self.qaoa_best_avg_obj_value))
+			
 			self.my_print(file, "{:<30}{:.2f}".format("STD of QAOA obj:", self.qaoa_std_obj_value))
 
 			self.my_print(file)
@@ -246,7 +249,9 @@ def print_qaoa_results_summary(self):
 
 			self.my_print(file, "{:<30}{:.2f}".format("Best QAOA obj (feasible):", self.qaoa_feasible_best_obj_value))
 			self.my_print(file)
-			self.my_print(file, "{:<30}{:.2f}s".format("QAOA total time:", self.qaoa_opt_total_time))
+			
+			self.my_print(file, "{:<30}{:.2f}s".format("QAOA wating time (s):", self.waiting_time))
+			self.my_print(file, "{:<30}{:.2f}".format("QAOA total time (s):", self.qaoa_opt_total_time))
 			self.my_print(file, "{:<30}{:.0f}".format("QAOA circuit depth:", self.qaoa_circuit_depth))
 
 			self.my_print(file, 50*"=")
@@ -259,24 +264,36 @@ def print_qaoa_results_summary(self):
 # Print the results of QAOA optimizer at each iteration 
 #================================================================================================
 def print_qaoa_optimizer_iter(self):
+	np.set_printoptions(precision=2, formatter={'float': ('{:.'+str(2)+'f} ').format})
+
 	if self.Params.Verbosity > 0 or self.parent == None:
 		if self.qaoa_iter == 0:
+			self.qaoa_temp_best 		= - sys.maxsize
 			with open(self.filename, 'a') as file:
-				self.my_print(file, "{:>6}  {:^20}{:^15}  {:^15} {:>5}".format("iter", "avg-obj", "best avg-obj", "best-obj", "time"))
+				self.my_print(file, " {:>6}  {:^20}{:^15}  {:^15}  {:^15}  {:^15}  {:^15}  {:^15} {:>5}     {:^15}  {:^15}".format( "iter", "avg-obj", "best avg-obj", "best-obj", "tight-obj", "rqubo-obj", "std", "skewness" ,"time", "gamma", "beta"))
 		
 		do_print_iter		= 	(self.Params.QAOA_Verbosity == 2) or \
 								(self.Params.QAOA_Verbosity == 1 and \
 									time.time() - self.qoao_opt_end_time >= self.Params.QAOA_Opt_Print_Time)
 
 		self.qaoa_opt_total_time 		= time.time() - self.qoao_opt_start_time
+
 		
 		if do_print_iter == True:
 			self.qoao_opt_end_time 		= time.time()
+
+			if self.qaoa_temp_best < self.qaoa_avg_obj_value: 
+				self.qaoa_temp_best 	= self.qaoa_avg_obj_value
+
+				star 		= "*" 
+			else:
+				star 		= " "
+
 			
 			with open(self.filename, 'a') as file:
-				self.my_print(file, "{:>6d}  {:>15.5e}  {:>15.5e}  {:>15.5e}  {:>5.0f}s".format(self.qaoa_iter, self.qaoa_avg_obj_value, self.qaoa_best_avg_obj_value,  self.qaoa_best_obj_value, self.qaoa_opt_total_time))
+				self.my_print(file, "{:}{:>6d}  {:>15.5e}  {:>15.5e}  {:>15.5e}  {:>15.5e}  {:>15.5e}  {:>15.5e}  {:>15.5e}  {:>5.0f}s      {:^15}  {:^15}".format(star, self.qaoa_iter, self.qaoa_avg_obj_value, self.qaoa_best_avg_obj_value,  self.qaoa_best_obj_value, self.qaoa_avg_tight_obj_value, self.qaoa_avg_rqubo_tight_obj_value, self.qaoa_std_obj_value, self.qaoa_skewness,self.qaoa_opt_total_time, str(self.gammas)[1:-1], str(self.betas)[1:-1]))
 
-
+	self.qaoa_iter 					= self.qaoa_iter + 1
 
 #================================================================================================
 # Print the results of QAOA optimizer at each iteration 

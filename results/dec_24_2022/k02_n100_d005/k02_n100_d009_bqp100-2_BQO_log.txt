@@ -1,0 +1,206 @@
+
+Gurobi 10.0.0 (linux64) logging started Tue Dec 13 14:59:59 2022
+
+Set parameter LogFile to value "../results/k02_n100_d005/k02_n100_d009_bqp100-2_BQO_log.txt"
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 100 rows, 200 columns and 200 nonzeros
+Model fingerprint: 0x53617522
+Model has 964 quadratic objective terms
+Variable types: 0 continuous, 200 integer (200 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [0e+00, 0e+00]
+  QObjective range [2e+00, 2e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 100 rows and 103 columns
+Presolve time: 0.13s
+Presolved: 475 rows, 572 columns, 1425 nonzeros
+Found heuristic solution: objective 255.0000000
+Variable types: 0 continuous, 572 integer (572 binary)
+
+Root relaxation: objective 1.145600e+04, 97 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 11456.0000    0   97  255.00000 11456.0000  4393%     -    0s
+H    0     0                    3317.0000000 11456.0000   245%     -    0s
+H    0     0                    3587.0000000 11456.0000   219%     -    0s
+H    0     0                    3937.0000000 11456.0000   191%     -    0s
+H    0     0                    4075.0000000 11456.0000   181%     -    0s
+     0     0 9962.00000    0  156 4075.00000 9962.00000   144%     -    0s
+     0     0 9942.00000    0  161 4075.00000 9942.00000   144%     -    0s
+     0     0 9601.33333    0  178 4075.00000 9601.33333   136%     -    0s
+     0     0 9601.33333    0  178 4075.00000 9601.33333   136%     -    0s
+     0     2 9601.33333    0  176 4075.00000 9601.33333   136%     -    0s
+H  151   176                    4196.0000000 8583.00000   105%  58.8    0s
+H  172   176                    4274.0000000 8583.00000   101%  57.0    0s
+H  215   246                    4405.0000000 8583.00000  94.8%  53.1    0s
+*  355   331              37    4676.0000000 8583.00000  83.6%  48.5    0s
+H  437   466                    4698.0000000 8583.00000  82.7%  47.9    0s
+*  439   466              25    5465.0000000 8583.00000  57.1%  47.9    0s
+*  446   466              27    5634.0000000 8583.00000  52.3%  47.4    0s
+H  654   647                    5700.0000000 8571.00000  50.4%  43.5    0s
+H  869   613                    5918.0000000 8291.00000  40.1%  40.5    0s
+H 1080   696                    5977.0000000 8291.00000  38.7%  39.9    0s
+  2462   887 6388.72597   19  339 5977.00000 6596.35243  10.4%  88.4    5s
+
+Cutting planes:
+  Gomory: 50
+  MIR: 18
+  Flow cover: 2
+  Inf proof: 1
+  Zero half: 355
+  RLT: 32
+  BQP: 5
+
+Explored 4512 nodes (535738 simplex iterations) in 8.44 seconds (9.82 work units)
+Thread count was 10 (of 40 available processors)
+
+Solution count 10: 5977 5918 5700 ... 4196
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 5.977000000000e+03, best bound 5.977000000000e+03, gap 0.0000%
+
+Gurobi 10.0.0 (linux64) logging started Tue Dec 13 17:02:23 2022
+
+Set parameter LogFile to value "../results/k02_n100_d005/k02_n100_d009_bqp100-2_BQO_log.txt"
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 100 rows, 200 columns and 200 nonzeros
+Model fingerprint: 0x53617522
+Model has 964 quadratic objective terms
+Variable types: 0 continuous, 200 integer (200 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [0e+00, 0e+00]
+  QObjective range [2e+00, 2e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 100 rows and 103 columns
+Presolve time: 0.13s
+Presolved: 475 rows, 572 columns, 1425 nonzeros
+Found heuristic solution: objective 255.0000000
+Variable types: 0 continuous, 572 integer (572 binary)
+
+Root relaxation: objective 1.145600e+04, 97 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 11456.0000    0   97  255.00000 11456.0000  4393%     -    0s
+H    0     0                    3317.0000000 11456.0000   245%     -    0s
+H    0     0                    3587.0000000 11456.0000   219%     -    0s
+H    0     0                    3937.0000000 11456.0000   191%     -    0s
+H    0     0                    4075.0000000 11456.0000   181%     -    0s
+     0     0 9962.00000    0  156 4075.00000 9962.00000   144%     -    0s
+     0     0 9942.00000    0  161 4075.00000 9942.00000   144%     -    0s
+     0     0 9601.33333    0  178 4075.00000 9601.33333   136%     -    0s
+     0     0 9601.33333    0  178 4075.00000 9601.33333   136%     -    0s
+     0     2 9601.33333    0  176 4075.00000 9601.33333   136%     -    0s
+H  151   176                    4196.0000000 8583.00000   105%  58.8    0s
+H  172   176                    4274.0000000 8583.00000   101%  57.0    0s
+H  215   246                    4405.0000000 8583.00000  94.8%  53.1    0s
+*  355   331              37    4676.0000000 8583.00000  83.6%  48.5    0s
+H  437   466                    4698.0000000 8583.00000  82.7%  47.9    0s
+*  439   466              25    5465.0000000 8583.00000  57.1%  47.9    0s
+*  446   466              27    5634.0000000 8583.00000  52.3%  47.4    0s
+H  654   647                    5700.0000000 8571.00000  50.4%  43.5    0s
+H  869   613                    5918.0000000 8291.00000  40.1%  40.5    0s
+H 1080   696                    5977.0000000 8291.00000  38.7%  39.9    0s
+
+Cutting planes:
+  Gomory: 49
+  MIR: 18
+  Flow cover: 2
+  Zero half: 317
+  RLT: 30
+  BQP: 5
+
+Explored 1796 nodes (107517 simplex iterations) in 3.00 seconds (2.79 work units)
+Thread count was 10 (of 40 available processors)
+
+Solution count 10: 5977 5918 5700 ... 4196
+
+Time limit reached
+Best objective 5.977000000000e+03, best bound 6.774000000000e+03, gap 13.3344%
+
+Gurobi 10.0.0 (linux64) logging started Mon Dec 19 10:48:06 2022
+
+Set parameter LogFile to value "../results/k02_n100_d005/k02_n100_d009_bqp100-2_BQO_log.txt"
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 98 rows, 196 columns and 196 nonzeros
+Model fingerprint: 0x41a46579
+Model has 960 quadratic objective terms
+Variable types: 0 continuous, 196 integer (196 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [0e+00, 0e+00]
+  QObjective range [2e+00, 2e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 98 rows and 99 columns
+Presolve time: 0.13s
+Presolved: 475 rows, 572 columns, 1425 nonzeros
+Variable types: 0 continuous, 572 integer (572 binary)
+
+Root relaxation: objective 1.120100e+04, 72 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 11201.0000    0   97   -0.00000 11201.0000      -     -    0s
+H    0     0                    2905.0000000 11201.0000   286%     -    0s
+H    0     0                    3284.0000000 11201.0000   241%     -    0s
+H    0     0                    3539.0000000 10359.5000   193%     -    0s
+     0     0 9601.00000    0  159 3539.00000 9601.00000   171%     -    0s
+     0     0 9597.00000    0  156 3539.00000 9597.00000   171%     -    0s
+     0     0 8918.25000    0  196 3539.00000 8918.25000   152%     -    0s
+     0     0 8918.25000    0  196 3539.00000 8918.25000   152%     -    0s
+     0     2 8918.25000    0  196 3539.00000 8918.25000   152%     -    0s
+H  151   176                    3871.0000000 8255.75000   113%  58.6    0s
+H  160   176                    4240.0000000 8255.75000  94.7%  58.0    0s
+H  215   250                    4281.0000000 8255.75000  92.8%  52.7    0s
+H  222   250                    4335.0000000 8255.75000  90.4%  52.5    0s
+H  237   250                    5032.0000000 8255.75000  64.1%  52.2    0s
+H  322   344                    5034.0000000 8255.75000  64.0%  46.1    0s
+H  505   466                    5105.0000000 8255.75000  61.7%  47.4    0s
+H  640   601                    5255.0000000 8010.25000  52.4%  47.3    0s
+H  767   658                    5266.0000000 7892.50000  49.9%  47.6    0s
+H  829   647                    5320.0000000 7892.50000  48.4%  47.5    0s
+*  909   679              20    5394.0000000 7892.50000  46.3%  47.9    0s
+*  927   664              18    5502.0000000 7892.50000  43.4%  47.7    0s
+H  930   682                    5535.0000000 7892.50000  42.6%  47.6    0s
+H  931   682                    5539.0000000 7892.50000  42.5%  47.7    0s
+H  945   641                    5672.0000000 7892.50000  39.1%  47.8    0s
+H  950   641                    5677.0000000 7892.50000  39.0%  47.9    0s
+
+Cutting planes:
+  Gomory: 33
+  MIR: 25
+  Zero half: 102
+  RLT: 32
+  BQP: 5
+
+Explored 2400 nodes (114302 simplex iterations) in 1.00 seconds (0.87 work units)
+Thread count was 10 (of 40 available processors)
+
+Solution count 10: 5677 5672 5539 ... 5105
+
+Time limit reached
+Best objective 5.677000000000e+03, best bound 7.472000000000e+03, gap 31.6188%

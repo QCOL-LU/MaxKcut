@@ -1,0 +1,23 @@
+
+Gurobi 9.5.0 (linux64) logging started Tue Nov  8 19:06:20 2022
+
+Set parameter LogFile to value "../results/max4cut_numv50/max4cut_numv50__A-MILO_log.txt"
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 2870 rows, 435 columns and 8660 nonzeros
+Model fingerprint: 0x5c38c7fd
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+00]
+Presolve removed 46 rows and 9 columns
+Presolve time: 0.01s
+Presolved: 2824 rows, 426 columns, 8506 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.1900000e+02   1.260000e+02   0.000000e+00      0s
+     175    1.1900000e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 175 iterations and 0.01 seconds (0.02 work units)
+Optimal objective  1.190000000e+02

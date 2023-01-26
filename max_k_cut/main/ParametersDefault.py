@@ -15,6 +15,14 @@ class Parameters():
 		self.Peel 							= True
 		self.Decompose 						= True
 		self.Fold 							= True
+
+		self.Twin_Fix						= False
+		self.Edge_Based_Fix					= False
+		self.Rehfeldt_Fix 					= False
+
+		self.Lange_Fold 					= False
+
+
 		self.Bipartite 						= True
 
 
@@ -46,6 +54,13 @@ class Parameters():
 		self.QAOA_Gates_Noise 				= 0.0 	# Error probabilities; 0.01 means that the error is 1%
 		self.Penalty_Increase 				= 1
 		self.Naive 							= False
+		self.Adjusted_Penalty				= False
+
+		self.Grad_Epoch_Len 				= 20
+		self.Grad_Method 					= "RandGradEst"
+		self.Grad_Sample_Size 				= 20
+		self.Grad_Smoothing_Param 			= 1e-1
+
 
 
 		self.Gurobi_TimeLimit 				= 3600
@@ -56,6 +71,15 @@ class Parameters():
 		self.Gurobi_Symmetry				= -1
 		self.Gurobi_Cuts 					= -1
 		self.Gurobi_LogToConsole 			= 0
+
+
+		self.Is_Simulator 					= True
+		self.QLSA_First_Run 				= True
+		self.Hub 							= 'ibm-q-ncsu' 			# Confidential *
+		self.Group 							= 'lehigh-universit'	# Confidential *
+		self.Project 						= 'qc-for-comb-opt'		# Confidential *
+		self.QC_Name 						= 'ibm_washington' #'ibmq_qasm_simulator'		#'ibmq_montreal'	ibm_washington	ibm_sherbrooke # Confidential * 
+		self.Token 							= '1d710f0eef75fd0ccc12884677f8283a29f1e17db1a3a53a9ef14d573802534c6001396fad2ce9c5e621decc3c146665e1bfd1fe086f64e8ae3b110993c8f093'					# Confidential ***
 
 
 

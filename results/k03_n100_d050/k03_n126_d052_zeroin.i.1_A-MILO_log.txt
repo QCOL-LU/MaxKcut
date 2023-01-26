@@ -1,0 +1,52 @@
+
+Gurobi 10.0.0 (linux64) logging started Wed Nov 16 21:33:58 2022
+
+Set parameter LogFile to value "../results/k03_n100_d050/k03_n126_d052_zeroin.i.1_A-MILO_log.txt"
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 37026 rows, 4478 columns and 111078 nonzeros
+Model fingerprint: 0xd7dc4af6
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+00]
+Presolve removed 764 rows and 112 columns
+Presolve time: 0.13s
+Presolved: 36262 rows, 4366 columns, 108568 nonzeros
+
+Concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Ordering time: 0.00s
+
+Barrier statistics:
+ AA' NZ     : 5.327e+03
+ Factor NZ  : 1.257e+04 (roughly 6 MB of memory)
+ Factor Ops : 2.356e+05 (less than 1 second per iteration)
+ Threads    : 1
+
+Barrier performed 0 iterations in 0.29 seconds (0.09 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+    1781    4.1000000e+03   0.000000e+00   0.000000e+00      0s
+
+Use crossover to convert LP symmetric solution to basic solution...
+Crossover log...
+
+     125 PPushes remaining with PInf 0.0000000e+00                 0s
+       0 PPushes remaining with PInf 0.0000000e+00                 0s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 0.0000000e+00      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+    1909    4.1000000e+03   0.000000e+00   0.000000e+00      0s
+
+Solved in 1909 iterations and 0.40 seconds (0.13 work units)
+Optimal objective  4.100000000e+03

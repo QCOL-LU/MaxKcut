@@ -1,0 +1,39 @@
+
+Gurobi 10.0.0 (linux64) logging started Mon Dec 19 10:44:53 2022
+
+Set parameter LogFile to value "../results/k03_n200_d015/k03_n200_d019_gka2e_BQO_log.txt"
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 200 rows, 600 columns and 600 nonzeros
+Model fingerprint: 0xeadf3fac
+Model has 11781 quadratic objective terms
+Variable types: 0 continuous, 600 integer (600 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [0e+00, 0e+00]
+  QObjective range [2e+00, 1e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -0.0000000
+Presolve removed 1 rows and 3 columns
+Presolve time: 0.26s
+Presolved: 11833 rows, 12231 columns, 35499 nonzeros
+Variable types: 0 continuous, 12231 integer (12231 binary)
+
+Root relaxation: time limit, 3214 iterations, 0.63 seconds (0.74 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0          -    0        -0.00000 150080.000      -     -    1s
+
+Explored 1 nodes (3214 simplex iterations) in 1.00 seconds (1.03 work units)
+Thread count was 10 (of 40 available processors)
+
+Solution count 1: -0 
+
+Time limit reached
+Best objective -0.000000000000e+00, best bound 1.500800000000e+05, gap -

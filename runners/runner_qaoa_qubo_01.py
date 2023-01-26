@@ -3,15 +3,15 @@ import sys
 sys.path.insert(1, '..')
 
 from max_k_cut import *
-from networkx import *
+import networkx as nx
 import sys
 import numpy as np
 
 seed 			= int(sys.argv[1])
 num_vertices 	= int(sys.argv[2])
-num_partitions 	= int(sys.argv[3])
-penalty_increase= float(sys.argv[4])
-noise 			= float(sys.argv[5])
+num_partitions 	= 2
+penalty_increase= 0
+noise 			= 0
 
 name 			= "seed" + str(seed) + "_band_test_" + ("naive" if penalty_increase > 1 else "tight")
 graph 			= nx.Graph( )
@@ -43,15 +43,15 @@ problem.Params.Naive 					= (True if penalty_increase > 1 else False)
 # problem.Params.Curvature_Method 		= "power_iteration"
 
 problem.Params.Gurobi_TimeLimit			= 3600
-# problem.Params.Gurobi_LogToConsole 		= 1
+problem.Params.QAOA_Opt_Print_Time 		= 0
 # problem.Params.QAOA_Optimize 			= False
 
-problem.Params.QAOA_Scipy_Optimizer 	= "brute" #Nelder-Mead brute
+problem.Params.QAOA_Scipy_Optimizer 	= "COBYLA" #Nelder-Mead brute zo_svrg COBYLA
 # problem.Params.Penalty_Increase 		= penalty_increase
 
 # problem.Params.QAOA_Angles				= [0.26, 0.38] #[0.26, 0.38]
-problem.Params.QAOA_Num_Levels			= 1
-problem.Params.QAOA_Num_Shots			= 10000
+problem.Params.QAOA_Num_Levels			= 3
+problem.Params.QAOA_Num_Shots			= 1e4
 problem.Params.QAOA_Brute_Num_Samples 	= 50
 # problem.Params.QAOA_Gates_Noise			= noise
 

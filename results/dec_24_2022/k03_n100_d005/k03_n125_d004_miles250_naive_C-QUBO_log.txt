@@ -1,0 +1,67 @@
+
+Gurobi 10.0.0 (linux64) logging started Wed Dec  7 11:16:43 2022
+
+Set parameter LogFile to value "../results/k03_n100_d005/k03_n125_d004_miles250_naive_C-QUBO_log.txt"
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 0 rows, 375 columns and 0 nonzeros
+Model fingerprint: 0x262e1ce5
+Model has 1911 quadratic objective terms
+Variable types: 0 continuous, 375 integer (375 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [2e+00, 3e+01]
+  QObjective range [2e+00, 6e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective -382.0000000
+Found heuristic solution: objective 321.0000000
+Presolve removed 0 rows and 3 columns
+Presolve time: 0.18s
+Presolved: 1518 rows, 1890 columns, 4554 nonzeros
+Variable types: 0 continuous, 1890 integer (1890 binary)
+
+Root relaxation: objective 4.160000e+02, 347 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  416.00000    0  167  321.00000  416.00000  29.6%     -    0s
+     0     0  372.22000    0  245  321.00000  372.22000  16.0%     -    0s
+     0     0  372.19000    0  242  321.00000  372.19000  15.9%     -    0s
+     0     0  353.50192    0  289  321.00000  353.50192  10.1%     -    0s
+     0     0  353.50192    0  264  321.00000  353.50192  10.1%     -    0s
+     0     2  353.50192    0  263  321.00000  353.50192  10.1%     -    1s
+H  124   126                     322.0000000  349.04659  8.40%   273    1s
+H  413   435                     323.0000000  349.04659  8.06%   138    2s
+*  435   435              51     325.0000000  349.04659  7.40%   134    2s
+*  445   435              53     327.0000000  349.04659  6.74%   131    2s
+H  506   472                     328.0000000  349.04659  6.42%   121    2s
+H  517   472                     329.0000000  349.04659  6.09%   119    2s
+H  528   472                     330.0000000  349.04659  5.77%   119    2s
+H  529   472                     331.0000000  349.04659  5.45%   119    2s
+H  566   498                     333.0000000  347.55893  4.37%   118    3s
+  1516  1178  335.36248   20  296  333.00000  346.26662  3.98%  86.9    5s
+H 1661  1134                     334.0000000  337.99941  1.20%  83.4    8s
+  1678  1145  336.58333   15  522  334.00000  336.58333  0.77%  82.6   10s
+  1695  1160  335.79398   15  411  334.00000  336.03126  0.61%  93.9   15s
+
+Cutting planes:
+  Gomory: 5
+  MIR: 8
+  Flow cover: 26
+  Zero half: 39
+  RLT: 28
+  BQP: 399
+  PSD: 17
+
+Explored 1741 nodes (171368 simplex iterations) in 15.77 seconds (7.91 work units)
+Thread count was 10 (of 40 available processors)
+
+Solution count 10: 334 333 331 ... 322
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.340000000000e+02, best bound 3.340000000000e+02, gap 0.0000%

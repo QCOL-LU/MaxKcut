@@ -1,0 +1,58 @@
+
+Gurobi 10.0.0 (linux64) logging started Tue Dec  6 09:11:11 2022
+
+Set parameter LogFile to value "../results/k03_n150_d005/k03_n154_d006_5-FullIns_3_tight_C-QUBO_log.txt"
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 0 rows, 462 columns and 0 nonzeros
+Model fingerprint: 0x7596b518
+Model has 3300 quadratic objective terms
+Variable types: 0 continuous, 462 integer (462 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [3e+00, 2e+01]
+  QObjective range [2e+00, 4e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective 260.7400000
+Found heuristic solution: objective 769.0000000
+Found heuristic solution: objective 777.0000000
+Presolve removed 0 rows and 3 columns
+Presolve time: 0.22s
+Presolved: 2817 rows, 3276 columns, 8451 nonzeros
+Found heuristic solution: objective 774.0000000
+Variable types: 0 continuous, 3276 integer (3276 binary)
+
+Root relaxation: objective 9.418267e+02, 659 iterations, 0.03 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  941.82667    0  351  777.00000  941.82667  21.2%     -    0s
+     0     0  784.08333    0  396  777.00000  784.08333  0.91%     -    0s
+     0     0  783.17107    0  388  777.00000  783.17107  0.79%     -    1s
+     0     0  781.98973    0  401  777.00000  781.98973  0.64%     -    1s
+     0     0  781.35341    0  417  777.00000  781.35341  0.56%     -    1s
+     0     0  781.35341    0  210  777.00000  781.35341  0.56%     -    1s
+     0     2  781.35341    0  210  777.00000  781.35341  0.56%     -    2s
+   914    31     cutoff   21       777.00000  778.00000  0.13%  75.9    5s
+
+Cutting planes:
+  Gomory: 9
+  MIR: 8
+  Zero half: 67
+  RLT: 111
+  BQP: 148
+
+Explored 1027 nodes (75341 simplex iterations) in 5.38 seconds (2.85 work units)
+Thread count was 10 (of 40 available processors)
+
+Solution count 4: 777 774 769 260.74 
+
+Optimal solution found (tolerance 1.00e-04)
+Warning: max bound violation (1.0000e+00) exceeds tolerance
+         (model may be infeasible or unbounded - try turning presolve off)
+Best objective 7.770000000000e+02, best bound 7.770000000000e+02, gap 0.0000%

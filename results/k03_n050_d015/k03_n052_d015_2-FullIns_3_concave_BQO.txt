@@ -1,0 +1,73 @@
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           52
+Number of edges:              201
+Number of partitions:         3
+
+Density (%):                  15
+Name of instance:             2-FullIns_3_concave
+
+Is planar:                    False
+Is Chordal:                   False
+
+Triangles Density (%):        0
+Min_Maximal_Matching (%):     88
+Global Efficiency:            0.50
+
+Core Number:                  6
+Largest Component Size:       52
+
+Cut Vertices Number:          0
+Largest BiComponent Size:     52
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       BQO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+Relaxed:                      True
+Rounding Heuristic:           False
+Curvature Type:               concave
+Curvature Method:             mosek
+Symmetry Breaking:            False
+Gurobi Time Limit:            3600
+Gurobi MIPGap:                0
+Gurobi Threads:               10
+Gurobi Heuristics:            0
+Gurobi Presolve:              -1
+Gurobi Symmetry:              -1
+Gurobi Cuts:                  -1
+==================================================
+
+==================================================
+Summary of results of BQO model of 0-S52
+--------------------------------------------------
+Model status:                 optimal
+Explored B&B nodes:           0
+Gurobi running time:          2.3
+
+Optimality gap (%):           0.00
+Upper bound:                  352.02
+Objective value:              352.02
+==================================================
+
+==================================================
+Summary of results of 0-S52
+--------------------------------------------------
+Number of vertices:           52
+Number of edges:              201
+
+Vertex num in largest comp:   52
+Edge num in largest comp:     201
+
+Pre-processing running time:  0.00
+Total solver time:            2.35
+Running time:                 4.42
+
+Upper bound:                  352.02
+Objective value:              4.00
+==================================================

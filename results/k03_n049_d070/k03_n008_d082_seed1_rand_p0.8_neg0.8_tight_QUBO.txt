@@ -1,0 +1,122 @@
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           8
+Number of edges:              23
+Number of partitions:         3
+
+Density (%):                  82
+Name of instance:             seed1_rand_p0.8_neg0.8_tight
+
+Is planar:                    False
+Is Chordal:                   False
+
+Triangles Density (%):        51
+Min_Maximal_Matching (%):     100
+Global Efficiency:            0.91
+
+Core Number:                  6
+Largest Component Size:       8
+
+Cut Vertices Number:          0
+Largest BiComponent Size:     8
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+Quantum Computer:             ibmq_montreal
+Naive Penalty Coef:           False
+Adjusted Penalty Coef:        False
+Penalty Multiplier:           1
+
+QAOA Num Levels:              1
+QAOA Num Shots:               10000
+Gates Error Probability:      0.0
+
+QAOA Optimize:                True
+QAOA Scipy Optimizer:         COBYLA
+QAOA Optimizer Tol:           0.001
+QAOA Angles:                  [0.26, 0.26]
+==================================================
+
+   iter        avg-obj        best avg-obj       best-obj            std           skewness      time          gamma            beta      
+*     0     -1.47419e+01     -1.47419e+01     -2.00000e+00      6.11900e-01     -1.81880e+01  29157s           0.26             0.26      
+      1     -1.64630e+01     -1.47419e+01     -2.00000e+00      6.68857e-01     -1.73803e+01  29189s           0.26             1.26      
+      2     -1.54442e+01     -1.47419e+01     -2.00000e+00      6.24097e-01     -1.75250e+01  29226s           1.26             0.26      
+      3     -1.58705e+01     -1.47419e+01     -2.00000e+00      6.33484e-01     -1.76047e+01  29257s          -0.12            -0.67      
+      4     -1.72060e+01     -1.47419e+01     -2.00000e+00      6.87124e-01     -1.69840e+01  29290s           0.07            -0.20      
+      5     -1.48852e+01     -1.47419e+01     -2.00000e+00      6.13160e-01     -1.79725e+01  29328s           0.23             0.51      
+      6     -1.55342e+01     -1.47419e+01     -2.00000e+00      6.28808e-01     -1.71368e+01  29362s           0.51             0.28      
+      7     -1.53675e+01     -1.47419e+01     -1.00000e+00      6.28562e-01     -1.68315e+01  29399s           0.14             0.22      
+      8     -1.50622e+01     -1.47419e+01     -1.00000e+00      6.11198e-01     -1.76131e+01  29438s           0.32             0.26      
+*     9     -1.44425e+01     -1.44425e+01     -1.00000e+00      5.92554e-01     -1.83562e+01  29469s           0.25             0.32      
+     10     -1.47921e+01     -1.44425e+01     -1.00000e+00      6.00476e-01     -1.73805e+01  29500s           0.20             0.36      
+*    11     -1.44113e+01     -1.44113e+01     -1.00000e+00      5.91887e-01     -1.74282e+01  29539s           0.28             0.34      
+     12     -1.45235e+01     -1.44113e+01     -1.00000e+00      5.96830e-01     -1.77599e+01  29572s           0.27             0.35      
+*    13     -1.42892e+01     -1.42892e+01     -1.00000e+00      5.90294e-01     -1.84655e+01  29604s           0.29             0.32      
+     14     -1.50481e+01     -1.42892e+01     -1.00000e+00      6.05303e-01     -1.75582e+01  29641s           0.30             0.31      
+     15     -1.43310e+01     -1.42892e+01     -1.00000e+00      5.78789e-01     -1.81203e+01  29671s           0.28             0.32      
+     16     -1.48600e+01     -1.42892e+01     -1.00000e+00      6.02042e-01     -1.72299e+01  29703s           0.30             0.32      
+     17     -1.47674e+01     -1.42892e+01     -1.00000e+00      6.03527e-01     -1.76896e+01  29750s           0.28             0.33      
+     18     -1.51360e+01     -1.42892e+01     -1.00000e+00      6.19531e-01     -1.75368e+01  29780s           0.29             0.32      
+     19     -1.46755e+01     -1.42892e+01     -1.00000e+00      6.01099e-01     -1.76773e+01  29814s           0.29             0.33      
+     20     -1.50997e+01     -1.42892e+01     -1.00000e+00      6.19058e-01     -1.73162e+01  29853s           0.29             0.32      
+     21     -1.48638e+01     -1.42892e+01     -1.00000e+00      6.07636e-01     -1.78663e+01  29886s           0.29             0.32      
+     22     -1.53771e+01     -1.42892e+01     -1.00000e+00      6.25751e-01     -1.77944e+01  29924s           0.29             0.32      
+
+Optimization terminated successfully. It stopped after 23 iterations.
+
+
+==================================================
+Summary of results QAOA
+--------------------------------------------------
+Avg of QAOA obj (BQO obj):    -3.97
+Avg of QAOA obj (penalty):    -10.32
+Avg of constraint violation:  3.61
+
+Feasible percentage (%):      0.22
+Avg of pure feasible obj:     -8.00
+
+Avg of QAOA obj:              -14.29
+STD of QAOA obj:              0.63
+
+Avg of QAOA obj (feasible):   -0.00
+STD of QAOA obj (feasible):   0.01
+
+Gamma angles:                 0.29
+Beta angles:                  0.32
+
+Best QAOA obj:                -1.00
+Modified best QAOA obj:       -1.00
+Best QAOA obj (feasible):     0.00
+
+QAOA total time:              29924.34s
+QAOA circuit depth:           17
+==================================================
+
+==================================================
+Summary of results of 0-S8
+--------------------------------------------------
+Number of vertices:           8
+Number of edges:              23
+
+Vertex num in largest comp:   8
+Edge num in largest comp:     23
+
+Pre-processing running time:  0.00
+Total solver time:            29924.34
+Running time:                 29931.06
+
+Upper bound:                  5.00
+Objective value:              0.00
+
+Partition 0:                  0, 1, 2, 3, 4, 5, 6 
+Partition 1:                  7                   
+Partition 2:                                      
+==================================================

@@ -1,0 +1,40 @@
+
+Gurobi 10.0.0 (linux64) logging started Tue Dec 13 20:35:42 2022
+
+Set parameter LogFile to value "../results/k03_n251_d005/k03_n2888_d000_ego-facebook_BQO_log.txt"
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 4 rows, 12 columns and 12 nonzeros
+Model fingerprint: 0xb104fdce
+Model has 18 quadratic objective terms
+Variable types: 0 continuous, 12 integer (12 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [0e+00, 0e+00]
+  QObjective range [2e+00, 8e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 1 rows and 3 columns
+Presolve time: 0.00s
+Presolved: 12 rows, 18 columns, 36 nonzeros
+Variable types: 0 continuous, 18 integer (18 binary)
+Found heuristic solution: objective 6.0000000
+
+Root relaxation: objective 1.500000e+01, 7 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   15.00000    0    6    6.00000   15.00000   150%     -    0s
+H    0     0                      14.0000000   15.00000  7.14%     -    0s
+
+Explored 1 nodes (7 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 10 (of 40 available processors)
+
+Solution count 2: 14 6 
+
+Optimal solution found (tolerance 0.00e+00)
+Best objective 1.400000000000e+01, best bound 1.400000000000e+01, gap 0.0000%

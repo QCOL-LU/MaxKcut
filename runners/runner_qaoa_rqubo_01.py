@@ -4,20 +4,20 @@ import sys
 sys.path.insert(1, '..')
 
 from max_k_cut import *
-from networkx import nx
+import networkx as nx
 import sys
 import numpy as np
 import random
 
 seed 			= int(sys.argv[1])
 num_vertices 	= int(sys.argv[2])
-num_partitions 	= int(sys.argv[3])
-penalty_increase= float(sys.argv[4])
-noise 			= float(sys.argv[5])
+num_partitions 	= 2
+penalty_increase= 0
+noise 			= 0
 
 name 			= "seed" + str(seed) + "_band_pen_shot_test_" + ("naive" if penalty_increase > 1 else "tight")
 graph 			= nx.Graph()
-graph_density 	= 0.8
+graph_density 	= 0.5
 
 is_connected 		= False
 while (not is_connected):
@@ -27,7 +27,7 @@ while (not is_connected):
 	seed 			= seed + 1 
 	is_connected 	= nx.is_connected(graph)
 
-neg_edge_percentage = 0.8
+neg_edge_percentage = 0.0
 weighted_graph	= nx.Graph()
 edges 			= [(edge[0], edge[1], 1 if random.random() > neg_edge_percentage else -1) for edge in graph.edges()] 
 
@@ -57,15 +57,18 @@ problem.Params.Naive 					= (True if penalty_increase > 1 else False)
 
 problem.Params.Gurobi_TimeLimit			= 3600
 # problem.Params.Gurobi_LogToConsole 		= 1
-# problem.Params.QAOA_Optimize 			= False
+problem.Params.QAOA_Brute_Num_Samples 	= 100
+problem.Params.QAOA_Verbosity 			= 2
 
-problem.Params.QAOA_Scipy_Optimizer 	= "brute" #Nelder-Mead brute
+problem.Params.QAOA_Optimize 			= True
+problem.Params.QAOA_Scipy_Optimizer 	= "COBYLA" #Nelder-Mead brute
 problem.Params.Penalty_Increase 		= penalty_increase
 
-# problem.Params.QAOA_Angles				= [6.15, 2.69]
+# problem.Params.QAOA_Angles				= [6.28, 3.14]
 problem.Params.QAOA_Num_Levels			= 1
 problem.Params.QAOA_Num_Shots			= 10000
-problem.Params.QAOA_Gates_Noise			= noise
+problem.Params.Is_Simulator				= False
+# problem.Params.QAOA_Gates_Noise			= noise
 
 
 problem.solve()

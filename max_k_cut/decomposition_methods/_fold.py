@@ -5,6 +5,10 @@ from copy import deepcopy
 from time import time
 import numpy as np
 
+def folded_subgraph_solver(self, graph, folded_vertices, add_const=False):
+
+	pass
+
 
 
 #================================================================================================
@@ -111,7 +115,6 @@ def fold(self):
 					
 					can_be_folded 				= (total_common_pos_weights - total_common_neg_weights - neg_weight_of_edge >= max_pos_diff_neg_weights - alpha_star)
 	
-	
 		#-----------------------------------------------------------------------------------------
 		# Fold vertices (graph.nodes[v1][folded-in] = v2  =>  v1 is removed and v2 is updated)
 		#-----------------------------------------------------------------------------------------
@@ -126,6 +129,9 @@ def fold(self):
 				neighbor_weight2 									= folded_graph.edges[vertex2, neighbor]["weight"]
 				neighbor_weight_new 								= neighbor_weight1 + neighbor_weight2
 				folded_graph.edges[vertex2, neighbor]["weight"] 	= neighbor_weight_new
+
+				if abs(neighbor_weight_new) < 1e-8:
+					folded_graph.remove_edge(vertex2, neighbor)
 
 				folded_graph.nodes[vertex2]["pos-weight"]			+= max(neighbor_weight_new, 0) - max(neighbor_weight2, 0)
 				folded_graph.nodes[vertex2]["neg-weight"]			+= min(neighbor_weight_new, 0) - min(neighbor_weight2, 0)

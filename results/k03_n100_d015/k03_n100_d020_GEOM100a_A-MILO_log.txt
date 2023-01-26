@@ -1,0 +1,27 @@
+
+Gurobi 10.0.0 (linux64) logging started Tue Nov 22 01:02:04 2022
+
+Set parameter LogFile to value "../results/k03_n100_d015/k03_n100_d020_GEOM100a_A-MILO_log.txt"
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 9028 rows, 1292 columns and 27084 nonzeros
+Model fingerprint: 0xccab00d8
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 9e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+00]
+Presolve removed 190 rows and 30 columns
+Presolve time: 0.03s
+Presolved: 1262 rows, 10154 columns, 27830 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0      handle free variables                          0s
+Extra simplex iterations after uncrush: 2
+    4286    5.3170000e+03   0.000000e+00   0.000000e+00      0s
+
+Solved in 4286 iterations and 0.14 seconds (0.12 work units)
+Optimal objective  5.317000000e+03

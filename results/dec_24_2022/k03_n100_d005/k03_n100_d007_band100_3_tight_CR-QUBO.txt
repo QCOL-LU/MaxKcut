@@ -1,0 +1,68 @@
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           100
+Number of edges:              390
+Number of partitions:         3
+
+Density (%):                  8
+Name of instance:             band100_3_tight
+
+Is planar:                    False
+Is Chordal:                   True
+
+Triangles Density (%):        0
+Min_Maximal_Matching (%):     100
+Global Efficiency:            0.23
+
+Core Number:                  5
+Largest Component Size:       100
+
+Cut Vertices Number:          0
+Largest BiComponent Size:     100
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       CR-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+Naive Penalty Coef:           False
+Adjusted Penalty Coef:        False
+Penalty Multiplier:           1
+
+Gates Error Probability:      0.0
+QAOA Num Levels:              3
+==================================================
+
+==================================================
+Summary of results of CR-QUBO model of 0-N100
+--------------------------------------------------
+Model status:                 time limit
+Explored B&B nodes:           351919
+Gurobi running time:          3600.4
+
+Optimality gap (%):           6.76
+Upper bound:                  104.62
+Objective value:              98.00
+==================================================
+
+==================================================
+Summary of results of 0-N100
+--------------------------------------------------
+Number of vertices:           100
+Number of edges:              390
+
+Vertex num in largest comp:   100
+Edge num in largest comp:     390
+
+Pre-processing running time:  0.00
+Total solver time:            3600.43
+Running time:                 3602.07
+
+Upper bound:                  104.62
+Objective value:              98.00
+==================================================

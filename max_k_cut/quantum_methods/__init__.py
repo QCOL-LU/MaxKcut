@@ -1,0 +1,1 @@
+from ._max_k_cut_qaoa import solve_max_k_cut_qaoa

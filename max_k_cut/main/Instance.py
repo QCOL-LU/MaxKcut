@@ -4,29 +4,25 @@ import networkx as nx
 import matplotlib.pyplot as plt 
 import time
 import gurobipy as gp
+from math import comb
 
 import os
 import sys
 
-from formulations._max_k_cut_amilo import solve_max_k_cut_amilo
-from formulations._max_k_cut_pmilo import solve_max_k_cut_pmilo
-from formulations._max_k_cut_rpmilo import solve_max_k_cut_rpmilo
 
-from formulations._max_k_cut_bqo import solve_max_k_cut_bqo
-from formulations._max_k_cut_rbqo import solve_max_k_cut_rbqo
 
-from formulations._max_k_cut_qubo import solve_max_k_cut_qubo
-from formulations._max_k_cut_rqubo import solve_max_k_cut_rqubo
+from ..formulations import *
+from ..quantum_methods import *
+from ..decomposition_methods import *
+from ..general_methods import *
 
-from quantum_methods._max_k_cut_qaoa import solve_max_k_cut_qaoa
 
-from decomposition_methods._peel import peel, update_parent_peel
-from decomposition_methods._decompose import decompose, update_parent_decompose
-from decomposition_methods._fold import fold, update_parent_fold
 
-from general_methods._print_methods import print_paramters, print_results_summary
+from max_k_cut.dfo_methods._cal_gradient import *
 
-from general_methods._plot_figures import plot_graph_solution, plot_decomposition_tree, plot_qaoa_level_one
+
+
+
 #====================================================================================================
 # The class of instance; it contains different methods
 #====================================================================================================
@@ -54,17 +50,17 @@ class Instance(Parameters):
 		self.upper_bound			= 0
 		self.total_solver_time		= 0
 		
-		self.preprocessing_total_time 		= 0
-		self.qaoa_best_avg_obj_value 		= - sys.maxsize
+		self.preprocessing_total_time 				= 0
+		self.qaoa_best_avg_obj_value 				= - sys.maxsize
 		self.qaoa_feasible_best_avg_obj_value 		= - sys.maxsize
 
 
-		self.density				= 200 * self.num_edges / ( (self.num_vertices - 1) * self.num_vertices ) if self.num_vertices > 1 else 0
+		
 		self.largest_subgraph		= (0, 0)								# (num_vertices, num_edges)
 
 		if nx.is_weighted(self.graph) == False: 
 			for edge in self.edges:
-				self.graph.edges[edge]["weight"] 		= 1
+				self.graph.edges[edge]["weight"] 	= 1
 
 	
 		self.total_weights 			= sum([self.graph.edges[edge]["weight"] for edge in self.edges]) 
@@ -78,26 +74,41 @@ class Instance(Parameters):
 		nx.set_node_attributes(self.graph, -1, "partition")
 
 
-		self.num_traversed_graphs 	= self.indentifier 
-		self.applied_operation 		= None  	# 1: solve    2: peel    3: decompose    4: fold 	
+
+		self.num_traversed_graphs 		= self.indentifier 
+		self.applied_operation 			= None  	# 1: solve    2: peel    3: decompose    4: fold 	
 
 		if self.num_vertices > 0:
-			self.fixed_vertex  		= self.vertices[0] if fixed_vertex_partition[0] == None else fixed_vertex_partition[0]
+			self.fixed_vertex  			= self.vertices[0] if fixed_vertex_partition[0] == None else fixed_vertex_partition[0]
 		
 
 		if self.parent == None:
-			self.Params 			= Parameters() if parameters == None else parameters
-			self.name_specifier  	= name_specifier
+			self.Params 				= Parameters() if parameters == None else parameters
+			self.name_specifier  		= name_specifier
+
+			self.density				= 200 * self.num_edges / ( (self.num_vertices - 1) * self.num_vertices ) if self.num_vertices > 1 else 0
+			self.triangles_density		= int(sum(nx.triangles(self.graph).values()) / 3 / comb(self.num_vertices,3) * 100) 
+			self.min_maximal_matching	= int(len(nx.algorithms.approximation.min_maximal_matching(self.graph)) / self.num_vertices * 200)
+			self.global_efficiency 		= nx.global_efficiency(self.graph)
+			
+			self.is_planar 				= nx.check_planarity(self.graph)[0]
+			self.is_chordal 			= nx.is_chordal(self.graph)
+
+			self.core_number			= max(nx.core_number(self.graph).values() ) + 1 
+			self.largest_component 		= len(max(nx.connected_components(self.graph), key=len))
+
+			self.num_cut_vertices 				= sum(1 for _ in nx.articulation_points(self.graph)) 
+			self.largest_biconnected_component	= len(max(nx.biconnected_components(self.graph), key=len))
 			
 		else:
-			self.Params 			= self.parent.Params
-			self.name 				= self.parent.name
-			self.directory 			= self.parent.directory
-			self.figure_path 		= self.parent.figure_path
-			self.result_path 		= self.parent.result_path
-			self.filename 			= self.parent.filename
-			self.num_partitions 	= self.parent.num_partitions
-			self.partitions 		= self.parent.partitions
+			self.Params 				= self.parent.Params
+			self.name 					= self.parent.name
+			self.directory 				= self.parent.directory
+			self.figure_path 			= self.parent.figure_path
+			self.result_path 			= self.parent.result_path
+			self.filename 				= self.parent.filename
+			self.num_partitions 		= self.parent.num_partitions
+			self.partitions 			= self.parent.partitions
 			
 
 			if self.num_vertices > 0:
@@ -115,11 +126,23 @@ class Instance(Parameters):
 		self.partitions 		= [partition for partition in range(self.num_partitions)]
 
 		self.category				= "d1" if self.density <= 5 else ("d2" if self.density <= 10 else ("d3" if self.density <= 25 else "d4")) + "_k" + str(self.num_partitions) 
+		
 
+		sizes    		= [49, 50, 100, 150, 200, 250, 251]
+		densities 		= [5, 15, 30, 50, 70, 100]
 
-		self.name  				= "max" + str(self.num_partitions) + "cut" 
-		self.directory 			= self.name + "_numv" + str(self.num_vertices) 
-		self.name 				= self.directory + "_" + str(self.name_specifier)
+		def find_position(my_list, number):
+			if number <= my_list[0]: return my_list[0]
+
+			for lb, ub in zip(my_list[:-1], my_list[1:]):
+				if lb <= number < ub: return lb
+			return my_list[-1]
+
+		self.name  				= "k" + str(self.num_partitions).zfill(2)  
+		self.directory 			= self.name + "_n" + str(find_position(sizes, self.num_vertices)).zfill(3) + "_d" + str(find_position(densities, int(self.density))).zfill(3)
+		self.name 				= "k" + str(self.num_partitions).zfill(2) \
+									+ "_n" + str(self.num_vertices).zfill(3) \
+									+ "_d" + str(int(self.density)).zfill(3) + "_" + str(self.name_specifier)
 
 		self.figure_path 		= "../figures/" + self.directory 
 		self.result_path 		= "../results/" + self.directory
@@ -148,45 +171,55 @@ class Instance(Parameters):
 	#------------------------------------------------------------------------------------------------
 	# Decomposition methods
 	#------------------------------------------------------------------------------------------------
-	from decomposition_methods._peel import peel, update_parent_peel
-	from decomposition_methods._decompose import decompose, update_parent_decompose
-	from decomposition_methods._fold import fold, update_parent_fold	
+	from ..decomposition_methods._peel import peel, update_parent_peel
+	from ..decomposition_methods._decompose import decompose, update_parent_decompose
+	from ..decomposition_methods._fold import fold, update_parent_fold, folded_subgraph_solver
+	
+	from ..decomposition_methods._Lange_et_al_fold import lange_fold, update_parent_lange_fold
+
+	from ..decomposition_methods._edge_based_fix import edge_based_fix, update_parent_edge_based_fix
+	from ..decomposition_methods._Rehfeldt_et_al_fold import rehfeldt_fix, update_parent_rehfeldt_fix
+	from ..decomposition_methods._twin_fix import twin_fix, update_parent_twin_fix
 
 	#------------------------------------------------------------------------------------------------
 	# Classical formulations
 	#------------------------------------------------------------------------------------------------
-	from formulations._max_k_cut_amilo import solve_max_k_cut_amilo
-	from formulations._max_k_cut_pmilo import solve_max_k_cut_pmilo
-	from formulations._max_k_cut_rpmilo import solve_max_k_cut_rpmilo
+	from ..formulations._max_k_cut_amilo import solve_max_k_cut_amilo
+	from ..formulations._max_k_cut_pmilo import solve_max_k_cut_pmilo
+	from ..formulations._max_k_cut_rpmilo import solve_max_k_cut_rpmilo
+	from ..formulations._max_k_cut_crpmilo import solve_max_k_cut_crpmilo
 
-	from formulations._max_k_cut_bqo import solve_max_k_cut_bqo
-	from formulations._max_k_cut_rbqo import solve_max_k_cut_rbqo
+	from ..formulations._max_k_cut_bqo import solve_max_k_cut_bqo
+	from ..formulations._max_k_cut_rbqo import solve_max_k_cut_rbqo
 
-	from formulations._max_k_cut_qubo import solve_max_k_cut_qubo
-	from formulations._max_k_cut_rqubo import solve_max_k_cut_rqubo
+	from ..formulations._max_k_cut_misdo import solve_max_k_cut_misdo
 
-	from formulations._curvature_coefs import calculate_curvature_coefs
+	from ..formulations._max_k_cut_qubo import solve_max_k_cut_qubo
+	from ..formulations._max_k_cut_rqubo import solve_max_k_cut_rqubo
+
+	from ..formulations._curvature_coefs import calculate_curvature_coefs
 
 	#------------------------------------------------------------------------------------------------
 	# QAOA method
 	#------------------------------------------------------------------------------------------------
-	from quantum_methods._max_k_cut_qaoa import solve_max_k_cut_qaoa
-	from quantum_methods._max_k_cut_qaoa_circuits import qaoa_expected_value
+	from ..quantum_methods._max_k_cut_qaoa import solve_max_k_cut_qaoa
+	from ..quantum_methods._max_k_cut_qaoa_circuits import qaoa_expected_value
 
-	from quantum_methods._max_k_cut_qaoa_dependencies import cal_obj_from_sol, convert_string_sol_to_sorted_sol, make_sol_feasible, cal_avg_best_sol, cal_avg_best_sol_feasible, gate_i_zz, gate_i_z_1, gate_i_z_2
+	from ..quantum_methods._max_k_cut_qaoa_dependencies import cal_obj_from_sol, convert_string_sol_to_sorted_sol, make_sol_feasible, cal_avg_best_sol, cal_avg_best_sol_feasible, gate_i_zz, gate_i_z_1, gate_i_z_2
+	from ..dfo_methods._cal_gradient import cal_gradient, cal_gradient_batch
 
 	#------------------------------------------------------------------------------------------------
 	# Plot methods
 	#------------------------------------------------------------------------------------------------
-	from general_methods._plot_figures import plot_qaoa_solutions_dist, plot_graph_problem, plot_qaoa_level_one
-	from general_methods._plot_figures import plot_graph_solution, plot_decomposition_tree
+	from ..general_methods._plot_figures import plot_qaoa_solutions_dist, plot_graph_problem, plot_qaoa_level_one
+	from ..general_methods._plot_figures import plot_graph_solution, plot_decomposition_tree
 
 	#------------------------------------------------------------------------------------------------
 	# Print methods
 	#------------------------------------------------------------------------------------------------
-	from general_methods._print_methods import my_print, print_paramters, print_results_summary
-	from general_methods._print_methods import print_qaoa_results_summary, print_qaoa_optimizer_iter
-	from general_methods._print_methods import print_gurobi_results_summary
+	from ..general_methods._print_methods import my_print, print_paramters, print_results_summary
+	from ..general_methods._print_methods import print_qaoa_results_summary, print_qaoa_optimizer_iter
+	from ..general_methods._print_methods import print_gurobi_results_summary
 
 
 	
@@ -203,9 +236,27 @@ class Instance(Parameters):
 
 		if self.parent == None:			self.print_paramters()
 		
-		is_peeling_allowed 				= self.Params.Peel and (True if self.parent == None else (not self.parent.applied_operation == "peel")) and (self.num_vertices > 0)
-		is_decompose_allowed  			= self.Params.Decompose and (True if self.parent == None else (not self.parent.applied_operation == "decompose")) and (self.num_vertices > 0)
-		is_folding_allowed  			= self.Params.Fold and (True if self.parent == None else (not self.parent.applied_operation == "fold")) and (self.num_vertices > 0)
+		# is_peeling_allowed 				= self.Params.Peel and (True if self.parent == None else (not self.parent.applied_operation == "peel")) and (self.num_vertices > 0)
+		# is_decompose_allowed  			= self.Params.Decompose and (True if self.parent == None else (not self.parent.applied_operation == "decompose")) and (self.num_vertices > 0)
+		# is_folding_allowed  			= self.Params.Fold and (True if self.parent == None else (not self.parent.applied_operation == "fold")) and (self.num_vertices > 0)
+		
+		# is_fixing_twin_allowed  		= self.Params.Twin_Fix and (True if self.parent == None else (not self.parent.applied_operation == "twin-fix")) and (self.num_vertices > 0)
+		# is_edge_based_fixing_allowed 	= self.Params.Edge_Based_Fix and (True if self.parent == None else (not self.parent.applied_operation == "edge-based-fix")) and (self.num_vertices > 0)
+		# is_Rehfeldt_fixing_allowed 		= self.Params.Rehfeldt_Fix and (True if self.parent == None else (not self.parent.applied_operation == "Rehfeldt_fix")) and (self.num_vertices > 0)
+		
+		# is_Lange_folding_allowed 		= self.Params.Lange_Fold and (True if self.parent == None else (not self.parent.applied_operation == "Lange_fold")) and (self.num_vertices > 0)
+
+		
+		is_peeling_allowed 				= self.Params.Peel and (True if self.parent == None else  (self.num_vertices > 0) )
+		is_decompose_allowed  			= self.Params.Decompose and (True if self.parent == None else (self.num_vertices > 0) )
+		is_folding_allowed  			= self.Params.Fold and (True if self.parent == None else  (self.num_vertices > 0) )
+		
+		is_fixing_twin_allowed  		= self.Params.Twin_Fix and (True if self.parent == None else (self.num_vertices > 0) )
+		is_edge_based_fixing_allowed 	= self.Params.Edge_Based_Fix and (True if self.parent == None else (self.num_vertices > 0) )
+		is_Rehfeldt_fixing_allowed 		= self.Params.Rehfeldt_Fix and (True if self.parent == None else (self.num_vertices > 0) )
+		
+		is_Lange_folding_allowed 		= self.Params.Lange_Fold and (True if self.parent == None else  (self.num_vertices > 0) )
+
 
 		is_graph_simplified 			= False 
 
@@ -251,7 +302,38 @@ class Instance(Parameters):
 
 					new_instance.solve()
 
-		
+		#--------------------------------------------------------------------------------------------
+		# Apply edge-based fixing algorithm if it is allowed
+		#--------------------------------------------------------------------------------------------
+		if not is_graph_simplified and is_edge_based_fixing_allowed == True:
+
+			(is_graph_simplified, edge_based_fixed_graph) 	= self.edge_based_fix()
+
+
+			if is_graph_simplified == True:
+				new_instance 			= Instance( graph=edge_based_fixed_graph, 
+													fixed_vertex_partition=(self.fixed_vertex, self.graph.nodes[self.fixed_vertex]["partition"]),
+													parent=self, 
+													indentifier=self.num_traversed_graphs + 1)
+				self.create_tree_node()
+				new_instance.solve()
+
+
+		#--------------------------------------------------------------------------------------------
+		# Apply Lange folding operation algorithm if it is allowed
+		#--------------------------------------------------------------------------------------------
+		if not is_graph_simplified and is_Lange_folding_allowed == True:
+
+			(is_graph_simplified, Lange_folded_graph) = self.lange_fold()
+
+			if is_graph_simplified == True:
+				new_instance 			= Instance( graph=Lange_folded_graph, 
+													fixed_vertex_partition=(self.fixed_vertex, self.graph.nodes[self.fixed_vertex]["partition"]),
+													parent=self, 
+													indentifier=self.num_traversed_graphs + 1)
+				self.create_tree_node()
+				new_instance.solve()
+
 		#--------------------------------------------------------------------------------------------
 		# Apply folding operation algorithm if it is allowed
 		#--------------------------------------------------------------------------------------------
@@ -268,14 +350,51 @@ class Instance(Parameters):
 				new_instance.solve()
 
 
+				
+		#--------------------------------------------------------------------------------------------
+		# Apply Rehfeldt fixing operation algorithm if it is allowed
+		#--------------------------------------------------------------------------------------------
+		if not is_graph_simplified and is_Rehfeldt_fixing_allowed == True:
 
+			(is_graph_simplified, Rehfeldt_fixed_graph) = self.rehfeldt_fix()
+
+			if is_graph_simplified == True:
+				new_instance 			= Instance( graph=Rehfeldt_fixed_graph, 
+													fixed_vertex_partition=(self.fixed_vertex, self.graph.nodes[self.fixed_vertex]["partition"]),
+													parent=self, 
+													indentifier=self.num_traversed_graphs + 1)
+				self.create_tree_node()
+				new_instance.solve()
+
+
+		
+
+
+		#--------------------------------------------------------------------------------------------
+		# Apply twin fixing algorithm if it is allowed
+		#--------------------------------------------------------------------------------------------
+		if not is_graph_simplified and is_fixing_twin_allowed == True:
+
+			(is_graph_simplified, twin_fixed_graph) 	= self.twin_fix()
+
+
+			if is_graph_simplified == True:
+				new_instance 			= Instance( graph=twin_fixed_graph, 
+													fixed_vertex_partition=(self.fixed_vertex, self.graph.nodes[self.fixed_vertex]["partition"]),
+													parent=self, 
+													indentifier=self.num_traversed_graphs + 1)
+				self.create_tree_node()
+				new_instance.solve()
+
+
+		
 		#--------------------------------------------------------------------------------------------
 		# Solve the problem if the graph is not simplified
 		#--------------------------------------------------------------------------------------------
 		if is_graph_simplified == False and self.num_vertices > 0:
 
 
-			if self.Params.Method == "BQO": 							solver 		= solve_max_k_cut_bqo
+			if self.Params.Method == "BQO":								solver 		= solve_max_k_cut_bqo
 
 			elif self.Params.Method == "R-BQO": 						solver 		= solve_max_k_cut_rbqo
 
@@ -284,6 +403,10 @@ class Instance(Parameters):
 			elif self.Params.Method == "P-MILO": 						solver 		= solve_max_k_cut_pmilo
 
 			elif self.Params.Method == "RP-MILO": 						solver 		= solve_max_k_cut_rpmilo
+
+			elif self.Params.Method == "C-RP-MILO": 					solver 		= solve_max_k_cut_crpmilo
+
+			elif self.Params.Method == "MISDO":							solver 		= solve_max_k_cut_misdo
 
 			elif self.Params.Method == "C-QUBO": 						solver 		= solve_max_k_cut_qubo
 
@@ -306,7 +429,7 @@ class Instance(Parameters):
 			self.upper_bound		= self.gurobi_ObjBound if self.Params.Method not in ["QUBO", "PUBO", "R-QUBO"] else sum(self.graph.edges[edge]["weight"] for edge in self.edges if self.graph.edges[edge]["weight"] > 0)
 			self.largest_subgraph	= (self.num_vertices, self.num_edges)
 
-		elif self.num_vertices == 0:
+		elif is_graph_simplified == False and self.num_vertices == 0:
 			self.create_tree_node()
 
 		
@@ -320,6 +443,16 @@ class Instance(Parameters):
 			elif self.parent.applied_operation == "decompose":		self.update_parent_decompose()
 
 			elif self.parent.applied_operation == "fold": 			self.update_parent_fold()
+
+			elif self.parent.applied_operation == "lange-fold": 	self.update_parent_lange_fold()
+
+			elif self.parent.applied_operation == "edge-based-fix": self.update_parent_edge_based_fix()
+
+			elif self.parent.applied_operation == "rehfeldt-fix": 	self.update_parent_rehfeldt_fix()
+
+			elif self.parent.applied_operation == "twin-fix": 		self.update_parent_twin_fix()
+
+			
 
 			self.parent.num_traversed_graphs 		= self.num_traversed_graphs
 

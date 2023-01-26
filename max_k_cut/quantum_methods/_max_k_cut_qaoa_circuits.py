@@ -4,59 +4,65 @@ import itertools
 import time
 import numpy as np
 
+from copy import deepcopy
 
-from qiskit import QuantumRegister, ClassicalRegister, QuantumCircuit, execute, Aer
-from qiskit.extensions import HamiltonianGate
-from qiskit.providers.aer.noise import NoiseModel
-from qiskit.providers.aer.noise.errors import  depolarizing_error
+from qiskit.circuit import Parameter
+from qiskit import QuantumRegister, ClassicalRegister, QuantumCircuit
 
-from quantum_methods._max_k_cut_qaoa_dependencies import cal_obj_from_sol, convert_string_sol_to_sorted_sol, make_sol_feasible, cal_avg_best_sol, cal_avg_best_sol_feasible, gate_i_zz, gate_i_z_1, gate_i_z_2
+from max_k_cut.quantum_methods._max_k_cut_qaoa_dependencies import  gate_i_zz, gate_i_z_1, gate_i_z_2
+from qiskit.quantum_info import SparsePauliOp
 
+# from qiskit.tools.monitor import job_monitor
 
 #================================================================================================
 # Calculate the objective function from the binary solution obtained from quantum circuit
 #================================================================================================
-def qaoa_expected_value(self, angles):
-
+def qaoa_expected_value(self):
+	
 	#--------------------------------------------------------------------------------------------
 	# Parameters setting 
 	#--------------------------------------------------------------------------------------------
 	if self.Params.Method == "QUBO":
-		self.penalty_coef	= {vertex:  self.Params.Penalty_Increase * max(self.graph.nodes[vertex]["pos-weight"]/self.num_partitions, - self.graph.nodes[vertex]["neg-weight"] / 2) + 0.1 for vertex in self.vertices}
-		num_qubits 			= (self.num_vertices - 1) * self.num_partitions
-		qubit_map 			= {vertex:[v_ind * self.num_partitions + partition for partition in self.partitions] for (v_ind, vertex) in enumerate(self.reduced_vertices)}
+		self.penalty_coef		= {vertex:  self.Params.Penalty_Increase * max(self.graph.nodes[vertex]["pos-weight"]/self.num_partitions, - self.graph.nodes[vertex]["neg-weight"] / 2) * 1.01 for vertex in self.vertices}
+		self.tight_penalty_coef = deepcopy(self.penalty_coef)
+
+		num_qubits 				= (self.num_vertices - 1) * self.num_partitions
+		qubit_map 				= {vertex:[v_ind * self.num_partitions + partition for partition in self.partitions] for (v_ind, vertex) in enumerate(self.reduced_vertices)}
 	
 		if self.Params.Naive == True:
 			self.penalty_coef	= {vertex: (self.graph.nodes[vertex]["pos-weight"] -  self.graph.nodes[vertex]["neg-weight"]) for vertex in self.vertices}
 
 
 	elif self.Params.Method == "PUBO":
-		self.penalty_coef	= {vertex: self.Params.Penalty_Increase * max(self.graph.nodes[vertex]["pos-weight"]/self.num_partitions, -(self.num_partitions - 1) * self.graph.nodes[vertex]["neg-weight"]) for vertex in self.vertices}
-		num_qubits 			= (self.num_vertices - 1) * self.num_partitions
-		qubit_map 			= {vertex:[v_ind * self.num_partitions + partition for partition in self.partitions] for (v_ind, vertex) in enumerate(self.reduced_vertices)}
+		self.penalty_coef		= {vertex: self.Params.Penalty_Increase * max(self.graph.nodes[vertex]["pos-weight"]/self.num_partitions, -(self.num_partitions - 1) * self.graph.nodes[vertex]["neg-weight"]) for vertex in self.vertices}
+		num_qubits 				= (self.num_vertices - 1) * self.num_partitions
+		qubit_map 				= {vertex:[v_ind * self.num_partitions + partition for partition in self.partitions] for (v_ind, vertex) in enumerate(self.reduced_vertices)}
 
 	elif self.Params.Method == "R-QUBO":
-		self.penalty_coef	= {vertex: self.Params.Penalty_Increase * (self.graph.nodes[vertex]["pos-weight"] -  self.graph.nodes[vertex]["neg-weight"])  for vertex in self.vertices}
-		num_qubits 			= (self.num_vertices - 1) * (self.num_partitions - 1)
-		qubit_map 			= {vertex:[v_ind * (self.num_partitions - 1) + partition for partition in self.partitions[:-1]] for (v_ind, vertex) in enumerate(self.reduced_vertices)}
+		self.penalty_coef		= {vertex: self.Params.Penalty_Increase * (self.graph.nodes[vertex]["pos-weight"] -  self.graph.nodes[vertex]["neg-weight"])  for vertex in self.vertices}
+		num_qubits 				= (self.num_vertices - 1) * (self.num_partitions - 1)
+		qubit_map 				= {vertex:[v_ind * (self.num_partitions - 1) + partition for partition in self.partitions[:-1]] for (v_ind, vertex) in enumerate(self.reduced_vertices)}
+		
+		self.tight_penalty_coef = deepcopy(self.penalty_coef)
 		
 		if self.Params.Naive == True:
 			self.penalty_coef	= {vertex: self.num_partitions * (self.graph.nodes[vertex]["pos-weight"] -  self.graph.nodes[vertex]["neg-weight"])  for vertex in self.vertices}
 
 
-	all_qubits 				= [qubit for qubit in range(num_qubits)]
+	self.tight_rqubo_penalty_coef 	= {vertex: self.Params.Penalty_Increase * (self.graph.nodes[vertex]["pos-weight"] -  self.graph.nodes[vertex]["neg-weight"])  for vertex in self.vertices}
+	self.num_qubits 			= num_qubits
+	all_qubits 					= [qubit for qubit in range(num_qubits)]
 
-
+	
 	#--------------------------------------------------------------------------------------------
 	# Quantum circuit initialization (QUBO, PUBO, and R-QUBO)
 	#--------------------------------------------------------------------------------------------
 	self.qaoa_circuit 		= QuantumCircuit(num_qubits, num_qubits)
 	self.qaoa_circuit.h(all_qubits)
 
-
 	for level in range(self.Params.QAOA_Num_Levels):
-		gamma 			= angles[level]
-		beta 			= angles[self.Params.QAOA_Num_Levels + level]
+		gamma 			= Parameter('gamma_{}'.format(level)) 		#angles[level]
+		beta 			= Parameter('beta_{}'.format(level)) 		#angles[self.Params.QAOA_Num_Levels + level]
 
 		#---------------------------------------------------------------------------------------
 		# Phase separation operator - QUBO  (objective function of the BQO)
@@ -178,41 +184,8 @@ def qaoa_expected_value(self, angles):
 	#--------------------------------------------------------------------------------------------
 	self.qaoa_circuit.measure(all_qubits, all_qubits)
 
-	noise_model 		= NoiseModel()
-	error_u1 			= depolarizing_error(self.Params.QAOA_Gates_Noise, 1)
-	noise_model.add_all_qubit_quantum_error(error_u1, ['u1', 'rx', 'unitary'])
-
-	backend 			= Aer.get_backend("qasm_simulator", fusion_max_qubit=3, precision="single") #qasm_simulator
-	# backend 			= Aer.get_backend("qasm_simulator") #qasm_simulator
-
-	shots				= self.Params.QAOA_Num_Shots
-
 	
-	simulate 			= execute(self.qaoa_circuit, backend=backend, shots=shots, noise_model=noise_model)
-	qaoa_results		= simulate.result()
-	
-	self.counts 		= qaoa_results.get_counts()
 
-
-	#--------------------------------------------------------------------------------------------
-	# Calculate the average and the best objective values and the best solution 
-	#--------------------------------------------------------------------------------------------
-	self.cal_avg_best_sol(angles)
-	self.qaoa_circuit_depth				= self.qaoa_circuit.depth()
-
-	#--------------------------------------------------------------------------------------------
-	# Print the results of QAOA optimizer at each iteration  
-	#--------------------------------------------------------------------------------------------
-	if self.Params.QAOA_Optimize == True:
-		self.print_qaoa_optimizer_iter()
-		self.qaoa_iter 					= self.qaoa_iter + 1
-
-	else:
-		self.qoao_opt_end_time 			= time.time()
-		self.qaoa_opt_total_time 		= self.qoao_opt_end_time - self.qoao_opt_start_time
-
-
-	return - self.qaoa_avg_obj_value
 
 
 

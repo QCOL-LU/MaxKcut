@@ -1,0 +1,61 @@
+Problem
+  Name                   : MISDO           
+  Objective sense        : maximize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 5050            
+  Affine conic cons.     : 0               
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 1               
+  Matrix variables       : 1               
+  Integer variables      : 0               
+
+Optimizer started.
+Presolve started.
+Linear dependency checker started.
+Linear dependency checker terminated.
+Eliminator started.
+Freed constraints in eliminator : 0
+Eliminator terminated.
+Eliminator - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - number                 : 0               
+Presolve terminated. Time: 0.00    
+GP based matrix reordering started.
+GP based matrix reordering terminated.
+Problem
+  Name                   : MISDO           
+  Objective sense        : maximize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 5050            
+  Affine conic cons.     : 0               
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 1               
+  Matrix variables       : 1               
+  Integer variables      : 0               
+
+Optimizer  - threads                : 10              
+Optimizer  - solved problem         : the primal      
+Optimizer  - Constraints            : 5050
+Optimizer  - Cones                  : 0
+Optimizer  - Scalar variables       : 4950              conic                  : 0               
+Optimizer  - Semi-definite variables: 1                 scalarized             : 5050            
+Factor     - setup time             : 0.62              dense det. time        : 0.00            
+Factor     - ML order time          : 0.38              GP order time          : 0.00            
+Factor     - nonzeros before factor : 1.28e+07          after factor           : 1.28e+07        
+Factor     - dense dim.             : 0                 flops                  : 4.30e+10        
+ITE PFEAS    DFEAS    GFEAS    PRSTATUS   POBJ              DOBJ              MU       TIME  
+0   1.0e+00  1.0e+00  1.0e+00  0.00e+00   1.470000000e+03   1.470000000e+03   1.0e+00  0.63  
+1   8.7e-01  8.7e-01  2.0e-01  3.68e+00   1.463458923e+03   1.463790569e+03   8.7e-01  1.03  
+2   7.0e-02  7.0e-02  6.8e-03  1.07e+00   1.468861620e+03   1.468874099e+03   7.0e-02  1.40  
+3   1.8e-05  1.8e-05  7.1e-08  1.12e+00   1.470000869e+03   1.470000860e+03   1.8e-05  1.78  
+4   3.6e-10  3.6e-10  1.4e-12  1.00e+00   1.470000000e+03   1.470000000e+03   3.6e-10  2.09  
+Optimizer terminated. Time: 2.09    
+
+
+Interior-point solution summary
+  Problem status  : PRIMAL_AND_DUAL_FEASIBLE
+  Solution status : OPTIMAL
+  Primal.  obj: 1.4700000000e+03    nrm: 1e+00    Viol.  con: 2e-11    var: 0e+00    barvar: 0e+00  
+  Dual.    obj: 1.4700000000e+03    nrm: 1e+03    Viol.  con: 2e-11    var: 0e+00    barvar: 1e-10  

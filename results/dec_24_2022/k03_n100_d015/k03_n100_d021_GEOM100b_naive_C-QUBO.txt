@@ -1,0 +1,68 @@
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           100
+Number of edges:              1050
+Number of partitions:         3
+
+Density (%):                  21
+Name of instance:             GEOM100b_naive
+
+Is planar:                    False
+Is Chordal:                   False
+
+Triangles Density (%):        3
+Min_Maximal_Matching (%):     98
+Global Efficiency:            0.52
+
+Core Number:                  15
+Largest Component Size:       100
+
+Cut Vertices Number:          0
+Largest BiComponent Size:     100
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       C-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+Naive Penalty Coef:           True
+Adjusted Penalty Coef:        False
+Penalty Multiplier:           1
+
+Gates Error Probability:      0.0
+QAOA Num Levels:              3
+==================================================
+
+==================================================
+Summary of results of C-QUBO model of 0-S100
+--------------------------------------------------
+Model status:                 time limit
+Explored B&B nodes:           5680
+Gurobi running time:          3600.1
+
+Optimality gap (%):           5.37
+Upper bound:                  4353.00
+Objective value:              4131.00
+==================================================
+
+==================================================
+Summary of results of 0-S100
+--------------------------------------------------
+Number of vertices:           100
+Number of edges:              1050
+
+Vertex num in largest comp:   100
+Edge num in largest comp:     1050
+
+Pre-processing running time:  0.00
+Total solver time:            3600.12
+Running time:                 3601.23
+
+Upper bound:                  4353.00
+Objective value:              4131.00
+==================================================

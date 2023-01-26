@@ -1,0 +1,33 @@
+
+Gurobi 9.5.0 (linux64) logging started Mon Oct 10 22:07:59 2022
+
+Set parameter LogFile to value "../results/max3cut_numv250/max3cut_numv250__P-MILO_log.txt"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 7719000 rows, 31125 columns and 23157000 nonzeros
+Model fingerprint: 0x87e199f8
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+
+Concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Presolve removed 0 rows and 0 columns (presolve time = 5s) ...
+Presolve removed 0 rows and 0 columns (presolve time = 13s) ...
+Presolve time: 15.05s
+Presolved: 7719000 rows, 31125 columns, 23157000 nonzeros
+
+
+Barrier performed 0 iterations in 65.77 seconds (12.60 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Solved in 7566 iterations and 66.54 seconds (90.91 work units)
+Optimal objective  3.382040817e+02
+
+User-callback calls 1233, time in user-callback 0.01 sec

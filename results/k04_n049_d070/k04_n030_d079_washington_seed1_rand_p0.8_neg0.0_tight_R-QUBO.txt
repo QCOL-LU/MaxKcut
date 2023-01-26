@@ -1,0 +1,52 @@
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           30
+Number of edges:              345
+Number of partitions:         4
+
+Density (%):                  79
+Name of instance:             washington_seed1_rand_p0.8_neg0.0_tight
+
+Is planar:                    False
+Is Chordal:                   False
+
+Triangles Density (%):        49
+Min_Maximal_Matching (%):     100
+Global Efficiency:            0.90
+
+Core Number:                  21
+Largest Component Size:       30
+
+Cut Vertices Number:          0
+Largest BiComponent Size:     30
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       R-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+Quantum Computer:             ibm_washington
+Naive Penalty Coef:           False
+Adjusted Penalty Coef:        False
+Penalty Multiplier:           1
+
+QAOA Num Levels:              1
+QAOA Num Shots:               10000
+Gates Error Probability:      0.0
+
+QAOA Optimize:                True
+QAOA Scipy Optimizer:         COBYLA
+QAOA Optimizer Tol:           0.001
+QAOA Angles:                  [0.2, 0.3]
+==================================================
+
+   iter        avg-obj        best avg-obj       best-obj         tight-obj        rqubo-obj           std           skewness      time          gamma            beta      
+*     0      4.32172e+01      4.32172e+01      2.29000e+02      4.32172e+01      4.32172e+01      7.83381e+00     -4.24834e+00  62362s           0.30             0.20      
+      1     -1.50199e+02      4.32172e+01      2.29000e+02     -1.50199e+02     -1.50199e+02      1.35900e+01     -1.26704e+01  63016s           0.30             1.20      
+*     2      6.74906e+01      6.74906e+01      2.43000e+02      6.74906e+01      6.74906e+01      6.57380e+00     -8.89908e-01  63689s           1.30             0.20      
+      3     -3.53540e+00      6.74906e+01      2.43000e+02     -3.53540e+00     -3.53540e+00      9.23773e+00     -7.99704e+00  64129s           1.42            -0.79      

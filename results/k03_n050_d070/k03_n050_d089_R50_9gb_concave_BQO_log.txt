@@ -1,0 +1,107 @@
+Problem
+  Name                   : curvature coefficients
+  Objective sense        : minimize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 2450            
+  Affine conic cons.     : 0               
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 1               
+  Matrix variables       : 1               
+  Integer variables      : 0               
+
+Optimizer started.
+Presolve started.
+Linear dependency checker started.
+Linear dependency checker terminated.
+Eliminator started.
+Freed constraints in eliminator : 0
+Eliminator terminated.
+Eliminator - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - number                 : 0               
+Presolve terminated. Time: 0.00    
+GP based matrix reordering started.
+GP based matrix reordering terminated.
+Problem
+  Name                   : curvature coefficients
+  Objective sense        : minimize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 2450            
+  Affine conic cons.     : 0               
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 1               
+  Matrix variables       : 1               
+  Integer variables      : 0               
+
+Optimizer  - threads                : 10              
+Optimizer  - solved problem         : the primal      
+Optimizer  - Constraints            : 2450
+Optimizer  - Cones                  : 0
+Optimizer  - Scalar variables       : 0                 conic                  : 0               
+Optimizer  - Semi-definite variables: 1                 scalarized             : 1275            
+Factor     - setup time             : 0.17              dense det. time        : 0.00            
+Factor     - ML order time          : 0.10              GP order time          : 0.00            
+Factor     - nonzeros before factor : 3.00e+06          after factor           : 3.00e+06        
+Factor     - dense dim.             : 0                 flops                  : 4.92e+09        
+ITE PFEAS    DFEAS    GFEAS    PRSTATUS   POBJ              DOBJ              MU       TIME  
+0   2.0e+00  0.0e+00  5.1e+01  0.00e+00   5.000000000e+01   0.000000000e+00   1.0e+00  0.18  
+1   2.9e-01  1.2e-16  1.2e+01  -9.54e-01  1.467737468e+02   1.236711330e+02   1.5e-01  0.31  
+2   3.9e-02  7.2e-16  7.3e-01  4.99e-01   1.976669292e+02   1.934079905e+02   2.0e-02  0.43  
+3   6.4e-03  6.7e-16  4.2e-02  8.41e-01   2.125888852e+02   2.118172713e+02   3.2e-03  0.53  
+4   5.8e-04  1.4e-15  1.2e-03  9.74e-01   2.150158783e+02   2.149452699e+02   2.9e-04  0.64  
+5   3.1e-06  8.7e-15  2.5e-07  9.97e-01   2.152842800e+02   2.152838783e+02   1.5e-06  0.77  
+6   5.0e-09  7.0e-13  1.2e-11  1.00e+00   2.152856947e+02   2.152856940e+02   2.5e-09  0.90  
+Optimizer terminated. Time: 0.91    
+
+
+Interior-point solution summary
+  Problem status  : PRIMAL_AND_DUAL_FEASIBLE
+  Solution status : OPTIMAL
+  Primal.  obj: 2.1528569468e+02    nrm: 7e+00    Viol.  con: 1e-08    var: 0e+00    barvar: 0e+00  
+  Dual.    obj: 2.1528569402e+02    nrm: 1e+00    Viol.  con: 0e+00    var: 0e+00    barvar: 4e-12  
+
+Gurobi 10.0.0 (linux64) logging started Mon Jan 16 19:08:15 2023
+
+Set parameter LogFile to value "../results/k03_n050_d070/k03_n050_d089_R50_9gb_concave_BQO_log.txt"
+Gurobi Optimizer version 10.0.0 build v10.0.0rc2 (linux64)
+
+CPU model: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+
+Optimize a model with 50 rows, 150 columns and 150 nonzeros
+Model fingerprint: 0xbc9284c7
+Model has 3426 quadratic objective terms
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [2e+00, 7e+00]
+  QObjective range [2e+00, 1e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 1 rows and 3 columns
+Presolve time: 0.00s
+Presolved: 49 rows, 147 columns, 147 nonzeros
+Presolved model has 3282 quadratic objective terms
+Ordering time: 0.00s
+
+Barrier statistics:
+ Free vars  : 144
+ AA' NZ     : 7.041e+03
+ Factor NZ  : 1.017e+04
+ Factor Ops : 6.342e+05 (less than 1 second per iteration)
+ Threads    : 1
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   7.71061403e+04  5.08864478e+05  9.09e+03 6.65e+00  2.49e+05     0s
+   1   1.28798361e+03  2.67274665e+04  6.53e+00 3.08e-03  2.67e+02     0s
+   2   8.69892728e+02  1.23860760e+04  6.53e-06 3.08e-09  3.92e+01     0s
+   3   8.69933771e+02  8.90217525e+02  3.68e-09 1.74e-12  6.90e-02     0s
+   4   8.70085732e+02  8.70243451e+02  2.42e-12 1.78e-15  5.36e-04     0s
+   5   8.70085972e+02  8.70086131e+02  6.44e-15 7.99e-15  5.41e-07     0s
+   6   8.70085972e+02  8.70085972e+02  5.55e-15 5.77e-15  5.42e-10     0s
+
+Barrier solved model in 6 iterations and 0.01 seconds (0.00 work units)
+Optimal objective 8.70085972e+02
+

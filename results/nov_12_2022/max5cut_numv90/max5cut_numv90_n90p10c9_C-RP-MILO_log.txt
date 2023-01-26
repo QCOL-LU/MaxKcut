@@ -1,0 +1,66 @@
+
+Gurobi 9.5.0 (linux64) logging started Mon May 23 19:56:18 2022
+
+Set parameter LogFile to value "../results/max5cut_numv90/max5cut_numv90_n90p10c9_C-RP-MILO_log.txt"
+Set parameter LazyConstraints to value 1
+Gurobi Optimizer version 9.5.0 build v9.5.0rc5 (linux64)
+Thread count: 20 physical cores, 40 logical processors, using up to 10 threads
+Optimize a model with 150564 rows, 6217 columns and 452819 nonzeros
+Model fingerprint: 0x95bc567f
+Variable types: 0 continuous, 6217 integer (6217 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 8e+01]
+Presolve removed 110409 rows and 0 columns
+Presolve time: 0.46s
+Presolved: 40155 rows, 6217 columns, 121592 nonzeros
+Variable types: 0 continuous, 6217 integer (6217 binary)
+
+Root relaxation: objective 2.650000e+02, 1829 iterations, 0.15 seconds (0.14 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  265.00000    0   88          -  265.00000      -     -    1s
+     0     0  265.00000    0   70          -  265.00000      -     -    1s
+     0     0  265.00000    0   58          -  265.00000      -     -    2s
+     0     0  265.00000    0  128          -  265.00000      -     -    4s
+     0     0  265.00000    0   92          -  265.00000      -     -    5s
+     0     0  265.00000    0  107          -  265.00000      -     -    6s
+     0     0  265.00000    0  106          -  265.00000      -     -    6s
+     0     0  265.00000    0  101          -  265.00000      -     -    7s
+     0     0  265.00000    0   59          -  265.00000      -     -    9s
+     0     2  265.00000    0  151          -  265.00000      -     -   19s
+     3     8  265.00000    2  405          -  265.00000      -  1834   22s
+    45    56  265.00000    6  325          -  265.00000      -   469   25s
+   115   244  265.00000    9  342          -  265.00000      -   344   31s
+   243   607  265.00000   10  155          -  265.00000      -   361   36s
+   606  1169  265.00000   11  326          -  265.00000      -   285   45s
+  1180  1601  265.00000   70  278          -  265.00000      -   282   52s
+  1649  1859  265.00000   79  352          -  265.00000      -   301   60s
+H 1759  1859                     243.0000000  265.00000  9.05%   323   60s
+* 1873  1784             158     253.0000000  265.00000  4.74%   338   60s
+H 1914  2049                     256.0000000  265.00000  3.52%   341   78s
+H 2143  2047                     257.0000000  265.00000  3.11%   340   78s
+  2234  2691  265.00000   91  407  257.00000  265.00000  3.11%   356   91s
+H 2707  2668                     259.0000000  265.00000  2.32%   351   91s
+H 2982  2963                     260.0000000  265.00000  1.92%   344  110s
+H 3493  2947                     261.0000000  265.00000  1.53%   352  114s
+H 3503  2734                     262.0000000  265.00000  1.15%   353  114s
+
+Cutting planes:
+  MIR: 38
+  Zero half: 43
+  Lazy constraints: 1394
+
+Explored 3600 nodes (1292442 simplex iterations) in 114.79 seconds (311.58 work units)
+Thread count was 10 (of 40 available processors)
+
+Solution count 8: 262 261 260 ... 243
+
+Solve interrupted
+Best objective 2.620000000000e+02, best bound 2.650000000000e+02, gap 1.1450%
+
+User-callback calls 34528, time in user-callback 0.67 sec

@@ -16,16 +16,21 @@ def convert_string_sol_to_sorted_sol(self, string_solution):
 
 	sorted_solution[self.fixed_vertex] 		= [(1 if self.graph.nodes[self.fixed_vertex]["partition"] == partition else 0) for partition in self.partitions]
 
+	rqubo_sorted_solution					= deepcopy(sorted_solution)
+
 	if self.Params.Method == "QUBO" or self.Params.Method == "PUBO":
 		for (v_ind, vertex) in enumerate(self.reduced_vertices):
 			sorted_solution[vertex] 	= [solution[v_ind * self.num_partitions + partition] for partition in self.partitions]
+			rqubo_sorted_solution[vertex] 		= deepcopy(sorted_solution[vertex])
+			rqubo_sorted_solution[vertex][-1] 	= 1 - sum(sorted_solution[vertex][:-1]) 
 	
 	elif self.Params.Method == "R-QUBO":
 		for (v_ind, vertex) in enumerate(self.reduced_vertices):
 			sorted_solution[vertex] 	= [solution[v_ind * (self.num_partitions - 1) + partition] if partition != self.partitions[-1] else 0 for partition in self.partitions]
 			sorted_solution[vertex][-1] = 1 - sum(sorted_solution[vertex]) 
 
-	return sorted_solution
+		rqubo_sorted_solution 			= deepcopy(sorted_solution)
+	return sorted_solution, rqubo_sorted_solution
 
 
 
@@ -137,6 +142,7 @@ def cal_obj_from_sol(self, sorted_solution):
 	# Calculate the objective value of the sorted solution (in BQO format) 
 	#--------------------------------------------------------------------------------------------
 	total_penalty 				= 0
+	tight_total_penalty			= 0
 	objective_value 			= sum(self.graph.edges[edge[0], edge[1]]["weight"] for edge in self.graph.edges) 
 	
 	for edge in self.edges:
@@ -155,7 +161,7 @@ def cal_obj_from_sol(self, sorted_solution):
 	#--------------------------------------------------------------------------------------------
 	for vertex in self.vertices:
 		penalty_term 			= 0
-		
+
 		if self.Params.Method == "QUBO":
 			penalty_term 		= sum(sorted_solution[vertex]) - 1
 			penalty_term 		= penalty_term * penalty_term
@@ -170,30 +176,47 @@ def cal_obj_from_sol(self, sorted_solution):
 				penalty_term 	= penalty_term + sorted_solution[vertex][partition1] * sorted_solution[vertex][partition2]
 
 		total_penalty 			+= self.penalty_coef[vertex] * penalty_term
+		tight_total_penalty 	+= self.tight_penalty_coef[vertex] * penalty_term
 	
-	objective_value 		-= total_penalty
+	tight_objective_value		= objective_value - tight_total_penalty
+	objective_value 			= objective_value - total_penalty
+	
 
-	return objective_value, total_penalty, constraint_violation
+	return tight_objective_value, objective_value, total_penalty, constraint_violation
 
 
 #================================================================================================
 # Calculate the average and the best objective values and the best solution 
 #================================================================================================
 def cal_avg_best_sol(self, angles):
-	shots							= self.Params.QAOA_Num_Shots
+	shots							= float(self.Params.QAOA_Num_Shots)
 
 	sum_obj_value					= 0.0
+	sum_tight_obj_value				= 0.0
+	sum_rqubo_tight_obj_value		= 0.0
+
 	sum_total_penalty 				= 0.0
+	sum_rqubo_total_penalty 		= 0.0
 	sum_constraint_violation 		= 0.0
 
 	sum_pure_feasible_obj_value 	= 0.0
 	pure_feasible_count 			= 0.0
 
+
+
 	self.histogram 					= {num: 0 for num in range(len(self.graph.edges))}
 
 	for (string_solution, count) in self.counts.items():
-		sorted_solution 			= convert_string_sol_to_sorted_sol(self, string_solution)
-		obj_value, total_penalty, constraint_violation 	= cal_obj_from_sol(self, sorted_solution)
+		sorted_solution, rqubo_sorted_solution			= convert_string_sol_to_sorted_sol(self, string_solution)
+		tight_obj_value, obj_value, total_penalty, constraint_violation 	= cal_obj_from_sol(self, sorted_solution)
+		temp_method 				= self.Params.Method
+		self.Params.Method 			= "R-QUBO"
+
+		rqubo_tight_obj_value,  rqubo_tight_total_penalty		= (tight_obj_value, total_penalty )if temp_method == "R-QUBO" else cal_obj_from_sol(self, rqubo_sorted_solution)[1:3]
+		self.Params.Method 			= temp_method
+
+
+		count 					 	= int(count * shots) if count < 1 else count
 
 		if total_penalty == 0.0:
 			pure_feasible_count 		= pure_feasible_count + count
@@ -202,7 +225,11 @@ def cal_avg_best_sol(self, angles):
 
 		
 		sum_obj_value				= sum_obj_value + count * obj_value
+		sum_tight_obj_value 		= sum_tight_obj_value + count * tight_obj_value
+		sum_rqubo_tight_obj_value 	= sum_rqubo_tight_obj_value + count * rqubo_tight_obj_value
+
 		sum_total_penalty 			= sum_total_penalty + count * total_penalty
+		sum_rqubo_total_penalty 	= sum_rqubo_total_penalty + count *rqubo_tight_total_penalty
 		sum_constraint_violation 	= sum_constraint_violation + count * constraint_violation
 
 		self.histogram[obj_value]	= self.histogram.get(obj_value, 0) + 100 * count/shots
@@ -212,26 +239,50 @@ def cal_avg_best_sol(self, angles):
 			self.qaoa_best_solution 	= deepcopy(sorted_solution)
 
 
-	self.qaoa_avg_obj_value 				= sum_obj_value / float(shots)
-	self.qaoa_avg_total_penalty  			= sum_total_penalty / float(shots)
-	self.qaoa_avg_constraint_violation  	= sum_constraint_violation / float(shots)
+	
+
+	self.qaoa_avg_obj_value 				= sum_obj_value / shots
+	self.qaoa_avg_tight_obj_value			= sum_tight_obj_value / shots
+	self.qaoa_avg_rqubo_tight_obj_value		= sum_rqubo_tight_obj_value / shots
+
+	self.qaoa_avg_total_penalty  			= sum_total_penalty / shots
+	self.qaoa_avg_rqubo_total_penalty  		= sum_rqubo_total_penalty / shots
+	self.qaoa_avg_constraint_violation  	= sum_constraint_violation / shots
 
 	self.qaoa_avg_pure_feasible_obj_value 	= sum_pure_feasible_obj_value / pure_feasible_count if pure_feasible_count != 0 else "NA"
-	self.qaoa_pure_feasible_percentage		= pure_feasible_count / float(shots) * 100
+	self.qaoa_pure_feasible_percentage		= pure_feasible_count / shots * 100
+
+
+	biased_sample 							= {value - self.qaoa_avg_obj_value: count for (value, count) in self.histogram.items()}
+	biased_sample_2 						= sum(count * value**2 for (value, count) in  biased_sample.items() ) / shots
+	biased_sample_3 						= sum(count * value**3 for (value, count) in  biased_sample.items() ) / shots
+
+	self.qaoa_skewness 						= np.sqrt(shots * (shots - 1)) / (shots - 1) * (biased_sample_3) / np.sqrt(biased_sample_2)**3
 
 	if self.qaoa_best_avg_obj_value < self.qaoa_avg_obj_value:
 		self.qaoa_best_avg_obj_value 				= self.qaoa_avg_obj_value
+		self.qaoa_best_avg_tight_obj_value			= self.qaoa_avg_tight_obj_value
+		self.qaoa_best_avg_rqubo_tight_obj_value	= self.qaoa_avg_rqubo_tight_obj_value
+
 		self.qaoa_best_avg_total_penalty 			= self.qaoa_avg_total_penalty
+		self.qaoa_best_avg_rqubo_total_penalty 		= self.qaoa_avg_rqubo_total_penalty
 		self.qaoa_best_avg_constraint_violation 	= self.qaoa_avg_constraint_violation
 
 		self.qaoa_best_avg_pure_feasible_obj_value	= self.qaoa_avg_pure_feasible_obj_value
 		self.qaoa_best_pure_feasible_percentage 	= self.qaoa_pure_feasible_percentage
 
+		self.qaoa_best_skewness 					= self.qaoa_skewness
+		self.best_angles							= angles
+		self.best_histogram 						= self.histogram
 
-		self.best_angles					= angles
-		self.best_histogram 				= self.histogram
+		self.best_counts 							= self.counts
 
-		self.best_counts 					= self.counts
+	else:
+		self.qaoa_best_ev_improved 					= False
+
+
+
+		
 	
 
 	self.qaoa_std_obj_value 					= np.sqrt(sum([(key - self.qaoa_avg_obj_value)**2 * value for (key, value) in self.histogram.items()])/(shots - 1))	
@@ -242,17 +293,17 @@ def cal_avg_best_sol(self, angles):
 # Calculate the average and the best objective values and the best solution 
 #================================================================================================
 def cal_avg_best_sol_feasible(self):
-	shots							= self.Params.QAOA_Num_Shots
+	shots							= float(self.Params.QAOA_Num_Shots)
 
 	feasible_sum_obj_value			= 0.0
 	self.feasible_histogram 		= {num: 0 for num in range(len(self.graph.edges))}
 
 
 	for (string_solution, count) in self.best_counts.items():
-		sorted_solution 			= convert_string_sol_to_sorted_sol(self, string_solution)
+		sorted_solution, rqubo_sorted_solution 	= convert_string_sol_to_sorted_sol(self, string_solution)
 
 		feasible_solution						= make_sol_feasible(self, sorted_solution)
-		feasible_obj_value,	total_penalty, constraint_violation		= cal_obj_from_sol(self, feasible_solution)
+		tight_obj_value, feasible_obj_value,	total_penalty, constraint_violation		= cal_obj_from_sol(self, feasible_solution)
 		feasible_sum_obj_value					= feasible_sum_obj_value + count * feasible_obj_value
 
 
@@ -264,7 +315,7 @@ def cal_avg_best_sol_feasible(self):
 			self.qaoa_feasible_best_solution 	= deepcopy(feasible_solution)
 
 
-	self.qaoa_feasible_avg_obj_value 		= feasible_sum_obj_value / float(shots)
+	self.qaoa_feasible_avg_obj_value 		= feasible_sum_obj_value / shots
 
 
 
@@ -292,14 +343,14 @@ def gate_i_zz(self, angle, qubits):
 	self.qaoa_circuit.append(U1, [q2])
 
 #================================================================================================
-# Apply gate exp(i * angle * angle (I - Z)) on the QAOA circuit
+# Apply gate exp(i * angle * (I - Z)) on the QAOA circuit
 #================================================================================================
 def gate_i_z_1(self, angle, qubit):
 	U1 		= U1Gate(angle)
 	self.qaoa_circuit.append(U1, qubit)
 
 #================================================================================================
-# Apply gate exp(i * angle * angle (I - Z)(I - Z)) on the QAOA circuit
+# Apply gate exp(i * angle * (I - Z)(I - Z)) on the QAOA circuit
 #================================================================================================
 def gate_i_z_2(self, angle, qubits):
 	CU1 		= U1Gate(angle).control(1)

@@ -9,13 +9,21 @@ import time
 #================================================================================================
 def solve_max_k_cut_qubo(self):
 
-	self.gurobi_start_time 			= time.time()
+	self.gurobi_start_time 			= time.time()	
 
-	penalty_coef	= {vertex: max(self.graph.nodes[vertex]["pos-weight"]/self.num_partitions, -self.graph.nodes[vertex]["neg-weight"]/2) for vertex in self.vertices}
+	if self.Params.Naive == True:
+		temp			= {vertex: (self.graph.nodes[vertex]["pos-weight"] -  self.graph.nodes[vertex]["neg-weight"]) for vertex in self.vertices}
+	else:
+		temp			= {vertex: max(self.graph.nodes[vertex]["pos-weight"]/self.num_partitions, -self.graph.nodes[vertex]["neg-weight"]/2) * 1.01 for vertex in self.vertices}
 	
-	# penalty_coef[1] = 1
-	penalty_coef[1] -= 1e-2
-	print(penalty_coef)
+
+
+	if self.Params.Adjusted_Penalty == True:
+		penalty_coef	= {vertex: max((self.graph.nodes[vertex]["pos-weight"] - self.graph.nodes[vertex]["neg-weight"])/len(list(self.graph.neighbors(vertex))), temp[vertex]) for vertex in self.vertices}
+	else:
+		penalty_coef	= temp
+	
+	
 
 	#--------------------------------------------------------------------------------------------
 	# Model initialization
@@ -32,7 +40,6 @@ def solve_max_k_cut_qubo(self):
 			#-----------------------------------------------------------------------------------
 			x 		= model.addVars(self.vertices, self.partitions, vtype=GRB.BINARY, name="x")
 
-			self.fixed_vertex = 3
 			self.graph.nodes[self.fixed_vertex]["partition"] = 0
 
 
@@ -74,7 +81,7 @@ def solve_max_k_cut_qubo(self):
 			model.Params.timeLimit 			= self.Params.Gurobi_TimeLimit
 
 			# model.Params.LogToConsole 		= 0
-			model.Params.LogFile 			= self.filename
+			model.Params.LogFile 			= self.filename[:-4] + "_log.txt"
 			# model.Params.OutputFlag 		= 0
 			
 			model 							= model if self.Params.Relaxed == False else model.relax()
@@ -111,19 +118,11 @@ def solve_max_k_cut_qubo(self):
 			# Obtain a binary solution
 			#-----------------------------------------------------------------------------------
 			solution						= {vertex: [model.getVarByName("x["+str(vertex)+","+str(partition)+"]").x for partition in self.partitions] for vertex in self.vertices}
-			print(solution)
-			print(hkj)
+			
 			
 			vertices_zero_assignment 					= [vertex for vertex in self.vertices if sum(solution[vertex]) == 0]
 			vertices_more_than_one_assignment			= [vertex for vertex in self.vertices if sum(solution[vertex]) > 1]
-			
-			for vertex in vertices_zero_assignment:
-				num_assigned_partition 					= sum(solution[vertex])
-				weight_partition_based_neighbors 		= {partition: sum([self.graph.edges[vertex, neighbor]["weight"] for neighbor in self.graph.neighbors(vertex) if solution[neighbor][partition] == 1]) for partition in self.partitions}
-				selected_partition 						= min(weight_partition_based_neighbors, key=weight_partition_based_neighbors.get)
-				solution[vertex] 						= [1 if partition == selected_partition else 0 for partition in self.partitions]
 
-				print(vertex, "z")
 			while vertices_more_than_one_assignment:
 				vertex 	 								= vertices_more_than_one_assignment[0]
 				similar_inf_vertices					= [neighbor for neighbor in vertices_more_than_one_assignment[1:] if str(solution[vertex]) == str(solution[neighbor]) ]
@@ -132,9 +131,17 @@ def solve_max_k_cut_qubo(self):
 				weight_partition 						= {partition: sum(self.graph.edges[edge[0], edge[1]]["weight"] * solution[edge[0]][partition] * solution[edge[1]][partition] for edge in inf_edges) for partition in self.partitions}
 
 				selected_partition 						= min(weight_partition, key=weight_partition.get)
-				solution[vertex] 						= [1 if partition == selected_partition else 0 for partition in self.partitions]
+				
+				for vertex in similar_inf_vertices:
+					solution[vertex] 					= [1 if partition == selected_partition else 0 for partition in self.partitions]
+
 				vertices_more_than_one_assignment 		= list(set(vertices_more_than_one_assignment) - set(similar_inf_vertices))
-				print(vertex, "o")
+
+			for vertex in vertices_zero_assignment:
+				num_assigned_partition 					= sum(solution[vertex])
+				weight_partition_based_neighbors 		= {partition: sum([self.graph.edges[vertex, neighbor]["weight"] for neighbor in self.graph.neighbors(vertex) if solution[neighbor][partition] == 1]) for partition in self.partitions}
+				selected_partition 						= min(weight_partition_based_neighbors, key=weight_partition_based_neighbors.get)
+				solution[vertex] 						= [1 if partition == selected_partition else 0 for partition in self.partitions]
 
 	for vertex in self.vertices:
 		for partition in self.partitions:
