@@ -19,7 +19,7 @@ git clone https://github.com/QCOL-LU/MaxKcut.git
 python3.9 -m venv env
 source env/bin/activate
 pip3.9 install -e MaxKcut/max_k_cut
-pip3 install qiskit numpy scipy matplotlib networkx
+pip3 install qiskit numpy scipy matplotlib networkx qiskit-ibm-runtime
 ```
 
 2- Follow the instruction provided [here](https://support.gurobi.com/hc/en-us/articles/360044290292-How-do-I-install-Gurobi-for-Python-) to install Gurobi solver.
