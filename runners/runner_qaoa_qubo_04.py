@@ -56,7 +56,7 @@ problem.Params.QAOA_Optimize 			= True
 problem.Params.QAOA_Scipy_Optimizer 	= "COBYLA" #Nelder-Mead brute
 # problem.Params.Penalty_Increase 		= penalty_increase
 
-problem.Params.QAOA_Angles				= [1.13, 1.64] #[0.26, 0.38] beta, gamma
+problem.Params.QAOA_Angles				= [0.24, 1.18] #[0.26, 0.38] beta, gamma
 problem.Params.QAOA_Num_Levels			= 1
 problem.Params.QAOA_Num_Shots			= 10000
 problem.Params.QAOA_Brute_Num_Samples 	= 50

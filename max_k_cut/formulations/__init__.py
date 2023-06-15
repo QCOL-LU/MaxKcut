@@ -10,3 +10,4 @@ from ._max_k_cut_qubo import *
 from ._max_k_cut_rqubo import *
 
 from ._max_k_cut_misdo import *
+from ._max_k_cut_misdo2 import *

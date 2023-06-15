@@ -1,0 +1,71 @@
+Problem
+  Name                   : MISDO2          
+  Objective sense        : maximize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 2775            
+  Affine conic cons.     : 0               
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 1               
+  Matrix variables       : 1               
+  Integer variables      : 0               
+
+Optimizer started.
+Presolve started.
+Linear dependency checker started.
+Linear dependency checker terminated.
+Eliminator started.
+Freed constraints in eliminator : 0
+Eliminator terminated.
+Eliminator - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - number                 : 0               
+Presolve terminated. Time: 0.00    
+GP based matrix reordering started.
+GP based matrix reordering terminated.
+Problem
+  Name                   : MISDO2          
+  Objective sense        : maximize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 2775            
+  Affine conic cons.     : 0               
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 1               
+  Matrix variables       : 1               
+  Integer variables      : 0               
+
+Optimizer  - threads                : 10              
+Optimizer  - solved problem         : the primal      
+Optimizer  - Constraints            : 2775
+Optimizer  - Cones                  : 0
+Optimizer  - Scalar variables       : 2701              conic                  : 0               
+Optimizer  - Semi-definite variables: 1                 scalarized             : 2775            
+Factor     - setup time             : 0.18              dense det. time        : 0.00            
+Factor     - ML order time          : 0.11              GP order time          : 0.00            
+Factor     - nonzeros before factor : 3.85e+06          after factor           : 3.85e+06        
+Factor     - dense dim.             : 0                 flops                  : 7.15e+09        
+ITE PFEAS    DFEAS    GFEAS    PRSTATUS   POBJ              DOBJ              MU       TIME  
+0   1.0e+00  1.0e+00  1.0e+00  0.00e+00   2.257500000e+02   2.257500000e+02   1.0e+00  0.19  
+1   1.5e-01  1.5e-01  1.0e-01  7.00e-01   2.316591515e+02   2.314318346e+02   1.5e-01  0.29  
+2   2.3e-02  2.3e-02  3.0e-03  1.02e+00   2.603572380e+02   2.603695613e+02   2.3e-02  0.43  
+3   1.0e-02  1.0e-02  1.1e-03  9.58e-01   2.663598418e+02   2.663629932e+02   1.0e-02  0.52  
+4   1.6e-03  1.6e-03  8.9e-05  9.71e-01   2.699590407e+02   2.699583811e+02   1.6e-03  0.63  
+5   8.2e-04  8.2e-04  3.1e-05  9.94e-01   2.702850520e+02   2.702847114e+02   8.2e-04  0.71  
+6   2.7e-04  2.7e-04  6.1e-06  9.94e-01   2.705074640e+02   2.705073474e+02   2.7e-04  0.81  
+7   2.9e-05  2.9e-05  2.1e-07  9.96e-01   2.706025989e+02   2.706025864e+02   2.9e-05  0.93  
+8   1.8e-05  1.8e-05  9.9e-08  9.98e-01   2.706071913e+02   2.706071835e+02   1.8e-05  1.02  
+9   8.9e-06  8.9e-06  3.6e-08  9.98e-01   2.706108439e+02   2.706108399e+02   8.9e-06  1.12  
+10  7.5e-07  7.5e-07  8.7e-10  9.99e-01   2.706140698e+02   2.706140695e+02   7.5e-07  1.24  
+11  4.4e-07  4.4e-07  4.0e-10  1.00e+00   2.706142005e+02   2.706142003e+02   4.4e-07  1.33  
+12  6.8e-08  6.8e-08  2.4e-11  1.00e+00   2.706143465e+02   2.706143465e+02   6.8e-08  1.43  
+13  2.5e-08  2.6e-08  5.5e-12  1.00e+00   2.706143629e+02   2.706143629e+02   2.5e-08  1.51  
+14  3.4e-09  3.6e-09  2.7e-13  1.00e+00   2.706143713e+02   2.706143713e+02   3.4e-09  1.61  
+Optimizer terminated. Time: 1.62    
+
+
+Interior-point solution summary
+  Problem status  : PRIMAL_AND_DUAL_FEASIBLE
+  Solution status : OPTIMAL
+  Primal.  obj: 2.7061437130e+02    nrm: 1e+00    Viol.  con: 2e-09    var: 0e+00    barvar: 0e+00  
+  Dual.    obj: 2.7061437130e+02    nrm: 2e+02    Viol.  con: 1e-08    var: 0e+00    barvar: 5e-09  

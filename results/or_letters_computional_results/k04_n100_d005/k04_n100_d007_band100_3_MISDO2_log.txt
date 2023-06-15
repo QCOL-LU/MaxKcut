@@ -1,0 +1,79 @@
+Problem
+  Name                   : MISDO2          
+  Objective sense        : maximize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 5050            
+  Affine conic cons.     : 0               
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 1               
+  Matrix variables       : 1               
+  Integer variables      : 0               
+
+Optimizer started.
+Presolve started.
+Linear dependency checker started.
+Linear dependency checker terminated.
+Eliminator started.
+Freed constraints in eliminator : 0
+Eliminator terminated.
+Eliminator - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - number                 : 0               
+Presolve terminated. Time: 0.00    
+GP based matrix reordering started.
+GP based matrix reordering terminated.
+Problem
+  Name                   : MISDO2          
+  Objective sense        : maximize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 5050            
+  Affine conic cons.     : 0               
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 1               
+  Matrix variables       : 1               
+  Integer variables      : 0               
+
+Optimizer  - threads                : 10              
+Optimizer  - solved problem         : the primal      
+Optimizer  - Constraints            : 5050
+Optimizer  - Cones                  : 0
+Optimizer  - Scalar variables       : 4950              conic                  : 0               
+Optimizer  - Semi-definite variables: 1                 scalarized             : 5050            
+Factor     - setup time             : 0.88              dense det. time        : 0.00            
+Factor     - ML order time          : 0.49              GP order time          : 0.00            
+Factor     - nonzeros before factor : 1.28e+07          after factor           : 1.28e+07        
+Factor     - dense dim.             : 0                 flops                  : 4.30e+10        
+ITE PFEAS    DFEAS    GFEAS    PRSTATUS   POBJ              DOBJ              MU       TIME  
+0   1.0e+00  1.0e+00  1.0e+00  0.00e+00   1.500000000e+00   1.500000000e+00   1.0e+00  0.90  
+1   2.7e-01  2.7e-01  1.7e-01  5.30e-01   1.750630612e+01   1.743888246e+01   2.7e-01  1.45  
+2   1.7e-01  1.7e-01  1.3e-01  4.45e-01   4.960668405e+01   4.932664232e+01   1.7e-01  1.90  
+3   2.5e-02  2.5e-02  5.7e-03  7.82e-01   1.007716552e+02   1.007635799e+02   2.5e-02  2.41  
+4   1.6e-02  1.6e-02  2.8e-03  1.30e+00   1.057263315e+02   1.057204236e+02   1.6e-02  2.81  
+5   2.0e-03  2.0e-03  1.5e-04  1.23e+00   1.134447395e+02   1.134416215e+02   2.0e-03  3.25  
+6   1.4e-03  1.4e-03  9.0e-05  8.92e-01   1.142053690e+02   1.142031755e+02   1.4e-03  3.67  
+7   6.7e-04  6.7e-04  3.0e-05  9.06e-01   1.148698773e+02   1.148688837e+02   6.7e-04  4.12  
+8   1.9e-04  1.9e-04  4.6e-06  9.16e-01   1.153874300e+02   1.153871760e+02   1.9e-04  4.57  
+9   1.2e-04  1.2e-04  2.3e-06  8.68e-01   1.155073152e+02   1.155071446e+02   1.2e-04  5.00  
+10  8.2e-05  8.2e-05  1.3e-06  8.74e-01   1.155649509e+02   1.155648338e+02   8.2e-05  5.41  
+11  4.1e-05  4.1e-05  4.9e-07  8.57e-01   1.156472193e+02   1.156471539e+02   4.1e-05  5.82  
+12  2.6e-05  2.6e-05  2.5e-07  8.97e-01   1.156815375e+02   1.156814952e+02   2.6e-05  6.17  
+13  1.4e-05  1.4e-05  1.0e-07  8.90e-01   1.157076892e+02   1.157076631e+02   1.4e-05  6.52  
+14  6.1e-06  6.1e-06  3.1e-08  8.33e-01   1.157350426e+02   1.157350307e+02   6.1e-06  6.92  
+15  2.1e-06  2.1e-06  6.3e-09  9.65e-01   1.157485418e+02   1.157485374e+02   2.1e-06  7.41  
+16  6.3e-07  6.3e-07  1.0e-09  9.94e-01   1.157559087e+02   1.157559073e+02   6.3e-07  7.89  
+17  4.1e-07  4.1e-07  5.6e-10  9.99e-01   1.157567479e+02   1.157567469e+02   4.1e-07  8.25  
+18  2.6e-07  2.6e-07  2.7e-10  1.00e+00   1.157573517e+02   1.157573511e+02   2.6e-07  8.62  
+19  2.0e-07  2.0e-07  1.9e-10  1.00e+00   1.157575764e+02   1.157575759e+02   2.0e-07  9.08  
+20  6.4e-08  6.4e-08  3.5e-11  1.00e+00   1.157580678e+02   1.157580676e+02   6.4e-08  9.59  
+21  4.4e-08  4.4e-08  2.0e-11  1.00e+00   1.157581269e+02   1.157581268e+02   4.4e-08  9.98  
+22  7.7e-09  7.7e-09  1.4e-12  1.00e+00   1.157582367e+02   1.157582367e+02   7.7e-09  10.58 
+Optimizer terminated. Time: 10.59   
+
+
+Interior-point solution summary
+  Problem status  : PRIMAL_AND_DUAL_FEASIBLE
+  Solution status : OPTIMAL
+  Primal.  obj: 1.1575823668e+02    nrm: 1e+00    Viol.  con: 6e-09    var: 0e+00    barvar: 0e+00  
+  Dual.    obj: 1.1575823666e+02    nrm: 2e+00    Viol.  con: 4e-08    var: 0e+00    barvar: 2e-08  

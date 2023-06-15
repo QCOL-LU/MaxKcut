@@ -79,5 +79,5 @@ class Parameters():
 		self.Group 							= 'lehigh-universit'	# Confidential *
 		self.Project 						= 'qc-for-comb-opt'		# Confidential *
 		self.QC_Name 						= 'ibm_washington' #'ibmq_qasm_simulator'		#'ibmq_montreal'	ibm_washington	ibm_sherbrooke # Confidential * 
-		self.Token 							= ""
+		self.Token 							= "cb03fdfa5944bde5276681dba3d7c581b603da237f410af03524ea27fc94cb97b1d98c4190b66808382dcf517015bc36968dc0f4426783889390c8265701f6cc"
 

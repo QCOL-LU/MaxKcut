@@ -1,0 +1,70 @@
+Problem
+  Name                   : MISDO2          
+  Objective sense        : maximize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 3828            
+  Affine conic cons.     : 0               
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 1               
+  Matrix variables       : 1               
+  Integer variables      : 0               
+
+Optimizer started.
+Presolve started.
+Linear dependency checker started.
+Linear dependency checker terminated.
+Eliminator started.
+Freed constraints in eliminator : 0
+Eliminator terminated.
+Eliminator - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - number                 : 0               
+Presolve terminated. Time: 0.00    
+GP based matrix reordering started.
+GP based matrix reordering terminated.
+Problem
+  Name                   : MISDO2          
+  Objective sense        : maximize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 3828            
+  Affine conic cons.     : 0               
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 1               
+  Matrix variables       : 1               
+  Integer variables      : 0               
+
+Optimizer  - threads                : 10              
+Optimizer  - solved problem         : the primal      
+Optimizer  - Constraints            : 3828
+Optimizer  - Cones                  : 0
+Optimizer  - Scalar variables       : 3741              conic                  : 0               
+Optimizer  - Semi-definite variables: 1                 scalarized             : 3828            
+Factor     - setup time             : 0.36              dense det. time        : 0.00            
+Factor     - ML order time          : 0.23              GP order time          : 0.00            
+Factor     - nonzeros before factor : 7.33e+06          after factor           : 7.33e+06        
+Factor     - dense dim.             : 0                 flops                  : 1.88e+10        
+ITE PFEAS    DFEAS    GFEAS    PRSTATUS   POBJ              DOBJ              MU       TIME  
+0   1.0e+00  1.0e+00  1.0e+00  0.00e+00   3.045000000e+02   3.045000000e+02   1.0e+00  0.38  
+1   1.7e-01  1.7e-01  1.2e-01  6.91e-01   3.075039942e+02   3.072358067e+02   1.7e-01  0.59  
+2   5.6e-02  5.6e-02  2.1e-02  1.01e+00   3.452635465e+02   3.452064330e+02   5.6e-02  0.77  
+3   1.1e-02  1.1e-02  1.6e-03  9.58e-01   3.657226220e+02   3.657153571e+02   1.1e-02  0.98  
+4   1.4e-03  1.4e-03  7.4e-05  9.25e-01   3.741331183e+02   3.741324923e+02   1.4e-03  1.21  
+5   9.0e-04  9.0e-04  3.8e-05  9.79e-01   3.746550407e+02   3.746546079e+02   9.0e-04  1.37  
+6   4.9e-04  4.9e-04  1.5e-05  9.90e-01   3.750524712e+02   3.750522168e+02   4.9e-04  1.53  
+7   7.6e-05  7.6e-05  9.6e-07  9.96e-01   3.754168862e+02   3.754168371e+02   7.6e-05  1.72  
+8   4.3e-05  4.3e-05  4.2e-07  1.00e+00   3.754476938e+02   3.754476651e+02   4.3e-05  1.89  
+9   6.9e-06  6.9e-06  2.7e-08  1.00e+00   3.754794861e+02   3.754794813e+02   6.9e-06  2.19  
+10  1.0e-06  1.0e-06  1.6e-09  1.00e+00   3.754844047e+02   3.754844039e+02   1.0e-06  2.38  
+11  1.5e-07  1.5e-07  8.4e-11  1.00e+00   3.754851030e+02   3.754851029e+02   1.5e-07  2.66  
+12  2.2e-08  2.2e-08  4.7e-12  1.00e+00   3.754852026e+02   3.754852025e+02   2.2e-08  2.86  
+13  1.2e-09  1.4e-09  5.8e-14  1.00e+00   3.754852181e+02   3.754852181e+02   1.1e-09  3.05  
+Optimizer terminated. Time: 3.05    
+
+
+Interior-point solution summary
+  Problem status  : PRIMAL_AND_DUAL_FEASIBLE
+  Solution status : OPTIMAL
+  Primal.  obj: 3.7548521809e+02    nrm: 1e+00    Viol.  con: 8e-10    var: 0e+00    barvar: 0e+00  
+  Dual.    obj: 3.7548521809e+02    nrm: 3e+02    Viol.  con: 5e-09    var: 0e+00    barvar: 2e-09  

@@ -18,7 +18,7 @@ def solve_max_k_cut_bqo(self):
 		#--------------------------------------------------------------------------------------------
 		# Construct the extended chordal graph
 		#--------------------------------------------------------------------------------------------
-		chordal_graph, 	H					= complete_to_chordal_graph(self.graph)
+		chordal_graph, 	H					= nx.complete_to_chordal_graph(self.graph)
 		maximal_cliques 					= list(nx.find_cliques(chordal_graph))
 		chordal_graph_edges 				= [ (min(edge), max(edge)) for edge in chordal_graph.edges()]
 		

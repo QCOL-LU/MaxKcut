@@ -120,7 +120,7 @@ def print_paramters(self):
 
 			
 
-		if self.Params.Method not in ["QUBO", "R-QUBO", "PUBO"]:
+		if self.Params.Method not in ["QUBO", "R-QUBO", "PUBO", "MISDO", "MISDO2"]:
 
 			self.my_print(file, "{:30}{:.0f}".format("Gurobi Time Limit:", self.Params.Gurobi_TimeLimit) )
 
@@ -307,7 +307,7 @@ def print_gurobi_results_summary(self):
 
 			self.my_print(file, "{:<30}{:}".format('Model status: ', self.gurobi_model_status) )
 			self.my_print(file, "{:<30}{:.0f}".format('Explored B&B nodes:',  self.gurobi_BB_nodes) )
-			self.my_print(file, "{:<30}{:.1f}".format('Gurobi running time:', self.gurobi_end_time - self.gurobi_start_time) )
+			self.my_print(file, "{:<30}{:.1f}".format('Solver running time:', self.gurobi_end_time - self.gurobi_start_time) )
 			
 			self.my_print(file)
 			self.my_print(file, "{:<30}{:.2f}".format('Optimality gap (%): ', 100*self.gurobi_MIPGap) )	
@@ -325,6 +325,11 @@ def print_gurobi_results_summary(self):
 
 
 
+def print_error_message(self):
+	with open(self.filename, 'a') as file:
+		self.my_print(file)
+		self.my_print(file, "An error occurred in the IBM quantum computer!")
+		self.my_print(file)
 
 
 

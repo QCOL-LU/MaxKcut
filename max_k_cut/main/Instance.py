@@ -193,6 +193,7 @@ class Instance(Parameters):
 	from ..formulations._max_k_cut_rbqo import solve_max_k_cut_rbqo
 
 	from ..formulations._max_k_cut_misdo import solve_max_k_cut_misdo
+	from ..formulations._max_k_cut_misdo2 import solve_max_k_cut_misdo2
 
 	from ..formulations._max_k_cut_qubo import solve_max_k_cut_qubo
 	from ..formulations._max_k_cut_rqubo import solve_max_k_cut_rqubo
@@ -407,6 +408,8 @@ class Instance(Parameters):
 			elif self.Params.Method == "C-RP-MILO": 					solver 		= solve_max_k_cut_crpmilo
 
 			elif self.Params.Method == "MISDO":							solver 		= solve_max_k_cut_misdo
+
+			elif self.Params.Method == "MISDO2":						solver 		= solve_max_k_cut_misdo2
 
 			elif self.Params.Method == "C-QUBO": 						solver 		= solve_max_k_cut_qubo
 

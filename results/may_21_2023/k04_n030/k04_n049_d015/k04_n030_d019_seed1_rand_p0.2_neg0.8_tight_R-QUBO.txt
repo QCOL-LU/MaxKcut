@@ -1,0 +1,99 @@
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           30
+Number of edges:              86
+Number of partitions:         4
+
+Density (%):                  20
+Name of instance:             seed1_rand_p0.2_neg0.8_tight
+
+Is planar:                    False
+Is Chordal:                   False
+
+Triangles Density (%):        0
+Min_Maximal_Matching (%):     80
+Global Efficiency:            0.55
+
+Core Number:                  5
+Largest Component Size:       30
+
+Cut Vertices Number:          1
+Largest BiComponent Size:     29
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       R-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+Quantum Computer:             ibm_washington
+Naive Penalty Coef:           False
+Adjusted Penalty Coef:        False
+Penalty Multiplier:           1
+
+QAOA Num Levels:              1
+QAOA Num Shots:               10000
+Gates Error Probability:      0.0
+
+QAOA Optimize:                True
+QAOA Scipy Optimizer:         COBYLA
+QAOA Optimizer Tol:           0.001
+QAOA Angles:                  [0.2, 0.3]
+==================================================
+
+   iter        avg-obj        best avg-obj       best-obj         tight-obj        rqubo-obj           std           skewness      time          gamma            beta      
+*     0     -9.34038e+01     -9.34038e+01     -5.10000e+01     -9.34038e+01     -9.34038e+01      2.81330e+00     -1.68047e+01  19426s           0.30             0.20      
+      1     -9.84898e+01     -9.34038e+01     -5.10000e+01     -9.84898e+01     -9.84898e+01      2.94536e+00     -1.69128e+01  19542s           0.30             1.20      
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           30
+Number of edges:              86
+Number of partitions:         4
+
+Density (%):                  20
+Name of instance:             seed1_rand_p0.2_neg0.8_tight
+
+Is planar:                    False
+Is Chordal:                   False
+
+Triangles Density (%):        0
+Min_Maximal_Matching (%):     80
+Global Efficiency:            0.55
+
+Core Number:                  5
+Largest Component Size:       30
+
+Cut Vertices Number:          1
+Largest BiComponent Size:     29
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       R-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+Quantum Computer:             ibm_sherbrooke
+Naive Penalty Coef:           False
+Adjusted Penalty Coef:        False
+Penalty Multiplier:           1
+
+QAOA Num Levels:              1
+QAOA Num Shots:               10000
+Gates Error Probability:      0.0
+
+QAOA Optimize:                True
+QAOA Scipy Optimizer:         COBYLA
+QAOA Optimizer Tol:           0.001
+QAOA Angles:                  [0.2, 0.3]
+==================================================
+
+   iter        avg-obj        best avg-obj       best-obj         tight-obj        rqubo-obj           std           skewness      time          gamma            beta      
+*     0     -9.97940e+01     -9.97940e+01     -6.70000e+01     -9.97940e+01     -9.97940e+01      2.98685e+00     -1.68667e+01  621083s           0.30             0.20      

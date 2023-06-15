@@ -1,0 +1,70 @@
+Problem
+  Name                   : MISDO2          
+  Objective sense        : maximize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 12880           
+  Affine conic cons.     : 0               
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 1               
+  Matrix variables       : 1               
+  Integer variables      : 0               
+
+Optimizer started.
+Presolve started.
+Linear dependency checker started.
+Linear dependency checker terminated.
+Eliminator started.
+Freed constraints in eliminator : 0
+Eliminator terminated.
+Eliminator - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - number                 : 0               
+Presolve terminated. Time: 0.01    
+GP based matrix reordering started.
+GP based matrix reordering terminated.
+Problem
+  Name                   : MISDO2          
+  Objective sense        : maximize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 12880           
+  Affine conic cons.     : 0               
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 1               
+  Matrix variables       : 1               
+  Integer variables      : 0               
+
+Optimizer  - threads                : 10              
+Optimizer  - solved problem         : the primal      
+Optimizer  - Constraints            : 12880
+Optimizer  - Cones                  : 0
+Optimizer  - Scalar variables       : 12720             conic                  : 0               
+Optimizer  - Semi-definite variables: 1                 scalarized             : 12880           
+Factor     - setup time             : 4.33              dense det. time        : 0.00            
+Factor     - ML order time          : 2.74              GP order time          : 0.01            
+Factor     - nonzeros before factor : 8.30e+07          after factor           : 8.30e+07        
+Factor     - dense dim.             : 0                 flops                  : 7.13e+11        
+ITE PFEAS    DFEAS    GFEAS    PRSTATUS   POBJ              DOBJ              MU       TIME  
+0   1.0e+00  1.0e+02  1.0e+00  0.00e+00   5.931866667e+04   5.931866667e+04   1.0e+00  4.35  
+1   8.3e-01  8.5e+01  9.1e-01  -8.78e-01  4.494182746e+04   4.494163276e+04   8.3e-01  8.39  
+2   5.5e-01  5.7e+01  7.2e-01  -9.32e-01  4.799958440e+04   4.799886833e+04   5.5e-01  12.31 
+3   4.5e-01  4.6e+01  6.0e-01  -7.38e-01  5.155093772e+04   5.155007424e+04   4.5e-01  16.00 
+4   2.4e-01  2.5e+01  3.0e-01  -4.66e-01  6.599694713e+04   6.599604481e+04   2.4e-01  19.69 
+5   8.4e-02  8.6e+00  6.9e-02  2.17e-01   8.020961861e+04   8.020921302e+04   8.4e-02  23.54 
+6   1.3e-02  1.3e+00  4.7e-03  7.34e-01   8.629621347e+04   8.629612668e+04   1.3e-02  27.17 
+7   2.8e-03  2.8e-01  4.9e-04  9.43e-01   8.684295021e+04   8.684292920e+04   2.8e-03  30.65 
+8   3.3e-04  3.3e-02  2.1e-05  9.83e-01   8.695530301e+04   8.695530013e+04   3.3e-04  34.65 
+9   5.4e-05  5.6e-03  1.4e-06  9.97e-01   8.696590556e+04   8.696590506e+04   5.4e-05  38.51 
+10  8.6e-06  8.8e-04  9.1e-08  1.00e+00   8.696762231e+04   8.696762223e+04   8.6e-06  42.36 
+11  1.3e-06  1.4e-04  5.5e-09  1.00e+00   8.696788839e+04   8.696788838e+04   1.3e-06  46.07 
+12  1.5e-07  1.5e-05  2.1e-10  1.00e+00   8.696793121e+04   8.696793121e+04   1.5e-07  49.70 
+13  3.8e-09  4.9e-07  8.4e-13  1.00e+00   8.696793649e+04   8.696793649e+04   3.8e-09  53.42 
+Optimizer terminated. Time: 53.43   
+
+
+Interior-point solution summary
+  Problem status  : PRIMAL_AND_DUAL_FEASIBLE
+  Solution status : OPTIMAL
+  Primal.  obj: 8.6967936491e+04    nrm: 1e+00    Viol.  con: 7e-09    var: 0e+00    barvar: 0e+00  
+  Dual.    obj: 8.6967936491e+04    nrm: 6e+04    Viol.  con: 2e-08    var: 0e+00    barvar: 4e-07  

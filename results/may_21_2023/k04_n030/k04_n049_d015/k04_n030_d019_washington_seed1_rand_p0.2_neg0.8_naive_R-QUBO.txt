@@ -1,0 +1,49 @@
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           30
+Number of edges:              86
+Number of partitions:         4
+
+Density (%):                  20
+Name of instance:             washington_seed1_rand_p0.2_neg0.8_naive
+
+Is planar:                    False
+Is Chordal:                   False
+
+Triangles Density (%):        0
+Min_Maximal_Matching (%):     80
+Global Efficiency:            0.55
+
+Core Number:                  5
+Largest Component Size:       30
+
+Cut Vertices Number:          1
+Largest BiComponent Size:     29
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       R-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+Quantum Computer:             ibm_washington
+Naive Penalty Coef:           True
+Adjusted Penalty Coef:        False
+Penalty Multiplier:           1
+
+QAOA Num Levels:              1
+QAOA Num Shots:               10000
+Gates Error Probability:      0.0
+
+QAOA Optimize:                True
+QAOA Scipy Optimizer:         COBYLA
+QAOA Optimizer Tol:           0.001
+QAOA Angles:                  [0.2, 0.3]
+==================================================
+
+   iter        avg-obj        best avg-obj       best-obj         tight-obj        rqubo-obj           std           skewness      time          gamma            beta      
+*     0     -3.38130e+02     -3.38130e+02     -1.24000e+02     -9.16994e+01     -9.16994e+01      1.19010e+01     -1.71046e+01  42358s           0.30             0.20      

@@ -80,7 +80,7 @@ def solve_max_k_cut_qubo(self):
 			model.Params.Threads			= self.Params.Gurobi_Threads
 			model.Params.timeLimit 			= self.Params.Gurobi_TimeLimit
 
-			# model.Params.LogToConsole 		= 0
+			model.Params.LogToConsole 		= self.Params.Gurobi_LogToConsole 
 			model.Params.LogFile 			= self.filename[:-4] + "_log.txt"
 			# model.Params.OutputFlag 		= 0
 			
@@ -120,15 +120,25 @@ def solve_max_k_cut_qubo(self):
 			solution						= {vertex: [model.getVarByName("x["+str(vertex)+","+str(partition)+"]").x for partition in self.partitions] for vertex in self.vertices}
 			
 			
-			vertices_zero_assignment 					= [vertex for vertex in self.vertices if sum(solution[vertex]) == 0]
-			vertices_more_than_one_assignment			= [vertex for vertex in self.vertices if sum(solution[vertex]) > 1]
+			vertices_zero_assignment 					= [vertex for vertex in self.vertices if sum(solution[vertex]) <= 0.5]
+			vertices_more_than_one_assignment			= [vertex for vertex in self.vertices if sum(solution[vertex]) >= 1.5]
+
+
 
 			while vertices_more_than_one_assignment:
+
 				vertex 	 								= vertices_more_than_one_assignment[0]
-				similar_inf_vertices					= [neighbor for neighbor in vertices_more_than_one_assignment[1:] if str(solution[vertex]) == str(solution[neighbor]) ]
-				inf_edges 								= [edge for edge in self.edges if self.graph.edges[edge]["weight"] < 0 and len(set(edge).intersection(set(similar_inf_vertices))) > 1 ]
-				inf_partitions 							= [partition for partition in self.partitions if solution[vertex][partition] == 1]
-				weight_partition 						= {partition: sum(self.graph.edges[edge[0], edge[1]]["weight"] * solution[edge[0]][partition] * solution[edge[1]][partition] for edge in inf_edges) for partition in self.partitions}
+				similar_inf_vertices					= [neighbor for neighbor in vertices_more_than_one_assignment if str(solution[vertex]) == str(solution[neighbor]) ]
+
+				induced_graph 							= nx.Graph()
+
+				for inf_vertex in similar_inf_vertices:
+					for neighbor in self.graph.neighbors(inf_vertex):
+						if self.graph.edges[(inf_vertex, neighbor)]["weight"] < 0: 
+							induced_graph.add_edge(inf_vertex, neighbor)
+
+				inf_partitions 							= [partition for partition in self.partitions if abs(solution[vertex][partition] - 1) < 1e-6]
+				weight_partition 						= {partition: sum(self.graph.edges[edge[0], edge[1]]["weight"] * solution[edge[0]][partition] * solution[edge[1]][partition] for edge in induced_graph.edges) for partition in inf_partitions}
 
 				selected_partition 						= min(weight_partition, key=weight_partition.get)
 				

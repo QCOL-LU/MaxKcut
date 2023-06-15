@@ -72,6 +72,8 @@ def solve_max_k_cut_qaoa(self):
 	options 						= Options()
 	options.execution.shots 		= self.Params.QAOA_Num_Shots
 
+	self.error_iter 						= 0
+
 	
 	
 	
@@ -91,37 +93,44 @@ def solve_max_k_cut_qaoa(self):
 			self.betas 							= np.array([angles[parameter_values[betas_keys[level]]] for level in range(self.Params.QAOA_Num_Levels)])
 
 			temp_start_time 					= time.time()
-			job 								= sampler.run(circuits=self.qaoa_circuit, parameter_values=[list(angles)])
-			
-			if self.First_run: 
-				self.qoao_opt_start_time		= time.time() 
-				self.First_run 					= False
-				self.waiting_time 				= self.qoao_opt_start_time - temp_start_time
+
+
+			while self.error_iter < 10:
+				try:
+					job 						= sampler.run(circuits=self.qaoa_circuit, parameter_values=[list(angles)])
+					qaoa_results 				= job.result()
 				
+				except:
+					self.print_error_message()
+					self.error_iter 					+= 1
 
-
-			qaoa_results 						= job.result()
-
-			
-
-			self.counts 						= qaoa_results.quasi_dists[0].binary_probabilities()
-
-			self.cal_avg_best_sol(np.append(self.gammas, self.betas))
-			
-
-			#--------------------------------------------------------------------------------------------
-			# Print the results of QAOA optimizer at each iteration  
-			#--------------------------------------------------------------------------------------------
-			if self.Params.QAOA_Optimize == True:
-				self.print_qaoa_optimizer_iter()	
-
-			else:
-				self.qoao_opt_end_time 			= time.time()
-				self.qaoa_opt_total_time 		= self.qoao_opt_end_time - self.qoao_opt_start_time
 				
+				else:
+					
+					self.counts 				= qaoa_results.quasi_dists[0].binary_probabilities()
+					self.cal_avg_best_sol(np.append(self.gammas, self.betas))
+				
+					if self.First_run: 
+						self.qoao_opt_start_time		= time.time() 
+						self.First_run 					= False
+						self.waiting_time 				= self.qoao_opt_start_time - temp_start_time
+						
 
+					#------------------------------------------------------------------------------------
+					# Print the results of QAOA optimizer at each iteration  
+					#------------------------------------------------------------------------------------
+					if self.Params.QAOA_Optimize == True:
+						self.print_qaoa_optimizer_iter()	
 
-			return - self.qaoa_avg_obj_value
+					else:
+						self.qoao_opt_end_time 			= time.time()
+						self.qaoa_opt_total_time 		= self.qoao_opt_end_time - self.qoao_opt_start_time
+
+					self.error_iter 							= 0
+					break
+						
+
+			return -self.qaoa_avg_obj_value
 
 
 		#--------------------------------------------------------------------------------------------

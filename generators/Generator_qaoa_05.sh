@@ -1,12 +1,12 @@
 #!/bin/bash
 
 PWD=`pwd`
-RUNNERS=(../runners/runner_qaoa_rqubo_05) #Change this 
+RUNNERS=(../runners/runner_cqubo_04) #Change this 
 NUM_PARTITIONS=(3)
 PENALTY_MULTIPLIER=(1.0) # 2.0
-NUM_VERTICES=(8)
-GRAPH_DENSITY=(0.8) #0.2 0.4 0.6
-NEG_EDGE_PERCENTAGE=(0.0) # 0.4 0.8
+NUM_VERTICES=(8 30)
+GRAPH_DENSITY=(0.2 0.8) #0.2 0.4 0.6
+NEG_EDGE_PERCENTAGE=(0.0 0.4 0.8) # 0.4 0.8
 
 
 

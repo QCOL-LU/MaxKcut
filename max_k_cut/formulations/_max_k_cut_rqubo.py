@@ -76,7 +76,7 @@ def solve_max_k_cut_rqubo(self):
 			model.Params.Threads			= self.Params.Gurobi_Threads
 			model.Params.timeLimit 			= self.Params.Gurobi_TimeLimit
 
-			# model.Params.LogToConsole 		= 0
+			model.Params.LogToConsole 		= self.Params.Gurobi_LogToConsole 
 			model.Params.LogFile 			= self.filename[:-4] + "_log.txt"
 			# model.Params.OutputFlag 		= 0
 			
@@ -117,7 +117,7 @@ def solve_max_k_cut_rqubo(self):
 			solution						= {vertex: solution[vertex] + [max(1 - sum(solution[vertex]), 0)] for vertex in self.vertices}
 			
 			
-			vertices_more_than_one_assignment			= [vertex for vertex in self.vertices if sum(solution[vertex]) > 1]
+			vertices_more_than_one_assignment			= [vertex for vertex in self.vertices if sum(solution[vertex]) >= 1.5]
 			
 
 			while vertices_more_than_one_assignment:

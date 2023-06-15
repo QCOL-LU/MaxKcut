@@ -23,13 +23,21 @@ for folder in sorted(os.listdir(os.getcwd())):
 			if word in filename: flag = 1
 		if flag == 1: continue
 
-		if (not os.path.isdir(filename) and not ("log" in filename)):
-			files.append(os.path.join(folder_paths, filename) )
+		file_address = os.path.join(folder_paths, filename)
+
+		if ((not os.path.isdir(file_address)) and not ("log" in filename)):
+			files.append(file_address )
 
 
-headers12	= ["File name", "Name of instance", "Density (%)","Naive Penalty Coef", "Is planar", "Number of vertices", "Number of edges", "Number of partitions", "Method","Peel", "Decompose", "Fold", "Penalty Multiplier", "Gates Error Probability",
+# headers12	= ["File name", "Name of instance", "Density (%)","Naive Penalty Coef", "Is planar", "Number of vertices", "Number of edges", "Number of partitions", "Method","Peel", "Decompose", "Fold", "Penalty Multiplier", "Gates Error Probability",
+# 				"Avg of QAOA obj (BQO obj)", "Avg of QAOA obj (penalty)", "Avg of constraint violation","Feasible percentage (%)", "Avg of pure feasible obj", 
+# 				"Avg of QAOA obj", "Avg of QAOA obj (feasible)", "STD of QAOA obj", "STD of QAOA obj (feasible)", "Best QAOA obj", "Modified best QAOA obj", "Best QAOA obj (feasible)", "QAOA total time",  "QAOA circuit depth", "Num of bi-comp", "Vertex num in largest comp", "Edge num in largest comp",  "Pre-processing running time", "Total solver time", "Running time", "Upper bound" ,"Objective value"]
+
+headers12	= ["File name", "Name of instance", "Density (%)","Naive Penalty Coef",  "Number of vertices", "Number of edges", "Number of partitions", "Method",
 				"Avg of QAOA obj (BQO obj)", "Avg of QAOA obj (penalty)", "Avg of constraint violation","Feasible percentage (%)", "Avg of pure feasible obj", 
-				"Avg of QAOA obj", "Avg of QAOA obj (feasible)", "STD of QAOA obj", "STD of QAOA obj (feasible)", "Best QAOA obj", "Modified best QAOA obj", "Best QAOA obj (feasible)", "QAOA total time",  "QAOA circuit depth", "Num of bi-comp", "Vertex num in largest comp", "Edge num in largest comp",  "Pre-processing running time", "Total solver time", "Running time", "Upper bound" ,"Objective value"]
+				"Avg of QAOA obj", "Avg of QAOA obj (feasible)", "STD of QAOA obj", "STD of QAOA obj (feasible)", "Best QAOA obj", "Modified best QAOA obj", 
+				"Avg of tight R-QUBO QAOA obj (penalty)", "Avg of tight R-QUBO QAOA obj", "Avg of tight QAOA obj (penalty)", "Avg of tight QAOA obj",
+				"Best QAOA obj (feasible)", "QAOA total time",  "QAOA circuit depth",  "Total solver time", "Running time", "Upper bound" ,"Objective value"]
 
 
 

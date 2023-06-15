@@ -1,0 +1,121 @@
+==================================================
+Instance parameters
+--------------------------------------------------
+Number of vertices:           8
+Number of edges:              7
+Number of partitions:         3
+
+Density (%):                  25
+Name of instance:             seed1_rand_p0.2_neg0.8_tight
+
+Is planar:                    True
+Is Chordal:                   True
+
+Triangles Density (%):        0
+Min_Maximal_Matching (%):     75
+Global Efficiency:            0.55
+
+Core Number:                  2
+Largest Component Size:       8
+
+Cut Vertices Number:          3
+Largest BiComponent Size:     2
+==================================================
+
+==================================================
+Solver parameters
+--------------------------------------------------
+Method:                       R-QUBO
+Peel:                         False
+Decompose:                    False
+Fold:                         False
+
+Quantum Computer:             ibmq_montreal
+Naive Penalty Coef:           False
+Adjusted Penalty Coef:        False
+Penalty Multiplier:           1
+
+QAOA Num Levels:              1
+QAOA Num Shots:               10000
+Gates Error Probability:      0.0
+
+QAOA Optimize:                True
+QAOA Scipy Optimizer:         COBYLA
+QAOA Optimizer Tol:           0.001
+QAOA Angles:                  [0.51, 0.32]
+==================================================
+
+   iter        avg-obj        best avg-obj       best-obj            std           skewness      time          gamma            beta      
+*     0     -4.41070e+00     -4.41070e+00      1.00000e+00      2.45670e-01     -1.90816e+01  50302s           0.32             0.51      
+      1     -4.95380e+00     -4.41070e+00      1.00000e+00      2.43539e-01     -1.71541e+01  50331s           0.32             1.51      
+      2     -5.02400e+00     -4.41070e+00      1.00000e+00      2.81092e-01     -1.85192e+01  50361s           1.32             0.51      
+      3     -5.04730e+00     -4.41070e+00      1.00000e+00      2.59236e-01     -1.70730e+01  50393s          -0.43            -0.15      
+      4     -4.77970e+00     -4.41070e+00      1.00000e+00      2.47922e-01     -1.68092e+01  50423s          -0.05             0.18      
+      5     -4.67310e+00     -4.41070e+00      1.00000e+00      2.58871e-01     -1.80332e+01  50452s           0.24             0.75      
+      6     -4.68780e+00     -4.41070e+00      1.00000e+00      2.51627e-01     -1.74913e+01  50483s           0.55             0.42      
+*     7     -4.23010e+00     -4.23010e+00      1.00000e+00      2.31158e-01     -1.92692e+01  50528s           0.23             0.42      
+      8     -4.57620e+00     -4.23010e+00      1.00000e+00      2.46158e-01     -1.78151e+01  50559s           0.17             0.31      
+      9     -4.90310e+00     -4.23010e+00      1.00000e+00      2.48538e-01     -1.59822e+01  50591s           0.13             0.51      
+     10     -4.34790e+00     -4.23010e+00      1.00000e+00      2.39759e-01     -1.87883e+01  50622s           0.26             0.37      
+     11     -4.69880e+00     -4.23010e+00      1.00000e+00      2.41700e-01     -1.71730e+01  50652s           0.25             0.44      
+     12     -4.70930e+00     -4.23010e+00      1.00000e+00      2.58461e-01     -1.78520e+01  50688s           0.20             0.41      
+     13     -4.81870e+00     -4.23010e+00      1.00000e+00      2.57929e-01     -1.82276e+01  50719s           0.21             0.42      
+     14     -4.42340e+00     -4.23010e+00      1.00000e+00      2.40893e-01     -1.89235e+01  50750s           0.23             0.43      
+     15     -4.46780e+00     -4.23010e+00      1.00000e+00      2.29361e-01     -1.69309e+01  50780s           0.24             0.42      
+     16     -4.51030e+00     -4.23010e+00      1.00000e+00      2.54006e-01     -1.83964e+01  50821s           0.23             0.43      
+     17     -4.50760e+00     -4.23010e+00      1.00000e+00      2.67005e-01     -1.84544e+01  50852s           0.23             0.42      
+     18     -4.55490e+00     -4.23010e+00      1.00000e+00      2.71224e-01     -1.90730e+01  50881s           0.22             0.42      
+     19     -5.02820e+00     -4.23010e+00      1.00000e+00      2.79231e-01     -1.62564e+01  50911s           0.23             0.43      
+     20     -4.53160e+00     -4.23010e+00      1.00000e+00      2.67273e-01     -2.00827e+01  50943s           0.23             0.42      
+     21     -4.41240e+00     -4.23010e+00      1.00000e+00      2.44382e-01     -1.96200e+01  50978s           0.23             0.42      
+
+Optimization terminated successfully. It stopped after 22 iterations.
+
+
+==================================================
+Summary of results QAOA
+--------------------------------------------------
+Avg of QAOA obj (BQO obj):    -2.31
+Avg of QAOA obj (penalty):    -1.92
+Avg of constraint violation:  1.07
+
+Feasible percentage (%):      22.46
+Avg of pure feasible obj:     -3.36
+
+Avg of QAOA obj:              -4.23
+STD of QAOA obj:              0.24
+
+Avg of QAOA obj (feasible):   -0.00
+STD of QAOA obj (feasible):   0.00
+
+Gamma angles:                 0.23
+Beta angles:                  0.42
+
+Best QAOA obj:                1.00
+Modified best QAOA obj:       1.00
+Best QAOA obj (feasible):     1.00
+
+QAOA total time:              50978.49s
+QAOA circuit depth:           16
+==================================================
+
+==================================================
+Summary of results of 0-S8
+--------------------------------------------------
+Number of vertices:           8
+Number of edges:              7
+
+Vertex num in largest comp:   8
+Edge num in largest comp:     7
+
+Pre-processing running time:  0.00
+Total solver time:            50978.49
+Running time:                 50985.33
+
+Upper bound:                  1.00
+Objective value:              1.00
+
+Partition 0:                  0, 1, 4             
+Partition 1:                  2, 3, 5, 6, 7       
+Partition 2:                                      
+==================================================
