@@ -1,6 +1,6 @@
 # The max k-cut problem on classical and quantum solvers
 
-Software package for the papers "[The max k-cut problem on classical and quantum solvers](https://www.sciencedirect.com/science/article/abs/pii/S0167637723001293)" and "A folding preprocess for the max k-cut problem" by Ramin Fakhimi, Hamidreza Validi, Illya V. Hicks, Tamas Terlaky, and Luis F. Zuluaga.
+Software package for the papers "[On relaxations of the max k-cut problem formulations](https://www.sciencedirect.com/science/article/abs/pii/S0167637723001293)" and "A folding preprocess for the max k-cut problem" by Ramin Fakhimi, Hamidreza Validi, Illya V. Hicks, Tamas Terlaky, and Luis F. Zuluaga.
 
 The max k-cut problem is easy to be explained, but hard to be solved: How to color the nodes of a graph with at most k colors such that the number of edges with distinct colored endpoints is maximized?
 
